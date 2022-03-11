@@ -1,0 +1,27 @@
+// VuePress 提供了一种添加额外样式的简便方法。你可以创建一个 .vuepress/styles/index.styl 文件。
+//   这是一个 Stylus (opens new window)文件，但你也可以使用正常的 CSS 语法。
+@import "//at.alicdn.com/t/font_3238599_oh4orhf52wm.css"
+
+
+.theme-container.homelayout-page-class {
+  /* 特定页面的 CSS */
+  .theme-default-content{
+    padding: 0px !important;
+    background: #f4f4f4
+    margin-top: 50px;
+   }
+   .theme-default-content:not(.custom) {
+        max-width: none;
+    }
+    .theme-default-content:not(.custom) > *:first-child{
+        margin-top: 0px;
+    }
+    .page{
+      padding-bottom: 0
+    }
+    .page-edit{
+      display: none;
+    }
+}
+
+
