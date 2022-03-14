@@ -1,11 +1,12 @@
 <template>
   <div class="book">
-    <img :src="book.imgurl" alt="图片" />
+    <img :src="$withBase(book.imgurl)" alt="图片" />
     <div class="content">
       <p class="name">{{ book.name }}</p>
       <p class="description">{{ book.description }}</p>
       <p class="date">{{ book.date }}</p>
     </div>
+    <i class="iconfont icon-tuijianjiaobiao" v-if="book.isRecommend"></i>
   </div>
 </template>
     
@@ -26,14 +27,16 @@ export default {
 };
 </script>
 
-<style lang="less" scoped>
+<style lang="stylus" scoped>
 .book {
   display: flex;
   /* justify-content: space-around; */
   border: 1px solid #ccc;
   margin-bottom: 20px;
+  border-radius: 10px;
+  position: relative;
   img {
-    width: 100px;
+    width: 120px;
     height: 120px;
     margin: 10px;
     background-image: linear-gradient(
@@ -46,10 +49,17 @@ export default {
     // width: 600px;
     // height: 300px;
   }
+  .iconfont{
+    position: absolute;
+    right: 0;
+    font-size: 2.5rem;
+    color: $accentColor;
+  }
 }
 
 .content {
   flex: 1;
+  padding-right: 50px;
 }
 .book .name {
   font-size: 1.1rem;
@@ -59,6 +69,5 @@ export default {
   font-size: 0.8rem;
   color: #999;
   text-align: right;
-  margin-right: 50px;
 }
 </style>

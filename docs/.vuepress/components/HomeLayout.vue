@@ -2,6 +2,9 @@
   <main
     class="home"
     :aria-labelledby="data.heroText !== null ? 'main-title' : null"
+    :style="{backgroundImage: 'url(' + $withBase('/img/bg.png') + ')'}"
+
+
   >
     <header class="hero">
       <img
@@ -77,7 +80,7 @@ export default {
  
 
 .home {
-  background: rgb(40,40,45) url(/img/bg.png);
+  background-color: rgb(40,40,45);
   max-width:none;
   margin: none;
  

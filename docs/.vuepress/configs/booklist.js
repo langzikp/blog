@@ -7,31 +7,66 @@
 
 module.exports = [
   {
-    id: 4,
-    imgurl: '/img/books/1.png',
-    name: 'web性能优化',
-    description: '这是一半前端工程师必看的书，一本值得二刷的书',
-    date: '2020-3-25'
+    imgurl: '/img/books/6.jpg',
+    name: '升入理解ES6',
+    description: '买来和上一本搭配这看，理解更透彻一点',
+    date: '2021-11-11',
+    isRecommend: true
   },
   {
-    id: 3,
-    imgurl: '/img/books/1.png',
-    name: 'JavaScript高级程序设计',
-    description: '这是一半前端工程师必看的书，一本值得二刷的书',
-    date: '2020-3-25'
+    imgurl: '/img/books/5.jpg',
+    name: 'ES6标准入门（第3版）',
+    description: '阮一峰老师的书，推荐',
+    date: '2021-11-11',
+    isRecommend: true
   },
   {
-    id: 2,
-    imgurl: '/img/books/1.png',
-    name: 'JavaScript高级程序设计',
-    description: '这是一半前端工程师必看的书，一本值得二刷的书',
-    date: '2021-03-25'
+    imgurl: '/img/books/8.jpg',
+    name: '写给大家看的设计书（第4版）',
+    description: '我还没时间看，好评很多的一本书',
+    date: '2021-10-12',
+    isRecommend: false
   },
   {
-    id: 1,
-    imgurl: '/img/books/1.png',
-    name: 'JavaScript高级程序设计',
-    description: '这是一半前端工程师必看的书，一本值得二刷的书',
-    date: '2021-03-25'
+    imgurl: '/img/books/9.jpg',
+    name: '系统架构师',
+    description: '软考-系统架构师教程',
+    date: '2021-10-12',
+    isRecommend: false
+  },
+  {
+    imgurl: '/img/books/3.jpg',
+    name: 'Web全栈工程师的自我修养',
+    description: '不讲技术，重点放在全栈工程师的技能要求、核心竞争力、未来发展方向、对移动端的思考等，作者是腾讯公司高级工程师，有兴趣的可以读一读',
+    date: '2020-3-25',
+    isRecommend: false
+  },
+  {
+    imgurl: '/img/books/4.jpg',
+    name: '软件设计师教程',
+    description: '软考-软件设计师考试教程',
+    date: '2020-01-11',
+    isRecommend: false
+  },
+  {
+    imgurl: '/img/books/7.jpg',
+    name: '阿里巴巴Java开发手册',
+    description: '阿里巴巴出的一本手册，从各个角度定义了编程规范，目前已经升级了多个版本',
+    date: '2018-02-9',
+    isRecommend: true
+  },
+  {
+    imgurl: '/img/books/2.jpg',
+    name: 'JavaScript DOM编程艺术(第2版)',
+    description: '这本适合搭配红包书看，没有红宝书全面，但在某些点上更细致',
+    date: '2017-08-13',
+    isRecommend: false
+  },
+  {
+    imgurl: '/img/books/1.jpg',
+    name: ' JavaScript高级程序设计(第3版)',
+    description: '这是前端工程师必看的书，不管你是刚入门还是已经工作一段时间，都推荐,一本值得二刷的书',
+    date: '2017-08-13',
+    isRecommend: true
   },
 ]

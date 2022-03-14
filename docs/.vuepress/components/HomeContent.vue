@@ -5,7 +5,7 @@
         </div>
         <div class="right">
             <div class="presentation">
-                <img src="/img/head.jpg" alt="">
+                <img :src="$withBase('/img/head.jpg')" alt="头像图片">
                 <div class="info">
                     <a href="mailto:819750949@qq.com" target="blank"><i class="iconfont icon-a-youjianchakanyoujianfasongyoujianshouyoujian-06"></i></a>
                     <a href="https://github.com/" target="blank"><i class="iconfont icon-github"></i></a>
@@ -79,7 +79,7 @@
                         author: "lang nie",
                         date: "2020-02-01",
                         tag: "booklist",
-                        url: "/booklist/study",
+                        url: "/about/",
                         content: "一个`Java后端`转`Web前端`的小学徒。"
                     },
                 ]

@@ -13,7 +13,7 @@
             {{info.content}}
         </p>
         <p v-if="info.content" class="all">
-            <a href="">阅读全文 ></a>
+            <a href="info.url">阅读全文 ></a>
         </p>
     </div>
 </template>

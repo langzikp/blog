@@ -4,7 +4,7 @@ permalink: /booklist
 # sidebar: false
 ---
 ## 我的书单
-<Book v-for="item in books" :key="item.id" :book="item" />
+<Book v-for="(item,index) in books" :key="index" :book="item" />
 
 <script>
 const books = require('../.vuepress/configs/booklist')
