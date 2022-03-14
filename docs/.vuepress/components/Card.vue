@@ -1,7 +1,7 @@
 <template>
     <div class="card">
         <div class="title">
-            <a :href="$withBase('info.url')">{{info.title}}</a>
+            <a :href="$withBase(info.url)">{{info.title}}</a>
         </div>
         <div class="tag">
             <span><i class="iconfont icon-zuozhe"></i> {{info.author}}</span>
@@ -13,7 +13,7 @@
             {{info.content}}
         </p>
         <p v-if="info.content" class="all">
-            <a :href="$withBase('info.url')">阅读全文 ></a>
+            <a :href="$withBase(info.url)">阅读全文 ></a>
         </p>
     </div>
 </template>
