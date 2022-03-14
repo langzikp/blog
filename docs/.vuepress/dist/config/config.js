@@ -1,4 +1,4 @@
-var dataConfig =  {
+var abacusConfig =  {
     infoList: [
         {
             title: "费曼学习法",
