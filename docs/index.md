@@ -32,5 +32,7 @@ pageClass: homelayout-page-class #该页面添加一些专门的 CSS
 <!-- <HomeFooterLayout /> -->
 
 
-
+::: slot footer
+MIT Licensed | Copyright © 2018-present [Evan You](https://github.com/yyx990803)
+:::
 <HomeFooterLayout />

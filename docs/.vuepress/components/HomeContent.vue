@@ -47,15 +47,15 @@
                     {
                         title: "费曼学习法",
                         author: "lang nie",
-                        date: "2019-02-01",
+                        date: "2021-05-10",
                         tag: "booklist",
-                        url: "",
+                        url: "/booklist/study",
                         content: "通过向别人清楚的解说某一件事或是写一篇浅显易懂的教程文章，来确认自己是否真正弄懂了这件事。 可以说是在通过向别讲解过程中来对自身的 查缺补漏。"
                     },
                     {
                         title: "代码规范: 养成良好的编码习惯",
                         author: "lang nie",
-                        date: "2022-02-01",
+                        date: "2021-05-10",
                         tag: "develop-norm",
                         url: "/develop-norm/engineer",
                         content: ""
@@ -70,18 +70,18 @@
                     {
                         title: "记录一些有趣的网站",
                         author: "lang nie",
-                        date: "2019-02-01",
+                        date: "202019-02-01",
                         tag: "develop-norm",
                         url: "/collect/sites.html#有趣",
                     },
                     {
-                        title: "你知道的越多，不知道的也就越多",
+                        title: "关于我",
                         author: "lang nie",
-                        date: "2019-01-01",
-                        tag: "develop-norm",
-                        url: "/collect/sites.html#有趣",
-                        content:"不知道大家有没有发现，我们身边经常有这样的人，他们越是有能力的，越是有知识的，越是低调，越是谦逊，因为他们深知，知道的越多，不知道的也就越多。"
-                    }
+                        date: "2020-02-01",
+                        tag: "booklist",
+                        url: "/booklist/study",
+                        content: "一个`Java后端`转`Web前端`的小学徒。"
+                    },
                 ]
             }
         },

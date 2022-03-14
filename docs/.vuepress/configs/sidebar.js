@@ -5,7 +5,7 @@
 * @Version: 1.0.1
 */
 module.exports = {
-
+    
     // 开发规范
     '/develop-norm/': [
         ['engineer', '工程师规范'],
@@ -27,7 +27,7 @@ module.exports = {
     ],
     '/javascript/': [
         ['notes', '学习笔记'],
-        ['es6', 'es6 语法'],
+        ['es6', 'ES6 语法'],
     ],
     '/vue/': [
         ['notes', '学习笔记'],
@@ -53,7 +53,23 @@ module.exports = {
     '/backend/': ['',],
 
     // 我的书单
-    '/booklist/': [''],
+    '/booklist/': [{
+        title: '书单',   // 必要的
+        // path: '/booklist/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+        collapsable: true, // 可选的, 默认值是 true,collapsable: false 来让一个组永远都是展开状态。
+        sidebarDepth: 0,    // 可选的, 默认值是 1
+        children: [
+            ['/booklist/', '我的书单'],
+        ]
+      },
+      {
+        title: '学习方法',
+        sidebarDepth: 0,  
+        children: [
+            ['/booklist/study', '费曼学习法'],
+        ],
+        initialOpenGroupIndex: -1 // 可选的, 默认值是 0
+      },],
     // 收藏
     '/collect/': [
         ['frame', '框架及UI库'],

@@ -23,7 +23,14 @@ module.exports = [
     ]
   },
   { text: '后端', link: '/backend/' },
-  { text: '我的书单', link: '/booklist/' },
+  {
+    text: '学习',
+    ariaLabel: '学习 Menu',
+    items: [
+      { text: '我的书单', link: '/booklist/' },
+      { text: '学习', link: '/booklist/study' },
+    ]
+  },
   {
     text: '收藏',
     items: [
@@ -44,14 +51,4 @@ module.exports = [
     ]
   },
   { text: '关于', link: '/about/' },
-  {
-    text: '工具集合',
-    ariaLabel: '工具集合 Menu',
-    items: [
-      //   { text: '常用css', link: '/frontend/' },
-      //   { text: '常用js', link: '/java/' },
-      { text: 'jQery API', link: 'https://jquery.cuishifeng.cn/' },
-      { text: 'markdown语法', link: 'https://markdown.com.cn/basic-syntax/paragraphs.html' }
-    ]
-  }
 ]

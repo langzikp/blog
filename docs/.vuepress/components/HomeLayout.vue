@@ -74,6 +74,7 @@ export default {
 .home .features{
   border-top: none !important;
 }
+ 
 
 .home {
   background: rgb(40,40,45) url(/img/bg.png);
@@ -124,9 +125,7 @@ export default {
       box-sizing: border-box;
       border-bottom: 1px solid darken($accentColor, 10%);
 
-      &:hover {
-        background-color: lighten($accentColor, 10%);
-      }
+      
     }
   }
 
@@ -149,13 +148,29 @@ export default {
     max-width: 30%;
     text-align: center;
     opacity 0.9;
-    &:hover{
-      color: $accentColor
+     &:hover {
+       h2{
+         color: $accentColor !important;
+       }
+       p{
+         color: $accentColor !important;
+       }
     }
+   
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 500;
+      border-bottom: none;
+      padding-bottom: 0;
+      color: #fff;
+    }
+
+    p {
+       color: #fff;
+    }
+
     a{
-      &:hover {
-        text-decoration: none;
-      }
+      text-decoration: none;
     }
     img{
       width: 10rem;
@@ -177,17 +192,17 @@ export default {
         50% {transform: translate(0px, -10px);}
       100% {transform: translate(0px, 0px);}
     }
-    h2 {
-      font-size: 1.4rem;
-      font-weight: 500;
-      border-bottom: none;
-      padding-bottom: 0;
-      color: #fff;
-    }
+    // h2 {
+    //   font-size: 1.4rem;
+    //   font-weight: 500;
+    //   border-bottom: none;
+    //   padding-bottom: 0;
+    //   color: #fff;
+    // }
 
-    p {
-       color: #fff;
-    }
+    // p {
+    //    color: #fff;
+    // }
   }
 
   .footer {
@@ -249,4 +264,5 @@ export default {
     }
   }
 }
+
 </style>
