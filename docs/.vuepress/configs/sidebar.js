@@ -28,6 +28,7 @@ module.exports = {
     '/javascript/': [
         ['notes', '学习笔记'],
         ['es6', 'ES6 语法'],
+        ['array', '数组循环总结']
     ],
     '/vue/': [
         ['notes', '学习笔记'],
@@ -67,6 +68,13 @@ module.exports = {
         sidebarDepth: 0,  
         children: [
             ['/booklist/study', '费曼学习法'],
+        ],
+        initialOpenGroupIndex: -1 // 可选的, 默认值是 0
+      },{
+        title: '语录',
+        sidebarDepth: 0,  
+        children: [
+            ['/booklist/quotations', '语录'],
         ],
         initialOpenGroupIndex: -1 // 可选的, 默认值是 0
       },],

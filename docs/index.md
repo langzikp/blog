@@ -7,7 +7,7 @@ tagline: Web前端技术博客，积跬步以至千里，致敬每个爱学习�
 #actionLink: /frontend/
 features:
 - title: 前端
-  details: Html,Css,Javascript，Vue，React等前端技术
+  details: Html、Css、Javascript、Vue、React等前端技术
   link:  /develop-norm/engineer # 可选
   imgUrl: /img/ui.png # 可选
 - title: 技术
@@ -32,7 +32,7 @@ pageClass: homelayout-page-class #该页面添加一些专门的 CSS
 <!-- <HomeFooterLayout /> -->
 
 
-::: slot footer
+<!-- ::: slot footer
 MIT Licensed | Copyright © 2018-present [Evan You](https://github.com/yyx990803)
-:::
+::: -->
 <HomeFooterLayout />

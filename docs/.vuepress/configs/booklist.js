@@ -7,11 +7,25 @@
 
 module.exports = [
   {
+    imgurl: '/img/books/11.jpg',
+    name: '前端架构:从入门到微前端',
+    description: '',
+    date: '2021-11-11',
+    isRecommend: true
+  },
+  {
+    imgurl: '/img/books/10.jpg',
+    name: 'Web前端性能优化',
+    description: '性能是我们一直关注的问题',
+    date: '2021-11-11',
+    isRecommend: false
+  },
+  {
     imgurl: '/img/books/6.jpg',
     name: '升入理解ES6',
     description: '买来和上一本搭配这看，理解更透彻一点',
     date: '2021-11-11',
-    isRecommend: true
+    isRecommend: false
   },
   {
     imgurl: '/img/books/5.jpg',

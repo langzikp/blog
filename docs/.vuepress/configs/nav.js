@@ -24,11 +24,12 @@ module.exports = [
   },
   { text: '后端', link: '/backend/' },
   {
-    text: '学习',
+    text: '记录',
     ariaLabel: '学习 Menu',
     items: [
       { text: '我的书单', link: '/booklist/' },
       { text: '学习', link: '/booklist/study' },
+      { text: '语录', link: '/booklist/quotations' },
     ]
   },
   {
