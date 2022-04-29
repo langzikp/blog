@@ -33,6 +33,13 @@ module.exports = [
     ]
   },
   {
+    text: '文档',
+    ariaLabel: '整理 文档',
+    items: [
+      { text: '微信小程序客服绑定流程', link: '/documents/mini-program-customer-service' },
+    ]
+  },
+  {
     text: '收藏',
     items: [
       {

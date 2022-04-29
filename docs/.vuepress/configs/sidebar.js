@@ -28,9 +28,11 @@ module.exports = {
     '/javascript/': [
         ['notes', '学习笔记'],
         ['es6', 'ES6 语法'],
-        ['array', '数组循环总结']
+        ['array', '数组循环总结'],
+        ['questions-answers', 'Q&A']
     ],
     '/vue/': [
+        ['create', 'vue项目搭建'],
         ['notes', '学习笔记'],
     ],
     '/react/': [
