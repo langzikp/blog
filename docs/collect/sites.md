@@ -28,6 +28,11 @@
 ## 互动
 - [兔小巢](https://txc.qq.com/)用户意见反馈服务平台
 
+## 文档压缩(图片，gif，pdf压缩)
+- [docmall](https://docsmall.com/image-compress)
+- [图贴士](https://www.tutieshi.com/)
+- [image compress](https://www.iloveimg.com/zh-cn/compress-image/compress-gif)
+
 
 ## 博客
 - [阮一峰的网络日志](http://www.ruanyifeng.com/blog/)
