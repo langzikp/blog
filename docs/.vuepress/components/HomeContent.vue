@@ -73,7 +73,7 @@
             target="blank"
             >Markdown</a
           >
-          <a class="color6" href="https://gitee.com/" target="blank">Gitee</a>
+          <a class="color6" href="https://gitee.com/login" target="blank">Gitee</a>
           <a class="color2" href="https://github.com/" target="blank">GitHub</a>
           <a
             class="color5"
