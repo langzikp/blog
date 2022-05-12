@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>微信公众号H5配置流程 | Lang&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/blog/img/favicon.png">
+    <meta name="description" content="this is my blog">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.504ab487.css" as="style"><link rel="preload" href="/blog/assets/js/app.c5f689e5.js" as="script"><link rel="preload" href="/blog/assets/js/2.a7057afa.js" as="script"><link rel="preload" href="/blog/assets/js/34.23390c01.js" as="script"><link rel="preload" href="/blog/assets/js/9.07fc8606.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.0e1106b0.js"><link rel="prefetch" href="/blog/assets/js/11.31409b34.js"><link rel="prefetch" href="/blog/assets/js/12.031ddfd7.js"><link rel="prefetch" href="/blog/assets/js/13.f47fe2b2.js"><link rel="prefetch" href="/blog/assets/js/14.ee4cde2f.js"><link rel="prefetch" href="/blog/assets/js/15.811af7b9.js"><link rel="prefetch" href="/blog/assets/js/16.32655989.js"><link rel="prefetch" href="/blog/assets/js/17.e97b0c5f.js"><link rel="prefetch" href="/blog/assets/js/18.c3238aa8.js"><link rel="prefetch" href="/blog/assets/js/19.a7854720.js"><link rel="prefetch" href="/blog/assets/js/20.08d7c7a7.js"><link rel="prefetch" href="/blog/assets/js/21.932d14af.js"><link rel="prefetch" href="/blog/assets/js/22.23ff45f3.js"><link rel="prefetch" href="/blog/assets/js/23.39b2466e.js"><link rel="prefetch" href="/blog/assets/js/24.4b5baaae.js"><link rel="prefetch" href="/blog/assets/js/25.c738c6a4.js"><link rel="prefetch" href="/blog/assets/js/26.e7e3c744.js"><link rel="prefetch" href="/blog/assets/js/27.6f9a81c1.js"><link rel="prefetch" href="/blog/assets/js/28.f02e5d65.js"><link rel="prefetch" href="/blog/assets/js/29.bc8faac0.js"><link rel="prefetch" href="/blog/assets/js/3.1cd23b47.js"><link rel="prefetch" href="/blog/assets/js/30.7e027fd0.js"><link rel="prefetch" href="/blog/assets/js/31.28c87b3c.js"><link rel="prefetch" href="/blog/assets/js/32.66de33a3.js"><link rel="prefetch" href="/blog/assets/js/33.a1f242e8.js"><link rel="prefetch" href="/blog/assets/js/35.bd07b8a3.js"><link rel="prefetch" href="/blog/assets/js/36.9a4c0d6d.js"><link rel="prefetch" href="/blog/assets/js/37.950e9dca.js"><link rel="prefetch" href="/blog/assets/js/38.8c24566f.js"><link rel="prefetch" href="/blog/assets/js/39.36548dca.js"><link rel="prefetch" href="/blog/assets/js/4.f55445a5.js"><link rel="prefetch" href="/blog/assets/js/40.e3d602c2.js"><link rel="prefetch" href="/blog/assets/js/41.6095abfa.js"><link rel="prefetch" href="/blog/assets/js/42.6b0680de.js"><link rel="prefetch" href="/blog/assets/js/43.d5981fb3.js"><link rel="prefetch" href="/blog/assets/js/44.9f0af613.js"><link rel="prefetch" href="/blog/assets/js/45.815a22a8.js"><link rel="prefetch" href="/blog/assets/js/46.b76b8607.js"><link rel="prefetch" href="/blog/assets/js/47.12f7d9cb.js"><link rel="prefetch" href="/blog/assets/js/48.09eb85b2.js"><link rel="prefetch" href="/blog/assets/js/49.7b75559f.js"><link rel="prefetch" href="/blog/assets/js/5.989adac2.js"><link rel="prefetch" href="/blog/assets/js/50.8d26d3df.js"><link rel="prefetch" href="/blog/assets/js/6.9798949f.js"><link rel="prefetch" href="/blog/assets/js/7.64f3e441.js"><link rel="prefetch" href="/blog/assets/js/8.c49c4f30.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.504ab487.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/img/logo.png" alt="Lang's blog" class="logo"> <span class="site-name can-hide">Lang's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发规范 Menu" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发规范 Menu" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/develop-norm/engineer.html" class="nav-link">
+  开发规范
+</a></li><li class="dropdown-item"><!----> <a href="/blog/html/notes.html" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/blog/css/notes.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/javascript/notes.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/notes.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/react/notes.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/performance-optimization/" class="nav-link">
+  性能优化
+</a></li><li class="dropdown-item"><!----> <a href="/blog/questions-answers/" class="nav-link">
+  Q&amp;A
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/backend/" class="nav-link">
+  后端
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="学习 Menu" class="dropdown-title"><span class="title">记录</span> <span class="arrow down"></span></button> <button type="button" aria-label="学习 Menu" class="mobile-dropdown-title"><span class="title">记录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/booklist/" class="nav-link">
+  我的书单
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/study.html" class="nav-link">
+  学习
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/quotations.html" class="nav-link">
+  语录
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="整理 文档" class="dropdown-title"><span class="title">操作文档</span> <span class="arrow down"></span></button> <button type="button" aria-label="整理 文档" class="mobile-dropdown-title"><span class="title">操作文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/documents/wechat-h5.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  微信公众号H5配置流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-customer-service.html" class="nav-link">
+  微信小程序客服绑定流程
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="收藏" class="dropdown-title"><span class="title">收藏</span> <span class="arrow down"></span></button> <button type="button" aria-label="收藏" class="mobile-dropdown-title"><span class="title">收藏</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          框架及UI库
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/frame.html#vue及ui组件库" class="nav-link">
+  Vue及UI组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html#react-ui-组件库" class="nav-link">
+  React UI 组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html" class="nav-link">
+  更多...
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他网站
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/sites.html#文档" class="nav-link">
+  文档
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#社区" class="nav-link">
+  社区
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html" class="nav-link">
+  更多...
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/blog/about/" class="nav-link">
+  关于
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发规范 Menu" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发规范 Menu" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/develop-norm/engineer.html" class="nav-link">
+  开发规范
+</a></li><li class="dropdown-item"><!----> <a href="/blog/html/notes.html" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/blog/css/notes.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/javascript/notes.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/notes.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/react/notes.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/performance-optimization/" class="nav-link">
+  性能优化
+</a></li><li class="dropdown-item"><!----> <a href="/blog/questions-answers/" class="nav-link">
+  Q&amp;A
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/backend/" class="nav-link">
+  后端
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="学习 Menu" class="dropdown-title"><span class="title">记录</span> <span class="arrow down"></span></button> <button type="button" aria-label="学习 Menu" class="mobile-dropdown-title"><span class="title">记录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/booklist/" class="nav-link">
+  我的书单
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/study.html" class="nav-link">
+  学习
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/quotations.html" class="nav-link">
+  语录
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="整理 文档" class="dropdown-title"><span class="title">操作文档</span> <span class="arrow down"></span></button> <button type="button" aria-label="整理 文档" class="mobile-dropdown-title"><span class="title">操作文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/documents/wechat-h5.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  微信公众号H5配置流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-customer-service.html" class="nav-link">
+  微信小程序客服绑定流程
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="收藏" class="dropdown-title"><span class="title">收藏</span> <span class="arrow down"></span></button> <button type="button" aria-label="收藏" class="mobile-dropdown-title"><span class="title">收藏</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          框架及UI库
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/frame.html#vue及ui组件库" class="nav-link">
+  Vue及UI组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html#react-ui-组件库" class="nav-link">
+  React UI 组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html" class="nav-link">
+  更多...
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他网站
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/sites.html#文档" class="nav-link">
+  文档
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#社区" class="nav-link">
+  社区
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html" class="nav-link">
+  更多...
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/blog/about/" class="nav-link">
+  关于
+</a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="微信公众号h5配置流程"><a href="#微信公众号h5配置流程" class="header-anchor">#</a> 微信公众号H5配置流程</h1> <blockquote><p>会员关注企业公众号时，微信会生成一个oppenid，将oppenid与会员绑定，则可利用其完成会员自动登录，减少每次登录输入账号密码的麻烦；同时利用oppenid可以给指定会员推送消息，如积分变动，电子券使用等，而为了获取oppenid则需要完成以下配置</p></blockquote> <blockquote><p>公众号应为已认证的服务号</p></blockquote> <ul><li>示例：会员系统以及会员H5所在服务器域名为：www.abacus.com</li></ul> <h3 id="_1-登录微信公众平台https-mp-weixin-qq-com-获取公众号appid和appsecret-设置ip白名单"><a href="#_1-登录微信公众平台https-mp-weixin-qq-com-获取公众号appid和appsecret-设置ip白名单" class="header-anchor">#</a> 1.	登录微信公众平台https://mp.weixin.qq.com，获取公众号AppId和AppSecret，设置IP白名单</h3> <p>登录地址：  <a href="https://mp.weixin.qq.com/" target="_blank" rel="noopener noreferrer">微信公众平台<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a><br> <img src="/blog/img/wechat/1.png" alt="图片"><br> <img src="/blog/img/wechat/2.png" alt="图片"><br> <strong>注意</strong>：1.AppSecret请妥善保存（后面要用），为保障帐号安全，公众平台不再储存AppSecret；如果遗忘，请重置。</p> <h3 id="_2-ip白名单设置的ip为www-abacus-com对应ip。"><a href="#_2-ip白名单设置的ip为www-abacus-com对应ip。" class="header-anchor">#</a> 2.	IP白名单设置的ip为www.abacus.com对应ip。</h3> <img src="/blog/img/wechat/3.png" alt="图片"> <img src="/blog/img/wechat/4.png" alt="图片"> <p><strong>注意</strong>：如果需要使用扫码赠券功能，需要利用微信接口唤起摄像头，需配置JS接口安全域名为www.abacus.com。</p> <h3 id="_3-在后台系统中配置第1步获取的appid和secret"><a href="#_3-在后台系统中配置第1步获取的appid和secret" class="header-anchor">#</a> 3.在后台系统中配置第1步获取的appid和secret</h3> <p>老项目：<br>
+在sms系统管理中或abacus.properties配置文件中设置参数：mbr.weixin.appid和mbr.weixin.secret。</p> <p>新项目：<br>
+在acas权限管理中配置，分为 集团会员 和 非集团会员 两种情况。</p> <p>可根据配置文件参数mbr.useManafirm来判断；设置为true，使用集团账户，默认为false。<br>
+项目为非集团会员时配置：</p> <img src="/blog/img/wechat/5.png" alt="图片">  
+为集团会员时配置：  
+<img src="/blog/img/wechat/6.png" alt="图片"> <img src="/blog/img/wechat/7.png" alt="图片"> <h3 id="_4-生成登录地址-将以下链接中的appid和-redirect-uri-替换为对应的appid和域名www-abacus-com即可。"><a href="#_4-生成登录地址-将以下链接中的appid和-redirect-uri-替换为对应的appid和域名www-abacus-com即可。" class="header-anchor">#</a> 4.生成登录地址:将以下链接中的APPID和 REDIRECT_URI 替换为对应的APPID和域名www.abacus.com即可。</h3> <p>https://open.weixin.qq.com/connect/oauth2/authorize?appid=<strong>APPID</strong>&amp;redirect_uri=http%3a%2f%2f<strong>REDIRECT_URI</strong>%2fmember%2fapp%2fbasic%2fweixinCodeLogin&amp;response_type=%20code&amp;scope=snsapi_userinfo&amp;state=200&amp;connect_redirect=1#wechat_redirect</p> <h3 id="_5-将4中拼接而成的地址-配置到公众号菜单"><a href="#_5-将4中拼接而成的地址-配置到公众号菜单" class="header-anchor">#</a> 5.将4中拼接而成的地址，配置到公众号菜单</h3> <img src="/blog/img/wechat/8.png" alt="图片"> <p><strong>完成以上，即可使用公众号登录会员H5。</strong></p> <h2 id="注意"><a href="#注意" class="header-anchor">#</a> 注意：<span class="badge tip" style="vertical-align:top;" data-v-15b7b770>注意</span></h2> <ol><li>第<strong>4</strong>完成后，可将链接拷贝至微信，看能否正常跳转到会员H5，再绑定第<strong>5</strong>步，减少重复修改</li> <li>加载图片验证码时可能出错
+<img src="/blog/img/wechat/9.png" alt="图片">
+原因是生成图片需要在Headless模式下，在会员系统tomcat/bin/catalina.sh文件中
+在所有类似以下代码：<br>
+&quot;$_RUNJAVA&quot; $JAVA_OPTS $CATALINA_OPTS \<br>
+-Djava.endorsed.dirs=&quot;$JAVA_ENDORSED_DIRS&quot; -classpath &quot;$CLASSPATH&quot; \<br>
+-Djava.security.manager \<br>
+-Djava.security.policy==&quot;$CATALINA_BASE&quot;/conf/catalina.policy \<br>
+-Dcatalina.base=&quot;$CATALINA_BASE&quot; \<br>
+-Dcatalina.home=&quot;$CATALINA_HOME&quot; \<br>
+-Djava.io.tmpdir=&quot;$CATALINA_TMPDIR&quot; \</li></ol> <p>在尾部加上一句：
+-Djava.awt.headless=true \</p> <p>修改后内容如下：<br>
+exec &quot;$_RUNJAVA&quot; $JAVA_OPTS $CATALINA_OPTS \<br>
+-Djava.endorsed.dirs=&quot;$JAVA_ENDORSED_DIRS&quot; -classpath &quot;$CLASSPATH&quot; \<br>
+-Dcatalina.base=&quot;$CATALINA_BASE&quot; \<br>
+-Dcatalina.home=&quot;$CATALINA_HOME&quot; \<br>
+-Djava.io.tmpdir=&quot;$CATALINA_TMPDIR&quot; \<br>
+-Djava.awt.headless=true \</p> <p>以tomcat6.0为例，总共有七处这样的地方。然后重启tomcat服务器<br>
+3. 可在 wechat/js/config/abacus-basic-config.js中修改项目名称，公司logo,幻灯片，推送广告等。<br>
+4. 部分机型使用附近门店获取定位不精确的情况，其原因如下：
+<img src="/blog/img/wechat/10.png" alt="图片"></p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.c5f689e5.js" defer></script><script src="/blog/assets/js/2.a7057afa.js" defer></script><script src="/blog/assets/js/34.23390c01.js" defer></script><script src="/blog/assets/js/9.07fc8606.js" defer></script>
+  </body>
+</html>

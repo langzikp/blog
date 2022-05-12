@@ -33,9 +33,10 @@ module.exports = [
     ]
   },
   {
-    text: '文档',
+    text: '操作文档',
     ariaLabel: '整理 文档',
     items: [
+      { text: '微信公众号H5配置流程', link: '/documents/wechat-h5' },
       { text: '微信小程序客服绑定流程', link: '/documents/mini-program-customer-service' },
     ]
   },
