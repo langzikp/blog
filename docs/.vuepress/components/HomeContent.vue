@@ -23,11 +23,12 @@
           ></a>
         </div>
         <div class="name">Lang Nie</div>
-        <div class="tag">前端界的小学徒</div>
+        <div class="tag">前端小学徒升级打怪中...</div>
       </div>
       <div class="category">
         <h3><i class="iconfont icon-lianjie"></i> 快速链接</h3>
         <div>
+          <a class="color6" href="https://developer.mozilla.org/zh-CN/" target="blank">MDN</a>
           <a class="color1" href="https://cn.vuejs.org/" target="blank">Vue</a>
           <a class="color2" href="https://vuepress.vuejs.org/zh/" target="blank"
             >VuePress</a

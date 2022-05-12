@@ -24,6 +24,7 @@ module.exports = {
         ['notes', '学习笔记'],
         ['weight', 'CSS 特性及权重'],
         ['tool', 'CSS 高频实用片段'],
+        ['css-border', 'CSS 边框效果'],
     ],
     '/javascript/': [
         ['notes', '学习笔记'],

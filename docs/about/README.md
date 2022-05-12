@@ -13,7 +13,10 @@ sidebar: false
 :::
 
 ## :haircut_man: 我
-一个`Java后端`转`Web前端`的小学徒
+一年Java  
+四年前端  
+小学徒升级打怪中...  
+
 
 ### 技能
 * 了解java开发流程，应用部署
@@ -23,8 +26,7 @@ sidebar: false
 * 熟悉 微信公众号，小程序开发
 
 ### 公众号
-一个拿来测试的公众号  
-![公众号二维码](/img/wechat.jpg "公众号二维码")
+<img :src="$withBase('/img/wechat.jpg')" alt="公众号二维码">
 
 ## :email: 联系
 - QQ: <a href="tencent://message/?uin=819750949&Site=&Menu=yes">819750949</a>

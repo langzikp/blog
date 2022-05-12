@@ -7,8 +7,6 @@
 ### 2.	添加客服
 菜单： 功能---客服---添加（最多添加100个客服）
 
-![这是图片](/img/wechat/mini-program/01.jpg "Magic Gardens")
-
 
 ### 3.客服登录上线
 登录客服消息管理工具，进行消息回复
@@ -18,7 +16,7 @@
 
 - 移动端小程序客服工具 
 
-![这是图片](/img/wechat/mini-program/02.jpg "Magic Gardens")
+<img :src="$withBase('/img/wechat/mini-program/02.jpg')" alt="图片">
 
 ### 附：使用说明 及 使用规范
 

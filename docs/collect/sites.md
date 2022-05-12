@@ -28,11 +28,12 @@
 ## 互动
 - [兔小巢](https://txc.qq.com/)用户意见反馈服务平台
 
-## 文档压缩(图片，gif，pdf压缩)
+## 图片/文档工具
 - [docmall](https://docsmall.com/image-compress)
 - [图贴士](https://www.tutieshi.com/)
-- [image compress](https://www.iloveimg.com/zh-cn/compress-image/compress-gif)
-
+- [image compress](https://www.iloveimg.com/zh-cn/compress-image/compress-gif) 图片压缩编辑
+- [微图](https://devtool.tech/tiny-image) 同时生成webp，avif格式
+- [remove](https://www.remove.bg/zh) AI抠图 图片背景消除
 
 ## 博客
 - [阮一峰的网络日志](http://www.ruanyifeng.com/blog/)
@@ -67,9 +68,7 @@
 > Windows系统下按<kbd>Win</kbd> + <kbd>.</kbd><br/>
 > Mac系统下按<kbd>Control</kbd> + <kbd>Command</kbd> + <kbd>空格</kbd>
 
-## 图片工具
-- [微图](https://devtool.tech/tiny-image) 浏览器端图片压缩，不会上传图片到服务器
-- [remove](https://www.remove.bg/zh) AI抠图
+
 
 ## 思维导图
 - [processon在线作图](https://www.processon.com/) 流程图、思维导图、原型图等
