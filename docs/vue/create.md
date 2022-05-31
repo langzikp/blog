@@ -33,7 +33,7 @@ $ npm config set registry https://registry.npm.taobao.org/
 $ npm install -g yarn
 
 # 查看版本
-$ yarn --version
+$ yarn -v
 1.22.17
 
 # 查看yarn当前镜像源

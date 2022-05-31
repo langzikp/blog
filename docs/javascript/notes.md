@@ -130,3 +130,11 @@ arr4.flat(Infinity);
 [Array.prototype.flat 详解](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)  
 
 
+## apply，call，bind的区别
+作用：用于改变this的指向  
+区别：  
+- 三者都可以改变函数的this对象指向。
+- 三者第一个参数都是this要指向的对象，如果如果没有这个参数或参数为undefined或null，则默认指向全局window。
+- 三者都可以传参，但是apply是数组，而call是参数列表，且apply和call是一次性传入参数，而bind可以分为多次传入。
+- bind 是返回绑定this之后的函数，便于稍后调用；apply 、call 则是立即执行 。
+[彻底弄懂bind，apply，call三者的区别](https://zhuanlan.zhihu.com/p/82340026)  

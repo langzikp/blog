@@ -19,10 +19,35 @@ module.exports = [
       { text: 'React', link: '/react/notes' },
       { text: 'Git', link: '/git/' },
       { text: '性能优化', link: '/performance-optimization/' },
-      { text: 'Q&A', link: '/questions-answers/' },
+      // { text: 'Q&A', link: '/questions-answers/' },
     ]
   },
   { text: '后端', link: '/backend/' },
+  {
+    text: '课程笔记',
+    ariaLabel: '课程笔记',
+    items: [
+      { text: '1-JavaScript进阶', link: '/course-notes/1-JavaScript进阶/1-1函数/01-内存管理.md' },
+      { text: '2-Vue框架源码&项目实战', link: '/course-notes' },
+      { text: '3-React框架源码解析', link: '/course-notes/' },
+      { text: '4-网易特色项目React实战', link: '/course-notes/' },
+      { text: '5-工程化', link: '/course-notes/' },
+      { text: '6-Node.js进阶', link: '/course-notes/' },
+      { text: '7-D3.js实现知识图谱可视化', link: '/course-notes/' },
+      { text: '8-网易花田移动端综合项目实战', link: '/course-notes/' },
+      { text: '课前预习专题计算机网络', link: '/course-notes/' },
+      { text: '', link: '/course-notes/' },
+    ]
+  },
+  {
+    text: 'Q&A',
+    ariaLabel: 'Q&A',
+    items: [
+      { text: 'HTMl-CSS', link: '/interview-question/html-css' },
+      { text: 'JavaScript', link: '/interview-question/javascript' },
+    ]
+  },
+
   {
     text: '记录',
     ariaLabel: '学习 Menu',
@@ -30,12 +55,6 @@ module.exports = [
       { text: '我的书单', link: '/booklist/' },
       { text: '学习', link: '/booklist/study' },
       { text: '语录', link: '/booklist/quotations' },
-    ]
-  },
-  {
-    text: '操作文档',
-    ariaLabel: '整理 文档',
-    items: [
       { text: '微信公众号H5配置流程', link: '/documents/wechat-h5' },
       { text: '微信小程序客服绑定流程', link: '/documents/mini-program-customer-service' },
     ]

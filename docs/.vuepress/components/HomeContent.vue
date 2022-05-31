@@ -73,8 +73,9 @@
             target="blank"
             >Markdown</a
           >
-          <a class="color6" href="https://gitee.com/login" target="blank">Gitee</a>
           <a class="color2" href="https://github.com/" target="blank">GitHub</a>
+          <a class="color6" href="https://gitee.com/login" target="blank">Gitee</a>
+          <a class="color3" :href="$withBase('/git')" target="blank">Git命令</a>
           <a
             class="color5"
             href="https://developers.weixin.qq.com/miniprogram/dev/framework/"

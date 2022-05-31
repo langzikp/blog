@@ -48,13 +48,12 @@ arr.forEach((value, index, array) => {
 var newArray = arr.filter(callback(element[, index[, array]])[, thisArg])
 ```
 ```js 
-const arr = [3, 8, 99, 44, 3]
-arr.forEach((value, index, array) => {
-    // value 数组中当前项的值
-    // index 当前项在数组中的索引
-    // array 数组对象本身
-    console.log(value, index, array);
-})
+const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+const result = words.filter(word => word.length > 6);
+
+console.log(result);
+// expected output: Array ["exuberant", "destruction", "present"]
 ```
 
 ## some
@@ -102,12 +101,21 @@ console.log(newArr);  // 返回['b', 'c']
 - reduceRight则是从右到左（从最后一个成员到第一个成员），其他完全一样。
 ```js 
 // 语法
-reduce((previousValue, currentValue, currentIndex, array) => { /* ... */ }, initialValue)
+array.reduce(function(total, currentValue[, currentIndex[, array]]), initialValue)
+array.reduceRight(function(total, currentValue[, currentIndex[, array]]), initialValue)
+
+
+//函数参数:
+// total	必需。初始值, 或者计算结束后的返回值。
+// currentValue	必需。当前元素
+// currentIndex	可选。当前元素的索引
+// arr	可选。当前元素所属的数组对象。
+// initialValue	可选。传递给函数的初始值
 ```
 ```js 
-[1, 2, 3, 4, 5].every(function (elem, index, arr) {
-    return elem >= 3;
-}) // false
+[1, 2, 3, 4, 5].reduce(function (total, currentValue) {
+    return total + currentValue;
+}) 
 ```
 
 ## for…in… 循环

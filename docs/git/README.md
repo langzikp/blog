@@ -1,4 +1,6 @@
 # Git 常用命令 
+[廖雪峰Git教程](https://www.liaoxuefeng.com/wiki/896043488029600)  
+[常用 Git 命令清单 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
 ## 仓库
 ```md
 # 在当前目录新建一个Git代码库

@@ -1,3 +1,4 @@
+const courseNotes = require('./sidebar-course-notes')
 /*
 * 将侧边栏放置在该文件中,集中进行管理
 * @Autor: niel
@@ -5,7 +6,7 @@
 * @Version: 1.0.1
 */
 module.exports = {
-    
+
     // 开发规范
     '/develop-norm/': [
         ['engineer', '工程师规范'],
@@ -41,20 +42,27 @@ module.exports = {
     ],
     '/git/': [
         ['', 'git 常用命令'],
-       
+
     ],
-   
+
     '/performance-optimization/': [
         ['', 'web 性能优化'],
-       
+
     ],
     '/questions-answers/': [
         ['', 'Q&A'],
-       
+
+    ],
+    '/interview-question/': [
+        ['html-css', 'HTML-CSS'],
+        ['javascript', 'JavaScript']
     ],
 
     // 后端
     '/backend/': ['',],
+
+    // 课程笔记
+    '/course-notes/': courseNotes,
 
     // 我的书单
     '/booklist/': [{
@@ -65,22 +73,22 @@ module.exports = {
         children: [
             ['/booklist/', '我的书单'],
         ]
-      },
-      {
+    },
+    {
         title: '学习方法',
-        sidebarDepth: 0,  
+        sidebarDepth: 0,
         children: [
             ['/booklist/study', '费曼学习法'],
         ],
         initialOpenGroupIndex: -1 // 可选的, 默认值是 0
-      },{
+    }, {
         title: '语录',
-        sidebarDepth: 0,  
+        sidebarDepth: 0,
         children: [
             ['/booklist/quotations', '语录'],
         ],
         initialOpenGroupIndex: -1 // 可选的, 默认值是 0
-      },],
+    },],
     // 收藏
     '/collect/': [
         ['frame', '框架及UI库'],
