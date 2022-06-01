@@ -138,3 +138,19 @@ arr4.flat(Infinity);
 - 三者都可以传参，但是apply是数组，而call是参数列表，且apply和call是一次性传入参数，而bind可以分为多次传入。
 - bind 是返回绑定this之后的函数，便于稍后调用；apply 、call 则是立即执行 。
 [彻底弄懂bind，apply，call三者的区别](https://zhuanlan.zhihu.com/p/82340026)  
+
+## 参数arguments 转换成数组的方式
+- `arguments` 是一个类数组对象，里面保存着调用函数时传入的实参
+- `arguments` 虽然可以通过下标获取其中的元素，也有 `length` 属性，但是却不是一个数组，因此不能使用数组的方法。
+- `arguments` 还有一个 `callee` 属性，这个属性指向 `arguments` 所在函数本身。
+```js
+// arguments 转为数组的方法
+var args = Array.prototype.slice.call(arguments);
+var args = [].slice.call(arguments);
+var args = Array.prototype.slice.apply(arguments);
+var args = [].slice.apply(arguments);
+
+// ES2015
+const args = Array.from(arguments);
+const args = [...arguments];
+```
