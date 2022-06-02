@@ -85,3 +85,19 @@ constructor 是 Object 类型的原型属性，它能够返回当前对象的构
 - Object.prototype.toString.call()
 [Object.prototype.toString.call解析](https://blog.csdn.net/hanyanshuo/article/details/104620122)  
 缺点：不能细分为谁谁的实例
+
+## 对于isNaN 和 Number.isNaN 函数区别的理解。
+
+isNaN函数 会将参数转换为数值，如果转换后是Number类型则返回true，否则返回false；  
+
+Number.isNaN会严格盘点参数是否为NaN，不会进行类型转换，只有参数是值为NaN的数字是才返回true
+
+## JavaScript中，对于hasOwnProperty函数的理解。
+hasOwnProperty函数用于指示对象自身（不包括原型链）是否具有指定名称的属性，有返回true，没有则返回false 
+
+## Object.is()与原来的比较操作符"==="、"==”的区别。
+- Object.is() 与 “==” 的区别在于： “==” 会在判断相等前对两边的变量（如果类型不相同）进行强制类型转换（会将 "" == false 判断为true），而Object.is()不会进行强制类型转换。
+
+
+
+- Object.is() 与 “===” 的区别在于：它们对有符号的 0 和 NaN 判断不同，“===”将 +0 和 -0视为相等，将NaN===NaN视为不等；而Object.is() 将 +0 和 -0视为不等，将NaN和NaN视为相等
