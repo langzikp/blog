@@ -16,7 +16,7 @@ const chapters = [
             },
             {
                 name: '1-2异步编程',
-                contents: ['01-理解异步', '02-Event Loop事件循环']
+                contents: ['01-理解异步', '02-Event Loop事件循环','03-异步编程-发布与订阅','04-深入理解Promise','05-Generator函数及其异步应用']
             }
         ]
     },
@@ -40,12 +40,14 @@ const courses = [];
 for (const chapter of chapters) {
     let temp1 = {
         title: chapter.name,   // 必要的
+        collapsable: false    // 可选的, 默认值是 true,collapsable: false 来让一个组永远都是展开状态。
     }
 
     let sections = []
     for (const section of chapter.sections) {
         let temp2 = {
-            title: section.name
+            title: section.name,
+            collapsable: false    // 可选的, 默认值是 true,collapsable: false 来让一个组永远都是展开状态。
         }
 
         let contents = []

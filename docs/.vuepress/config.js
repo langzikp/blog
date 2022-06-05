@@ -8,7 +8,7 @@ module.exports = {
     head: [
         ['link', { rel: 'icon', href: '/img/favicon.png' }]
     ],
-    host: '192.9.200.119',
+    host: 'localhost',
     port: '8080',
     markdown: {
         lineNumbers: true

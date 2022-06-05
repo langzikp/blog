@@ -150,6 +150,8 @@ var args = [].slice.call(arguments);
 var args = Array.prototype.slice.apply(arguments);
 var args = [].slice.apply(arguments);
 
+// slice 方法原理就是根据传入的参数（值）对原数组（或者类数组）进行遍历获取，赋给新数组然后返回。如果没有参数便复制整个原数组（或者类数组），后赋给新数组然后返回。
+
 // ES2015
 const args = Array.from(arguments);
 const args = [...arguments];
