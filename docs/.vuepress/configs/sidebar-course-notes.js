@@ -17,6 +17,10 @@ const chapters = [
             {
                 name: '1-2异步编程',
                 contents: ['01-理解异步', '02-Event Loop事件循环','03-异步编程-发布与订阅','04-深入理解Promise','05-Generator函数及其异步应用', '06-基于Thunk函数的Generator自动执行器', '07-co模块源码分析', '08-深入理解Async和Await', '09-手写Promise上', '10-手写Promise下', '11-WebWorker多线程机制', '12-复杂异步场景下的解决方案Rxjs']
+            },
+            {
+                name: '1-3设计模式',
+                contents: ['01-设计模式', ]
             }
         ]
     },
