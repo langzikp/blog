@@ -40,6 +40,10 @@ module.exports = {
     '/react/': [
         ['notes', '学习笔记'],
     ],
+    '/nodejs/': [
+        ['', 'Node.js'],
+        ['version-management', 'Node.js多版本管理器'],
+    ],
     '/git/': [
         ['', 'git 常用命令'],
 

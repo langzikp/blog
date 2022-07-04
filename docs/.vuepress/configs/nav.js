@@ -17,6 +17,7 @@ module.exports = [
       { text: 'Javascript', link: '/javascript/notes' },
       { text: 'Vue', link: '/vue/notes' },
       { text: 'React', link: '/react/notes' },
+      { text: 'Nodejs', link: '/nodejs/' },
       { text: 'Git', link: '/git/' },
       { text: '性能优化', link: '/performance-optimization/' },
       // { text: 'Q&A', link: '/questions-answers/' },
@@ -28,7 +29,7 @@ module.exports = [
     ariaLabel: '课程笔记',
     items: [
       { text: '1-JavaScript进阶', link: '/course-notes/1-JavaScript进阶/1-1函数/01-内存管理.md' },
-      { text: '2-Vue框架源码&项目实战', link: '/course-notes' },
+      { text: '2-Vue框架源码&项目实战', link: '/course-notes/2-Vue框架源码and项目实战/2-1课程导学/01-Vue专题导学.md' },
       { text: '3-React框架源码解析', link: '/course-notes/' },
       { text: '4-网易特色项目React实战', link: '/course-notes/' },
       { text: '5-工程化', link: '/course-notes/' },

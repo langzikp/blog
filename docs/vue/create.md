@@ -46,7 +46,8 @@ $ yarn config set registry https://registry.npm.taobao.org/
 
 ### 安装开发工具 Visual Studio Code
 - 安装插件：Vetur  —— 语法高亮、智能感知、Emmet等
-- 安装插件：Vue VSCode Snippets   —— 模板快速生成代码片段
+- 安装插件：Vue VSCode Snippets   —— 模板快速生成代码片段  
+  **VSCode 快速生成vue模板插件**[命令参考官网](https://github.com/sdras/vue-vscode-snippets)
 
 ## Vue CLI 搭建项目
 Vue CLI官方地址[Vue CLI](https://cli.vuejs.org/zh/)
