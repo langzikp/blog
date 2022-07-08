@@ -42,6 +42,9 @@ const chapters = [
             {
                 name: '2-4深入vue源码设计',
                 contents: ['01-响应式源码分析', '02-异步更新队列NextTick源码分析', '03-Diff算法分析', '04-Computed和Watch源码分析']
+            }, {
+                name: '2-5Vue生态及实践',
+                contents: ['01-Vuex', '02-Router']
             }
         ]
     },
