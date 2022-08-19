@@ -29,7 +29,8 @@
         <h3><i class="iconfont icon-lianjie"></i> 快速链接</h3>
         <div>
           <a class="color6" href="https://developer.mozilla.org/zh-CN/" target="blank">MDN</a>
-          <a class="color1" href="https://cn.vuejs.org/" target="blank">Vue</a>
+          <a class="color1" href="https://v2.cn.vuejs.org/" target="blank">Vue2</a>
+          <a class="color7" href="https://cn.vuejs.org/" target="blank">Vue3</a>
           <a class="color2" href="https://vuepress.vuejs.org/zh/" target="blank"
             >VuePress</a
           >
@@ -51,12 +52,17 @@
           <a class="color2" href="https://react.docschina.org/" target="blank"
             >React</a
           >
-          <a class="color3" href="https://uniapp.dcloud.io/" target="blank"
+          <a class="color8" href="https://uniapp.dcloud.io/" target="blank"
             >uni-app</a
           >
-          <a class="color4" href="https://uniui.dcloud.net.cn/" target="blank"
+          <a class="color7" href="https://uniui.dcloud.net.cn/" target="blank"
             >uni-ui</a
           >
+          
+          <a class="color4" href="https://v1.uviewui.com/guide/demo.html" target="blank"
+            >uView</a
+          >
+
           <a class="color5" href="https://jquery.cuishifeng.cn/" target="blank"
             >jQuery</a
           >
@@ -255,6 +261,12 @@ export default {
 
       .color6 {
         background-color: #f8b26a;
+      }
+      .color7 {
+        background-color: #f8b56a;
+      }
+      .color8 {
+        background-color: #f9b26a;
       }
     }
   }

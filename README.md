@@ -6,18 +6,15 @@
 #### 软件架构
 使用vuepress 搭建的个人博客
 
+#### 安装依赖
+yarn
 
-#### 安装教程
+#### 启动服务
+yarn dev
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+#### 打包构建
+yarn build
 
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
 
 #### 参与贡献
 

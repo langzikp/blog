@@ -42,6 +42,7 @@ module.exports = {
     ],
     '/nodejs/': [
         ['', 'Node.js'],
+        ['npm', 'npm包管理器'],
         ['version-management', 'Node.js多版本管理器'],
     ],
     '/git/': [
