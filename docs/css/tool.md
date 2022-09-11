@@ -37,18 +37,109 @@ input{
 }
 ```
 
+## input type="number"尾部的箭头
+```css
+input::-webkit-inner-spin-button { 
+  -webkit-appearance: none;
+}
+```
+
+## input radio/checkbox 样式修改
+:::details radio/checkbox
+```css
+.user-defined-input:checked {
+        background:#3B3C3D;
+}
+.user-defined-input {
+  width:25px;
+  height:25px;
+  background-color:rgba(0, 0, 0, 0);
+  border:solid 1px #dddddd;
+  -webkit-border-radius:50%;
+  border-radius:50%;
+  font-size:0.8rem;
+  margin:0;
+  padding:0;
+  position:relative;
+  display:inline-block;
+  vertical-align:top;
+  cursor:default;
+  -webkit-appearance:none;
+  -webkit-user-select:none;
+  user-select:none;
+  -webkit-transition:background-color ease 0.1s;
+  transition:background-color ease 0.1s;
+}
+.user-defined-input:checked::after {
+  content:'';
+  top:5px;
+  left:5px;
+  position:absolute;
+  background:transparent;
+  border:#fff solid 2px;
+  border-top:none;
+  border-right:none;
+  height:6px;
+  width:10px;
+  -moz-transform:rotate(-45deg);
+  -ms-transform:rotate(-45deg);
+  -webkit-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+}
+```
+:::
+
+<style type="text/css">
+.user-defined-input:checked {
+        background:#3B3C3D;
+}
+.user-defined-input {
+        width:25px;
+        height:25px;
+        background-color:rgba(0, 0, 0, 0);
+        border:solid 1px #dddddd;
+        -webkit-border-radius:50%;
+        border-radius:50%;
+        font-size:0.8rem;
+        margin:0;
+        padding:0;
+        position:relative;
+        display:inline-block;
+        vertical-align:top;
+        cursor:default;
+        -webkit-appearance:none;
+        -webkit-user-select:none;
+        user-select:none;
+        -webkit-transition:background-color ease 0.1s;
+        transition:background-color ease 0.1s;
+}
+.user-defined-input:checked::after {
+        content:'';
+        top:5px;
+        left:5px;
+        position:absolute;
+        background:transparent;
+        border:#fff solid 2px;
+        border-top:none;
+        border-right:none;
+        height:6px;
+        width:10px;
+        -moz-transform:rotate(-45deg);
+        -ms-transform:rotate(-45deg);
+        -webkit-transform:rotate(-45deg);
+        transform:rotate(-45deg);
+}
+</style>
+
+<input class="user-defined-input" type="radio" name="sex" checked/>  男
+<input class="user-defined-input" type="radio" name="sex"/>  女
+
 ## 改变光标颜色
 ```css
 .input {
   caret-color: #ffd476;
 }
 
-```
-## input type="number"尾部的箭头
-```css
-input::-webkit-inner-spin-button { 
-  -webkit-appearance: none;
-}
 ```
 
 ## 水平垂直居中
