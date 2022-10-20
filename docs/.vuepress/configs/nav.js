@@ -20,6 +20,7 @@ module.exports = [
       { text: 'Nodejs', link: '/nodejs/' },
       { text: 'Git', link: '/git/' },
       { text: '性能优化', link: '/performance-optimization/' },
+      { text: '前端安全', link: '/web-security/xss' },
       // { text: 'Q&A', link: '/questions-answers/' },
     ]
   },

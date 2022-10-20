@@ -31,6 +31,7 @@ module.exports = {
         ['notes', '学习笔记'],
         ['es6', 'ES6 语法'],
         ['array', '数组循环总结'],
+        ['regexp', '正则表达式'],
         ['questions-answers', 'Q&A']
     ],
     '/vue/': [
@@ -52,6 +53,11 @@ module.exports = {
 
     '/performance-optimization/': [
         ['', 'web 性能优化'],
+
+    ],
+    '/web-security/': [
+        ['xss', '前端安全之XSS攻击'],
+        ['csrf', '前端安全之CSRF攻击'],
 
     ],
     '/questions-answers/': [
