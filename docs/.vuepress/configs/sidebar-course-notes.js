@@ -4,8 +4,6 @@
 * @Date: 2022-05-30
 * @Version: 1.0.0
 */
-const ROOT_CONTENT = 'course-notes'
-
 const chapters = [
     {
         name: '1-JavaScript进阶',
@@ -62,10 +60,9 @@ for (const chapter of chapters) {
         let temp2 = {
             title: section.name,
         }
-
         let contents = []
         for (const item of section.contents) {
-            contents.push([`/${ROOT_CONTENT}/${chapter.name}/${section.name}/${item}.md`, item])
+            contents.push([`/course-notes/${chapter.name}/${section.name}/${item}.md`, item])
         }
         temp2.children = contents
         sections.push(temp2)

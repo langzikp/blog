@@ -5,7 +5,7 @@
 - 宏任务（队列）macroTask：`script`，计时器(`setTimeout`， `setInterval`)，ajax请求，dom事件
 - 微任务（队列）microTask：`Promise.then`, `MutationObserver` 
 
-## 事件循环闭环流程
+## 事件循环闭环流程 
 当主线程执行栈为空时，执行以下步骤：
 
 1. 执行微任务队列  
