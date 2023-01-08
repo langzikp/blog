@@ -68,7 +68,7 @@
           >
           <a
             class="color1"
-            href="https://www.bookstack.cn/read/es6-3rd/sidebar.md"
+            href="https://es6.ruanyifeng.com/#docs/let"
             target="blank"
             >ES6</a
           >
