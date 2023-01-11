@@ -13,6 +13,7 @@
 ## uni-app及uni-ui 组件库
 - [uni-app](https://uniapp.dcloud.io/)
 - [uni-ui](https://uniui.dcloud.net.cn/components/number-box.html)
+- [uview-ui](https://v1.uviewui.com/guide/demo.html)
 
 ## 常用效果组件
 - [Animate.css](https://animate.style/) 动画库
