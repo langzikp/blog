@@ -43,6 +43,15 @@ const chapters = [
             }, {
                 name: '2-5Vue生态及实践',
                 contents: ['01-Vuex', '02-Router']
+            }, {
+                name: '2-6掘金Top10列表页实践',
+                contents: ['01-实践']
+            }, {
+                name: '2-7配置中心',
+                contents: ['01-配置中心']
+            }, {
+                name: '2-8优化实践',
+                contents: ['01-keep-alive实践', '02-长列表优化']
             }
         ]
     },

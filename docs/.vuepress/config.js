@@ -31,5 +31,5 @@ module.exports = {
     },
     plugins: [
         // '@vuepress/back-to-top',//回到顶部插件
-    ],
+    ]
 }

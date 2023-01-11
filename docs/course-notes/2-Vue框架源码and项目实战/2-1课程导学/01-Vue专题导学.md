@@ -31,8 +31,7 @@
   - Nuxt
     - 通过思路
     - 性能优化
-![这是图片](/img/course-img.jpg)
-
+<img :src="$withBase('img/course-img.jpg')" alt="图片">
 
 
 ## 补充：LRU算法

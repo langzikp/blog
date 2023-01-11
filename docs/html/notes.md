@@ -7,7 +7,8 @@
 - 方便搜索引擎能识别页面结构，有利于SEO
 - 方便其他设备解析（如移动设备、盲人阅读器等）
 
-![这是图片](/img/ct_sem_elements.png)
+<img :src="$withBase('img/ct_sem_elements.png')" alt="图片">
+
 
 ## HTML5废弃的标签及属性
 ### 移除的元素
