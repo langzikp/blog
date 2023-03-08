@@ -68,7 +68,7 @@
           >
           <a
             class="color1"
-            href="https://es6.ruanyifeng.com/#docs/let"
+            href="https://es6.ruanyifeng.com/#README"
             target="blank"
             >ES6</a
           >
@@ -94,6 +94,15 @@
           <a class="color5" href="https://www.runoob.com/" target="blank"
             >菜鸟教程</a
           >
+        </div>
+      </div>
+      <div class="wechat">
+        <h3 class="title">公众号</h3>
+        <div>
+          <img :src="$withBase('/img/wechat.jpg')" alt="公众号" />
+        </div>
+        <div>
+          关注公众号，回复[<strong>面试题</strong>]，可获取大厂面试题
         </div>
       </div>
     </div>
@@ -213,7 +222,7 @@ export default {
       opacity: 0.9;
 
       h3 {
-        margin: 5px 5px;
+        margin: 5px;
         font-weight: 400;
 
         .iconfont {
@@ -238,7 +247,6 @@ export default {
           transform: scale(1.2);
         }
       }
-
       .color1 {
         background-color: #9daf9f;
       }
@@ -269,6 +277,18 @@ export default {
         background-color: #f9b26a;
       }
     }
+
+    .wechat{
+        background-color: #fff;
+        border-radius: 8px;
+        margin-top: 10px;
+        padding: 10px;
+        opacity: 0.9;
+        h3{
+          margin: 5px;
+          font-weight: 400;
+        }
+      }
   }
 }
 

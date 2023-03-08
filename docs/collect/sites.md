@@ -25,8 +25,14 @@
 - [鱼塘热榜](https://mo.fish) 划水网站，收集了很多网站，当天热门文章
 - [码力全开资源库](https://maliquankai.com/designnav/) 很全很强大，独立开发者/设计干货/优质利器/工具资源...
 
+
 ## 互动
 - [兔小巢](https://txc.qq.com/)用户意见反馈服务平台
+
+## 工具
+- [草料二维码](https://cli.im/text)
+- [即时工具](https://www.67tool.com/)
+- [JSON格式化](https://www.sojson.com/)
 
 ## 图片/文档工具
 - [docmall](https://docsmall.com/image-compress)

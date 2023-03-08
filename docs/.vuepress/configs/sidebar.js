@@ -27,9 +27,40 @@ module.exports = {
         ['tool', 'CSS 高频实用片段'],
         ['css-border', 'CSS 边框效果'],
     ],
-    '/javascript/': [
+    // '/javascript/': [
+    //     ['notes', '学习笔记'],
+    //     [
+    //         {
+    //             title: 'ES6',   // 必要的
+    //             // path: '/booklist/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+    //             collapsable: true, // 可选的, 默认值是 true,collapsable: false 来让一个组永远都是展开状态。
+    //             sidebarDepth: 0,    // 可选的, 默认值是 1
+    //             children: [
+    //                 ['/ES6/01-ES6之let及const命令', '测试'],
+    //             ]
+    //         },
+    //     ],
+    //     ['array', '数组循环总结'],
+    //     ['regexp', '正则表达式'],
+    //     ['questions-answers', 'Q&A']
+    // ],
+    '/javascript/':  [
         ['notes', '学习笔记'],
-        ['es6', 'ES6 语法'],
+        {
+            title: 'ES6',   // 必要的
+            collapsable: true, // 可选的, 默认值是 true,collapsable: false 来让一个组永远都是展开状态。
+            sidebarDepth: 0,    // 可选的, 默认值是 1
+            children: [
+                ['/javascript/ES6/01-ES6之let及const命令', '01-ES6之let及const命令'],
+                ['/javascript/ES6/02-ES6之解构赋值', '02-ES6之解构赋值'],
+                ['/javascript/ES6/03-ES6之字符串扩展', '03-ES6之字符串扩展'],
+                ['/javascript/ES6/04-ES6之数值的扩展', '04-ES6之数值的扩展'],
+                ['/javascript/ES6/05-ES6之函数的扩展', '05-ES6之函数的扩展'],
+                ['/javascript/ES6/06-ES6之数组的扩展', '06-ES6之数组的扩展'],
+                ['/javascript/ES6/07-ES6之对象的扩展', '07-ES6之对象的扩展'],
+            ]
+        },
+        ['es6', 'es6'],
         ['array', '数组循环总结'],
         ['regexp', '正则表达式'],
         ['questions-answers', 'Q&A']
