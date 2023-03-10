@@ -57,6 +57,7 @@ module.exports = [
       { text: '我的书单', link: '/booklist/' },
       { text: '学习', link: '/booklist/study' },
       { text: '语录', link: '/booklist/quotations' },
+      { text: '十分钟搭建自己的个人博客', link: '/documents/build-blog' },
       { text: '微信公众号H5配置流程', link: '/documents/wechat-h5' },
       { text: '微信小程序客服绑定流程', link: '/documents/mini-program-customer-service' },
     ]

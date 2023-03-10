@@ -30,6 +30,12 @@ module.exports = {
 
     },
     plugins: [
-        // '@vuepress/back-to-top',//回到顶部插件
+        '@vuepress/back-to-top', // 回到顶部插件
+        '@vuepress/active-header-links', // 页面滚动时自动激活侧边栏链接的插件
+        {
+            sidebarLinkSelector: '.sidebar-link',
+            headerAnchorSelector: '.header-anchor'
+        }
+        
     ]
 }
