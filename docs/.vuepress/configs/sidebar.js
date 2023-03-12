@@ -58,6 +58,8 @@ module.exports = {
                 ['/javascript/ES6/05-ES6之函数的扩展', '05-ES6之函数的扩展'],
                 ['/javascript/ES6/06-ES6之数组的扩展', '06-ES6之数组的扩展'],
                 ['/javascript/ES6/07-ES6之对象的扩展', '07-ES6之对象的扩展'],
+                ['/javascript/ES6/08-ES6之对象的新增方法', '08-ES6之对象的新增方法'],
+                ['/javascript/ES6/09-ES6之运算符的扩展', '09-ES6之运算符的扩展'],
             ]
         },
         ['es6', 'es6'],
