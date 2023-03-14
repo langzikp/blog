@@ -5,7 +5,7 @@
             <a href="https://github.com/" target="blank"><i class="iconfont icon-github"></i></a>
             <a href="https://music.163.com/" target="blank"><i class="iconfont icon-erji"></i></a>
         </div>
-        <div>This is my blog for recording and learning| Copyright © 2019-2022 Lang Nie | MIT License</div>
+        <div>This is my blog for recording and learning| Copyright © 2019-present Lang Nie | MIT License</div>
     </div>
 </template>
 

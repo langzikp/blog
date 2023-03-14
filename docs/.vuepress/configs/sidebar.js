@@ -60,9 +60,11 @@ module.exports = {
                 ['/javascript/ES6/07-ES6之对象的扩展', '07-ES6之对象的扩展'],
                 ['/javascript/ES6/08-ES6之对象的新增方法', '08-ES6之对象的新增方法'],
                 ['/javascript/ES6/09-ES6之运算符的扩展', '09-ES6之运算符的扩展'],
+                ['/javascript/ES6/10-ES6之新增数据类型Symbol', '10-ES6之新增数据类型Symbol'],
+                ['/javascript/ES6/11-ES6之新增数据结构Map和Set', '11-ES6之新增数据结构Map和Set'],
             ]
         },
-        ['es6', 'es6'],
+        // ['es6', 'es6'],
         ['array', '数组循环总结'],
         ['regexp', '正则表达式'],
         ['questions-answers', 'Q&A']

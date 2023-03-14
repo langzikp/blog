@@ -26,18 +26,18 @@ module.exports = [
   },
   { text: '后端', link: '/backend/' },
   {
-    text: '课程笔记',
-    ariaLabel: '课程笔记',
+    text: '笔记',
+    ariaLabel: '笔记',
     items: [
-      { text: '0-计算机网络', link: '/course-notes/0-计算机网络/1课程导学/01-课程导学.md' },
+      // { text: '0-计算机网络', link: '/course-notes/0-计算机网络/1课程导学/01-课程导学.md' },
       { text: '1-JavaScript进阶', link: '/course-notes/1-JavaScript进阶/1-1函数/01-内存管理.md' },
       { text: '2-Vue框架源码&项目实战', link: '/course-notes/2-Vue框架源码and项目实战/2-1课程导学/01-Vue专题导学.md' },
-      { text: '3-React框架源码解析', link: '/course-notes/1' },
-      { text: '4-网易特色项目React实战', link: '/course-notes/2' },
-      { text: '5-工程化', link: '/course-notes/3' },
-      { text: '6-Node.js进阶', link: '/course-notes/4' },
-      { text: '7-D3.js实现知识图谱可视化', link: '/course-notes/5' },
-      { text: '8-网易花田移动端综合项目实战', link: '/course-notes/6' },
+      // { text: '3-React框架源码解析', link: '/course-notes/1' },
+      // { text: '4-网易特色项目React实战', link: '/course-notes/2' },
+      // { text: '5-工程化', link: '/course-notes/3' },
+      // { text: '6-Node.js进阶', link: '/course-notes/4' },
+      // { text: '7-D3.js实现知识图谱可视化', link: '/course-notes/5' },
+      // { text: '8-网易花田移动端综合项目实战', link: '/course-notes/6' },
     ]
     
   },

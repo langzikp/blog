@@ -1,11 +1,13 @@
 <template>
   <main
-    class="home"
+    class="home" :style="bgStyle"
     :aria-labelledby="data.heroText !== null ? 'main-title' : null"
-    :style="{backgroundImage: 'url(' + $withBase('/img/bg.png') + ')'}"
-
-
-  >
+  > 
+  
+    <div class="operation">
+      <div class="btn1" :class="{active: status==1}" @click="updateStatus('1')">主题一</div>
+      <div class="btn2" :class="{active: status==2}" @click="updateStatus('2')">主题二</div>
+    </div>
     <header class="hero">
       <img
         v-if="data.heroImage"
@@ -17,11 +19,11 @@
         {{ data.heroText || $title || "Hello" }}
       </h1>
 
-      <p v-if="data.tagline !== null" class="description">
+      <p v-if="data.tagline !== null" class="description" :style="{color: bgStyle.color}">
         {{ data.tagline || $description || "Welcome to your VuePress site" }}
       </p>
 
-      <p v-if="data.actionText && data.actionLink" class="action">
+      <p v-if="data.actionText && data.actionLink" class="action" :style="{color: bgStyle.color}">
         <NavLink class="action-button" :item="actionLink" />
       </p>
     </header>
@@ -34,8 +36,8 @@
       >
         <RouterLink :to="feature.link">
           <img :src="$withBase(feature.imgUrl)" />
-          <h2>{{ feature.title }}</h2>
-          <p>{{ feature.details }}</p>
+          <h2  :style="{color: bgStyle.color}">{{ feature.title }}</h2>
+          <p :style="{color: bgStyle.color}">{{ feature.details }}</p>
         </RouterLink>
       </div>
     </div>
@@ -57,7 +59,20 @@ export default {
   name: "HomeLayout",
 
   components: { NavLink },
-
+  data(){
+    return {
+      status: 1,
+      url: '',
+      bgStyle:{
+        color: '',
+        backgroundColor: '',
+        backgroundImage: '',
+      }
+    }
+  },
+  mounted(){
+    this.status = localStorage.getItem("blog_theme_status") || 1
+  },
   computed: {
     data() {
       return this.$page.frontmatter;
@@ -70,24 +85,70 @@ export default {
       };
     },
   },
+  watch:{
+    status: {
+      immediate: true,
+      handler(val){
+        if(val==1){
+          this.bgStyle.color = '#fff';
+          this.bgStyle.backgroundColor = '#28282d';
+          this.bgStyle.backgroundImage = `url(${this.$withBase('/img/bg.png')})`;
+          return
+        }
+        if(val==2){
+          this.bgStyle.color = '#28282d';
+          this.bgStyle.backgroundColor = '#fff';
+          this.bgStyle.backgroundImage = `url(${this.$withBase('/svg/bg.svg')})`;
+          return
+        }
+      }
+      
+    } 
+  },
+  methods:{
+    updateStatus(val){
+      this.status = val
+      window.localStorage.setItem("blog_theme_status",val)
+    }
+  }
 };
 </script>
 
 <style lang="stylus" scoped>
+
+.home{
+  position: relative;
+}
+.operation{
+  border-radius:10px;
+  background-color: #393939;
+  display: inline-flex;
+  align-items: center;
+  color: #fff;
+  position: absolute;
+  top: 25px;
+  cursor: pointer !important;
+  .btn1{
+    margin: 5px 5px 5px 15px;
+  }
+  .btn2{
+    margin: 5px 15px 5px 5px;
+  }
+  .active{
+    color: #69d8d5;
+  }
+}
+
 .home .features{
   border-top: none !important;
 }
  
 
 .home {
-  background-color: rgb(40,40,45);
   max-width:none;
   margin: none;
- 
   margin-top: 0
   padding: $navbarHeight 2rem 0;
-  // max-width: $homePageWidth;
-  // margin: 0px auto;
   display: block;
 
   .hero {
@@ -101,7 +162,7 @@ export default {
 
     h1 {
       font-size: 3rem;
-      color: #fff;
+
     }
 
     h1, .description, .action {
@@ -112,15 +173,14 @@ export default {
       max-width: 35rem;
       font-size: 1rem;
       line-height: 1.6rem;
-      color: lighten($textColor, 40%);
-      color: #fff;
+
 
     }
 
     .action-button {
       display: inline-block;
       font-size: 1.2rem;
-      color: #fff;
+    
       background-color: $accentColor;
       padding: 0.8rem 1.6rem;
       border-radius: 4px;
@@ -165,13 +225,8 @@ export default {
       font-weight: 500;
       border-bottom: none;
       padding-bottom: 0;
-      color: #fff;
+    
     }
-
-    p {
-       color: #fff;
-    }
-
     a{
       text-decoration: none;
     }
@@ -195,17 +250,6 @@ export default {
         50% {transform: translate(0px, -10px);}
       100% {transform: translate(0px, 0px);}
     }
-    // h2 {
-    //   font-size: 1.4rem;
-    //   font-weight: 500;
-    //   border-bottom: none;
-    //   padding-bottom: 0;
-    //   color: #fff;
-    // }
-
-    // p {
-    //    color: #fff;
-    // }
   }
 
   .footer {

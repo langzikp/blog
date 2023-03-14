@@ -139,11 +139,28 @@ export default {
           url: "/develop-norm/git",
         },
         {
+          title: "10分钟搭建一个免费个人博客网站",
+          author: "lang nie",
+          date: "2022-02-01",
+          tag: "documents",
+          url: "/documents/build-blog",
+          content: "身为一名技术人，怎么能没有一个属于自己的博客网站呢，跟着我10分钟快速搭建。",
+        },
+        {
           title: "记录一些有趣的网站",
           author: "lang nie",
-          date: "202019-02-01",
+          date: "2020-02-01",
           tag: "develop-norm",
           url: "/collect/sites.html#有趣",
+        },
+       
+        {
+          title: "常用的正则表达式",
+          author: "lang nie",
+          date: "2022-02-01",
+          tag: "documents",
+          url: "/javascript/regexp",
+          content: "这些正则表达式，工作中你一定会用到，快快收藏。",
         },
         {
           title: "关于我",

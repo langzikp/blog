@@ -5,19 +5,19 @@
 * @Version: 1.0.0
 */
 const chapters = [
-    {
-        name: '0-计算机网络',
-        sections: [
-            {
-                name: '1课程导学',
-                contents: ['01-课程导学']
-            },
-            {
-                name: '2网络协议',
-                contents: ['01-OSI七层模型', '02-TCP和IP协议和互联网协议群', '03-DNS和CDN']
-            },
-        ]
-    },
+    // {
+    //     name: '0-计算机网络',
+    //     sections: [
+    //         {
+    //             name: '1课程导学',
+    //             contents: ['01-课程导学']
+    //         },
+    //         {
+    //             name: '2网络协议',
+    //             contents: ['01-OSI七层模型', '02-TCP和IP协议和互联网协议群', '03-DNS和CDN']
+    //         },
+    //     ]
+    // },
     {
         name: '1-JavaScript进阶',
         sections: [
