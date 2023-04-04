@@ -60,6 +60,7 @@ module.exports = [
       { text: '十分钟搭建自己的个人博客', link: '/documents/build-blog' },
       { text: '微信公众号H5配置流程', link: '/documents/wechat-h5' },
       { text: '微信小程序客服绑定流程', link: '/documents/mini-program-customer-service' },
+      { text: '微信小程序上线准备', link: '/documents/mini-program-online' },
     ]
   },
   {
