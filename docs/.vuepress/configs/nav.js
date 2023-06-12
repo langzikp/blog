@@ -19,7 +19,7 @@ module.exports = [
       { text: 'React', link: '/react/notes' },
       { text: 'Nodejs', link: '/nodejs/' },
       { text: 'Git', link: '/git/' },
-      { text: '性能优化', link: '/performance-optimization/' },
+      { text: '优化', link: '/optimization/data-desensitization' },
       { text: '前端安全', link: '/web-security/xss' },
       // { text: 'Q&A', link: '/questions-answers/' },
     ]

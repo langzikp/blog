@@ -22,10 +22,13 @@ module.exports = {
 
     ],
     '/css/': [
-        ['notes', '学习笔记'],
+        ['notes', '浏览器是如何渲染页面的'],
         ['weight', 'CSS 特性及权重'],
+        ['css-computed', 'CSS 属性计算过程'],
+        ['css-include-block', 'CSS 之包含块'],
         ['tool', 'CSS 高频实用片段'],
         ['css-border', 'CSS 边框效果'],
+       
     ],
     // '/javascript/': [
     //     ['notes', '学习笔记'],
@@ -62,9 +65,11 @@ module.exports = {
                 ['/javascript/ES6/09-ES6之运算符的扩展', '09-ES6之运算符的扩展'],
                 ['/javascript/ES6/10-ES6之新增数据类型Symbol', '10-ES6之新增数据类型Symbol'],
                 ['/javascript/ES6/11-ES6之新增数据结构Map和Set', '11-ES6之新增数据结构Map和Set'],
+                ['/javascript/ES6/12-ES6之Reflect反射和Proxy代理', '12-ES6之Reflect反射和Proxy代理'],
             ]
         },
         // ['es6', 'es6'],
+        ['utils', '工具函数'],
         ['array', '数组循环总结'],
         ['regexp', '正则表达式'],
         ['questions-answers', 'Q&A']
@@ -83,12 +88,20 @@ module.exports = {
     ],
     '/git/': [
         ['', 'git 常用命令'],
+        ['manage-branch', 'git 分支管理'],
 
     ],
 
-    '/performance-optimization/': [
-        ['', 'web 性能优化'],
-
+    '/optimization/':  [
+        ['data-desensitization', '优化之数据脱敏'],
+        {
+            title: '性能优化',   // 必要的
+            // collapsable: true, // 可选的, 默认值是 true,collapsable: false 来让一个组永远都是展开状态。
+            // sidebarDepth: 0,    // 可选的, 默认值是 1
+            children: [
+                ['/optimization/submenu/doc1', '优化1'],
+            ]
+        },
     ],
     '/web-security/': [
         ['xss', '前端安全之XSS攻击'],

@@ -17,6 +17,7 @@
 - [Github](https://github.com/) 程序员同性交友社区
 - [码云](https://gitee.com/) 国内代码托管平台
 - [掘金](https://juejin.im/) 一个帮助开发者成长的社区
+- [CSDN](https://www.csdn.net/) 专业开发者社区
 - [简书](https://www.jianshu.com/) 有很多频道的创作社区
 - [思否](https://segmentfault.com/) 解决技术问题的社区
 - [stack overflow](https://stackoverflow.com/) 同上，外网的
@@ -40,6 +41,7 @@
 - [image compress](https://www.iloveimg.com/zh-cn/compress-image/compress-gif) 图片压缩编辑
 - [微图](https://devtool.tech/tiny-image) 同时生成webp，avif格式
 - [remove](https://www.remove.bg/zh) AI抠图 图片背景消除
+- [一键抠图](https://www.yijiankoutu.com/) 一键抠图,图片压缩，转换，修复，抠图在线网站
 
 ## 博客
 - [阮一峰的网络日志](http://www.ruanyifeng.com/blog/)

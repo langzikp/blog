@@ -1,6 +1,5 @@
 # Git 常用命令 
-[廖雪峰Git教程](https://www.liaoxuefeng.com/wiki/896043488029600)  
-[常用 Git 命令清单 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
+
 ## 仓库
 ```md
 # 在当前目录新建一个Git代码库
@@ -270,7 +269,7 @@ $ git reset --keep [commit]
 # 后者的所有变化都将被前者抵消，并且应用到当前分支
 $ git revert [commit]
 
-暂时将未提交的变化移除，稍后再移入
+# 暂时将未提交的变化移除，稍后再移入
 $ git stash
 $ git stash pop
 ```
@@ -282,3 +281,6 @@ $ git archive
 ```
 
 以上常用命令来自阮一峰老师的博客文章《常用 Git 命令清单》，感谢阮老师
+
+[廖雪峰Git教程](https://www.liaoxuefeng.com/wiki/896043488029600)  
+[常用 Git 命令清单 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
