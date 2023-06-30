@@ -41,6 +41,12 @@
             >Element UI</a
           >
           <a
+            class="color3"
+            href="https://element-plus.gitee.io/zh-CN/component/button.html"
+            target="blank"
+            >Element Plus</a
+          >
+          <a
             class="color6"
             href="https://vant-contrib.gitee.io/vant/#/zh-CN"
             target="blank"
@@ -55,9 +61,9 @@
           <a class="color8" href="https://uniapp.dcloud.io/" target="blank"
             >uni-app</a
           >
-          <a class="color7" href="https://uniui.dcloud.net.cn/" target="blank"
+          <!-- <a class="color7" href="https://uniui.dcloud.net.cn/" target="blank"
             >uni-ui</a
-          >
+          > -->
           
           <a class="color4" href="https://v1.uviewui.com/guide/demo.html" target="blank"
             >uView</a
@@ -91,9 +97,12 @@
           <a class="color4" href="https://www.iconfont.cn/" target="blank"
             >阿里矢量图标库</a
           >
-          <a class="color5" href="https://www.runoob.com/" target="blank"
+          <!-- <a class="color5" href="https://www.runoob.com/" target="blank"
             >菜鸟教程</a
-          >
+          > -->
+        </div>
+        <div class="more">
+          <a :href="$withBase('/documents/quick-entry')"> 更多>> </a>
         </div>
       </div>
       <div class="wechat">
@@ -294,7 +303,13 @@ export default {
         background-color: #f9b26a;
       }
     }
-
+    .more{
+      text-align: right;
+      font-size: 0.8rem;
+      a{
+        color: #333;
+      }
+    }
     .wechat{
         background-color: #fff;
         border-radius: 8px;

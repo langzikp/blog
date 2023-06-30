@@ -75,7 +75,9 @@ module.exports = {
         ['questions-answers', 'Q&A']
     ],
     '/vue/': [
-        ['create', 'vue项目搭建'],
+        ['create', 'vue2项目搭建'],
+        ['vue3', 'vue3后台项目搭建'],
+        ['optimize', 'vue常见优化手段'],
         ['notes', '学习笔记'],
     ],
     '/react/': [
@@ -106,6 +108,12 @@ module.exports = {
     '/web-security/': [
         ['xss', '前端安全之XSS攻击'],
         ['csrf', '前端安全之CSRF攻击'],
+
+    ],
+    '/network/': [
+        ['01', '网络分层模型和应用协议'],
+        ['02', '浏览器的通信能力'],
+        ['03', '跨域问题及解决方案'],
 
     ],
     '/questions-answers/': [

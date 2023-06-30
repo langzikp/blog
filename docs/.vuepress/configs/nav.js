@@ -15,13 +15,13 @@ module.exports = [
       { text: 'HTML', link: '/html/notes' },
       { text: 'CSS', link: '/css/notes' },
       { text: 'Javascript', link: '/javascript/notes' },
-      { text: 'Vue', link: '/vue/notes' },
+      { text: 'Vue', link: '/vue/create' },
       { text: 'React', link: '/react/notes' },
       { text: 'Nodejs', link: '/nodejs/' },
       { text: 'Git', link: '/git/' },
       { text: '优化', link: '/optimization/data-desensitization' },
       { text: '前端安全', link: '/web-security/xss' },
-      // { text: 'Q&A', link: '/questions-answers/' },
+      { text: '网络', link: '/network/01' },
     ]
   },
   { text: '后端', link: '/backend/' },
@@ -61,6 +61,7 @@ module.exports = [
       { text: '微信公众号H5配置流程', link: '/documents/wechat-h5' },
       { text: '微信小程序客服绑定流程', link: '/documents/mini-program-customer-service' },
       { text: '微信小程序上线准备', link: '/documents/mini-program-online' },
+      { text: '前端相关框架', link: '/documents/quick-entry' },
     ]
   },
   {

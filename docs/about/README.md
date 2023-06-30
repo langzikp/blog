@@ -20,10 +20,10 @@ sidebar: false
 
 ### 技能
 * 了解java开发流程，应用部署
-* 熟悉 HTML、CSS、JavaScript 
+* 熟悉 HTML、CSS、JavaScript、ES6
 * 熟悉 jQuery 
 * 熟悉 Vue
-* 熟悉 微信公众号，小程序开发
+* 熟悉 uni-app、微信公众号、小程序开发
 
 ### 公众号
 <img :src="$withBase('/img/wechat.jpg')" alt="公众号二维码">
