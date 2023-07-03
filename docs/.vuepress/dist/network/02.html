@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>浏览器的通信能力 | Lang&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/blog/img/favicon.png">
+    <meta name="description" content="this is my blog">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.4e27b305.css" as="style"><link rel="preload" href="/blog/assets/js/app.529646e1.js" as="script"><link rel="preload" href="/blog/assets/js/2.30db37c0.js" as="script"><link rel="preload" href="/blog/assets/js/124.d87dd78b.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.610b7dcb.js"><link rel="prefetch" href="/blog/assets/js/100.017b24e7.js"><link rel="prefetch" href="/blog/assets/js/101.b26df9de.js"><link rel="prefetch" href="/blog/assets/js/102.366cd169.js"><link rel="prefetch" href="/blog/assets/js/103.4fb0d60d.js"><link rel="prefetch" href="/blog/assets/js/104.40820814.js"><link rel="prefetch" href="/blog/assets/js/105.eada29af.js"><link rel="prefetch" href="/blog/assets/js/106.55d51a5b.js"><link rel="prefetch" href="/blog/assets/js/107.42769682.js"><link rel="prefetch" href="/blog/assets/js/108.a81e5d07.js"><link rel="prefetch" href="/blog/assets/js/109.515f0808.js"><link rel="prefetch" href="/blog/assets/js/11.c1c46bd4.js"><link rel="prefetch" href="/blog/assets/js/110.61206cbe.js"><link rel="prefetch" href="/blog/assets/js/111.69a65566.js"><link rel="prefetch" href="/blog/assets/js/112.0cebb226.js"><link rel="prefetch" href="/blog/assets/js/113.bb9a0aa9.js"><link rel="prefetch" href="/blog/assets/js/114.9abc2382.js"><link rel="prefetch" href="/blog/assets/js/115.95e7e41c.js"><link rel="prefetch" href="/blog/assets/js/116.bb9f0a91.js"><link rel="prefetch" href="/blog/assets/js/117.08f3a847.js"><link rel="prefetch" href="/blog/assets/js/118.bac305a9.js"><link rel="prefetch" href="/blog/assets/js/119.55c8fe31.js"><link rel="prefetch" href="/blog/assets/js/12.81ec3129.js"><link rel="prefetch" href="/blog/assets/js/120.68ba3287.js"><link rel="prefetch" href="/blog/assets/js/121.900acf1b.js"><link rel="prefetch" href="/blog/assets/js/122.8cdb59e5.js"><link rel="prefetch" href="/blog/assets/js/123.2c8d851f.js"><link rel="prefetch" href="/blog/assets/js/125.68deb30f.js"><link rel="prefetch" href="/blog/assets/js/126.b68f0482.js"><link rel="prefetch" href="/blog/assets/js/127.635b8aa1.js"><link rel="prefetch" href="/blog/assets/js/128.928b028a.js"><link rel="prefetch" href="/blog/assets/js/129.c25d51f4.js"><link rel="prefetch" href="/blog/assets/js/13.5d69b942.js"><link rel="prefetch" href="/blog/assets/js/130.9b9aebb5.js"><link rel="prefetch" href="/blog/assets/js/131.57ca5081.js"><link rel="prefetch" href="/blog/assets/js/132.c160cae0.js"><link rel="prefetch" href="/blog/assets/js/133.ab132816.js"><link rel="prefetch" href="/blog/assets/js/134.b6a27190.js"><link rel="prefetch" href="/blog/assets/js/135.d2ecf18d.js"><link rel="prefetch" href="/blog/assets/js/136.c5160279.js"><link rel="prefetch" href="/blog/assets/js/137.764cd882.js"><link rel="prefetch" href="/blog/assets/js/138.daa13a31.js"><link rel="prefetch" href="/blog/assets/js/139.97d89f0d.js"><link rel="prefetch" href="/blog/assets/js/14.c1b1df72.js"><link rel="prefetch" href="/blog/assets/js/140.f576d326.js"><link rel="prefetch" href="/blog/assets/js/15.4a86c65c.js"><link rel="prefetch" href="/blog/assets/js/16.f6eb875a.js"><link rel="prefetch" href="/blog/assets/js/17.93a28384.js"><link rel="prefetch" href="/blog/assets/js/18.c8676da3.js"><link rel="prefetch" href="/blog/assets/js/19.3a830b27.js"><link rel="prefetch" href="/blog/assets/js/20.8c46145a.js"><link rel="prefetch" href="/blog/assets/js/21.f8f80b6f.js"><link rel="prefetch" href="/blog/assets/js/22.d6989942.js"><link rel="prefetch" href="/blog/assets/js/23.02749a1e.js"><link rel="prefetch" href="/blog/assets/js/24.58f8d077.js"><link rel="prefetch" href="/blog/assets/js/25.64f935a0.js"><link rel="prefetch" href="/blog/assets/js/26.5817cef9.js"><link rel="prefetch" href="/blog/assets/js/27.9fb6f6b3.js"><link rel="prefetch" href="/blog/assets/js/28.3d1bf554.js"><link rel="prefetch" href="/blog/assets/js/29.fa91600b.js"><link rel="prefetch" href="/blog/assets/js/3.ab95a79f.js"><link rel="prefetch" href="/blog/assets/js/30.2f5bbf20.js"><link rel="prefetch" href="/blog/assets/js/31.8e2e7e63.js"><link rel="prefetch" href="/blog/assets/js/32.9b2606bb.js"><link rel="prefetch" href="/blog/assets/js/33.1fdf3d11.js"><link rel="prefetch" href="/blog/assets/js/34.ba0103b0.js"><link rel="prefetch" href="/blog/assets/js/35.175811a4.js"><link rel="prefetch" href="/blog/assets/js/36.47e4b615.js"><link rel="prefetch" href="/blog/assets/js/37.f3fd3444.js"><link rel="prefetch" href="/blog/assets/js/38.4018e48d.js"><link rel="prefetch" href="/blog/assets/js/39.db9bc892.js"><link rel="prefetch" href="/blog/assets/js/4.7ef9feba.js"><link rel="prefetch" href="/blog/assets/js/40.2b1bb4a7.js"><link rel="prefetch" href="/blog/assets/js/41.4be6bf18.js"><link rel="prefetch" href="/blog/assets/js/42.bc7e3d3f.js"><link rel="prefetch" href="/blog/assets/js/43.7684eb81.js"><link rel="prefetch" href="/blog/assets/js/44.03cbb415.js"><link rel="prefetch" href="/blog/assets/js/45.04b4fa92.js"><link rel="prefetch" href="/blog/assets/js/46.82befd6b.js"><link rel="prefetch" href="/blog/assets/js/47.9d0db5e6.js"><link rel="prefetch" href="/blog/assets/js/48.0c5da2d5.js"><link rel="prefetch" href="/blog/assets/js/49.d290c9c9.js"><link rel="prefetch" href="/blog/assets/js/5.a86388ef.js"><link rel="prefetch" href="/blog/assets/js/50.4d7a4272.js"><link rel="prefetch" href="/blog/assets/js/51.75b5d300.js"><link rel="prefetch" href="/blog/assets/js/52.d582e1c7.js"><link rel="prefetch" href="/blog/assets/js/53.3090fed2.js"><link rel="prefetch" href="/blog/assets/js/54.5ec44417.js"><link rel="prefetch" href="/blog/assets/js/55.059b1362.js"><link rel="prefetch" href="/blog/assets/js/56.f990e36a.js"><link rel="prefetch" href="/blog/assets/js/57.a9c1cf23.js"><link rel="prefetch" href="/blog/assets/js/58.0253d74f.js"><link rel="prefetch" href="/blog/assets/js/59.ead97ac1.js"><link rel="prefetch" href="/blog/assets/js/6.c1c94eca.js"><link rel="prefetch" href="/blog/assets/js/60.5f46b401.js"><link rel="prefetch" href="/blog/assets/js/61.a49f3e4f.js"><link rel="prefetch" href="/blog/assets/js/62.4569b73d.js"><link rel="prefetch" href="/blog/assets/js/63.d541af7e.js"><link rel="prefetch" href="/blog/assets/js/64.9081f4c0.js"><link rel="prefetch" href="/blog/assets/js/65.6a04316b.js"><link rel="prefetch" href="/blog/assets/js/66.51f03fec.js"><link rel="prefetch" href="/blog/assets/js/67.772433e2.js"><link rel="prefetch" href="/blog/assets/js/68.b6947e72.js"><link rel="prefetch" href="/blog/assets/js/69.540884d8.js"><link rel="prefetch" href="/blog/assets/js/7.bc0c539e.js"><link rel="prefetch" href="/blog/assets/js/70.5a65ad87.js"><link rel="prefetch" href="/blog/assets/js/71.dce2afd4.js"><link rel="prefetch" href="/blog/assets/js/72.4d8bc97e.js"><link rel="prefetch" href="/blog/assets/js/73.8ce97dff.js"><link rel="prefetch" href="/blog/assets/js/74.8c781df6.js"><link rel="prefetch" href="/blog/assets/js/75.f317a8b8.js"><link rel="prefetch" href="/blog/assets/js/76.3bef787e.js"><link rel="prefetch" href="/blog/assets/js/77.476e8494.js"><link rel="prefetch" href="/blog/assets/js/78.cc818edd.js"><link rel="prefetch" href="/blog/assets/js/79.70e4b9bd.js"><link rel="prefetch" href="/blog/assets/js/8.e1ef625e.js"><link rel="prefetch" href="/blog/assets/js/80.83514e50.js"><link rel="prefetch" href="/blog/assets/js/81.94580408.js"><link rel="prefetch" href="/blog/assets/js/82.67354b0a.js"><link rel="prefetch" href="/blog/assets/js/83.94830354.js"><link rel="prefetch" href="/blog/assets/js/84.fe37f1ea.js"><link rel="prefetch" href="/blog/assets/js/85.cafeb28f.js"><link rel="prefetch" href="/blog/assets/js/86.f67d545e.js"><link rel="prefetch" href="/blog/assets/js/87.99c1ae32.js"><link rel="prefetch" href="/blog/assets/js/88.841a6153.js"><link rel="prefetch" href="/blog/assets/js/89.ad4ac9cd.js"><link rel="prefetch" href="/blog/assets/js/9.536836bb.js"><link rel="prefetch" href="/blog/assets/js/90.37b650d7.js"><link rel="prefetch" href="/blog/assets/js/91.f30bcae6.js"><link rel="prefetch" href="/blog/assets/js/92.a1e43926.js"><link rel="prefetch" href="/blog/assets/js/93.3c19ddf8.js"><link rel="prefetch" href="/blog/assets/js/94.35fb9495.js"><link rel="prefetch" href="/blog/assets/js/95.1dd16149.js"><link rel="prefetch" href="/blog/assets/js/96.8aa5f78a.js"><link rel="prefetch" href="/blog/assets/js/97.ca0adcb8.js"><link rel="prefetch" href="/blog/assets/js/98.58b9af44.js"><link rel="prefetch" href="/blog/assets/js/99.680a08ae.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.4e27b305.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/img/logo.png" alt="Lang's blog" class="logo"> <span class="site-name can-hide">Lang's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发规范 Menu" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发规范 Menu" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/develop-norm/engineer.html" class="nav-link">
+  开发规范
+</a></li><li class="dropdown-item"><!----> <a href="/blog/html/notes.html" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/blog/css/notes.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/javascript/notes.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/create.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/react/notes.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/blog/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/optimization/data-desensitization.html" class="nav-link">
+  优化
+</a></li><li class="dropdown-item"><!----> <a href="/blog/web-security/xss.html" class="nav-link">
+  前端安全
+</a></li><li class="dropdown-item"><!----> <a href="/blog/network/01.html" class="nav-link">
+  网络
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/backend/" class="nav-link">
+  后端
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/course-notes/1-JavaScript进阶/1-1函数/01-内存管理.html" class="nav-link">
+  1-JavaScript进阶
+</a></li><li class="dropdown-item"><!----> <a href="/blog/course-notes/2-Vue框架源码and项目实战/2-1课程导学/01-Vue专题导学.html" class="nav-link">
+  2-Vue框架源码&amp;项目实战
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Q&amp;A" class="dropdown-title"><span class="title">Q&amp;A</span> <span class="arrow down"></span></button> <button type="button" aria-label="Q&amp;A" class="mobile-dropdown-title"><span class="title">Q&amp;A</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/interview-question/html-css.html" class="nav-link">
+  HTMl-CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/interview-question/javascript.html" class="nav-link">
+  JavaScript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="学习 Menu" class="dropdown-title"><span class="title">记录</span> <span class="arrow down"></span></button> <button type="button" aria-label="学习 Menu" class="mobile-dropdown-title"><span class="title">记录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/booklist/" class="nav-link">
+  我的书单
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/study.html" class="nav-link">
+  学习
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/quotations.html" class="nav-link">
+  语录
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/build-blog.html" class="nav-link">
+  十分钟搭建自己的个人博客
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/wechat-h5.html" class="nav-link">
+  微信公众号H5配置流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-customer-service.html" class="nav-link">
+  微信小程序客服绑定流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-online.html" class="nav-link">
+  微信小程序上线准备
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/quick-entry.html" class="nav-link">
+  前端相关框架
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="收藏" class="dropdown-title"><span class="title">收藏</span> <span class="arrow down"></span></button> <button type="button" aria-label="收藏" class="mobile-dropdown-title"><span class="title">收藏</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          框架及UI库
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/frame.html#vue及ui组件库" class="nav-link">
+  Vue及UI组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html#react-ui-组件库" class="nav-link">
+  React UI 组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html" class="nav-link">
+  更多...
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他网站
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/sites.html#文档" class="nav-link">
+  文档
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#社区" class="nav-link">
+  社区
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#工具" class="nav-link">
+  工具
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html" class="nav-link">
+  更多...
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/blog/about/" class="nav-link">
+  关于
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发规范 Menu" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发规范 Menu" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/develop-norm/engineer.html" class="nav-link">
+  开发规范
+</a></li><li class="dropdown-item"><!----> <a href="/blog/html/notes.html" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/blog/css/notes.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/javascript/notes.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/create.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/react/notes.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/blog/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/optimization/data-desensitization.html" class="nav-link">
+  优化
+</a></li><li class="dropdown-item"><!----> <a href="/blog/web-security/xss.html" class="nav-link">
+  前端安全
+</a></li><li class="dropdown-item"><!----> <a href="/blog/network/01.html" class="nav-link">
+  网络
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/backend/" class="nav-link">
+  后端
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/course-notes/1-JavaScript进阶/1-1函数/01-内存管理.html" class="nav-link">
+  1-JavaScript进阶
+</a></li><li class="dropdown-item"><!----> <a href="/blog/course-notes/2-Vue框架源码and项目实战/2-1课程导学/01-Vue专题导学.html" class="nav-link">
+  2-Vue框架源码&amp;项目实战
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Q&amp;A" class="dropdown-title"><span class="title">Q&amp;A</span> <span class="arrow down"></span></button> <button type="button" aria-label="Q&amp;A" class="mobile-dropdown-title"><span class="title">Q&amp;A</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/interview-question/html-css.html" class="nav-link">
+  HTMl-CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/interview-question/javascript.html" class="nav-link">
+  JavaScript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="学习 Menu" class="dropdown-title"><span class="title">记录</span> <span class="arrow down"></span></button> <button type="button" aria-label="学习 Menu" class="mobile-dropdown-title"><span class="title">记录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/booklist/" class="nav-link">
+  我的书单
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/study.html" class="nav-link">
+  学习
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/quotations.html" class="nav-link">
+  语录
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/build-blog.html" class="nav-link">
+  十分钟搭建自己的个人博客
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/wechat-h5.html" class="nav-link">
+  微信公众号H5配置流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-customer-service.html" class="nav-link">
+  微信小程序客服绑定流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-online.html" class="nav-link">
+  微信小程序上线准备
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/quick-entry.html" class="nav-link">
+  前端相关框架
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="收藏" class="dropdown-title"><span class="title">收藏</span> <span class="arrow down"></span></button> <button type="button" aria-label="收藏" class="mobile-dropdown-title"><span class="title">收藏</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          框架及UI库
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/frame.html#vue及ui组件库" class="nav-link">
+  Vue及UI组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html#react-ui-组件库" class="nav-link">
+  React UI 组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html" class="nav-link">
+  更多...
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他网站
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/sites.html#文档" class="nav-link">
+  文档
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#社区" class="nav-link">
+  社区
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#工具" class="nav-link">
+  工具
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html" class="nav-link">
+  更多...
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/blog/about/" class="nav-link">
+  关于
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/blog/network/01.html" class="sidebar-link">网络分层模型和应用协议</a></li><li><a href="/blog/network/02.html" aria-current="page" class="active sidebar-link">浏览器的通信能力</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/network/02.html#用户代理" class="sidebar-link">用户代理</a></li><li class="sidebar-sub-header"><a href="/blog/network/02.html#ajax" class="sidebar-link">AJAX</a></li><li class="sidebar-sub-header"><a href="/blog/network/02.html#实战" class="sidebar-link">实战</a></li></ul></li><li><a href="/blog/network/03.html" class="sidebar-link">跨域问题及解决方案</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="浏览器的通信能力"><a href="#浏览器的通信能力" class="header-anchor">#</a> 浏览器的通信能力</h1> <h2 id="用户代理"><a href="#用户代理" class="header-anchor">#</a> 用户代理</h2> <p>浏览器可以代替用户完成http请求，代替用户解析响应结果，所以我们称之为：</p> <p><strong>用户代理 user agent</strong></p> <p>在网络层面，对于前端开发者，必须要知道浏览器拥有的两大核心能力：</p> <ul><li>自动发出请求的能力</li> <li>自动解析响应的能力</li></ul> <h3 id="自动发出请求的能力"><a href="#自动发出请求的能力" class="header-anchor">#</a> 自动发出请求的能力</h3> <p>当一些事情发生的时候，浏览器会代替用户自动发出http请求，常见的包括：</p> <ol><li><p><strong>用户在地址栏输入了一个url地址，并按下了回车</strong></p> <p>浏览器会自动解析URL，并发出一个<code>GET</code>请求，同时抛弃当前页面。</p></li> <li><p><strong>当用户点击了页面中的a元素</strong></p> <p>浏览器会拿到a元素的href地址，并发出一个<code>GET</code>请求，同时抛弃当前页面。</p></li> <li><p><strong>当用户点击了提交按钮<code>&lt;button type=&quot;submit&quot;&gt;...&lt;/button&gt;</code></strong></p> <p>浏览器会获取按钮所在的<code>&lt;form&gt;</code>元素，拿到它的<code>action</code>属性地址，同时拿到它<code>method</code>属性值，然后把表单中的数据组织到请求体中，发出<code>指定方法</code>的请求，同时抛弃当前页面。</p> <blockquote><p>这种方式的提交现在越来越少见了</p></blockquote></li> <li><p><strong>当解析HTML时遇到了<code>&lt;link&gt; &lt;img&gt; &lt;script&gt; &lt;video&gt; &lt;audio&gt;</code>等元素</strong></p> <p>浏览器会拿到对应的地址，发出<code>GET</code>请求</p></li> <li><p><strong>当用户点击了刷新</strong></p> <p>浏览器会拿到当前页面的地址，以及当前页面的请求方法，重新发一次请求，同时抛弃当前页面。</p></li></ol> <blockquote><p>浏览器在发出请求时，会自动附带一些请求头</p></blockquote> <p>==重点来了==</p> <p>从古至今，浏览器都有一个约定：</p> <p><strong>当发送GET请求时，浏览器不会附带请求体</strong></p> <p>这个约定深刻的影响着后续的前后端各种应用，现在，几乎所有人都在潜意识中认同了这一点，无论是前端开发人员还是后端开发人员。</p> <p>由于前后端程序的默认行为，逐步造成了GET和POST的各种差异：</p> <ol><li><p>浏览器在发送 GET 请求时，不会附带请求体</p></li> <li><p>GET 请求的传递信息量有限，适合传递少量数据；POST 请求的传递信息量是没有限制的，适合传输大量数据。</p></li> <li><p>GET 请求只能传递 ASCII 数据，遇到非 ASCII 数据需要进行编码；POST 请求没有限制</p></li> <li><p>大部分 GET 请求传递的数据都附带在 path 参数中，能够通过分享地址完整的重现页面，但同时也暴露了数据，若有敏感数据传递，不应该使用 GET 请求，至少不应该放到 path 中</p></li> <li><p>POST 不会被保存到浏览器的历史记录中</p></li> <li><p>刷新页面时，若当前的页面是通过 POST 请求得到的，则浏览器会提示用户是否重新提交。若是 GET 请求得到的页面则没有提示。</p></li></ol> <h3 id="自动解析响应的能力"><a href="#自动解析响应的能力" class="header-anchor">#</a> 自动解析响应的能力</h3> <p>浏览器不仅能发送请求，还能够针对服务器的各种响应结果做出不同的自动处理</p> <p>常见的处理有：</p> <ol><li><p><strong>识别响应码</strong></p> <p>浏览器能够自动识别响应码，当出现一些特殊的响应码时浏览器会自动完成处理，比如<code>301、302</code></p></li> <li><p><strong>根据响应结果做不同的处理</strong></p> <p>浏览器能够自动分析响应头中的<code>Content-Type</code>，根据不同的值进行不同处理，比如：</p> <ul><li><p><code>text/plain</code>: 普通的纯文本，浏览器通常会将响应体原封不动的显示到页面上</p></li> <li><p><code>text/html</code>：html文档，浏览器通常会将响应体作为页面进行渲染</p></li> <li><p><code>text/javascript</code>或<code>application/javascript</code>：js代码，浏览器通常会使用JS执行引擎将它解析执行</p></li> <li><p><code>text/css</code>：css代码，浏览器会将它视为样式</p></li> <li><p><code>image/jpeg</code>：浏览器会将它视为jpg图片</p></li> <li><p><code>application/octet-stream</code>：二进制数据，会触发浏览器下载功能</p></li> <li><p><code>attachment</code>：附件，会触发下载功能</p> <p>该值和其他值不同，应放到<code>Content-Disposition</code>头中。</p></li></ul></li></ol> <h3 id="基本流程"><a href="#基本流程" class="header-anchor">#</a> 基本流程</h3> <blockquote><p>访问：https://oss.duyiedu.com/test/index.html</p></blockquote> <img src="/blog/img/network/12.png" alt="图片"> <h2 id="ajax"><a href="#ajax" class="header-anchor">#</a> AJAX</h2> <blockquote><p>浏览器本身就具备网络通信的能力，但在早期，浏览器并没有把这个能力开放给JS。</p> <p>最早是微软在IE浏览器中把这一能力向JS开放，让JS可以在代码中实现发送请求，并不会刷新页面，这项技术在2005年被正式命名为AJAX（<strong>A</strong>synchronous <strong>J</strong>avascript <strong>A</strong>nd <strong>X</strong>ML）</p></blockquote> <p>AJAX 就是指在web应用程序中异步向服务器发送请求。</p> <p>它的实现方式有两种，<code>XMLHttpRequest 简称XHR</code>和<code>Fetch</code></p> <p>以下是两者的对比</p> <table><thead><tr><th>功能点</th> <th>XHR</th> <th>Fetch</th></tr></thead> <tbody><tr><td>基本的请求能力</td> <td>✅</td> <td>✅</td></tr> <tr><td>基本的获取响应能力</td> <td>✅</td> <td>✅</td></tr> <tr><td>监控请求进度</td> <td>✅</td> <td>❌</td></tr> <tr><td>监控响应进度</td> <td>✅</td> <td>✅</td></tr> <tr><td>Service Worker中是否可用</td> <td>❌</td> <td>✅</td></tr> <tr><td>控制cookie的携带</td> <td>❌</td> <td>✅</td></tr> <tr><td>控制重定向</td> <td>❌</td> <td>✅</td></tr> <tr><td>请求取消</td> <td>✅</td> <td>✅</td></tr> <tr><td>自定义referrer</td> <td>❌</td> <td>✅</td></tr> <tr><td>流</td> <td>❌</td> <td>✅</td></tr> <tr><td>API风格</td> <td><code>Event</code></td> <td><code>Promise</code></td></tr> <tr><td>活跃度</td> <td>停止更新</td> <td>不断更新</td></tr></tbody></table> <h2 id="实战"><a href="#实战" class="header-anchor">#</a> 实战</h2> <h3 id="请求并获取响应数据"><a href="#请求并获取响应数据" class="header-anchor">#</a> 请求并获取响应数据</h3> <p>请求地址：https://study.duyiedu.com/api/herolist</p> <p>请求方法：GET</p> <p>响应类型：application/json</p> <p>响应结果：王者荣耀英雄数据</p> <h3 id="上传文件并监控进度"><a href="#上传文件并监控进度" class="header-anchor">#</a> 上传文件并监控进度</h3> <h4 id="准备工作-启动本地文件上传服务器"><a href="#准备工作-启动本地文件上传服务器" class="header-anchor">#</a> 准备工作：启动本地文件上传服务器</h4> <p><strong>如果没有安装node</strong></p> <ol><li><p>下载安装node，https://nodejs.org/zh-cn/</p></li> <li><p>打开命令行工具，设置淘宝源</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token function">npm</span> config <span class="token builtin class-name">set</span> registry https://registry.npm.taobao.org
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li></ol> <p><strong>安装依赖</strong></p> <ol><li>在命令行进入<code>upload-server</code>目录</li> <li>运行<code>npm i</code></li></ol> <p><strong>启动服务器</strong></p> <ol><li>在命令行进入<code>upload-server</code>目录</li> <li>运行<code>npm start</code></li></ol> <h4 id="上传接口"><a href="#上传接口" class="header-anchor">#</a> 上传接口</h4> <p>请求路径：<code>/upload/single</code></p> <p>请求方法：<code>POST</code></p> <p>消息格式：<code>multipart/form-data</code></p> <p>字段名称：<code>avatar</code></p> <p>允许的后缀名：<code>['.jpg', '.jpeg', '.bmp', '.webp', '.gif', '.png']</code></p> <p>最大尺寸：<code>1M</code></p> <p>响应格式：<code>JSON</code></p> <p>响应结果示例：</p> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token comment">// 成功</span>
+<span class="token punctuation">{</span>
+  <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token string">&quot;文件的访问地址&quot;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 失败：后缀名不符号要求</span>
+<span class="token punctuation">{</span>
+  <span class="token property">&quot;errCode&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;errMsg&quot;</span><span class="token operator">:</span> <span class="token string">&quot;后缀名不符合要求&quot;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 失败：文件过大</span>
+<span class="token punctuation">{</span>
+  <span class="token property">&quot;errCode&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;errMsg&quot;</span><span class="token operator">:</span> <span class="token string">&quot;文件过大&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h3 id="chatgpt"><a href="#chatgpt" class="header-anchor">#</a> ChatGPT</h3> <h4 id="准备工作-启动本地服务器"><a href="#准备工作-启动本地服务器" class="header-anchor">#</a> 准备工作：启动本地服务器</h4> <blockquote><p>已安装好node，以及设置好了npm的淘宝源</p></blockquote> <p><strong>安装依赖</strong></p> <ol><li>在命令行进入<code>chat-server</code>目录</li> <li>运行<code>npm i</code></li></ol> <p><strong>启动服务器</strong></p> <ol><li>在命令行进入<code>chat-server</code>目录</li> <li>运行<code>npm run dev</code></li></ol> <h4 id="聊天接口"><a href="#聊天接口" class="header-anchor">#</a> 聊天接口</h4> <p>请求路径：<code>/chat</code></p> <p>请求方法：<code>POST</code></p> <p>请求消息格式：<code>application/json</code></p> <p>请求体格式：</p> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token comment">// 清除当前的聊天上下文</span>
+<span class="token comment">// 清除后，服务器不再记录之前的聊天内容，后续的聊天将使用新的上下文</span>
+<span class="token punctuation">{</span>
+  <span class="token property">&quot;clear&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 发送消息</span>
+<span class="token punctuation">{</span>
+  <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token string">&quot;我要你扮演海绵宝宝的魔法海螺壳&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>响应格式：<code>纯文本</code></p> <div class="language-text line-numbers-mode"><pre class="language-text"><code>好的，我现在开始扮演海绵宝宝的魔法海螺壳。我可以说出各种魔法语言和帮助海绵宝宝和派大星解决问题。让我们开始冒险吧！噢呵呵呵呵！
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>注意：响应比较耗时，服务器会流式的将文本发送到客户端，为了提高用户体验，客户端最好流式的接收消息。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">6/30/2023, 6:08:04 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/network/01.html" class="prev">
+        网络分层模型和应用协议
+      </a></span> <span class="next"><a href="/blog/network/03.html">
+        跨域问题及解决方案
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/blog/assets/js/app.529646e1.js" defer></script><script src="/blog/assets/js/2.30db37c0.js" defer></script><script src="/blog/assets/js/124.d87dd78b.js" defer></script>
+  </body>
+</html>

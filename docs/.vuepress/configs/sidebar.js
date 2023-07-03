@@ -146,6 +146,7 @@ module.exports = {
         sidebarDepth: 0,
         children: [
             ['/booklist/study', '费曼学习法'],
+            ['/booklist/ceremony', '学习的仪式感'],
         ],
         initialOpenGroupIndex: -1 // 可选的, 默认值是 0
     }, {

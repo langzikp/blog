@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>跨域问题及解决方案 | Lang&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/blog/img/favicon.png">
+    <meta name="description" content="this is my blog">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.4e27b305.css" as="style"><link rel="preload" href="/blog/assets/js/app.529646e1.js" as="script"><link rel="preload" href="/blog/assets/js/2.30db37c0.js" as="script"><link rel="preload" href="/blog/assets/js/125.68deb30f.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.610b7dcb.js"><link rel="prefetch" href="/blog/assets/js/100.017b24e7.js"><link rel="prefetch" href="/blog/assets/js/101.b26df9de.js"><link rel="prefetch" href="/blog/assets/js/102.366cd169.js"><link rel="prefetch" href="/blog/assets/js/103.4fb0d60d.js"><link rel="prefetch" href="/blog/assets/js/104.40820814.js"><link rel="prefetch" href="/blog/assets/js/105.eada29af.js"><link rel="prefetch" href="/blog/assets/js/106.55d51a5b.js"><link rel="prefetch" href="/blog/assets/js/107.42769682.js"><link rel="prefetch" href="/blog/assets/js/108.a81e5d07.js"><link rel="prefetch" href="/blog/assets/js/109.515f0808.js"><link rel="prefetch" href="/blog/assets/js/11.c1c46bd4.js"><link rel="prefetch" href="/blog/assets/js/110.61206cbe.js"><link rel="prefetch" href="/blog/assets/js/111.69a65566.js"><link rel="prefetch" href="/blog/assets/js/112.0cebb226.js"><link rel="prefetch" href="/blog/assets/js/113.bb9a0aa9.js"><link rel="prefetch" href="/blog/assets/js/114.9abc2382.js"><link rel="prefetch" href="/blog/assets/js/115.95e7e41c.js"><link rel="prefetch" href="/blog/assets/js/116.bb9f0a91.js"><link rel="prefetch" href="/blog/assets/js/117.08f3a847.js"><link rel="prefetch" href="/blog/assets/js/118.bac305a9.js"><link rel="prefetch" href="/blog/assets/js/119.55c8fe31.js"><link rel="prefetch" href="/blog/assets/js/12.81ec3129.js"><link rel="prefetch" href="/blog/assets/js/120.68ba3287.js"><link rel="prefetch" href="/blog/assets/js/121.900acf1b.js"><link rel="prefetch" href="/blog/assets/js/122.8cdb59e5.js"><link rel="prefetch" href="/blog/assets/js/123.2c8d851f.js"><link rel="prefetch" href="/blog/assets/js/124.d87dd78b.js"><link rel="prefetch" href="/blog/assets/js/126.b68f0482.js"><link rel="prefetch" href="/blog/assets/js/127.635b8aa1.js"><link rel="prefetch" href="/blog/assets/js/128.928b028a.js"><link rel="prefetch" href="/blog/assets/js/129.c25d51f4.js"><link rel="prefetch" href="/blog/assets/js/13.5d69b942.js"><link rel="prefetch" href="/blog/assets/js/130.9b9aebb5.js"><link rel="prefetch" href="/blog/assets/js/131.57ca5081.js"><link rel="prefetch" href="/blog/assets/js/132.c160cae0.js"><link rel="prefetch" href="/blog/assets/js/133.ab132816.js"><link rel="prefetch" href="/blog/assets/js/134.b6a27190.js"><link rel="prefetch" href="/blog/assets/js/135.d2ecf18d.js"><link rel="prefetch" href="/blog/assets/js/136.c5160279.js"><link rel="prefetch" href="/blog/assets/js/137.764cd882.js"><link rel="prefetch" href="/blog/assets/js/138.daa13a31.js"><link rel="prefetch" href="/blog/assets/js/139.97d89f0d.js"><link rel="prefetch" href="/blog/assets/js/14.c1b1df72.js"><link rel="prefetch" href="/blog/assets/js/140.f576d326.js"><link rel="prefetch" href="/blog/assets/js/15.4a86c65c.js"><link rel="prefetch" href="/blog/assets/js/16.f6eb875a.js"><link rel="prefetch" href="/blog/assets/js/17.93a28384.js"><link rel="prefetch" href="/blog/assets/js/18.c8676da3.js"><link rel="prefetch" href="/blog/assets/js/19.3a830b27.js"><link rel="prefetch" href="/blog/assets/js/20.8c46145a.js"><link rel="prefetch" href="/blog/assets/js/21.f8f80b6f.js"><link rel="prefetch" href="/blog/assets/js/22.d6989942.js"><link rel="prefetch" href="/blog/assets/js/23.02749a1e.js"><link rel="prefetch" href="/blog/assets/js/24.58f8d077.js"><link rel="prefetch" href="/blog/assets/js/25.64f935a0.js"><link rel="prefetch" href="/blog/assets/js/26.5817cef9.js"><link rel="prefetch" href="/blog/assets/js/27.9fb6f6b3.js"><link rel="prefetch" href="/blog/assets/js/28.3d1bf554.js"><link rel="prefetch" href="/blog/assets/js/29.fa91600b.js"><link rel="prefetch" href="/blog/assets/js/3.ab95a79f.js"><link rel="prefetch" href="/blog/assets/js/30.2f5bbf20.js"><link rel="prefetch" href="/blog/assets/js/31.8e2e7e63.js"><link rel="prefetch" href="/blog/assets/js/32.9b2606bb.js"><link rel="prefetch" href="/blog/assets/js/33.1fdf3d11.js"><link rel="prefetch" href="/blog/assets/js/34.ba0103b0.js"><link rel="prefetch" href="/blog/assets/js/35.175811a4.js"><link rel="prefetch" href="/blog/assets/js/36.47e4b615.js"><link rel="prefetch" href="/blog/assets/js/37.f3fd3444.js"><link rel="prefetch" href="/blog/assets/js/38.4018e48d.js"><link rel="prefetch" href="/blog/assets/js/39.db9bc892.js"><link rel="prefetch" href="/blog/assets/js/4.7ef9feba.js"><link rel="prefetch" href="/blog/assets/js/40.2b1bb4a7.js"><link rel="prefetch" href="/blog/assets/js/41.4be6bf18.js"><link rel="prefetch" href="/blog/assets/js/42.bc7e3d3f.js"><link rel="prefetch" href="/blog/assets/js/43.7684eb81.js"><link rel="prefetch" href="/blog/assets/js/44.03cbb415.js"><link rel="prefetch" href="/blog/assets/js/45.04b4fa92.js"><link rel="prefetch" href="/blog/assets/js/46.82befd6b.js"><link rel="prefetch" href="/blog/assets/js/47.9d0db5e6.js"><link rel="prefetch" href="/blog/assets/js/48.0c5da2d5.js"><link rel="prefetch" href="/blog/assets/js/49.d290c9c9.js"><link rel="prefetch" href="/blog/assets/js/5.a86388ef.js"><link rel="prefetch" href="/blog/assets/js/50.4d7a4272.js"><link rel="prefetch" href="/blog/assets/js/51.75b5d300.js"><link rel="prefetch" href="/blog/assets/js/52.d582e1c7.js"><link rel="prefetch" href="/blog/assets/js/53.3090fed2.js"><link rel="prefetch" href="/blog/assets/js/54.5ec44417.js"><link rel="prefetch" href="/blog/assets/js/55.059b1362.js"><link rel="prefetch" href="/blog/assets/js/56.f990e36a.js"><link rel="prefetch" href="/blog/assets/js/57.a9c1cf23.js"><link rel="prefetch" href="/blog/assets/js/58.0253d74f.js"><link rel="prefetch" href="/blog/assets/js/59.ead97ac1.js"><link rel="prefetch" href="/blog/assets/js/6.c1c94eca.js"><link rel="prefetch" href="/blog/assets/js/60.5f46b401.js"><link rel="prefetch" href="/blog/assets/js/61.a49f3e4f.js"><link rel="prefetch" href="/blog/assets/js/62.4569b73d.js"><link rel="prefetch" href="/blog/assets/js/63.d541af7e.js"><link rel="prefetch" href="/blog/assets/js/64.9081f4c0.js"><link rel="prefetch" href="/blog/assets/js/65.6a04316b.js"><link rel="prefetch" href="/blog/assets/js/66.51f03fec.js"><link rel="prefetch" href="/blog/assets/js/67.772433e2.js"><link rel="prefetch" href="/blog/assets/js/68.b6947e72.js"><link rel="prefetch" href="/blog/assets/js/69.540884d8.js"><link rel="prefetch" href="/blog/assets/js/7.bc0c539e.js"><link rel="prefetch" href="/blog/assets/js/70.5a65ad87.js"><link rel="prefetch" href="/blog/assets/js/71.dce2afd4.js"><link rel="prefetch" href="/blog/assets/js/72.4d8bc97e.js"><link rel="prefetch" href="/blog/assets/js/73.8ce97dff.js"><link rel="prefetch" href="/blog/assets/js/74.8c781df6.js"><link rel="prefetch" href="/blog/assets/js/75.f317a8b8.js"><link rel="prefetch" href="/blog/assets/js/76.3bef787e.js"><link rel="prefetch" href="/blog/assets/js/77.476e8494.js"><link rel="prefetch" href="/blog/assets/js/78.cc818edd.js"><link rel="prefetch" href="/blog/assets/js/79.70e4b9bd.js"><link rel="prefetch" href="/blog/assets/js/8.e1ef625e.js"><link rel="prefetch" href="/blog/assets/js/80.83514e50.js"><link rel="prefetch" href="/blog/assets/js/81.94580408.js"><link rel="prefetch" href="/blog/assets/js/82.67354b0a.js"><link rel="prefetch" href="/blog/assets/js/83.94830354.js"><link rel="prefetch" href="/blog/assets/js/84.fe37f1ea.js"><link rel="prefetch" href="/blog/assets/js/85.cafeb28f.js"><link rel="prefetch" href="/blog/assets/js/86.f67d545e.js"><link rel="prefetch" href="/blog/assets/js/87.99c1ae32.js"><link rel="prefetch" href="/blog/assets/js/88.841a6153.js"><link rel="prefetch" href="/blog/assets/js/89.ad4ac9cd.js"><link rel="prefetch" href="/blog/assets/js/9.536836bb.js"><link rel="prefetch" href="/blog/assets/js/90.37b650d7.js"><link rel="prefetch" href="/blog/assets/js/91.f30bcae6.js"><link rel="prefetch" href="/blog/assets/js/92.a1e43926.js"><link rel="prefetch" href="/blog/assets/js/93.3c19ddf8.js"><link rel="prefetch" href="/blog/assets/js/94.35fb9495.js"><link rel="prefetch" href="/blog/assets/js/95.1dd16149.js"><link rel="prefetch" href="/blog/assets/js/96.8aa5f78a.js"><link rel="prefetch" href="/blog/assets/js/97.ca0adcb8.js"><link rel="prefetch" href="/blog/assets/js/98.58b9af44.js"><link rel="prefetch" href="/blog/assets/js/99.680a08ae.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.4e27b305.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/img/logo.png" alt="Lang's blog" class="logo"> <span class="site-name can-hide">Lang's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发规范 Menu" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发规范 Menu" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/develop-norm/engineer.html" class="nav-link">
+  开发规范
+</a></li><li class="dropdown-item"><!----> <a href="/blog/html/notes.html" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/blog/css/notes.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/javascript/notes.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/create.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/react/notes.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/blog/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/optimization/data-desensitization.html" class="nav-link">
+  优化
+</a></li><li class="dropdown-item"><!----> <a href="/blog/web-security/xss.html" class="nav-link">
+  前端安全
+</a></li><li class="dropdown-item"><!----> <a href="/blog/network/01.html" class="nav-link">
+  网络
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/backend/" class="nav-link">
+  后端
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/course-notes/1-JavaScript进阶/1-1函数/01-内存管理.html" class="nav-link">
+  1-JavaScript进阶
+</a></li><li class="dropdown-item"><!----> <a href="/blog/course-notes/2-Vue框架源码and项目实战/2-1课程导学/01-Vue专题导学.html" class="nav-link">
+  2-Vue框架源码&amp;项目实战
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Q&amp;A" class="dropdown-title"><span class="title">Q&amp;A</span> <span class="arrow down"></span></button> <button type="button" aria-label="Q&amp;A" class="mobile-dropdown-title"><span class="title">Q&amp;A</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/interview-question/html-css.html" class="nav-link">
+  HTMl-CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/interview-question/javascript.html" class="nav-link">
+  JavaScript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="学习 Menu" class="dropdown-title"><span class="title">记录</span> <span class="arrow down"></span></button> <button type="button" aria-label="学习 Menu" class="mobile-dropdown-title"><span class="title">记录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/booklist/" class="nav-link">
+  我的书单
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/study.html" class="nav-link">
+  学习
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/quotations.html" class="nav-link">
+  语录
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/build-blog.html" class="nav-link">
+  十分钟搭建自己的个人博客
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/wechat-h5.html" class="nav-link">
+  微信公众号H5配置流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-customer-service.html" class="nav-link">
+  微信小程序客服绑定流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-online.html" class="nav-link">
+  微信小程序上线准备
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/quick-entry.html" class="nav-link">
+  前端相关框架
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="收藏" class="dropdown-title"><span class="title">收藏</span> <span class="arrow down"></span></button> <button type="button" aria-label="收藏" class="mobile-dropdown-title"><span class="title">收藏</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          框架及UI库
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/frame.html#vue及ui组件库" class="nav-link">
+  Vue及UI组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html#react-ui-组件库" class="nav-link">
+  React UI 组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html" class="nav-link">
+  更多...
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他网站
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/sites.html#文档" class="nav-link">
+  文档
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#社区" class="nav-link">
+  社区
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#工具" class="nav-link">
+  工具
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html" class="nav-link">
+  更多...
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/blog/about/" class="nav-link">
+  关于
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发规范 Menu" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发规范 Menu" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/develop-norm/engineer.html" class="nav-link">
+  开发规范
+</a></li><li class="dropdown-item"><!----> <a href="/blog/html/notes.html" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/blog/css/notes.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/javascript/notes.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/create.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/react/notes.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/blog/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/optimization/data-desensitization.html" class="nav-link">
+  优化
+</a></li><li class="dropdown-item"><!----> <a href="/blog/web-security/xss.html" class="nav-link">
+  前端安全
+</a></li><li class="dropdown-item"><!----> <a href="/blog/network/01.html" class="nav-link">
+  网络
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/backend/" class="nav-link">
+  后端
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/course-notes/1-JavaScript进阶/1-1函数/01-内存管理.html" class="nav-link">
+  1-JavaScript进阶
+</a></li><li class="dropdown-item"><!----> <a href="/blog/course-notes/2-Vue框架源码and项目实战/2-1课程导学/01-Vue专题导学.html" class="nav-link">
+  2-Vue框架源码&amp;项目实战
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Q&amp;A" class="dropdown-title"><span class="title">Q&amp;A</span> <span class="arrow down"></span></button> <button type="button" aria-label="Q&amp;A" class="mobile-dropdown-title"><span class="title">Q&amp;A</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/interview-question/html-css.html" class="nav-link">
+  HTMl-CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/interview-question/javascript.html" class="nav-link">
+  JavaScript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="学习 Menu" class="dropdown-title"><span class="title">记录</span> <span class="arrow down"></span></button> <button type="button" aria-label="学习 Menu" class="mobile-dropdown-title"><span class="title">记录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/booklist/" class="nav-link">
+  我的书单
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/study.html" class="nav-link">
+  学习
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/quotations.html" class="nav-link">
+  语录
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/build-blog.html" class="nav-link">
+  十分钟搭建自己的个人博客
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/wechat-h5.html" class="nav-link">
+  微信公众号H5配置流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-customer-service.html" class="nav-link">
+  微信小程序客服绑定流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-online.html" class="nav-link">
+  微信小程序上线准备
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/quick-entry.html" class="nav-link">
+  前端相关框架
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="收藏" class="dropdown-title"><span class="title">收藏</span> <span class="arrow down"></span></button> <button type="button" aria-label="收藏" class="mobile-dropdown-title"><span class="title">收藏</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          框架及UI库
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/frame.html#vue及ui组件库" class="nav-link">
+  Vue及UI组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html#react-ui-组件库" class="nav-link">
+  React UI 组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html" class="nav-link">
+  更多...
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他网站
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/sites.html#文档" class="nav-link">
+  文档
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#社区" class="nav-link">
+  社区
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#工具" class="nav-link">
+  工具
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html" class="nav-link">
+  更多...
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/blog/about/" class="nav-link">
+  关于
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/blog/network/01.html" class="sidebar-link">网络分层模型和应用协议</a></li><li><a href="/blog/network/02.html" class="sidebar-link">浏览器的通信能力</a></li><li><a href="/blog/network/03.html" aria-current="page" class="active sidebar-link">跨域问题及解决方案</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/network/03.html#同源策略及跨域问题" class="sidebar-link">同源策略及跨域问题</a></li><li class="sidebar-sub-header"><a href="/blog/network/03.html#解决方案" class="sidebar-link">解决方案</a></li><li class="sidebar-sub-header"><a href="/blog/network/03.html#cors" class="sidebar-link">CORS</a></li><li class="sidebar-sub-header"><a href="/blog/network/03.html#简单请求" class="sidebar-link">简单请求</a></li><li class="sidebar-sub-header"><a href="/blog/network/03.html#预检请求-preflight" class="sidebar-link">预检请求(preflight)</a></li><li class="sidebar-sub-header"><a href="/blog/network/03.html#jsonp" class="sidebar-link">JSONP</a></li><li class="sidebar-sub-header"><a href="/blog/network/03.html#代理" class="sidebar-link">代理</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="跨域问题及解决方案"><a href="#跨域问题及解决方案" class="header-anchor">#</a> 跨域问题及解决方案</h1> <h2 id="同源策略及跨域问题"><a href="#同源策略及跨域问题" class="header-anchor">#</a> 同源策略及跨域问题</h2> <p><strong>同源策略</strong>是一套浏览器<strong>安全机制</strong>，当一个<strong>源</strong>的文档和脚本，与另一个<strong>源</strong>的资源进行通信时，同源策略就会对这个通信做出不同程度的限制。</p> <p>简单来说，同源策略对 <strong>同源资源</strong> <strong>放行</strong>，对 <strong>异源资源</strong> <strong>限制</strong></p> <p>因此限制造成的开发问题，称之为<strong>跨域（异源）问题</strong></p> <h3 id="同源和异源"><a href="#同源和异源" class="header-anchor">#</a> 同源和异源</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>源(origin) = 协议 + 域名 + 端口
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>例如:</p> <p><code>https://study.duyiedu.com/api/movie</code>的源为<code>https://study.duyiedu.com</code></p> <p><code>http://localhost:7001/index.html</code>的源为<code>http://localhost:7001</code></p> <p>两个URL地址的源<strong>完全相同</strong>，则称之为<strong>同源</strong>，否则称之为<strong>异源（跨域）</strong></p> <img src="/blog/img/network/13.png" alt="图片"> <h3 id="跨域出现的场景"><a href="#跨域出现的场景" class="header-anchor">#</a> 跨域出现的场景</h3> <p>跨域可能出现在三种场景：</p> <ul><li><p><strong>网络通信</strong></p> <p>a元素的跳转；加载css、js、图片等；AJAX等等</p></li> <li><p>JS API</p> <p><code>window.open</code>、<code>window.parent</code>、<code>iframe.contentWindow</code>等等</p></li> <li><p>存储</p> <p><code>WebStorage</code>、<code>IndexedDB</code>等等</p></li></ul> <p>对于不同的跨域场景，以及每个场景中不同的跨域方式，同源策略都有不同的限制。</p> <p>本文重点讨论<strong>网络通信</strong>中<code>AJAX</code>的跨域问题</p> <h3 id="网络中的跨域"><a href="#网络中的跨域" class="header-anchor">#</a> 网络中的跨域</h3> <p>当浏览器运行页面后，会发出很多的网络请求，例如CSS、JS、图片、AJAX等等</p> <p>请求页面的源称之为<strong>页面源</strong>，在该页面中发出的请求称之为<strong>目标源</strong>。</p> <p>当页面源和目标源一致时，则为<strong>同源请求</strong>，否则为<strong>异源请求（跨域请求）</strong></p> <img src="/blog/img/network/14.png" alt="图片"> <h3 id="浏览器如何限制异源请求"><a href="#浏览器如何限制异源请求" class="header-anchor">#</a> 浏览器如何限制异源请求？</h3> <p>浏览器出于多方面的考量，制定了非常繁杂的规则来限制各种跨域请求，但总体的原则非常简单：</p> <ul><li>对标签发出的跨域请求轻微限制</li> <li>对AJAX发出的跨域请求<strong>严厉限制</strong></li></ul> <img src="/blog/img/network/15.png" alt="图片"> <h2 id="解决方案"><a href="#解决方案" class="header-anchor">#</a> 解决方案</h2> <h2 id="cors"><a href="#cors" class="header-anchor">#</a> CORS</h2> <p>CORS（Cross-Origin Resource Sharing）是最正统的跨域解决方案，同时也是浏览器推荐的解决方案。</p> <p>CORS是一套规则，用于帮助浏览器判断是否校验通过。</p> <img src="/blog/img/network/16.png" alt="图片"> <p>CORS的基本理念是：</p> <ul><li>只要服务器明确表示<strong>允许</strong>，则校验<strong>通过</strong></li> <li>服务器明确拒绝或没有表示，则校验不通过</li></ul> <p><strong>所以，使用CORS解决跨域，必须要保证服务器是「自己人」</strong></p> <h4 id="请求分类"><a href="#请求分类" class="header-anchor">#</a> 请求分类</h4> <p>CORS将请求分为两类：==简单请求==和==预检请求==。</p> <p>对不同种类的请求它的规则有所区别。</p> <p>所以要理解CORS，首先要理解它是如何划分请求的。</p> <h2 id="简单请求"><a href="#简单请求" class="header-anchor">#</a> 简单请求</h2> <blockquote><p>完整判定逻辑：https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#simple_requests</p></blockquote> <p>简单来说，只要全部满足下列条件，就是简单请求：</p> <ul><li><p>请求方法是<code>GET</code>、<code>POST</code>、<code>HEAD</code>之一</p></li> <li><p>头部字段满足CORS安全规范，详见 <a href="https://fetch.spec.whatwg.org/#cors-safelisted-request-header" target="_blank" rel="noopener noreferrer">W3C<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <blockquote><p>浏览器默认自带的头部字段都是满足安全规范的，只要开发者不改动和新增头部，就不会打破此条规则</p></blockquote></li> <li><p>如果有<code>Content-Type</code>，必须是下列值中的一个</p> <ul><li><code>text/plain</code></li> <li><code>multipart/form-data</code></li> <li><code>application/x-www-form-urlencoded</code></li></ul></li></ul> <h2 id="预检请求-preflight"><a href="#预检请求-preflight" class="header-anchor">#</a> 预检请求(preflight)</h2> <p>只要不是简单请求，均为预检请求</p> <h4 id="问-文件上传是不是简单请求"><a href="#问-文件上传是不是简单请求" class="header-anchor">#</a> 问：文件上传是不是简单请求</h4> <blockquote><p>不一定
+文件上传也可能修改header，也可能不使用<code>multipart/form-data</code>类型，以base64上传一个文件都是能上传文件，所以单说文件上传不一定就是简单请求</p></blockquote> <h4 id="练习"><a href="#练习" class="header-anchor">#</a> 练习</h4> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 下面的跨域请求哪些是简单请求，哪些是预检请求</span>
+
+<span class="token comment">// 1  是简单请求，fetch默认是get请求</span>
+<span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'https://douyin.com'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 2  预检请求，因为自定义了头部header</span>
+<span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'https://douyin.com'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">headers</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 3  是简单请求，post且未修改header</span>
+<span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'https://douyin.com'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">'POST'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">body</span><span class="token operator">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token literal-property property">b</span><span class="token operator">:</span> <span class="token number">2</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 4 预检请求，修改了content-type</span>
+<span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'https://douyin.com'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">'POST'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">headers</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">'content-type'</span><span class="token operator">:</span> <span class="token string">'application/json'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">body</span><span class="token operator">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">a</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token literal-property property">b</span><span class="token operator">:</span> <span class="token number">2</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><h4 id="对简单请求的验证"><a href="#对简单请求的验证" class="header-anchor">#</a> 对简单请求的验证</h4> <img src="/blog/img/network/17.png" alt="图片"> <h4 id="对预检请求的验证"><a href="#对预检请求的验证" class="header-anchor">#</a> 对预检请求的验证</h4> <ol><li>发送预检请求</li></ol> <img src="/blog/img/network/18.png" alt="图片"> <ol start="2"><li>发送真实请求（和简单请求一致）</li></ol> <h4 id="细节1-关于cookie"><a href="#细节1-关于cookie" class="header-anchor">#</a> 细节1 - 关于cookie</h4> <p>默认情况下，ajax的跨域请求并不会附带cookie，这样一来，某些需要权限的操作就无法进行</p> <p>不过可以通过简单的配置就可以实现附带cookie</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// xhr</span>
+<span class="token keyword">var</span> xhr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+xhr<span class="token punctuation">.</span>withCredentials <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+
+<span class="token comment">// fetch api</span>
+<span class="token function">fetch</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">credentials</span><span class="token operator">:</span> <span class="token string">&quot;include&quot;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>这样一来，该跨域的ajax请求就是一个<em>附带身份凭证的请求</em></p> <p>当一个请求需要附带cookie时，无论它是简单请求，还是预检请求，都会在请求头中添加<code>cookie</code>字段</p> <p>而服务器响应时，需要明确告知客户端：服务器允许这样的凭据</p> <p>告知的方式也非常的简单，只需要在响应头中添加：<code>Access-Control-Allow-Credentials: true</code>即可</p> <p>对于一个附带身份凭证的请求，若服务器没有明确告知，浏览器仍然视为跨域被拒绝。</p> <p>另外要特别注意的是：<strong>对于附带身份凭证的请求，服务器不得设置 <code>Access-Control-Allow-Origin 的值为*</code></strong>。这就是为什么不推荐使用*的原因</p> <h4 id="细节2-关于跨域获取响应头"><a href="#细节2-关于跨域获取响应头" class="header-anchor">#</a> 细节2 - 关于跨域获取响应头</h4> <p>在跨域访问时，JS只能拿到一些最基本的响应头，如：Cache-Control、Content-Language、Content-Type、Expires、Last-Modified、Pragma，如果要访问其他头，则需要服务器设置本响应头。</p> <p><code>Access-Control-Expose-Headers</code>头让服务器把允许浏览器访问的头放入白名单，例如：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>Access-Control-Expose-Headers: authorization, a, b
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>这样JS就能够访问指定的响应头了。</p> <h2 id="jsonp"><a href="#jsonp" class="header-anchor">#</a> JSONP</h2> <p>在很久很久以前...并没有CORS方案</p> <img src="/blog/img/network/19.png" alt="图片"> <p>在那个年代，古人靠着非凡的智慧来解决这一问题</p> <img src="/blog/img/network/20.png" alt="图片"> <p>虽然可以解决问题，但JSONP有着明显的缺陷：</p> <ul><li><p>仅能使用GET请求</p></li> <li><p>容易产生安全隐患</p> <blockquote><p>恶意攻击者可能利用<code>callback=恶意函数</code>的方式实现<code>XSS</code>攻击</p></blockquote></li> <li><p>容易被非法站点恶意调用</p></li></ul> <p><strong>因此，除非是某些特殊的原因，否则永远不应该使用JSONP</strong></p> <h2 id="代理"><a href="#代理" class="header-anchor">#</a> 代理</h2> <p>CORS和JSONP均要求服务器是「自己人」</p> <p>那如果不是呢？
+<img src="/blog/img/network/24.png" alt="图片"></p> <p>那就找一个中间人（代理）</p> <img src="/blog/img/network/22.png" alt="图片"> <p>比如，前端小王想要请求获取王者荣耀英雄数据，但直接请求腾讯服务器会造成跨域</p> <img src="/blog/img/network/23.png" alt="图片"> <p>由于腾讯服务器不是「自己人」，小王决定用代理解决</p> <img src="/blog/img/network/25.png" alt="图片"> <h3 id="如何选择"><a href="#如何选择" class="header-anchor">#</a> 如何选择</h3> <p>最重要的，是要保持<strong>生产环境和开发环境一致</strong></p> <p>下面是一张决策图</p> <img src="/blog/img/network/26.png" alt="图片"> <p>具体的几种场景</p> <img src="/blog/img/network/27.png" alt="图片"> <img src="/blog/img/network/28.png" alt="图片"></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">6/30/2023, 6:08:04 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/network/02.html" class="prev">
+        浏览器的通信能力
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/blog/assets/js/app.529646e1.js" defer></script><script src="/blog/assets/js/2.30db37c0.js" defer></script><script src="/blog/assets/js/125.68deb30f.js" defer></script>
+  </body>
+</html>
