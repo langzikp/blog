@@ -78,6 +78,7 @@ module.exports = {
         ['create', 'vue2项目搭建'],
         ['vue3', 'vue3后台项目搭建'],
         ['optimize', 'vue常见优化手段'],
+        ['add-icon', 'vue+element使用第三方icon'],
         ['notes', '学习笔记'],
     ],
     '/react/': [
