@@ -42,6 +42,8 @@
 - [微图](https://devtool.tech/tiny-image) 同时生成webp，avif格式
 - [remove](https://www.remove.bg/zh) AI抠图 图片背景消除
 - [一键抠图](https://www.yijiankoutu.com/) 一键抠图,图片压缩，转换，修复，抠图在线网站
+- [爱图工具箱](https://www.itutool.com/) 在线计算器工具，常用单位转换工具，文本处理与转换工具，图片编辑与格式转换工具
+- [爱图工具箱-svg编辑](https://www.itutool.com/svg-editor.html) svg编辑，图片转换
 
 ## 博客
 - [阮一峰的网络日志](http://www.ruanyifeng.com/blog/)

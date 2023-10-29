@@ -7,6 +7,8 @@ ES6新增模块功能，主要由两个命令构成：`export`和`import`。`exp
 - export 与 import 的复合写法
 - 跨模块常量  
 - import()
+- ES6 模块与 CommonJS 模块的差异
+- Node.js 的模块加载方法
 
 **注意：ES6 的模块自动采用严格模式，不管你有没有在模块头部加上"use strict"。**
 ### 一. export
@@ -358,6 +360,150 @@ import('./myModule.js')
   // ...·
 });
 ```
+
+### 七. ES6 模块与 CommonJS 模块的差异
+ ES6 模块与 CommonJS 模块完全不同。有三个重大差异：
+- CommonJS 模块输出的是一个值的拷贝，ES6 模块输出的是值的引用。
+- CommonJS 模块是运行时加载，ES6 模块是编译时输出接口。
+- CommonJS 模块的require()是同步加载模块，ES6 模块的import命令是异步加载，有一个独立的模块依赖的解析阶段。
+
+
+第二个差异是因为 CommonJS 加载的是一个对象（即module.exports属性），该对象只有在脚本运行完才会生成。而 ES6 模块不是对象，它的对外接口只是一种静态定义，在代码静态解析阶段就会生成。
+
+重点解释一下第一个差异：  
+**CommonJS 模块输出的是值的拷贝**，也就是说，一旦输出一个值，模块内部的变化就影响不到这个值
+```js
+// lib.js
+var counter = 3;
+function incCounter() {
+  counter++;
+}
+module.exports = {
+  counter: counter,
+  incCounter: incCounter,
+};
+
+// main.js
+var mod = require('./lib');
+
+console.log(mod.counter);  // 3
+mod.incCounter();
+console.log(mod.counter); // 3
+```
+上面代码说明，lib.js模块加载以后，它的内部变化就影响不到输出的mod.counter了。这是因为mod.counter是一个原始类型的值，除非写成一个函数，才能得到内部变动后的值。
+```js
+// lib.js
+var counter = 3;
+function incCounter() {
+  counter++;
+}
+module.exports = {
+  get counter() {
+    return counter
+  },
+  incCounter: incCounter,
+};
+```
+如上：counter属性实际上是一个取值器函数。现在再执行main.js，就可以正确读取内部变量counter的变动了
+
+ES6 模块的运行机制与 CommonJS 不一样。JS 引擎对脚本静态分析的时候，遇到模块加载命令import，就会生成一个只读引用。等到脚本真正执行时，再根据这个只读引用，到被加载的那个模块里面去取值。**ES6 模块是动态引用，并且不会缓存值，模块里面的变量绑定其所在的模块**。
+```js
+// lib.js
+export let counter = 3;
+export function incCounter() {
+  counter++;
+}
+
+// main.js
+import { counter, incCounter } from './lib';
+console.log(counter); // 3
+incCounter();
+console.log(counter); // 4
+```
+**注意**: 
+- ES6 输入的模块变量，只是一个“符号连接”，所以这个变量是只读的，对它进行重新赋值会报错。
+```js
+// lib.js
+export let obj = {};
+
+// main.js
+import { obj } from './lib';
+
+obj.prop = 123; // OK
+obj = {}; // TypeError
+```
+- export通过接口，输出的是同一个值。不同的脚本加载这个接口，得到的都是同样的实例。
+```js
+// mod.js
+function C() {
+  this.sum = 0;
+  this.add = function () {
+    this.sum += 1;
+  };
+  this.show = function () {
+    console.log(this.sum);
+  };
+}
+
+export let c = new C();
+
+// x.js
+import {c} from './mod';
+c.add();
+
+// y.js
+import {c} from './mod';
+c.show(); 
+
+// main.js
+import './x';
+import './y';
+
+// 输出： 1
+```
+
+### 八. Node.js 的模块加载方法
+JavaScript 现在有两种模块。一种是 ES6 模块，简称 ESM；另一种是 CommonJS 模块，简称 CJS。  
+CommonJS 模块是 Node.js 专用的，CommonJS 模块使用`require()`和`module.exports`，ES6 模块使用`import`和`export`。
+
+Node加载 ES6 模块会依次寻找以下脚本，与require()的规则一致。
+```js
+import './foo'
+// 依次寻找
+//  ./foo.js
+//  ./foo/package.json
+//  ./foo/index.js
+
+import 'baz'
+// 依次寻找
+//  ./mode_modules/baz.js
+//  ./mode_modules/baz/package.json
+//  ./mode_modules/baz/index.js
+//  寻找上一级目录
+//  ../mode_modules/baz.js
+//  ../mode_modules/baz/package.json
+//  ../mode_modules/baz/index.js
+//  再上一级目录...
+```
+ ES6 模块之中，顶层的this指向undefined，CommonJS 模块的顶层this指向当前模块，这也两者的一个重大差异。
+
+从 Node.js v13.2 版本开始，Node.js 已经默认打开了 ES6 模块支持。要求 ES6 模块采用.mjs后缀文件名，默认启用严格模式，不必在每个模块文件顶部指定"use strict"。
+
+如果不希望将后缀名改成.mjs，可以在项目的package.json文件中，指定type字段为module。
+```js
+{
+   "type": "module"
+}
+```
+一旦设置了以后，该项目的 JS 脚本，就被解释成 ES6 模块。
+
+如果这时还要使用 CommonJS 模块，那么需要将 CommonJS 脚本的后缀名都改成.cjs。如果没有type字段，或者type字段为commonjs，则.js脚本会被解释成 CommonJS 模块。
+
+总结为一句话：.mjs文件总是以 ES6 模块加载，.cjs文件总是以 CommonJS 模块加载，.js文件的加载取决于package.json里面type字段的设置。
+
+
+
+
 
 ***参考资料***
 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy)

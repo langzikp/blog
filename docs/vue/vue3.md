@@ -1,11 +1,11 @@
 ## 技术栈&官网
 | 技术栈         | 描述                        | 官网        |
 | -----------   | -----------                 | ----------- |
-|  Vue3         | 渐进式 JavaScript 框架       | [文档](https://cn.vuejs.org/)       |
-|  Element Plus | 基于 Vue 3，面向设计师和开发者的组件库        | [文档](https://element-plus.gitee.io/zh-CN/)        |
-|  Vite         |  前端开发与构建工具           | [文档](https://cn.vitejs.dev/)        |
-|  Pinia        |  新一代状态管理工具	        | [文档](https://pinia.vuejs.org/)        |
-|  Vue Router   |  Vue.js 的官方路由           | [文档](https://router.vuejs.org/zh/)        |
+|  Vue3         | 渐进式 JavaScript 框架       | [文档](https://cn.vuejs.org/guide/introduction.html)       |
+|  Element Plus | 基于 Vue 3，面向设计师和开发者的组件库        | [文档](https://element-plus.gitee.io/zh-CN/component/button.html)        |
+|  Vite         |  前端开发与构建工具           | [文档](https://cn.vitejs.dev/guide/)        |
+|  Pinia        |  新一代状态管理工具	        | [文档](https://pinia.vuejs.org/zh/introduction.html)        |
+|  Vue Router   |  Vue.js 的官方路由           | [文档](https://router.vuejs.org/zh/introduction.html)        |
 
 ## 环境准备
 |       | 名称               | 备注 |
