@@ -44,17 +44,14 @@
 - [微图](https://devtool.tech/tiny-image) 同时生成webp，avif格式
 - [remove](https://www.remove.bg/zh) AI抠图 图片背景消除
 - [一键抠图](https://www.yijiankoutu.com/) 一键抠图,图片压缩，转换，修复，抠图在线网站
-<<<<<<< HEAD
 - [随机生成图片](https://picsum.photos/) 可随机生成指定大小的图片 （https://picsum.photos/200/300）
 
 ## 工具网站
 - [犸良](https://design.alipay.com/emotion) 让动效更简单
 - [鹿班](https://luban.aliyun.com/) 快速完成大量商品图、banner图、海报图和会场图的设计
 - [顽兔抠图](https://alidesign.taobao.com/work.htm#/iframe/wantoo) 抠图
-=======
 - [爱图工具箱](https://www.itutool.com/) 在线计算器工具，常用单位转换工具，文本处理与转换工具，图片编辑与格式转换工具
 - [爱图工具箱-svg编辑](https://www.itutool.com/svg-editor.html) svg编辑，图片转换
->>>>>>> 1e1749a351d8a3b466c4d95218a3827e6ad8d704
 
 ## 博客
 - [阮一峰的网络日志](http://www.ruanyifeng.com/blog/)
