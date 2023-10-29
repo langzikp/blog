@@ -66,6 +66,12 @@ module.exports = {
                 ['/javascript/ES6/10-ES6之新增数据类型Symbol', '10-ES6之新增数据类型Symbol'],
                 ['/javascript/ES6/11-ES6之新增数据结构Map和Set', '11-ES6之新增数据结构Map和Set'],
                 ['/javascript/ES6/12-ES6之Reflect反射和Proxy代理', '12-ES6之Reflect反射和Proxy代理'],
+                ['/javascript/ES6/13-ES6之Promise', '13-ES6之Promise'],
+                ['/javascript/ES6/14-EE6之Iterator和for_of循环', '14-EE6之Iterator和for_of循环'],
+                ['/javascript/ES6/15-ES6之Generator函数', '15-ES6之Generator函数'],
+                ['/javascript/ES6/16-ES6之async函数', '16-ES6之async函数'],
+                ['/javascript/ES6/17-ES6之Class类', '17-ES6之Class类'],
+                ['/javascript/ES6/18-ES6之Export和Import', '18-ES6之Export和Import'],
             ]
         },
         // ['es6', 'es6'],
