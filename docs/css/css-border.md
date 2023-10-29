@@ -83,9 +83,42 @@ border-radius: 0 0 45% 45%/0 0 35% 35%;
 }
 </style>
 <div class="box4">弧边</div>
-<!-- 
-### 5.流光边框
+
+### 5. 鼠标移入下划线动画
+
+<div class="title">
+    <span>这是一个标题这是一个标题这是一个标题</span>
+</div>
+
+<style type="text/css">
+    .title span{
+    background: linear-gradient(to right, red, red) no-repeat;
+    background-position: right bottom;
+    background-size: 0 2px;
+    transition: background-size 0.5s;
+}
+.title span:hover{
+    background-position: left bottom;
+    background-size: 100% 2px;
+    cursor: pointer;
+}
+</style>
+```html
+<div class="title">
+    <span>这是一个标题</span>
+</div>
+```
 ```css
-border-radius: 0 0 45% 45%/0 0 35% 35%;
-``` -->
+.title span{
+    background: linear-gradient(to right, red, red) no-repeat;
+    background-position: right bottom;
+    background-size: 0 2px;
+    transition: background-size 1s;
+}
+.title span:hover{
+    background-position: left bottom;
+    background-size: 100% 2px;
+    cursor: pointer;
+}
+```
 

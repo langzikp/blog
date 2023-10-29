@@ -34,6 +34,8 @@
 - [草料二维码](https://cli.im/text)
 - [即时工具](https://www.67tool.com/)
 - [JSON格式化](https://www.sojson.com/)
+- [脚本之家在线工具](http://tools.jb51.net/)
+- [CSS3剪贴路径（Clip-path）在线生成器工具](http://tools.jb51.net/code/css3path)
 
 ## 图片/文档工具
 - [docmall](https://docsmall.com/image-compress)
@@ -42,6 +44,12 @@
 - [微图](https://devtool.tech/tiny-image) 同时生成webp，avif格式
 - [remove](https://www.remove.bg/zh) AI抠图 图片背景消除
 - [一键抠图](https://www.yijiankoutu.com/) 一键抠图,图片压缩，转换，修复，抠图在线网站
+- [随机生成图片](https://picsum.photos/) 可随机生成指定大小的图片 （https://picsum.photos/200/300）
+
+## 工具网站
+- [犸良](https://design.alipay.com/emotion) 让动效更简单
+- [鹿班](https://luban.aliyun.com/) 快速完成大量商品图、banner图、海报图和会场图的设计
+- [顽兔抠图](https://alidesign.taobao.com/work.htm#/iframe/wantoo) 抠图
 
 ## 博客
 - [阮一峰的网络日志](http://www.ruanyifeng.com/blog/)

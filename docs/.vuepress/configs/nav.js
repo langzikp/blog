@@ -78,7 +78,7 @@ module.exports = [
         text: '其他网站', items: [
           { text: '文档', link: '/collect/sites#文档' },
           { text: '社区', link: '/collect/sites#社区' },
-          { text: '工具', link: '/collect/sites#工具' },
+          { text: '图片/工具', link: '/collect/sites#工具' },
           { text: '更多...', link: '/collect/sites' },
         ]
       }
