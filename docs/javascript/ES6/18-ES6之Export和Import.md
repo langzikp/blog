@@ -20,7 +20,7 @@ export var name = '张三';
 export var age = 55;
 export function multiply(x, y) {
   return x * y;
-};
+}
 ```
 另外一种推荐写法是，使用大括号指定所要输出的一组变量，如下：
 ```js
