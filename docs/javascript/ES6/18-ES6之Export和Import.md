@@ -12,7 +12,7 @@ ES6新增模块功能，主要由两个命令构成：`export`和`import`。`exp
 
 **注意：ES6 的模块自动采用严格模式，不管你有没有在模块头部加上"use strict"。**
 ### 一. export
-一个模块就是一个独立的文件。该文件内部的所有变量，外部无法获取。如果你希望外部能够读取模块内部的某个变量，就必须使用export关键字输出该变量。
+一个模块就是一个独立的文件。该文件内部的所有变量，外部无法获取。如果你希望外部能够读取模块内部的某个变量，就必须使用`export`关键字输出该变量。
 - 基本语法
 ```js
 // config.js
@@ -134,7 +134,7 @@ import {a} from './xxx.js'
 
 a.foo = 'hello'; // 合法操作
 ```
-**修改属性后，其他模块将读到改写后的值，这种写法很难查错，建议凡是输入的变量，都当作完全只读，不要轻易改变它的属性。**
+**修改属性后，其他模块将读到改写后的值，这种写法很难查错，建议凡是输入的变量，都当作完全只读，不要轻易改变它的属性。**  
 2. `import`命令具有提升效果，会提升到整个模块的头部，首先执行。
 ```js
 fn();
@@ -177,7 +177,7 @@ import { bar } from 'module';
 // 等同于
 import { foo, bar } from 'module';
 ```
-虽然foo和bar在两个语句中加载，但是它们对应的是同一个my_module模块。也就是说，`import`语句是 `Singleton` 模式。
+虽然`foo`和`bar`在两个语句中加载，但是它们对应的是同一个`my_module`模块。也就是说，`import`语句是 `Singleton` 模式。
 
 ### 三. export default命令
 `export default`命令，为模块指定默认输出。
@@ -214,7 +214,7 @@ import { default as foo } from 'modules';
 // import foo from 'modules';
 ```
 
-- 如果想在一条import语句中，同时输入默认方法和其他接口，可以写成下面这样。
+- 如果想在一条`import`语句中，同时输入默认方法和其他接口，可以写成下面这样。
 ```js
 import _, { each, forEach } from 'lodash';
 ```
@@ -228,7 +228,8 @@ export { foo, bar } from 'my_module';
 import { foo, bar } from 'my_module';
 export { foo, bar };
 ```
-**注意：**写成一行以后，foo和bar实际上并没有被导入当前模块，只是相当于对外转发了这两个接口，导致当前模块不能直接使用foo和bar。
+**注意：**
+ 写成一行以后，`foo`和`bar`实际上并没有被导入当前模块，只是相当于对外转发了这两个接口，导致当前模块不能直接使用`foo`和`bar`。
 
 - 接口改名
 ```js
@@ -268,7 +269,7 @@ import {A, B} from './constants';
 console.log(A); // 1
 console.log(B); // 3
 ```
-业务中可能有很多常量，在不同模块使用，可以建一个专门的constants目录，将各种常量写在不同的文件里面，保存在该目录下
+业务中可能有很多常量，在不同模块使用，可以建一个专门的`constants`目录，将各种常量写在不同的文件里面，保存在该目录下
 ```js
 // constants/db.js
 export const db = {
@@ -286,7 +287,7 @@ export const users = ['root', 'admin', 'staff', 'ceo', 'chief', 'moderator'];
 export {db} from './db';
 export {users} from './users';
 ```
-使用的时候，直接加载index.js就可以了。
+使用的时候，直接加载`index.js`就可以了。
 ```js
 // script.js
 import {db, users} from './constants/index';
@@ -365,10 +366,10 @@ import('./myModule.js')
  ES6 模块与 CommonJS 模块完全不同。有三个重大差异：
 - CommonJS 模块输出的是一个值的拷贝，ES6 模块输出的是值的引用。
 - CommonJS 模块是运行时加载，ES6 模块是编译时输出接口。
-- CommonJS 模块的require()是同步加载模块，ES6 模块的import命令是异步加载，有一个独立的模块依赖的解析阶段。
+- CommonJS 模块的`require()`是同步加载模块，ES6 模块的`import`命令是异步加载，有一个独立的模块依赖的解析阶段。
 
 
-第二个差异是因为 CommonJS 加载的是一个对象（即module.exports属性），该对象只有在脚本运行完才会生成。而 ES6 模块不是对象，它的对外接口只是一种静态定义，在代码静态解析阶段就会生成。
+第二个差异是因为 CommonJS 加载的是一个对象（即`module.exports`属性），该对象只有在脚本运行完才会生成。而 ES6 模块不是对象，它的对外接口只是一种静态定义，在代码静态解析阶段就会生成。
 
 重点解释一下第一个差异：  
 **CommonJS 模块输出的是值的拷贝**，也就是说，一旦输出一个值，模块内部的变化就影响不到这个值
@@ -390,7 +391,7 @@ console.log(mod.counter);  // 3
 mod.incCounter();
 console.log(mod.counter); // 3
 ```
-上面代码说明，lib.js模块加载以后，它的内部变化就影响不到输出的mod.counter了。这是因为mod.counter是一个原始类型的值，除非写成一个函数，才能得到内部变动后的值。
+上面代码说明，lib.js模块加载以后，它的内部变化就影响不到输出的`mod.counter`了。这是因为`mod.counter`是一个原始类型的值，除非写成一个函数，才能得到内部变动后的值。
 ```js
 // lib.js
 var counter = 3;
@@ -404,9 +405,9 @@ module.exports = {
   incCounter: incCounter,
 };
 ```
-如上：counter属性实际上是一个取值器函数。现在再执行main.js，就可以正确读取内部变量counter的变动了
+如上：`counter`属性实际上是一个取值器函数。现在再执行main.js，就可以正确读取内部变量`counter`的变动了
 
-ES6 模块的运行机制与 CommonJS 不一样。JS 引擎对脚本静态分析的时候，遇到模块加载命令import，就会生成一个只读引用。等到脚本真正执行时，再根据这个只读引用，到被加载的那个模块里面去取值。**ES6 模块是动态引用，并且不会缓存值，模块里面的变量绑定其所在的模块**。
+ES6 模块的运行机制与 CommonJS 不一样。JS 引擎对脚本静态分析的时候，遇到模块加载命令`import`，就会生成一个只读引用。等到脚本真正执行时，再根据这个只读引用，到被加载的那个模块里面去取值。**ES6 模块是动态引用，并且不会缓存值，模块里面的变量绑定其所在的模块**。
 ```js
 // lib.js
 export let counter = 3;
@@ -463,7 +464,7 @@ import './y';
 ```
 
 ### 八. Node.js 的模块加载方法
-JavaScript 现在有两种模块。一种是 ES6 模块，简称 ESM；另一种是 CommonJS 模块，简称 CJS。  
+JavaScript 现在有两种模块。一种是 ES6 模块，简称 `ESM`；另一种是 CommonJS 模块，简称 `CJS`。  
 CommonJS 模块是 Node.js 专用的，CommonJS 模块使用`require()`和`module.exports`，ES6 模块使用`import`和`export`。
 
 Node加载 ES6 模块会依次寻找以下脚本，与require()的规则一致。
@@ -485,11 +486,36 @@ import 'baz'
 //  ../mode_modules/baz/index.js
 //  再上一级目录...
 ```
- ES6 模块之中，顶层的this指向undefined，CommonJS 模块的顶层this指向当前模块，这也两者的一个重大差异。
+ ES6 模块之中，顶层的`this`指向`undefined`，`CommonJS` 模块的顶层`this`指向当前模块，这也两者的一个重大差异。
 
-从 Node.js v13.2 版本开始，Node.js 已经默认打开了 ES6 模块支持。要求 ES6 模块采用.mjs后缀文件名，默认启用严格模式，不必在每个模块文件顶部指定"use strict"。
+ ### nodejs 中 `module.erports` 和 `exports`的区别
+ 为了方便开发者便捷的导出，nodejs在初始化完`module.exports`后，有声明了一个变量 `exports = module.exports`
+ ```js
+(function(module){
+  module.exports = {};
+  var exports = module.exports;
+  // 模块中的代码
+  return module.exports
+})()
 
-如果不希望将后缀名改成.mjs，可以在项目的package.json文件中，指定type字段为module。
+ ```
+可以看出，`exports`指向的就是`module.exports`， 但**最终返回的是`module.exports`**,   所以不要直接对`exports`进行赋值操作, 导入后是获取不到的
+```js
+// index.js
+exports = {'a': 1}  
+exports = 'a'
+
+module.exports = {a: 2}
+
+// 导入后 获取到的是 {a: 2}
+var obj = require('./index.js')
+console.log(obj) // {a: 2}
+```
+--- 
+
+从 Node.js v13.2 版本开始，Node.js 已经默认打开了 ES6 模块支持。要求 ES6 模块采用`.mjs`后缀文件名，默认启用严格模式，不必在每个模块文件顶部指定`"use strict"`。
+
+如果不希望将后缀名改成`.mjs`，可以在项目的`package.json`文件中，指定`type`字段为`module`。
 ```js
 {
    "type": "module"
@@ -497,14 +523,14 @@ import 'baz'
 ```
 一旦设置了以后，该项目的 JS 脚本，就被解释成 ES6 模块。
 
-如果这时还要使用 CommonJS 模块，那么需要将 CommonJS 脚本的后缀名都改成.cjs。如果没有type字段，或者type字段为commonjs，则.js脚本会被解释成 CommonJS 模块。
+如果这时还要使用 CommonJS 模块，那么需要将 CommonJS 脚本的后缀名都改成`.cjs`。如果没有`type`字段，或者`type`字段为`commonjs`，则`.js`脚本会被解释成 CommonJS 模块。
 
-总结为一句话：.mjs文件总是以 ES6 模块加载，.cjs文件总是以 CommonJS 模块加载，.js文件的加载取决于package.json里面type字段的设置。
-
-
+总结为一句话：`.mjs`文件总是以 ES6 模块加载，`.cjs`文件总是以 CommonJS 模块加载，`.js`文件的加载取决于`package.json`里面type字段的设置。
 
 
 
-***参考资料***
-[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy)
+
+
+***参考资料***  
+[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy)  
 [阮一峰 ES6 入门教程](https://es6.ruanyifeng.com/)

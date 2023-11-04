@@ -134,6 +134,8 @@ module.exports = {
 
     // 后端
     '/backend/': ['',],
+    // 渡一
+    '/duyi/': ['',],
 
     // 课程笔记
     '/course-notes/': courseNotes,

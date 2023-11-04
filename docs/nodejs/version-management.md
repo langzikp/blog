@@ -1,9 +1,33 @@
 # Node.js多版本管理器
 
-## GNVM
-GNVM 是一个简单的 Windows 下 Node.js 多版本管理器，类似的 nvm nvmw nodist 。
+## NVM
 
-## 安装
+nvm并非包管理器，它是用于管理多个node版本的工具
+
+在实际的开发中，可能会出现多个项目分别使用的是不同的node版本，在这种场景下，管理不同的node版本就显得尤为重要
+
+nvm就是用于切换版本的一个工具
+
+#### 下载和安装
+
+最新版下载地址：[nvm](https://github.com/coreybutler/nvm-windows/releases)
+
+下载nvm-setup.zip后，直接安装
+
+#### 使用nvm
+
+nvm提供了CLI工具，用于管理node版本
+
+在终端中输入nvm，以查看各种可用命令
+
+> 为了加快下载速度，建议设置淘宝镜像   
+> node淘宝镜像：https://npm.taobao.org/mirrors/node/  
+> npm淘宝镜像：https://npm.taobao.org/mirrors/npm/
+
+## GNVM
+GNVM 也是一个简单的 Windows 下 Node.js 多版本管理器，类似的 nvm nvmw nodist 。
+
+#### 安装
 - 不存在 Node.js 环境
 
 下载并解压缩 gnvm.exe 保存到任意文件夹，并将此文件夹加入到环境变量 Path 。
@@ -12,14 +36,14 @@ GNVM 是一个简单的 Windows 下 Node.js 多版本管理器，类似的 nvm n
 
 下载并解压缩 gnvm.exe 保存到 Node.js 所在的文件夹。
 
-## 验证
+#### 验证
 在 cmd 下，输入 gnvm version，输出 版本说明 则配置成功。
 
 
-## 常用命令
+#### 常用命令
 **使用管理员权限打开cmd**
 
-### 查看/安装/使用/卸载
+#### 查看/安装/使用/卸载
 ```shell
 # 查看已安装的版本
 $ gnvm ls
@@ -44,7 +68,7 @@ $ gnvm uninstall 10.0.0
 Node.js version 10.0.0 uninstall success.
 ```
 
-### 设置/查看
+#### 设置/查看
 ```shell
 # 查看本地版本及远程最新版本
 $ gnvm node-version
@@ -65,7 +89,7 @@ Set success, registry new value is http://npm.taobao.org/mirrors/node/
 $ gnvm search 5.*.*
 ```
 
-### 安装npm
+#### 安装npm
 ```shell
 # 安装当前 Node.js 版本对应的 NPM 版本。
 $ gnvm npm global
@@ -78,7 +102,7 @@ Start unzip and install v6.10.2.zip zip file, please wait.
 Set success, current npm version is 6.10.2.
 ```
 
-## 术语
+#### 术语
 - global 当前使用的 Node.js 。
 - latest 稳定版本的 Node.js 
 

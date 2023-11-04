@@ -5,8 +5,8 @@
   > 
   
     <div class="operation">
-      <div class="btn1" :class="{active: status==1}" @click="updateStatus('1')">主题一</div>
-      <div class="btn2" :class="{active: status==2}" @click="updateStatus('2')">主题二</div>
+      <div class="btn1" :class="{active: status==1}" @click="updateStatus('1')">1</div>
+      <div class="btn2" :class="{active: status==2}" @click="updateStatus('2')">2</div>
     </div>
     <header class="hero">
       <img
