@@ -42,6 +42,17 @@
            </div>
         </div>
          <div class="card">
+           <h3>工具库</h3>
+           <div>
+                <a class="item" href="https://jquery.cuishifeng.cn/" target="blank">jQuery</a>
+                <a class="item" href="https://www.jq22.com/" target="blank">jQuery plugins </a>
+                <a class="item" href="https://www.lodashjs.com/" target="blank">lodash.js</a>
+                <a class="item" href="http://mockjs.com/" target="blank">mock.js</a>
+                <a class="item" href="https://momentjs.com/" target="blank">moment.js</a>
+                <a class="item" href="https://animate.style/" target="blank">animate.css</a>
+           </div>
+        </div>
+         <div class="card">
            <h3>其他</h3>
            <div>
                 <a class="item" href="https://markdown.com.cn/basic-syntax/paragraphs.html" target="blank">Markdown</a>
