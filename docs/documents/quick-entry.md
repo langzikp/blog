@@ -30,6 +30,7 @@
            </div>
            <div>
                 <a class="item" href="https://vuepress.vuejs.org/zh/" target="blank">vuepress</a>
+                <a class="item" href="https://vitejs.cn/vitepress/" target="blank">vitepress</a>
            </div>
         </div>
         <div class="card">
@@ -41,6 +42,16 @@
                 <a class="item" href="https://developers.weixin.qq.com/miniprogram/dev/framework/" target="blank">微信开发文档</a>
            </div>
         </div>
+        <div class="card">
+           <h3>NodeJs</h3>
+           <div>
+                <a class="item" href="https://jquery.cuishifeng.cn/" target="blank">node</a>
+                <a class="item" href="https://langzikp.gitee.io/blog/nodejs/npm.html" target="blank">npm</a>
+                <a class="item" href="https://express.nodejs.cn/" target="blank">express</a>
+                <a class="item" href="https://www.sequelize.cn/" target="blank">sequelize</a>
+                <a class="item" href="https://www.npmjs.com/package/log4js" target="blank">log4js</a>
+           </div>
+        </div>
          <div class="card">
            <h3>工具库</h3>
            <div>
@@ -50,6 +61,8 @@
                 <a class="item" href="http://mockjs.com/" target="blank">mock.js</a>
                 <a class="item" href="https://momentjs.com/" target="blank">moment.js</a>
                 <a class="item" href="https://animate.style/" target="blank">animate.css</a>
+                <a class="item" href="https://echarts.apache.org/handbook/zh/get-started/" target="blank">ECharts.js</a>
+                <a class="item" href="https://www.wangeditor.com/v5/for-frame.html" target="blank">wangEditor</a>
            </div>
         </div>
          <div class="card">

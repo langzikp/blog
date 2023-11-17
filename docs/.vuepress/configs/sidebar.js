@@ -28,6 +28,8 @@ module.exports = {
         ['css-include-block', 'CSS 之包含块'],
         ['tool', 'CSS 高频实用片段'],
         ['css-border', 'CSS 边框效果'],
+        ['css-pixel', '设备像素/设备独立像素/css像素/dpr/ppi的区别'],
+
        
     ],
     // '/javascript/': [
