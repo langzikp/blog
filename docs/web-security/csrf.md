@@ -6,20 +6,44 @@ CSRF（Cross-site request forgery）跨站请求伪造：攻击者诱导受害�
 
 1. 受害者登录a.com，并保留了登录凭证（Cookie）。
 1. 攻击者引诱受害者访问了b.com。
-1. b.com 向 a.com 发送了一个请求：a.com/act=xx。浏览器会…
+1. b.com 向 a.com 发送了一个请求：a.com/act=xx，浏览器会携带cookie
 1. a.com接收到请求后，对请求进行验证，并确认是受害者的凭证，误以为是受害者自己发送的请求。
 1. a.com以受害者的名义执行了act=xx。
 1. 攻击完成，攻击者在受害者不知情的情况下，冒充受害者，让a.com执行了自己定义的操作。
 
+
+## CSRF的特点
+- 攻击一般发起在第三方网站，而不是被攻击的网站。被攻击的网站无法防止攻击发生。
+- 攻击利用受害者在被攻击网站的登录凭证，冒充受害者提交操作；而不是直接窃取数据。
+- 整个过程攻击者并不能获取到受害者的登录凭证，仅仅是“冒用”。
+- 跨站请求可以用各种方式：图片URL、超链接、CORS、Form提交等等。部分请求方式可以直接嵌入在第三方论坛、文章中，难以进行追踪。
+
+CSRF通常是跨域的，因为外域通常更容易被攻击者掌控。但是如果本域下有容易被利用的功能，比如可以发图和链接的论坛和评论区，攻击可以直接在本域下进行，而且这种攻击更加危险。
+
 ## CSRF 攻击的预防
 
 - 阻止不明外域的访问
-  - 同源检测
-  - Samesite Cookie
+  - **同源检测**  
+   在HTTP协议中，每一个跨域请求都会携带两个header（ Referer 和 Origin ），用于标记来源域名，Origin 表示当前请求资源所在页面的协议和域名，Referer 表示当前请求资源所在页面的完整路径。
+   通过判断Origin是否为我们自己的合法域名，不是则拒绝该请求
+  - **Samesite Cookie**  
+    允许服务器设定一则 cookie 不随着跨站请求一起发送，这样可以在一定程度上防范跨站请求伪造攻击，可选的属性值有
+      - `Strict` 浏览器仅对同一站点的请求发送 cookie，即请求来自设置 cookie 的站点。
+      - `Lax` cookie 不会在跨站请求中被发送，如：加载图像或 frame 的请求。但 cookie 在用户从外部站点导航到源站时，cookie 也将被发送（例如，跟随一个链接）。这是 SameSite 属性未被设置时的默认行为。
+      - `None` 览器会在跨站和同站请求中均发送 cookie。在设置这一属性值时，必须同时设置 Secure 属性  
+
+      **注意** 在一些老的浏览，若未指定Samesite，所有的 cookie 均会被发送。
+
+
 - 提交时要求附加本域才能获取的信息
+
   - CSRF Token
-  - 双重Cookie验证 
+    不使用cookie进行验证，使用Jwt等Token方案进行校验
+  - 双重验证 
+    对某些敏感操作进行二次校验，短信验证码，刷脸，指纹等
+    
 
 
-**摘录文献**  
-[如何防止XSS攻击](https://juejin.cn/post/6844903689702866952#heading-2)
+**参考**  
+- [MDN HTTP-Header](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value)
+- [如何防止CSRF攻击](https://juejin.cn/post/6844903689702866952#heading-2)   
