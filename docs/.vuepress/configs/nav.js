@@ -25,7 +25,7 @@ module.exports = [
     ]
   },
   { text: '后端', link: '/backend/' },
-
+  { text: '算法', link: '/algorithm/01' },
   // { text: '渡一', link: '/duyi/' },
   {
     text: '笔记',

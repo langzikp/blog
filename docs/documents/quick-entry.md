@@ -47,9 +47,15 @@
            <div>
                 <a class="item" href="https://jquery.cuishifeng.cn/" target="blank">node</a>
                 <a class="item" href="https://langzikp.gitee.io/blog/nodejs/npm.html" target="blank">npm</a>
-                <a class="item" href="https://express.nodejs.cn/" target="blank">express</a>
+                <a class="item" href="https://expressjs.com/" target="blank">express 官网</a>
+                <a class="item" href="https://www.expressjs.com.cn/zh-cn/" target="blank">express 中文网</a>
                 <a class="item" href="https://www.sequelize.cn/" target="blank">sequelize</a>
                 <a class="item" href="https://www.npmjs.com/package/log4js" target="blank">log4js</a>
+                <a class="item" href="https://koajs.com/" target="blank">koa 官网</a>
+                <a class="item" href="https://koa.bootcss.com/index.html" target="blank">koa 中文网</a>
+                <a class="item" href="https://www.eggjs.org/zh-CN/intro" target="blank">Egg.js</a>
+                <a class="item" href="https://midwayjs.org/docs/intro" target="blank">Midway.js</a>
+                <a class="item" href="https://docs.nestjs.cn/10/firststeps" target="blank">Nest.js</a>
            </div>
         </div>
          <div class="card">

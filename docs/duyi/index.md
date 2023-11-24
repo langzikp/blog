@@ -70,9 +70,9 @@
 <a class="item" href="https://echarts.apache.org/handbook/zh/get-started/" target="blank">ECharts.js</a>
 
 
-## 📆 2023-11-07 node
+## 📆 2023-11-07 node,mysql,数据驱动和ORM，express
 #### 📒学习内容： 
-- 技术应用阶段： node
+- 高薪就业阶段： node
   - node 核心
     - 全局对象 [global](https://nodejs.cn/api/globals.html)
     - 内置模块 [os](https://nodejs.cn/api/os.html)
@@ -96,12 +96,7 @@
     - 断点调试
     - [跨域](/network/03.html)
         - JSONP
-        - CORS  [CORS中间件](https://www.npmjs.com/package/cors) CORS方案解决跨域问题的中间件
-    - [connect-history-api-fallback](https://www.npmjs.com/package/connect-history-api-fallback) 是一个用于处理前端路由的中间件，它的原理是在服务器接收到请求时，检查请求的路径是否匹配到静态文件（如HTML、CSS、JS等），如果不匹配，则将请求重定向到前端的入口文件，通常是 index.html。这样做的目的是确保在使用前端路由时，刷新页面或直接访问某个路由时，服务器都能正确地返回前端入口文件，并由前端路由来处理路由匹配和页面渲染。
-    - [multer](https://github.com/expressjs/multer/blob/master/doc/README-zh-cn.md)  处理图片上传的中间件
-    - [Jimp](https://www.npmjs.com/package/jimp) 图片处理/水印/裁剪的中间件
-    - [node-qrcode](https://www.npmjs.com/package/qrcode) 生成二维码
-    - [svg-captcha](https://www.npmjs.com/package/svg-captcha) 图片验证码
+        - CORS 
 
   - websocket
   - CSRF攻击
@@ -112,6 +107,23 @@
 
 #### ✏️学习笔记：
 [nodejs](/nodejs/)
+[express](/nodejs/express.html)
+
+
+## 📆 2023-11-20 Koa
+#### 📒学习内容： 
+- 高薪就业阶段： Koa
+
+#### ✏️学习笔记：
+[koa](/nodejs/koa.html)
+
+
+## 📆 2023-11-21 Egg
+#### 📒学习内容： 
+- 高薪就业阶段： Egg
+
+#### ✏️学习笔记：
+[Egg](/nodejs/egg.html)
 
 
 
