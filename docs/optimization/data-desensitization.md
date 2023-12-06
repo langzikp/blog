@@ -20,20 +20,18 @@
 
 #### 姓名脱敏
 ```js
-let handleName = function(name){
-    let arr = Array.from(name)
-    let result = ''
-    if (arr.length === 2) {
-        result = arr[0] + '*'
-    } else if (arr.length > 2) {
-        for (let i = 1; i < arr.length - 1; i++) {
-          arr[i] = '*'
-        }
-        result = arr.join('')
-    }else {
-        return name
-    }
-    return result
+/**
+ * 姓名脱敏方法
+ * @author 聂浪
+ * @description 可用姓名脱敏处理
+ * @param {string} name — 待处理姓名
+ */
+export function handleNameMask(name) {
+	if (name.length <= 2) {
+		return name.charAt(0) + "*";
+	} else {
+		return name.charAt(0) + "*".repeat(name.length - 2) + name.charAt(name.length - 1);
+	}
 }
 
 console.log(handleName('张三')) // 张*
@@ -72,28 +70,31 @@ console.log(handleEmail('819759949@qq.com'))  // 819***@qq.com
 可用于手机号，身份证号，地址等处理
 ```js
 /**
- * 	 str: 待处理字符串
- *   begin：头部保留多少位
- *   end： 尾部保留多少位
- *   max： 最大掩码*的重复数量
+ * 通用脱敏方法
+ * @author 聂浪
+ * @description 可用于手机号，身份证号，地址等脱敏处理
+ * @param {string} str — 待处理字符串
+ * @param {number} begin — 头部保留多少位
+ * @param {number} end — 尾部保留多少位
+ * @param {number} max — 最大掩码*的重复数量
  */
-let handleCommon = function (str, begin, end = 0, max = 20) {
-    if (!str) return '';
-    if (begin + end > str.length) return str;
+export function handleDataMask(str, begin, end = 0, max = 20) {
+	if (!str) return '';
+	if (begin + end > str.length) return str;
 
-    let leftStr = str.substring(0, begin);
-    let rightStr = str.substring(str.length - end, str.length);
+	let leftStr = str.substring(0, begin);
+	let rightStr = str.substring(str.length - end, str.length);
 
-    let num = Math.min(max, str.length - begin - end);
-    return leftStr + '*'.repeat(num) + rightStr;
+	let num = Math.min(max, str.length - begin - end);
+	return leftStr + '*'.repeat(num) + rightStr;
 }
 
-console.log(handleCommon('13057794096', 3, 4, 4)) 
+console.log(handleDataMask('13057794096', 3, 4, 4)) 
 // 130****4096
 
-console.log(handleCommon('511623199210122518', 4, 4)) 
+console.log(handleDataMask('511623199210122518', 4, 4)) 
 // 5116**********2518
 
-console.log(handleCommon('四川省成都市成华区建设路66号4栋一单元606', 6, 0, 6)) 
+console.log(handleDataMask('四川省成都市成华区建设路66号4栋一单元606', 6, 0, 6)) 
 // 四川省成都市******
 ```

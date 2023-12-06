@@ -29,6 +29,7 @@ module.exports = {
         ['tool', 'CSS 高频实用片段'],
         ['css-border', 'CSS 边框效果'],
         ['css-pixel', '设备像素/设备独立像素/css像素/dpr/ppi的区别'],
+        ['other', '其他知识点'],
 
        
     ],
@@ -140,14 +141,20 @@ module.exports = {
     // 后端
     '/backend/': ['',],
     '/algorithm/': [
-        ['01', '什么是算法'],
-        ['02', '什么是数据结构'],
-        ['03', '时间复杂度'],
-        ['04', '空间复杂度'],
+        ['01-algorithm-datastructure', '算法和数据结构'],
+        ['02-timeandspace-complexity.md', '时间复杂度和空间复杂度'],
+        ['03-array-linkedlist', '数组和链表'],
+        ['04-stack-queue', '栈和队列'],
+
     ],
     // 渡一
     '/duyi/': ['',],
 
+    // 构建工具
+    '/build-tool/': [
+        ['webpack', 'webpack'],
+        ['vite', 'vite'],
+    ],
     // 课程笔记
     '/course-notes/': courseNotes,
 

@@ -17,6 +17,7 @@ module.exports = [
       { text: 'Javascript', link: '/javascript/notes' },
       { text: 'Vue', link: '/vue/create' },
       { text: 'React', link: '/react/notes' },
+      { text: '构建工具', link: '/build-tool/webpack' },
       { text: 'Nodejs', link: '/nodejs/' },
       { text: 'Git', link: '/git/' },
       { text: '优化', link: '/optimization/data-desensitization' },
@@ -25,7 +26,7 @@ module.exports = [
     ]
   },
   { text: '后端', link: '/backend/' },
-  { text: '算法', link: '/algorithm/01' },
+  { text: '算法', link: '/algorithm/01-algorithm-datastructure' },
   // { text: '渡一', link: '/duyi/' },
   {
     text: '笔记',

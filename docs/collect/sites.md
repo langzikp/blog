@@ -27,6 +27,10 @@
 - [码力全开资源库](https://maliquankai.com/designnav/) 很全很强大，独立开发者/设计干货/优质利器/工具资源...
 
 
+## 内容
+- [codepen](https://codepen.io/) 完全免费的前端代码托管服务，可以用来制作和测试页面的网站
+- [css-tricks](https://css-tricks.com/) 一个国外的优秀前端开发博客，主要分享使用 CSS 样式的技巧，经验和教程等
+
 ## 互动
 - [兔小巢](https://txc.qq.com/)用户意见反馈服务平台
 
@@ -44,7 +48,8 @@
 - [微图](https://devtool.tech/tiny-image) 同时生成webp，avif格式
 - [remove](https://www.remove.bg/zh) AI抠图 图片背景消除
 - [一键抠图](https://www.yijiankoutu.com/) 一键抠图,图片压缩，转换，修复，抠图在线网站
-- [随机生成图片](https://picsum.photos/) 可随机生成指定大小的图片 （https://picsum.photos/200/300）
+- [随机生成图片](https://picsum.photos/) 可随机生成指定大小的图片，图片占位 （https://picsum.photos/200/300）
+- [觅元素](https://www.51yuansu.com/) 一天有5次免费下载机会，上面素材质量很高，图片素材
 
 ## 工具网站
 - [犸良](https://design.alipay.com/emotion) 让动效更简单
@@ -75,9 +80,7 @@
 
 
 ## 评论系统
-
 - [giscus](https://giscus.app/zh-CN) 由 [GitHub Discussions](https://docs.github.com/en/discussions) 驱动的评论系统
-
 
 
 ## 前端小工具

@@ -2,7 +2,7 @@
 npm 全称为 node package manager，即 node 包管理器，它运行在 node 环境中，让开发者可以用简单的方式完成包的查找、安装、更新、卸载、上传等操作。  
 [npm 官网](https://www.npmjs.com/)        
 [npm文档](https://npm.nodejs.cn/about-npm)   
-[npm和node版本对照](https://nodejs.org/zh-cn/download/releases/)  
+[npm和node版本对照](https://nodejs.org/en/download/releases/)  
 
 ## 1、包的安装
 因为 npm 的官方 registry 服务器位于国外，所以通常使用淘宝镜像，提高下载速度
