@@ -1,11 +1,8 @@
-# webpack
+
 [webpack 官网](https://www.webpackjs.com/concepts/)  
 [技能树](http://mdrs.yuanjin.tech/img/20210508151156.png)
 
-# 核心
-
 **webpack是用来搭建前端工程的**
-
 它运行在node环境中，它所做的事情，简单来说，就是**打包**
 
 
@@ -18,20 +15,27 @@
 
 ## 配置
 - [mode](https://www.webpackjs.com/configuration/mode/)  模式
+
 - [entry和context](https://www.webpackjs.com/configuration/entry-context/) 入口和上下文
+
 - [output](https://www.webpackjs.com/configuration/output/) 输出
   - [publicPath](https://www.webpackjs.com/configuration/output/#outputpublicpath) 在使用file-loader或url-loader时，模块中的路径来自于某个loader或plugin，当产生路径时，loader或plugin只有相对于dist目录的路径，并不知道该路径将在哪个资源中使用，从而无法确定最终正确的路径
-- [loader](https://www.webpackjs.com/concepts/loaders/)  
-loader 用于对模块的源代码进行转换。loader 可以使你在 import 或"加载"模块时预处理文件。
+  ```js
+    output: {
+        // 该配置会为index.html中引入的<script> <link>等标签中的资源路径添加前缀
+        publicPath: '/'
+    }
+  ```
+
+- [loader](https://www.webpackjs.com/concepts/loaders/)   
+loader 用于对模块的源代码进行转换。  
+loader 可以使你在 import 或"加载"模块时预处理文件。
 > webapck的本质是一个模块打包工具, 所以webpack默认只能处理JS文件,不能处理其他文件,
 因为其他文件中没有模块的概念, 但是在企业开发中我们除了需要对JS进行打包以外,
 还有可能需要对图片/CSS等进行打包, 所以为了能够让webpack能够对其它的文件类型进行打包,
 在打包之前就必须将其它类型文件转换为webpack能够识别处理的模块,
 注意：loader都是用NodeJS编写的
 
-> loader特点:
-> 单一原则, 一个loader只做一件事情
-> 多个loader会按照从右至左, 从下至上的顺序执行
 
 - [plugin](https://www.webpackjs.com/concepts/plugins/)  插件  
 插件（plugin）是 webpack 的支柱功能。用于扩展webpack的功能。当然loader也是变相的扩展了webpack ，但是它只专注于转化文件这一个领域。   
@@ -42,24 +46,21 @@ loader 用于对模块的源代码进行转换。loader 可以使你在 import �
 
 - [resolve](https://www.webpackjs.com/configuration/resolve/)   解析相关的配置
     - alias  路径别名
-    ```js
-    alias: {
-      "@": path.resolve(__dirname, 'src'),
-      "_": __dirname
-    }
-    ```
     - extensions 缺省的文件和后缀名
-    ```js
-     resolve: {
-      extensions: ['.js', '.json', '.wasm'],
-    },
-    ```
     - modules webpack解析模块时应该搜索的目录
-    ```js
-    resolve: {
-      modules: ['node_modules'],
-    },
-    ```
+         ```js
+            resolve: {
+                // 创建 import 或 require 的路径别名
+                alias: {
+                    "@": path.resolve(__dirname, 'src'),
+                    "_": __dirname
+                },
+                // 使的我们在引入资源时可省略后缀，按此配置顺序查找
+                extensions: ['.js', '.json', '.wasm'],  // 默认值
+                // webpack 解析模块时应该搜索的目录
+                modules: ['node_modules'],  // 默认值
+            },
+        ```
 
 ## 编译过程
 
@@ -140,7 +141,7 @@ chunk是webpack在内部构建过程中的一个概念，译为```块```，它�
 
 <img :src="$withBase('/img/webpack/11.jpg')">
 
-**涉及术语**
+### 涉及术语
 
 1. module：模块，分割的代码单元，webpack中的模块可以是任何内容的文件，不仅限于JS
 2. chunk：webpack内部构建模块的块，一个chunk中包含多个模块，这些模块是从入口模块通过依赖分析得来的
@@ -151,199 +152,9 @@ chunk是webpack在内部构建过程中的一个概念，译为```块```，它�
 7. id：通常指chunk的唯一编号，如果在开发环境下构建，和chunkname相同；如果是生产环境下构建，则使用一个从0开始的数字进行编号
 
 
-## 常用loader
-- `file-loader` : 普通文件处理，将文件发送到输出目录
-- `url-loader` : 将文件作为 data URI 内联到 bundle 中
-
-## 常用插件
-- `html-webpack-plugin` : 会在打包结束之后自动创建一个index.html, 并将打包好的JS自动引入到这个文件中
-```js
-// 默认情况下生成html文件并没有压缩,如果想让html文件压缩可以设置
-new HtmlWebpackPlugin({
-    template: "index.html",//配置模板
-     minify: {
-			collapseWhitespace: true//压缩
-		}
-})
-
-```
-- `clean-webpack-plugin` :  在打包之前将我们指定的文件夹清空。应用场景每次打包前将目录清空, 然后再存放新打包的内容, 避免新老混淆问题。
-- `copy-webpack-plugin` : 打包相关的文档。除了JS/CSS/图片/字体图标等需要打包以外, 可能还有一些相关的文档也需要打包（word等）。文档内容是固定不变的, 我们只需要将对应的文件拷贝到打包目录中即可
 
 
-## 开发服务器
-[webpack-dev-server](https://www.webpackjs.com/configuration/dev-server/) 是webpack官方制作的一个单独的库，用于解决打包、运行、调试繁琐过程。  
-
-```webpack-dev-server```命令几乎支持所有的webpack命令参数，如```--config```、```-env```等等，你可以把它当作webpack命令使用
-
-这个命令是专门为开发阶段服务的，真正部署的时候还是得使用webpack命令
-
-当我们执行```webpack-dev-server```命令后，它做了以下操作：
-
-1. 内部执行webpack命令，传递命令参数
-2. 开启watch
-3. 注册hooks：类似于plugin，webpack-dev-server会向webpack中注册一些钩子函数，主要功能如下：
-   1. 将资源列表（aseets）保存起来
-   2. 禁止webpack输出文件
-4. 用express开启一个服务器，监听某个端口，当请求到达后，根据请求的路径，给予相应的资源内容
-
-**常见配置**
-- port：配置监听端口
-- proxy：配置代理，常用于跨域访问
-- stats：配置控制台输出内容
-
-## webpack 内置插件
-[webpack 内置插件-官网](https://www.webpackjs.com/plugins/)    
-所有的webpack内置插件都作为webpack的静态属性存在的，使用下面的方式即可创建一个插件对象
-
-```js
-const webpack = require("webpack")
-
-new webpack.插件名(options)
-```
-
-### DefinePlugin
-
-全局常量定义插件，使用该插件通常定义一些常量值，例如：
-
-```js
-new webpack.DefinePlugin({
-    PI: `Math.PI`, // PI = Math.PI
-    VERSION: `"1.0.0"`, // VERSION = "1.0.0"
-    DOMAIN: JSON.stringify("duyi.com")
-})
-```
-
-这样一来，在源码中，我们可以直接使用插件中提供的常量，当webpack编译完成后，会自动替换为常量的值
-
-### BannerPlugin
-
-它可以为每个chunk生成的文件头部添加一行注释，一般用于添加作者、公司、版权等信息
-
-```js
-new webpack.BannerPlugin({
-  banner: `
-  hash:[hash]
-  chunkhash:[chunkhash]
-  name:[name]
-  author:yuanjin
-  corporation:duyi
-  `
-})
-```
-
-### ProvidePlugin
-
-自动加载模块，而不必到处 import 或 require 
-
-```js
-new webpack.ProvidePlugin({
-  $: 'jquery',
-  _: 'lodash'
-})
-```
-
-然后在我们任意源码中：
-
-```js
-$('#item'); // <= 起作用
-_.drop([1, 2, 3], 2); // <= 起作用
-```
-
-# 页面模板
-
-对于单页应用而言，只有一个空白的页面，所有内容都靠JS代码创建
-
-webpack会自动生成一个页面，并且在页面中会自动加入对js和css的引用
-
-它生成页面时，参考的是`public/index.html`，其称之为页面模板
-
-# public目录
-
-webpack会非常暴力的将public目录中的所有文件（除页面模板外），复制到打包结果中
-
-# 开发服务器
-
-如果每次修改完代码，都要经过`打包->运行`，未免太过麻烦
-
-在开发阶段，我们可以运行`npm run serve`命令获得更好的打包体验
-
-该命令会让`webpack`启动一个**开发服务器**。
-
-在这个阶段，webpack并不会形成打包结果文件，而是把打包的内容放到内存中，当我们请求服务器时，服务器从内存中给予我们打包结果
-
-与此同时，当源码发生变动时，webpack会自动重新打包，同时刷新页面以访问到最新的打包结果
-
-![image-20210508194442940](http://mdrs.yuanjin.tech/img/20210508194443.png)
-
-# 文件缓存
-
-可以看到，除了页面外，其他的资源在打包完成后，文件名多了一些奇奇怪怪的字符
-
-例如：`js/app-9ea93.js`
-
-其中，`9ea93`这样的字符称之为`hash`，它会随着模块内容的变化而变化
-
-**源码内容不变，hash不变；源码内容变化，hash变化**
-
-之所以这样做，是因为生产环境中，浏览器会对除页面外的静态资源进行缓存
-
-如果不设置hash值，一旦代码更新，浏览器还会使用之前缓存的结果，无法使用最新的代码
-
-<img src="http://mdrs.yuanjin.tech/img/20210508183135.png" alt="image-20210508183135487" style="zoom:50%;" />
-
-有了hash值之后，即可解决此问题
-
-![image-20210508183454385](http://mdrs.yuanjin.tech/img/20210508183454.png)
-
-webpack会在打包时自动处理hash值，并不会对我们写代码造成任何影响，但作为一个前端开发者，有必要了解这一点
-
-## 资源路径
-
-**除代码和样式模块外，其他模块被视为资源模块**
-
-值得特别注意的是，**资源模块在源代码中的路径和打包后的路径是不一样的**
-
-- 对于css中的路径，webpack在打包时，会将其自动转换为打包结果的路径
-
-```css
-.container{
-  /* 背景图使用了源码中的路径 */
-  backgroud: url('../assets/1.png'); 
-}
-
- /* 打包后*/
-.container{
-  /* css中的资源路径会被自动替换，我们无须关心 */
-  background: url(/img/1492ea.png);
-}
-```
-- 
-
-但如果我们要通过js动态的使用路径，webpack是无法识别的
-
-```js
-// 打包前
-const url = './assets/1.png'; // 该路径无法被转换
-img.src = url;
-
-// 打包后
-const url = './assets/1.png'; // ❌
-img.src = url;
-```
-
-正确的做法是，通过模块化的方式导入资源，并获取资源路径
-
-```js
-// 打包前
-import url from './assets/1.png'; // 打包后，url得到的将是真实的路径
-img.src = url;
-
-// 打包后
-const url = '/img/1492ea.png'; // ✅
-img.src = url;
-```
-
+#
 ## js兼容性
 
 当webpack读取到js代码时，会自动对其进行兼容性处理
@@ -366,19 +177,6 @@ webpack在打包时，会对所有js和css代码进行压缩
 
 混淆的作用一方面是为了进一步压缩包体积，另一方面是为了让我们的代码更难被其他人理解利用
 
-## 源码地图 source map
-
-我们运行的是webpack打包后的结果，而打包后的结果是很难阅读的
-
-但这样一来会带来新的问题，如果代码报错，我们就难以知道到底是那一行代码写的有问题
-
-此时源码地图就发挥了作用
-
-可以发现，js代码打包后都会跟上一个同名的、后缀为`.map`的文件，该文件就保存了原始代码的内容
-
-请放心，这个内容人类是看不懂的，但浏览器可以看懂
-
-当代码报错时，浏览器会定位到源码地图中的对应代码，而不是把真实报错的代码展示给我们
 
 ## css工程化
 

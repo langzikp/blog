@@ -51,11 +51,12 @@ module.exports = {
     //     ['questions-answers', 'Q&A']
     // ],
     '/javascript/':  [
+        ['base', 'JS基础'],
         ['notes', '学习笔记'],
         {
             title: 'ES6',   // 必要的
             collapsable: true, // 可选的, 默认值是 true,collapsable: false 来让一个组永远都是展开状态。
-            sidebarDepth: 0,    // 可选的, 默认值是 1
+            sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
                 ['/javascript/ES6/01-ES6之let及const命令', '01-ES6之let及const命令'],
                 ['/javascript/ES6/02-ES6之解构赋值', '02-ES6之解构赋值'],
@@ -152,7 +153,19 @@ module.exports = {
 
     // 构建工具
     '/build-tool/': [
-        ['webpack', 'webpack'],
+        // ['webpack', 'webpack'],
+        {
+            title: 'webpack',   // 必要的
+            collapsable: true, // 可选的, 默认值是 true,collapsable: false 来让一个组永远都是展开状态。
+            sidebarDepth: 2,    // 可选的, 默认值是 1
+            children: [
+                ['/build-tool/webpack/core', 'webpack核心'],
+                ['/build-tool/webpack/extent', '常用扩展'],
+                ['/build-tool/webpack/css', 'css工程化'],
+                ['/build-tool/webpack/js', 'js工程化'],
+                // ['/javascript/ES6/02-ES6之解构赋值', '02-ES6之解构赋值'],
+            ]
+        },
         ['vite', 'vite'],
     ],
     // 课程笔记

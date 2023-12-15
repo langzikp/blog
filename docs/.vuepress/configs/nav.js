@@ -17,7 +17,7 @@ module.exports = [
       { text: 'Javascript', link: '/javascript/notes' },
       { text: 'Vue', link: '/vue/create' },
       { text: 'React', link: '/react/notes' },
-      { text: '构建工具', link: '/build-tool/webpack' },
+      { text: '构建工具', link: '/build-tool/webpack/core' },
       { text: 'Nodejs', link: '/nodejs/' },
       { text: 'Git', link: '/git/' },
       { text: '优化', link: '/optimization/data-desensitization' },

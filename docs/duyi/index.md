@@ -4,6 +4,17 @@
 <img :src="$withBase('/img/duyi.jpg')" alt="" width="width: 70%;"/>
 :::
 
+vscode常用插件
+```js
+Live Server     启动一个具有静态和动态页面实时重新加载功能的开发本地服务器
+
+Auto Rename Tag  自动重命名配对的HTML/XML标记
+
+JavaScript (ES6) code snippets  ES6语法下的JavaScript代码片段
+
+Code Runner  代码一键运行
+```
+
 ## 📆 2023-10-28 随谈
 #### 📒学习内容： 
 - [随谈](https://ke.qq.com/course/2144831/8652044116212287#term_id=102247018)
@@ -163,6 +174,7 @@
 - 技术应用阶段： vue从入门到事件
 
 #### ✏️学习笔记：
+- 博客页面
 
 -  组件说明文档
 给自定义的全局组件写好文档 
@@ -208,3 +220,26 @@ new Vue({
 
 #### ✏️学习笔记：
 - 小米商城首页
+
+
+## 📆 2023-12-07 vue组件库入门到实践
+#### 📒学习内容： 
+- 技术应用阶段： vue组件库入门到实践
+
+#### ✏️学习笔记：
+- elementui
+- 博客后台管理系统
+- 阿里云部署
+
+
+## 📆 2023-12-08 Webpack详细版
+#### 📒学习内容： 
+- 高薪就业阶段： Webpack详细版
+
+#### ✏️学习笔记：
+- [webpack](/nodejs/egg.html)
+- webpack核心
+- 常用插件
+- css工程化
+- js工程化
+- 性能优化
