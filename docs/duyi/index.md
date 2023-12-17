@@ -13,6 +13,9 @@ Auto Rename Tag  自动重命名配对的HTML/XML标记
 JavaScript (ES6) code snippets  ES6语法下的JavaScript代码片段
 
 Code Runner  代码一键运行
+
+Markdown Preview Enhanced  markdown预览
+
 ```
 
 ## 📆 2023-10-28 随谈

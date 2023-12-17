@@ -162,7 +162,8 @@ module.exports = {
                 ['/build-tool/webpack/core', 'webpack核心'],
                 ['/build-tool/webpack/extent', '常用扩展'],
                 ['/build-tool/webpack/css', 'css工程化'],
-                ['/build-tool/webpack/js', 'js工程化'],
+                ['/build-tool/webpack/js', 'js兼容性'],
+                ['/build-tool/webpack/performance', '性能优化'],
                 // ['/javascript/ES6/02-ES6之解构赋值', '02-ES6之解构赋值'],
             ]
         },

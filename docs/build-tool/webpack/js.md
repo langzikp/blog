@@ -127,7 +127,7 @@ new Promise(function (resolve) {
 }
 ```
 
-## babel插件 {ignore}
+## babel插件
 
 > @babel/polyfill 已过时，目前被`core-js`和`generator-runtime`所取代
 
@@ -212,6 +212,26 @@ console.error("bar");
 
 ## webpack中使用babel
 ```js
-
-
+// webpack.config.js
+module.exports = {
+    mode: "development",
+    devtool: "source-map",
+    module: {
+        rules: [
+            { test: /\.js$/, use: "babel-loader" }
+        ]
+    }
+}
+```
+`.babelrc`配置
+```js
+// .babelrc
+{
+    "presets": [
+        ["@babel/preset-env", {
+            "useBuiltIns": "usage",
+            "corejs": 3
+        }]
+    ]
+}
 ```
