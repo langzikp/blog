@@ -6,6 +6,8 @@
 
 vscode常用插件
 ```js
+Chinese 中文
+
 Live Server     启动一个具有静态和动态页面实时重新加载功能的开发本地服务器
 
 Auto Rename Tag  自动重命名配对的HTML/XML标记
@@ -15,6 +17,11 @@ JavaScript (ES6) code snippets  ES6语法下的JavaScript代码片段
 Code Runner  代码一键运行
 
 Markdown Preview Enhanced  markdown预览
+
+stylelint  css语法检测，会读取你工程中的配置文件`.stylelintrc`，按照配置进行实时报错
+
+eslint  css语法检测，会读取你工程中的配置文件`.stylelintrc`，按照配置进行实时报错
+
 
 ```
 
