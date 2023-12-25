@@ -19,7 +19,7 @@ module.exports = {
         nav, //导航栏配置
         sidebar,// 侧边栏配置
 
-        lastUpdated: 'Last Updated', // git 的最后commit时间
+        // lastUpdated: 'Last Updated', // git 的最后commit时间
         smoothScroll: true,//启用页面滚动效果
         // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
         // repo: 'vuejs/vuepress',

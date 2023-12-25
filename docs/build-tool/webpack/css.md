@@ -360,7 +360,7 @@ h1.active,h2.active,h3.active,h4.active,h5.active,h6.active{
 }
 ```
 
-### 插件2：ppostcss-apply
+### 插件2：postcss-apply
 
 该插件可以支持在css中书写属性集
 

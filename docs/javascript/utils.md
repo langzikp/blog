@@ -170,6 +170,44 @@ function copyText(text, success = null, fail = null) {
 
 ```
 
+## 格式化时间
+```js
+/**
+	 * 格式化日期
+	 * 
+	 * @param JSONDate 该参数为json格式的日期（包含time为毫秒数），或者，该参数的值直接为毫秒数
+	 * @param formatter 返回日期格式，需使用以下字母：Y（年）、m（月）、d（日）、H（时）、i（分）、s（秒），大小写敏感
+	 * @example 使用如下：$.parseJsonDateToFormatDate(1311583624000,"Y-m-d H:i:s");
+	 * @description 传入时间和格式，并按传入的格式返回一个日期字符串
+	 */
+	$.parseJsonDateToFormatDate = function(JSONDate, formatter) {
+		if ("undefined" == typeof(JSONDate) || null == JSONDate || "" == JSONDate){
+		    return "<div align='center'>/</div>";
+		} 
+		var time = JSONDate["time"] || JSONDate;
+		formatter = ("undefined" == typeof(formatter) || "" == formatter) 
+				? "Y-m-d H:i:s"
+				: formatter;
+		var date, datastr, y, m, d, h, i, s;
+		datastr = formatter;
+		date = new Date(time);
+		y = date.getFullYear();
+		m = ("0" + (date.getMonth() + 1)).slice(-2);
+		d = ("0" + date.getDate()).slice(-2);
+		h = ("0" + date.getHours()).slice(-2);
+		i = ("0" + date.getMinutes()).slice(-2);
+		s = ("0" + date.getSeconds()).slice(-2);
+		datastr = datastr.replace(/Y/, y);
+		datastr = datastr.replace(/m/, m);
+		datastr = datastr.replace(/d/, d);
+		datastr = datastr.replace(/H/, h);
+		datastr = datastr.replace(/i/, i);
+		datastr = datastr.replace(/s/, s);
+		return datastr;
+	};
+```
+
+
 
 ***参考***  
 

@@ -45,9 +45,9 @@ loader 可以使你在 import 或"加载"模块时预处理文件。
 - [devtool](https://www.webpackjs.com/configuration/devtool/#root) 源码视图
 
 - [resolve](https://www.webpackjs.com/configuration/resolve/)   解析相关的配置
-    - alias  路径别名
-    - extensions 缺省的文件和后缀名
-    - modules webpack解析模块时应该搜索的目录
+    - [alias](https://www.webpackjs.com/configuration/resolve/#resolvealias)  路径别名
+    - [extensions](https://www.webpackjs.com/configuration/resolve/#resolveextensions) 缺省的文件和后缀名
+    - [modules](https://www.webpackjs.com/configuration/resolve/#resolveextensions) webpack解析模块时应该搜索的目录
          ```js
             resolve: {
                 // 创建 import 或 require 的路径别名

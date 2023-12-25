@@ -51,7 +51,16 @@ module.exports = {
     //     ['questions-answers', 'Q&A']
     // ],
     '/javascript/':  [
-        ['base', 'JS基础'],
+        {
+            title: 'JS基础',   // 必要的
+            collapsable: true, // 可选的, 默认值是 true,collapsable: false 来让一个组永远都是展开状态。
+            sidebarDepth: 2,    // 可选的, 默认值是 1
+            children: [
+                ['/javascript/base/core', '核心概念'],
+                ['/javascript/base/library', '标准库'],
+                ['/javascript/base/webapi', 'WebAPI'],
+            ]
+        },
         ['notes', '学习笔记'],
         {
             title: 'ES6',   // 必要的
@@ -164,7 +173,7 @@ module.exports = {
                 ['/build-tool/webpack/css', 'css工程化'],
                 ['/build-tool/webpack/js', 'js兼容性'],
                 ['/build-tool/webpack/performance', '性能优化'],
-                // ['/javascript/ES6/02-ES6之解构赋值', '02-ES6之解构赋值'],
+                ['/build-tool/webpack/extend', '扩展'],
             ]
         },
         ['vite', 'vite'],
