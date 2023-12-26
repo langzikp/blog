@@ -26,6 +26,17 @@ module.exports = {
         ['weight', 'CSS 特性及权重'],
         ['css-computed', 'CSS 属性计算过程'],
         ['css-include-block', 'CSS 之包含块'],
+        {
+            title: 'CSS3常用属性',   // 必要的
+            collapsable: true, // 可选的, 默认值是 true,collapsable: false 来让一个组永远都是展开状态。
+            sidebarDepth: 2,    // 可选的, 默认值是 1
+            children: [
+                ['/css/css3/layout', '布局'],
+                ['/css/css3/vision', '视觉'],
+                ['/css/css3/animation', '过渡和动画'],
+                ['/css/css3/other', '其他'],
+            ]
+        },
         ['tool', 'CSS 高频实用片段'],
         ['css-border', 'CSS 边框效果'],
         ['css-pixel', '设备像素/设备独立像素/css像素/dpr/ppi的区别'],
