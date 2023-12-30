@@ -1,6 +1,7 @@
 # 布局
 
-![image-20210511102549096](http://mdrs.yuanjin.tech/img/20210511102802.png)
+ <img :src="$withBase('/img/css/25.jpg')" />
+
 
 **浮动**：做文字环绕效果
 
@@ -15,27 +16,27 @@
 
 ### 生成弹性容器和弹性项目
 
-![image-20210511112624876](http://mdrs.yuanjin.tech/img/20210511112624.png)
+<img :src="$withBase('/img/css/18.jpg')" />
 
-**默认情况下，**弹性项目沿着主轴依次排列，侧轴拉伸
+**默认情况下弹性项目沿着主轴依次排列，侧轴拉伸**
 
 ### 更改方向
 
 通过`flex-direction`可更改主轴方向
 
-![image-20210511112510632](http://mdrs.yuanjin.tech/img/20210511112510.png)
+<img :src="$withBase('/img/css/19.png')" />
 
 ### 主轴排列
 
 通过`justify-content`属性，可以影响主轴的排列方式
 
-![image-20210511113617325](http://mdrs.yuanjin.tech/img/20210511113617.png)
+<img :src="$withBase('/img/css/20.jpg')" />
 
 ### 侧轴排列
 
 通过`align-items`属性，可以影响侧轴的排列方式
 
-![image-20210511114016304](http://mdrs.yuanjin.tech/img/20210511114016.png)
+<img :src="$withBase('/img/css/21.jpg')" />
 
 ### 弹性项目伸缩
 
@@ -45,11 +46,11 @@
 
 拉伸示例：
 
-![image-20210511120916571](http://mdrs.yuanjin.tech/img/20210511120916.png)
+<img :src="$withBase('/img/css/22.jpg')" />
 
 压缩示例：
 
-![image-20210511121459341](http://mdrs.yuanjin.tech/img/20210511121459.png)
+<img :src="$withBase('/img/css/23.png')" />
 
 默认情况下，`flex: 0 1 auto`
 
@@ -59,23 +60,19 @@
 
 给**弹性容器**设置`flex-wrap: wrap`，即可主轴换行
 
-<img src="http://mdrs.yuanjin.tech/img/20210511123310.png" alt="image-20210511123310673" style="zoom:50%;" />
-
-> 尽管如此，多行多列仍然推荐使用网格布局
+<img :src="$withBase('/img/css/24.png')" />
 
 ## 网格
 
-> [MDN详细文档](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Grid_Layout)
->
-> [阮一峰网格布局教程](http://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html)
->
-> [网格布局小游戏](https://cssgridgarden.com/)
+[MDN详细文档](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Grid_Layout)  
+[阮一峰网格布局教程](http://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html) 
+[网格布局小游戏](https://cssgridgarden.com/)  
 
 **网格布局是多行多列布局的终极解决方案**
 
 ### 生成网格布局
 
-<img src="http://mdrs.yuanjin.tech/img/20210511165317.png" alt="image-20210511165317363" style="zoom:50%;" />
+<img :src="$withBase('/img/css/26.jpg')" />
 
 容器生成网格布局后，其所有子元素为**网格项目**
 
@@ -87,13 +84,13 @@
 
 **它们的语法是相同的**
 
-![image-20210511172305100](http://mdrs.yuanjin.tech/img/20210511172305.png)
+<img :src="$withBase('/img/css/27.jpg')" />
 
 ### 改变排列方向
 
 使用属性`grid-auto-flow: column`，可使子元素按列排放
 
-<img src="http://mdrs.yuanjin.tech/img/20210511173447.png" alt="image-20210511173447321" style="zoom:50%;" />
+<img :src="$withBase('/img/css/28.jpg')" />
 
 ### 单元格之间的间隙
 
@@ -103,7 +100,7 @@ column-gap: 20px; /* 列间隙为20px */
 gap: 10px 20px; /* 行间隙为10px，列间隙为20px */
 ```
 
-![image-20210512132025687](http://mdrs.yuanjin.tech/img/20210512132025.png)
+<img :src="$withBase('/img/css/29.jpg')" />
 
 ### 单元格内部的对齐
 
@@ -120,7 +117,7 @@ justify-items: start 左 | end 右 | center 中 | stretch 拉伸;
 align-items: start 上 | end 下 | center 中 | stretch 拉伸;
 ```
 
-<img src="http://mdrs.yuanjin.tech/img/20210511174450.png" alt="image-20210511174450356" style="zoom:50%;" />
+<img :src="$withBase('/img/css/30.jpg')" />
 
 可以使用速写属性`place-items: 垂直对齐方式 水平对齐方式`同时设置这两个值
 
@@ -140,4 +137,4 @@ place-items: start center; /* 垂直靠上，水平居中 */
 grid-area: 起始行线编号/起始列线编号/结束行线编号/结束列线编号;
 ```
 
-<img src="http://mdrs.yuanjin.tech/img/20210511180028.png" alt="image-20210511180027983" style="zoom:50%;" />
+<img :src="$withBase('/img/css/31.jpg')" />

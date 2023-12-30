@@ -46,7 +46,7 @@ transition: 过渡属性 持续时间 过渡函数 过渡延迟
 
 **动画的本质是预先定义的一套css变化规则，然后给该规则取个名字**
 
-![image-20210513172902413](http://mdrs.yuanjin.tech/img/20210513172902.png)
+<img :src="$withBase('/img/css/34.jpg')" />
 
 然后，其他元素即可使用这样的规则：
 

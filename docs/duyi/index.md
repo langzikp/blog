@@ -261,3 +261,16 @@ new Vue({
 #### ✏️学习笔记：
 - [js base](/javascript/base.html)
 
+## 📆 2023-12-27 HTML+CSS语言提升（H5 + CSS3）
+- 技术应用阶段： HTML+CSS语言提升（H5 + CSS3）
+
+#### ✏️学习笔记：
+- [css3](/css/css3/layout.html)
+
+
+## 📆 2023-12-28 JavaScript语言提升（ES6+）
+- 技术应用阶段： JavaScript语言提升（ES6+）
+
+#### ✏️学习笔记：
+
+

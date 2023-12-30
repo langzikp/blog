@@ -2,9 +2,7 @@
 
 ## box-sizing
 
-一图胜千言
-
-![image-20210514150015660](http://mdrs.yuanjin.tech/img/20210514150015.png)
+<img :src="$withBase('/img/css/35.jpg')" />
 
 使用`border-box`控制尺寸更加直观，因此，很多网站都会加入下面的代码
 
@@ -40,7 +38,7 @@ css3属性`object-fit`可以控制**多媒体内容和与元素**的适应方式
 
 下图中的所有`img`元素均被固定了宽高，溢出img的部分实际上均不会显示
 
-![image-20210514134908778](http://mdrs.yuanjin.tech/img/20210514134908.png)
+<img :src="$withBase('/img/css/36.jpg')" />
 
 ## 视口单位
 
@@ -52,7 +50,7 @@ css3支持使用`vw`和`vh`作为单位，分别表示`视口宽度`和`视口�
 
 通过`::before`和`::after`选择器，可以通过css给元素生成两个子元素
 
-<img src="http://mdrs.yuanjin.tech/img/20210514140049.png" alt="image-20210514140049244" style="zoom:50%;" />
+<img :src="$withBase('/img/css/37.jpg')" />
 
 使用伪元素可以避免在HTML中使用过多的空元素
 
@@ -63,5 +61,3 @@ css3支持使用`vw`和`vh`作为单位，分别表示`视口宽度`和`视口�
 > [MDN详细文档](https://developer.mozilla.org/zh-CN/docs/Web/CSS/scroll-behavior)
 
 使用`scroll-behavior: smooth`，可以让滚动更加丝滑
-
-参见MDN效果即可

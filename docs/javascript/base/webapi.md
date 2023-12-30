@@ -170,6 +170,25 @@ dom.onclick = function () {
 };
 ```
 
+### dom 操作类样式（html5新增）
+```js
+// 添加类样式
+dom.classList.add('a');  // <div class="a"></div>
+dom.classList.add('b');  // <div class="a b"></div>
+dom.classList.add('c');  // <div class="a b c"></div>
+
+// 是否包含某个类样式
+dom.classList.contains('a');  // true 
+
+// 移除类样式
+dom.classList.remove('a');  // <div class="b c"></div>
+
+// 切换类样式
+dom.classList.toggle('a'); // <div class="a b c"></div>
+dom.classList.toggle('a'); // <div class="b c"></div>
+dom.classList.toggle('a'); // <div class="a b c"></div>
+```
+
 #### [事件类型](https://developer.mozilla.org/zh-CN/docs/Web/Events)
 
 ##### 表单类事件
