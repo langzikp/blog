@@ -272,5 +272,4 @@ new Vue({
 - 技术应用阶段： JavaScript语言提升（ES6+）
 
 #### ✏️学习笔记：
-
-
+[promise](/course-notes/1-JavaScript进阶/1-2异步编程/04-深入理解Promise.html)

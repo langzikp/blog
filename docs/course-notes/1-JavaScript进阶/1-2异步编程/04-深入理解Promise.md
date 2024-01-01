@@ -59,7 +59,7 @@ Promise.resolve(1).then(console.log);
 ## 并发任务控制
 ```js
 function timeout(time){
-    return new Pormise(resolve =>{
+    return new Promise(resolve =>{
         setTimeout(() => {
             resolve()
         }, time)
@@ -67,6 +67,28 @@ function timeout(time){
 }
 // 根据以下输出，完成任务调度类
 class SuperTask{
+    constructor(parallelCount = 2){
+        // 最大任务并行数
+        this.parallelCount = parallelCount;
+        this.tasks = [];
+        this.runningCount = 0;
+    }
+    add(task){
+        return new Promise((resolve, reject) =>{
+            this.tasks.push({task, resolve, reject});
+            this._run();
+        })
+    }
+    _run(){
+        while(this.runningCount < this.parallelCount && this.tasks.length){
+            const {task, resolve, reject} = this.tasks.shift();
+            this.runningCount++;
+            Promise.resolve(task()).then(resolve, reject).finally(() =>{
+                this.runningCount--;
+                this._run();
+            });
+        }
+    }
 
 }
 
