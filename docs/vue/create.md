@@ -65,4 +65,11 @@ $ vue -V
 $ vue create my-project
 # OR
 $ vue ui
+```
+
+
+## vue模板项目社区实践
+[vue-element-admin ](https://panjiachen.github.io/vue-element-admin-site/zh/guide/)是一个后台前端解决方案，它基于 vue 和 element-ui实现。
+
+
 

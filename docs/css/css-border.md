@@ -122,3 +122,98 @@ border-radius: 0 0 45% 45%/0 0 35% 35%;
 }
 ```
 
+### 6. 倾斜按钮
+
+
+<button class="btn">
+    <span>倾斜按钮</span>
+</button>
+
+<style type="text/css">
+.btn{
+   width: 100px;
+   height: 40px;
+   background: #409eff;
+   border: none;
+   outline: none;
+   display: block;
+   color: #fff;
+   font-size: 18px;
+   border-radius: 10px 0;
+   position: relative;
+   transform: skew(-20deg)
+   
+}
+.btn::before{
+    content: '';  
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle at 0 0, transparent 0 20px, #409eff 21px);
+    position: absolute;
+    bottom: 0;
+    left: -19px;
+}
+.btn::after{
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle at 100% 100%, transparent 0 20px, #409eff 21px);
+    position: absolute;
+    top: 0;
+    right: -19px;
+}
+
+.btn span{
+    display: block;
+    transform: skew(20deg);
+}
+
+</style>
+
+
+```html
+
+<button class="btn">
+    <span>倾斜按钮</span>
+</button>
+```
+```css
+.btn{
+   width: 100px;
+   height: 40px;
+   background: #409eff;
+   border: none;
+   outline: none;
+   display: block;
+   color: #fff;
+   font-size: 18px;
+   border-radius: 10px 0;
+   position: relative;
+   transform: skew(-20deg)
+   
+}
+.btn::before{
+    content: '';  
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle at 0 0, transparent 0 20px, #409eff 21px);
+    position: absolute;
+    bottom: 0;
+    left: -19px;
+}
+.btn::after{
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle at 100% 100%, transparent 0 20px, #409eff 21px);
+    position: absolute;
+    top: 0;
+    right: -19px;
+}
+
+.btn span{
+    display: block;
+    transform: skew(20deg);
+}
+```
+

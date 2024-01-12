@@ -8,6 +8,7 @@
            <div>
                 <a class="item" href="https://cn.vuejs.org/" target="blank">MDN</a>
                 <a class="item" href="https://es6.ruanyifeng.com/" target="blank">ES6</a>
+                <a class="item" href="https://ts.nodejs.cn/" target="blank">TypeScript</a>
                 <a class="item" href="https://jquery.cuishifeng.cn/" target="blank">jQuery</a>
                 <!-- <a class="item" href="https://www.runoob.com/" target="blank">菜鸟教程</a> -->
            </div>
@@ -20,6 +21,7 @@
                 <a class="item" href="https://vuex.vuejs.org/zh/" target="blank">Vuex</a>
                 <a class="item" href="https://cli.vuejs.org/zh/" target="blank">Vue CLI</a>
                 <a class="item" href="https://element.eleme.cn/#/zh-CN/component/installation" target="blank">Element UI</a>
+                <a class="item" href="https://panjiachen.github.io/vue-element-admin-site/zh/guide/" target="blank">vue-element-admin</a>
            </div>
            <div>
                 <a class="item" href="https://cn.vuejs.org/" target="blank">Vue3</a>

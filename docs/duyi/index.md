@@ -6,23 +6,25 @@
 
 vscode常用插件
 ```js
-Chinese 中文
+**Chinese** 中文
 
-Live Server     启动一个具有静态和动态页面实时重新加载功能的开发本地服务器
+**Live Server**     启动一个具有静态和动态页面实时重新加载功能的开发本地服务器
 
-Auto Rename Tag  自动重命名配对的HTML/XML标记
+**Auto Rename Tag**  自动重命名配对的HTML/XML标记
 
-JavaScript (ES6) code snippets  ES6语法下的JavaScript代码片段
+**JavaScript (ES6) code snippets**  ES6语法下的JavaScript代码片段
 
-Code Runner  代码一键运行
+**Code Runner**  js代码一键运行
 
-Markdown Preview Enhanced  markdown预览
+**Markdown Preview Enhanced**  markdown预览
 
-stylelint  css语法检测，会读取你工程中的配置文件`.stylelintrc`，按照配置进行实时报错
+**stylelint**  css语法检测，会读取你工程中的配置文件`.stylelintrc`，按照配置进行实时报错
 
-eslint  css语法检测，会读取你工程中的配置文件`.stylelintrc`，按照配置进行实时报错
+**eslint**  该工具会自动检查工程中的JS文件，检查的依据是eslint的配置文件`.eslintrc`，如果找不到工程中的配置文件，也无法完成检查
 
-Regex Previewer  正则表达式验证插件
+**Regex Previewer**  正则表达式验证插件
+
+**EditorConfig for VS Code** 该工具依据项目中的`.editorconfig`文件来定义项目的编码规范，编辑器的行为会与`.editorconfig` 文件中定义的一致 
 ```
 
 ## 📆 2023-10-28 随谈
@@ -273,3 +275,9 @@ new Vue({
 
 #### ✏️学习笔记：
 [promise](/course-notes/1-JavaScript进阶/1-2异步编程/04-深入理解Promise.html)
+
+## 📆 2023-01-10 TypeScript基础
+- 高薪就业阶段： TypeScript基础
+
+#### ✏️学习笔记：
+[阮一峰TypeScript](https://wangdoc.com/typescript/basic)
