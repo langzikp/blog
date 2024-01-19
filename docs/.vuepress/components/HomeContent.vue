@@ -48,9 +48,9 @@
           >
           <a
             class="color6"
-            href="https://vant-contrib.gitee.io/vant/#/zh-CN"
+            href="https://cn.vitejs.dev/"
             target="blank"
-            >Vant UI</a
+            >Vite</a
           >
           <a class="color5" href="http://nodejs.cn/learn" target="blank"
             >Node.js</a

@@ -27,12 +27,19 @@
                 <a class="item" href="https://cn.vuejs.org/" target="blank">Vue3</a>
                 <a class="item" href="https://router.vuejs.org/zh/" target="blank">Vue Router4.X</a>
                 <a class="item" href="https://pinia.vuejs.org/zh/" target="blank">Pinia</a>
-                <a class="item" href="https://cn.vitejs.dev/" target="blank">Vite</a>&emsp;&nbsp;&nbsp;
+                <a class="item" href="https://cn.vuejs.org/guide/scaling-up/tooling.html#project-scaffolding" target="blank">create-vue</a>&emsp;&nbsp;&nbsp;
                 <a class="item" href="https://element-plus.gitee.io/zh-CN/component/button.html" target="blank">Element Plus</a>
            </div>
            <div>
                 <a class="item" href="https://vuepress.vuejs.org/zh/" target="blank">vuepress</a>
                 <a class="item" href="https://vitejs.cn/vitepress/" target="blank">vitepress</a>
+           </div>
+        </div>
+        <div class="card">
+           <h3>构建工具</h3>
+           <div>
+                <a class="item" href="/blog/build-tool/webpack/core.html" target="blank">webpack</a>
+                <a class="item" href="/blog/build-tool/vite.html" target="blank">Vite</a>
            </div>
         </div>
         <div class="card">
