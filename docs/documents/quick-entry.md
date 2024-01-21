@@ -6,7 +6,7 @@
         <div class="card">
            <h3> JavaScript</h3>
            <div>
-                <a class="item" href="https://cn.vuejs.org/" target="blank">MDN</a>
+                <a class="item" href="https://developer.mozilla.org/zh-CN/" target="blank">MDN</a>
                 <a class="item" href="https://es6.ruanyifeng.com/" target="blank">ES6</a>
                 <a class="item" href="https://ts.nodejs.cn/" target="blank">TypeScript</a>
                 <a class="item" href="https://jquery.cuishifeng.cn/" target="blank">jQuery</a>
