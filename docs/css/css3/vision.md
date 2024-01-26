@@ -25,7 +25,12 @@
 `linear-gradient()`用于创建一张渐变的图
 > [MDN详细文档](https://developer.mozilla.org/zh-CN/docs/Web/CSS/linear-gradient())
 
+## 滤镜 filter 
+`filter` 属性将模糊或颜色偏移等图形效果应用于元素。滤镜通常用于调整图像、背景和边框的渲染。
+> [MDN详细文档](https://developer.mozilla.org/zh-CN/docs/Web/CSS/filter)
 
+`backdrop-filter`CSS 属性可以让你为一个元素后面区域添加图形效果（如模糊或颜色偏移）。因为它适用于元素背后的所有元素，为了看到效果，必须使元素或其背景至少部分透明。
+> [MDN详细文档](https://developer.mozilla.org/zh-CN/docs/Web/CSS/backdrop-filter#%E8%AF%AD%E6%B3%95)
 
 
 ## 变形

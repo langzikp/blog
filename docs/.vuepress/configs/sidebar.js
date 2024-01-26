@@ -31,9 +31,11 @@ module.exports = {
             collapsable: true, // 可选的, 默认值是 true,collapsable: false 来让一个组永远都是展开状态。
             sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [
+                ['/css/css3/tools', '常用工具'],
                 ['/css/css3/layout', '布局'],
                 ['/css/css3/vision', '视觉'],
                 ['/css/css3/animation', '过渡和动画'],
+                ['/css/css3/modern', '现代css'],
                 ['/css/css3/other', '其他'],
             ]
         },
