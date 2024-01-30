@@ -378,3 +378,24 @@ function handler(e) {
   e.stopPropagation(); // 阻止事件继续冒泡
 }
 ```
+
+## 文件 API
+[文件 API](https://developer.mozilla.org/zh-CN/docs/Web/API/File_API)
+## 拖放 API
+[拖放 API](https://developer.mozilla.org/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
+## Web Storage API
+[Web Storage API](https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Storage_API)
+## IndexedDB API
+[IndexedDB API](https://developer.mozilla.org/zh-CN/docs/Web/API/IndexedDB_API)
+## Web Worker API
+[Web Worker API](https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Workers_API)
+## 地理位置 API API
+[地理位置 API](https://developer.mozilla.org/zh-CN/docs/Web/API/Geolocation_API)
+## Clipboard API API
+[Clipboard API API](https://developer.mozilla.org/zh-CN/docs/Web/API/Clipboard_API)
+## Web Worker API
+[Web Animations API](https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Animations_API)
+## 交叉观察器 API
+[交叉观察器 API](https://developer.mozilla.org/zh-CN/docs/Web/API/Intersection_Observer_API)
+## MutationObserver API
+[MutationObserver API](https://developer.mozilla.org/zh-CN/docs/Web/API/MutationObserver)
