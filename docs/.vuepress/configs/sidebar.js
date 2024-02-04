@@ -25,7 +25,10 @@ module.exports = {
         ['notes', '浏览器是如何渲染页面的'],
         ['weight', 'CSS 特性及权重'],
         ['css-computed', 'CSS 属性计算过程'],
+        ['css-box-model', 'CSS 之盒模型'],
         ['css-include-block', 'CSS 之包含块'],
+        ['css-visual-formatting-model', 'CSS 之视觉格式化模型'],
+        ['css-bfc', 'CSS 之块级格式化上下文'],
         {
             title: 'CSS3常用属性',   // 必要的
             collapsable: true, // 可选的, 默认值是 true,collapsable: false 来让一个组永远都是展开状态。
