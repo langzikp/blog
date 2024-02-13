@@ -19,6 +19,7 @@ module.exports = {
     ],
     '/html/': [
         ['notes', '学习笔记'],
+        ['question', '面试问答'],
 
     ],
     '/css/': [
@@ -29,6 +30,8 @@ module.exports = {
         ['css-include-block', 'CSS 之包含块'],
         ['css-visual-formatting-model', 'CSS 之视觉格式化模型'],
         ['css-bfc', 'CSS 之块级格式化上下文'],
+        ['css-stack-context', 'CSS 之层叠上下文'],
+        ['css-compatibility', 'CSS 之兼容性'],
         {
             title: 'CSS3常用属性',   // 必要的
             collapsable: true, // 可选的, 默认值是 true,collapsable: false 来让一个组永远都是展开状态。
@@ -46,6 +49,7 @@ module.exports = {
         ['css-border', 'CSS 边框效果'],
         ['css-pixel', '设备像素/设备独立像素/css像素/dpr/ppi的区别'],
         ['other', '其他知识点'],
+        ['question', '面试问答'],
 
        
     ],
