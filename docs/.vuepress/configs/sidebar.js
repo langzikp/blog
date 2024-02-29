@@ -111,7 +111,7 @@ module.exports = {
         ['utils', '工具函数'],
         ['array', '数组循环总结'],
         ['regexp', '正则表达式'],
-        ['questions-answers', 'Q&A']
+        ['questions-answers', '面试问答']
     ],
     '/vue/': [
         ['create', 'vue2项目搭建'],

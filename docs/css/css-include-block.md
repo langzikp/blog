@@ -66,9 +66,9 @@
 
 另外一种是对于非根元素，对于非根元素的包含块判定就有几种不同的情况了。大致可以分为如下几种：
 
-- 如果元素的 positiion 是 relative 或 static ，那么包含块由离它最近的块容器（block container）的内容区域（content area）的边缘建立。
+- 如果元素的 positiion 是 relative 或 static ，那么包含块由离它最近的**块容器（block container）的内容区域**（content area）的边缘建立。
 - 如果 position 属性是 fixed，那么包含块由视口建立。
-- 如果元素使用了 absolute 定位，则包含块由它的最近的 position 的值不是 static （也就是值为fixed、absolute、relative 或 sticky）的祖先元素的内边距区的边缘组成。
+- 如果元素使用了 absolute 定位，则包含块由它的最近的 position 的值不是 static （也就是值为fixed、absolute、relative 或 sticky）的**祖先元素**的**内边距区**的边缘组成。
 
 前面两条实际上都还比较好理解，第三条往往是初学者容易比较忽视的，我们来看一个示例：
 
