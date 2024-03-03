@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vuex | Lang&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/blog/img/favicon.png">
+    <meta name="description" content="this is my blog">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.4ceb4da7.css" as="style"><link rel="preload" href="/blog/assets/js/app.1d7aa480.js" as="script"><link rel="preload" href="/blog/assets/js/2.a77c63c4.js" as="script"><link rel="preload" href="/blog/assets/js/86.1684287a.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.4d5e23ca.js"><link rel="prefetch" href="/blog/assets/js/100.afe2a5a3.js"><link rel="prefetch" href="/blog/assets/js/101.a99e0a44.js"><link rel="prefetch" href="/blog/assets/js/102.069ccca8.js"><link rel="prefetch" href="/blog/assets/js/103.b8b8b534.js"><link rel="prefetch" href="/blog/assets/js/104.d7e8cc06.js"><link rel="prefetch" href="/blog/assets/js/105.c874d988.js"><link rel="prefetch" href="/blog/assets/js/106.6e4f9678.js"><link rel="prefetch" href="/blog/assets/js/107.0c8c0012.js"><link rel="prefetch" href="/blog/assets/js/108.426acb09.js"><link rel="prefetch" href="/blog/assets/js/109.6b6f777c.js"><link rel="prefetch" href="/blog/assets/js/11.e0d69fa8.js"><link rel="prefetch" href="/blog/assets/js/110.d7c54bfb.js"><link rel="prefetch" href="/blog/assets/js/111.cfb418d4.js"><link rel="prefetch" href="/blog/assets/js/112.ffca9ac0.js"><link rel="prefetch" href="/blog/assets/js/113.553af2aa.js"><link rel="prefetch" href="/blog/assets/js/114.1de796aa.js"><link rel="prefetch" href="/blog/assets/js/115.390fcf78.js"><link rel="prefetch" href="/blog/assets/js/116.333291a5.js"><link rel="prefetch" href="/blog/assets/js/117.d25aa6b5.js"><link rel="prefetch" href="/blog/assets/js/118.790b0e18.js"><link rel="prefetch" href="/blog/assets/js/119.04f6c551.js"><link rel="prefetch" href="/blog/assets/js/12.59479433.js"><link rel="prefetch" href="/blog/assets/js/120.10e01e3f.js"><link rel="prefetch" href="/blog/assets/js/121.36272ad8.js"><link rel="prefetch" href="/blog/assets/js/122.a2d598d9.js"><link rel="prefetch" href="/blog/assets/js/123.ffc46f47.js"><link rel="prefetch" href="/blog/assets/js/124.b1c0b8d4.js"><link rel="prefetch" href="/blog/assets/js/125.ad997419.js"><link rel="prefetch" href="/blog/assets/js/126.ac50cc39.js"><link rel="prefetch" href="/blog/assets/js/127.8700a103.js"><link rel="prefetch" href="/blog/assets/js/128.552560ee.js"><link rel="prefetch" href="/blog/assets/js/129.89cc2b85.js"><link rel="prefetch" href="/blog/assets/js/13.c635c6ec.js"><link rel="prefetch" href="/blog/assets/js/130.31de3388.js"><link rel="prefetch" href="/blog/assets/js/131.1dd35f34.js"><link rel="prefetch" href="/blog/assets/js/132.5d42d890.js"><link rel="prefetch" href="/blog/assets/js/133.5fac33a0.js"><link rel="prefetch" href="/blog/assets/js/134.9dc74ecc.js"><link rel="prefetch" href="/blog/assets/js/135.51d5e1c6.js"><link rel="prefetch" href="/blog/assets/js/136.17ea9982.js"><link rel="prefetch" href="/blog/assets/js/137.9943b7e9.js"><link rel="prefetch" href="/blog/assets/js/138.e32b2355.js"><link rel="prefetch" href="/blog/assets/js/139.cc753ff6.js"><link rel="prefetch" href="/blog/assets/js/14.63a45543.js"><link rel="prefetch" href="/blog/assets/js/140.d52876bd.js"><link rel="prefetch" href="/blog/assets/js/141.39f25c32.js"><link rel="prefetch" href="/blog/assets/js/142.be7a6718.js"><link rel="prefetch" href="/blog/assets/js/143.c9c3e682.js"><link rel="prefetch" href="/blog/assets/js/144.643cd39c.js"><link rel="prefetch" href="/blog/assets/js/145.0d940abc.js"><link rel="prefetch" href="/blog/assets/js/146.1866b9b6.js"><link rel="prefetch" href="/blog/assets/js/147.a1a13583.js"><link rel="prefetch" href="/blog/assets/js/148.b0526b59.js"><link rel="prefetch" href="/blog/assets/js/149.4c01a0bd.js"><link rel="prefetch" href="/blog/assets/js/15.eccbff81.js"><link rel="prefetch" href="/blog/assets/js/150.c0a9e55f.js"><link rel="prefetch" href="/blog/assets/js/151.8acfde4e.js"><link rel="prefetch" href="/blog/assets/js/152.3de05754.js"><link rel="prefetch" href="/blog/assets/js/153.5430e800.js"><link rel="prefetch" href="/blog/assets/js/154.888405f4.js"><link rel="prefetch" href="/blog/assets/js/155.ec80d175.js"><link rel="prefetch" href="/blog/assets/js/156.97bba65e.js"><link rel="prefetch" href="/blog/assets/js/157.cbfa9c4b.js"><link rel="prefetch" href="/blog/assets/js/158.ef251003.js"><link rel="prefetch" href="/blog/assets/js/159.4caec581.js"><link rel="prefetch" href="/blog/assets/js/16.19b010da.js"><link rel="prefetch" href="/blog/assets/js/160.f9b116bc.js"><link rel="prefetch" href="/blog/assets/js/161.9e4bb7de.js"><link rel="prefetch" href="/blog/assets/js/162.6d952350.js"><link rel="prefetch" href="/blog/assets/js/163.d5a5f353.js"><link rel="prefetch" href="/blog/assets/js/164.476e8570.js"><link rel="prefetch" href="/blog/assets/js/165.b93aaed2.js"><link rel="prefetch" href="/blog/assets/js/166.7996df0a.js"><link rel="prefetch" href="/blog/assets/js/167.4cc7d75e.js"><link rel="prefetch" href="/blog/assets/js/168.19cc891d.js"><link rel="prefetch" href="/blog/assets/js/169.2c0bf571.js"><link rel="prefetch" href="/blog/assets/js/17.31c323bb.js"><link rel="prefetch" href="/blog/assets/js/170.98a2b2a1.js"><link rel="prefetch" href="/blog/assets/js/171.e2548c24.js"><link rel="prefetch" href="/blog/assets/js/172.30e6c8ba.js"><link rel="prefetch" href="/blog/assets/js/173.6c3a52fd.js"><link rel="prefetch" href="/blog/assets/js/174.217c6af3.js"><link rel="prefetch" href="/blog/assets/js/175.7b9d0bd3.js"><link rel="prefetch" href="/blog/assets/js/176.16e7ce65.js"><link rel="prefetch" href="/blog/assets/js/177.1830c864.js"><link rel="prefetch" href="/blog/assets/js/178.200bfd42.js"><link rel="prefetch" href="/blog/assets/js/179.2a3e5b5b.js"><link rel="prefetch" href="/blog/assets/js/18.6c4d9352.js"><link rel="prefetch" href="/blog/assets/js/180.fdeac10d.js"><link rel="prefetch" href="/blog/assets/js/181.40e69c13.js"><link rel="prefetch" href="/blog/assets/js/182.43dd023d.js"><link rel="prefetch" href="/blog/assets/js/183.050bbcdb.js"><link rel="prefetch" href="/blog/assets/js/184.7e38a358.js"><link rel="prefetch" href="/blog/assets/js/185.7988fdda.js"><link rel="prefetch" href="/blog/assets/js/186.1bd22bea.js"><link rel="prefetch" href="/blog/assets/js/187.e2bc97f8.js"><link rel="prefetch" href="/blog/assets/js/188.7f618293.js"><link rel="prefetch" href="/blog/assets/js/189.854e58c7.js"><link rel="prefetch" href="/blog/assets/js/19.d24b8c84.js"><link rel="prefetch" href="/blog/assets/js/190.db1f6fde.js"><link rel="prefetch" href="/blog/assets/js/191.e0bb94fb.js"><link rel="prefetch" href="/blog/assets/js/192.a2a24797.js"><link rel="prefetch" href="/blog/assets/js/20.2e04223c.js"><link rel="prefetch" href="/blog/assets/js/21.534f7b13.js"><link rel="prefetch" href="/blog/assets/js/22.813db543.js"><link rel="prefetch" href="/blog/assets/js/23.b9539532.js"><link rel="prefetch" href="/blog/assets/js/24.b10bb8eb.js"><link rel="prefetch" href="/blog/assets/js/25.7f08786c.js"><link rel="prefetch" href="/blog/assets/js/26.363359a1.js"><link rel="prefetch" href="/blog/assets/js/27.53e3c2b1.js"><link rel="prefetch" href="/blog/assets/js/28.6d6d2842.js"><link rel="prefetch" href="/blog/assets/js/29.8819f7d4.js"><link rel="prefetch" href="/blog/assets/js/3.f6f111f0.js"><link rel="prefetch" href="/blog/assets/js/30.0763e168.js"><link rel="prefetch" href="/blog/assets/js/31.e0dc2b1f.js"><link rel="prefetch" href="/blog/assets/js/32.db37fc35.js"><link rel="prefetch" href="/blog/assets/js/33.5a8e7c59.js"><link rel="prefetch" href="/blog/assets/js/34.2f53febf.js"><link rel="prefetch" href="/blog/assets/js/35.a6809987.js"><link rel="prefetch" href="/blog/assets/js/36.e261731a.js"><link rel="prefetch" href="/blog/assets/js/37.1980e040.js"><link rel="prefetch" href="/blog/assets/js/38.ceaf9534.js"><link rel="prefetch" href="/blog/assets/js/39.45c26cf3.js"><link rel="prefetch" href="/blog/assets/js/4.48084369.js"><link rel="prefetch" href="/blog/assets/js/40.e7326a09.js"><link rel="prefetch" href="/blog/assets/js/41.065fd2c9.js"><link rel="prefetch" href="/blog/assets/js/42.4da1ada5.js"><link rel="prefetch" href="/blog/assets/js/43.fb7452bf.js"><link rel="prefetch" href="/blog/assets/js/44.4159dde9.js"><link rel="prefetch" href="/blog/assets/js/45.b03aa9b4.js"><link rel="prefetch" href="/blog/assets/js/46.fadf150b.js"><link rel="prefetch" href="/blog/assets/js/47.22ed9488.js"><link rel="prefetch" href="/blog/assets/js/48.1ddb0b33.js"><link rel="prefetch" href="/blog/assets/js/49.ffa2fa97.js"><link rel="prefetch" href="/blog/assets/js/5.adf70ce4.js"><link rel="prefetch" href="/blog/assets/js/50.3f8712f6.js"><link rel="prefetch" href="/blog/assets/js/51.4907feb0.js"><link rel="prefetch" href="/blog/assets/js/52.347ae740.js"><link rel="prefetch" href="/blog/assets/js/53.87259183.js"><link rel="prefetch" href="/blog/assets/js/54.d80ba5ea.js"><link rel="prefetch" href="/blog/assets/js/55.e0493bcf.js"><link rel="prefetch" href="/blog/assets/js/56.f855f8d4.js"><link rel="prefetch" href="/blog/assets/js/57.f05cd47c.js"><link rel="prefetch" href="/blog/assets/js/58.ad21849e.js"><link rel="prefetch" href="/blog/assets/js/59.f87bf533.js"><link rel="prefetch" href="/blog/assets/js/6.0f15f97c.js"><link rel="prefetch" href="/blog/assets/js/60.36be1503.js"><link rel="prefetch" href="/blog/assets/js/61.23342dc7.js"><link rel="prefetch" href="/blog/assets/js/62.ba377ed7.js"><link rel="prefetch" href="/blog/assets/js/63.568d5deb.js"><link rel="prefetch" href="/blog/assets/js/64.4ca08419.js"><link rel="prefetch" href="/blog/assets/js/65.0beb6e05.js"><link rel="prefetch" href="/blog/assets/js/66.b373af8f.js"><link rel="prefetch" href="/blog/assets/js/67.d57377a6.js"><link rel="prefetch" href="/blog/assets/js/68.6ab7bb33.js"><link rel="prefetch" href="/blog/assets/js/69.4b561427.js"><link rel="prefetch" href="/blog/assets/js/7.5ad22b04.js"><link rel="prefetch" href="/blog/assets/js/70.f5256c13.js"><link rel="prefetch" href="/blog/assets/js/71.e3c434b5.js"><link rel="prefetch" href="/blog/assets/js/72.03181e3a.js"><link rel="prefetch" href="/blog/assets/js/73.3c487e8a.js"><link rel="prefetch" href="/blog/assets/js/74.9c389547.js"><link rel="prefetch" href="/blog/assets/js/75.13f2f38c.js"><link rel="prefetch" href="/blog/assets/js/76.5e7bd26b.js"><link rel="prefetch" href="/blog/assets/js/77.c6d41697.js"><link rel="prefetch" href="/blog/assets/js/78.b53bd3f6.js"><link rel="prefetch" href="/blog/assets/js/79.60c7a787.js"><link rel="prefetch" href="/blog/assets/js/8.e3715d0f.js"><link rel="prefetch" href="/blog/assets/js/80.d23ec1a6.js"><link rel="prefetch" href="/blog/assets/js/81.aa220153.js"><link rel="prefetch" href="/blog/assets/js/82.f36c3df2.js"><link rel="prefetch" href="/blog/assets/js/83.5d1e91e5.js"><link rel="prefetch" href="/blog/assets/js/84.0b726221.js"><link rel="prefetch" href="/blog/assets/js/85.847b2707.js"><link rel="prefetch" href="/blog/assets/js/87.1a92d542.js"><link rel="prefetch" href="/blog/assets/js/88.a9418349.js"><link rel="prefetch" href="/blog/assets/js/89.988bb040.js"><link rel="prefetch" href="/blog/assets/js/9.f18d4697.js"><link rel="prefetch" href="/blog/assets/js/90.b609d99f.js"><link rel="prefetch" href="/blog/assets/js/91.4849b8ee.js"><link rel="prefetch" href="/blog/assets/js/92.17969654.js"><link rel="prefetch" href="/blog/assets/js/93.9cd305f8.js"><link rel="prefetch" href="/blog/assets/js/94.f0128a1a.js"><link rel="prefetch" href="/blog/assets/js/95.cb26249c.js"><link rel="prefetch" href="/blog/assets/js/96.2af60b5a.js"><link rel="prefetch" href="/blog/assets/js/97.dfeea9c9.js"><link rel="prefetch" href="/blog/assets/js/98.16fb6346.js"><link rel="prefetch" href="/blog/assets/js/99.555bea56.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.4ceb4da7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/img/logo.png" alt="Lang's blog" class="logo"> <span class="site-name can-hide">Lang's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发规范 Menu" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发规范 Menu" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/develop-norm/engineer.html" class="nav-link">
+  开发规范
+</a></li><li class="dropdown-item"><!----> <a href="/blog/html/notes.html" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/blog/css/notes.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/javascript/notes.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/create.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/react/notes.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/build-tool/webpack/core.html" class="nav-link">
+  构建工具
+</a></li><li class="dropdown-item"><!----> <a href="/blog/nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/blog/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/optimization/data-desensitization.html" class="nav-link">
+  优化
+</a></li><li class="dropdown-item"><!----> <a href="/blog/web-security/xss.html" class="nav-link">
+  前端安全
+</a></li><li class="dropdown-item"><!----> <a href="/blog/network/01.html" class="nav-link">
+  网络
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/backend/" class="nav-link">
+  后端
+</a></div><div class="nav-item"><a href="/blog/algorithm/01-algorithm-datastructure.html" class="nav-link">
+  算法
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/course-notes/1-JavaScript进阶/1-1函数/01-内存管理.html" class="nav-link">
+  JavaScript进阶
+</a></li><li class="dropdown-item"><!----> <a href="/blog/course-notes/2-Vue框架源码and项目实战/2-1课程导学/01-Vue专题导学.html" class="nav-link">
+  Vue框架源码&amp;项目实战
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Q&amp;A" class="dropdown-title"><span class="title">Q&amp;A</span> <span class="arrow down"></span></button> <button type="button" aria-label="Q&amp;A" class="mobile-dropdown-title"><span class="title">Q&amp;A</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/interview-question/html-css.html" class="nav-link">
+  HTMl-CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/interview-question/javascript.html" class="nav-link">
+  JavaScript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="学习 Menu" class="dropdown-title"><span class="title">记录</span> <span class="arrow down"></span></button> <button type="button" aria-label="学习 Menu" class="mobile-dropdown-title"><span class="title">记录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/booklist/" class="nav-link">
+  我的书单
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/study.html" class="nav-link">
+  学习
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/quotations.html" class="nav-link">
+  语录
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/build-blog.html" class="nav-link">
+  十分钟搭建自己的个人博客
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/wechat-h5.html" class="nav-link">
+  微信公众号H5配置流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-customer-service.html" class="nav-link">
+  微信小程序客服绑定流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-online.html" class="nav-link">
+  微信小程序上线准备
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/quick-entry.html" class="nav-link">
+  前端相关框架
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="收藏" class="dropdown-title"><span class="title">收藏</span> <span class="arrow down"></span></button> <button type="button" aria-label="收藏" class="mobile-dropdown-title"><span class="title">收藏</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          框架及UI库
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/frame.html#vue及ui组件库" class="nav-link">
+  Vue及UI组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html#react-ui-组件库" class="nav-link">
+  React UI 组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html" class="nav-link">
+  更多...
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他网站
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/sites.html#文档" class="nav-link">
+  文档
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#社区" class="nav-link">
+  社区
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#工具" class="nav-link">
+  图片/工具
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html" class="nav-link">
+  更多...
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/blog/about/" class="nav-link">
+  关于
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发规范 Menu" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发规范 Menu" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/develop-norm/engineer.html" class="nav-link">
+  开发规范
+</a></li><li class="dropdown-item"><!----> <a href="/blog/html/notes.html" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/blog/css/notes.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/javascript/notes.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/create.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/react/notes.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/build-tool/webpack/core.html" class="nav-link">
+  构建工具
+</a></li><li class="dropdown-item"><!----> <a href="/blog/nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/blog/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/optimization/data-desensitization.html" class="nav-link">
+  优化
+</a></li><li class="dropdown-item"><!----> <a href="/blog/web-security/xss.html" class="nav-link">
+  前端安全
+</a></li><li class="dropdown-item"><!----> <a href="/blog/network/01.html" class="nav-link">
+  网络
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/backend/" class="nav-link">
+  后端
+</a></div><div class="nav-item"><a href="/blog/algorithm/01-algorithm-datastructure.html" class="nav-link">
+  算法
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/course-notes/1-JavaScript进阶/1-1函数/01-内存管理.html" class="nav-link">
+  JavaScript进阶
+</a></li><li class="dropdown-item"><!----> <a href="/blog/course-notes/2-Vue框架源码and项目实战/2-1课程导学/01-Vue专题导学.html" class="nav-link">
+  Vue框架源码&amp;项目实战
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Q&amp;A" class="dropdown-title"><span class="title">Q&amp;A</span> <span class="arrow down"></span></button> <button type="button" aria-label="Q&amp;A" class="mobile-dropdown-title"><span class="title">Q&amp;A</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/interview-question/html-css.html" class="nav-link">
+  HTMl-CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/interview-question/javascript.html" class="nav-link">
+  JavaScript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="学习 Menu" class="dropdown-title"><span class="title">记录</span> <span class="arrow down"></span></button> <button type="button" aria-label="学习 Menu" class="mobile-dropdown-title"><span class="title">记录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/booklist/" class="nav-link">
+  我的书单
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/study.html" class="nav-link">
+  学习
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/quotations.html" class="nav-link">
+  语录
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/build-blog.html" class="nav-link">
+  十分钟搭建自己的个人博客
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/wechat-h5.html" class="nav-link">
+  微信公众号H5配置流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-customer-service.html" class="nav-link">
+  微信小程序客服绑定流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-online.html" class="nav-link">
+  微信小程序上线准备
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/quick-entry.html" class="nav-link">
+  前端相关框架
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="收藏" class="dropdown-title"><span class="title">收藏</span> <span class="arrow down"></span></button> <button type="button" aria-label="收藏" class="mobile-dropdown-title"><span class="title">收藏</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          框架及UI库
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/frame.html#vue及ui组件库" class="nav-link">
+  Vue及UI组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html#react-ui-组件库" class="nav-link">
+  React UI 组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html" class="nav-link">
+  更多...
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他网站
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/sites.html#文档" class="nav-link">
+  文档
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#社区" class="nav-link">
+  社区
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#工具" class="nav-link">
+  图片/工具
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html" class="nav-link">
+  更多...
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/blog/about/" class="nav-link">
+  关于
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>1-JavaScript进阶</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>2-Vue框架源码and项目实战</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>2-1课程导学</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>2-2初识vue</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>2-3探索vue的组件世界</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>2-4深入vue源码设计</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>2-5Vue生态及实践</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/course-notes/2-Vue框架源码and项目实战/2-5Vue生态及实践/01-Vuex.html" class="active sidebar-link">01-Vuex</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/course-notes/2-Vue框架源码and项目实战/2-5Vue生态及实践/01-Vuex.html#state" class="sidebar-link">state</a></li><li class="sidebar-sub-header"><a href="/blog/course-notes/2-Vue框架源码and项目实战/2-5Vue生态及实践/01-Vuex.html#mutations" class="sidebar-link">mutations</a></li><li class="sidebar-sub-header"><a href="/blog/course-notes/2-Vue框架源码and项目实战/2-5Vue生态及实践/01-Vuex.html#getter" class="sidebar-link">getter</a></li><li class="sidebar-sub-header"><a href="/blog/course-notes/2-Vue框架源码and项目实战/2-5Vue生态及实践/01-Vuex.html#actions" class="sidebar-link">actions</a></li><li class="sidebar-sub-header"><a href="/blog/course-notes/2-Vue框架源码and项目实战/2-5Vue生态及实践/01-Vuex.html#vuex响应式源码分析" class="sidebar-link">vuex响应式源码分析</a></li><li class="sidebar-sub-header"><a href="/blog/course-notes/2-Vue框架源码and项目实战/2-5Vue生态及实践/01-Vuex.html#module" class="sidebar-link">module</a></li></ul></li><li><a href="/blog/course-notes/2-Vue框架源码and项目实战/2-5Vue生态及实践/02-Router.html" class="sidebar-link">02-Router</a></li></ul></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>2-6掘金Top10列表页实践</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>2-7配置中心</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>2-8优化实践</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>2-9SSR</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>2-10Nuxt</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vuex"><a href="#vuex" class="header-anchor">#</a> Vuex</h1> <p><a href="https://v3.vuex.vuejs.org/zh/" target="_blank" rel="noopener noreferrer">Vuex<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="state"><a href="#state" class="header-anchor">#</a> state</h2> <ul><li>单一状态</li> <li>响应式</li></ul> <h2 id="mutations"><a href="#mutations" class="header-anchor">#</a> mutations</h2> <ul><li>必须由commit触发</li> <li>必须是同步函数</li></ul> <h2 id="getter"><a href="#getter" class="header-anchor">#</a> getter</h2> <ul><li>由state派生出的转态</li> <li>store的计算属性</li></ul> <h2 id="actions"><a href="#actions" class="header-anchor">#</a> actions</h2> <ul><li>由dispatch触发</li> <li>可以包含任意异步操作</li> <li>不可用变更状态，可以已通过mutation改变</li></ul> <h2 id="vuex响应式源码分析"><a href="#vuex响应式源码分析" class="header-anchor">#</a> vuex响应式源码分析</h2> <p><a href="https://live.study.163.com/live/index.html?courseId=100107444&amp;lesson=104943987&amp;type=1" target="_blank" rel="noopener noreferrer">vuex响应式源码分析<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="module"><a href="#module" class="header-anchor">#</a> module</h2> <p><a href="https://v3.vuex.vuejs.org/zh/guide/modules.html" target="_blank" rel="noopener noreferrer">module<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/course-notes/2-Vue框架源码and项目实战/2-4深入vue源码设计/04-Computed和Watch源码分析.html" class="prev">
+        04-Computed和Watch源码分析
+      </a></span> <span class="next"><a href="/blog/course-notes/2-Vue框架源码and项目实战/2-5Vue生态及实践/02-Router.html">
+        02-Router
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/blog/assets/js/app.1d7aa480.js" defer></script><script src="/blog/assets/js/2.a77c63c4.js" defer></script><script src="/blog/assets/js/86.1684287a.js" defer></script>
+  </body>
+</html>

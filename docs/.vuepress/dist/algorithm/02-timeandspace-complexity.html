@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>什么是时间复杂度 | Lang&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/blog/img/favicon.png">
+    <meta name="description" content="this is my blog">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.4ceb4da7.css" as="style"><link rel="preload" href="/blog/assets/js/app.1d7aa480.js" as="script"><link rel="preload" href="/blog/assets/js/2.a77c63c4.js" as="script"><link rel="preload" href="/blog/assets/js/19.d24b8c84.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.4d5e23ca.js"><link rel="prefetch" href="/blog/assets/js/100.afe2a5a3.js"><link rel="prefetch" href="/blog/assets/js/101.a99e0a44.js"><link rel="prefetch" href="/blog/assets/js/102.069ccca8.js"><link rel="prefetch" href="/blog/assets/js/103.b8b8b534.js"><link rel="prefetch" href="/blog/assets/js/104.d7e8cc06.js"><link rel="prefetch" href="/blog/assets/js/105.c874d988.js"><link rel="prefetch" href="/blog/assets/js/106.6e4f9678.js"><link rel="prefetch" href="/blog/assets/js/107.0c8c0012.js"><link rel="prefetch" href="/blog/assets/js/108.426acb09.js"><link rel="prefetch" href="/blog/assets/js/109.6b6f777c.js"><link rel="prefetch" href="/blog/assets/js/11.e0d69fa8.js"><link rel="prefetch" href="/blog/assets/js/110.d7c54bfb.js"><link rel="prefetch" href="/blog/assets/js/111.cfb418d4.js"><link rel="prefetch" href="/blog/assets/js/112.ffca9ac0.js"><link rel="prefetch" href="/blog/assets/js/113.553af2aa.js"><link rel="prefetch" href="/blog/assets/js/114.1de796aa.js"><link rel="prefetch" href="/blog/assets/js/115.390fcf78.js"><link rel="prefetch" href="/blog/assets/js/116.333291a5.js"><link rel="prefetch" href="/blog/assets/js/117.d25aa6b5.js"><link rel="prefetch" href="/blog/assets/js/118.790b0e18.js"><link rel="prefetch" href="/blog/assets/js/119.04f6c551.js"><link rel="prefetch" href="/blog/assets/js/12.59479433.js"><link rel="prefetch" href="/blog/assets/js/120.10e01e3f.js"><link rel="prefetch" href="/blog/assets/js/121.36272ad8.js"><link rel="prefetch" href="/blog/assets/js/122.a2d598d9.js"><link rel="prefetch" href="/blog/assets/js/123.ffc46f47.js"><link rel="prefetch" href="/blog/assets/js/124.b1c0b8d4.js"><link rel="prefetch" href="/blog/assets/js/125.ad997419.js"><link rel="prefetch" href="/blog/assets/js/126.ac50cc39.js"><link rel="prefetch" href="/blog/assets/js/127.8700a103.js"><link rel="prefetch" href="/blog/assets/js/128.552560ee.js"><link rel="prefetch" href="/blog/assets/js/129.89cc2b85.js"><link rel="prefetch" href="/blog/assets/js/13.c635c6ec.js"><link rel="prefetch" href="/blog/assets/js/130.31de3388.js"><link rel="prefetch" href="/blog/assets/js/131.1dd35f34.js"><link rel="prefetch" href="/blog/assets/js/132.5d42d890.js"><link rel="prefetch" href="/blog/assets/js/133.5fac33a0.js"><link rel="prefetch" href="/blog/assets/js/134.9dc74ecc.js"><link rel="prefetch" href="/blog/assets/js/135.51d5e1c6.js"><link rel="prefetch" href="/blog/assets/js/136.17ea9982.js"><link rel="prefetch" href="/blog/assets/js/137.9943b7e9.js"><link rel="prefetch" href="/blog/assets/js/138.e32b2355.js"><link rel="prefetch" href="/blog/assets/js/139.cc753ff6.js"><link rel="prefetch" href="/blog/assets/js/14.63a45543.js"><link rel="prefetch" href="/blog/assets/js/140.d52876bd.js"><link rel="prefetch" href="/blog/assets/js/141.39f25c32.js"><link rel="prefetch" href="/blog/assets/js/142.be7a6718.js"><link rel="prefetch" href="/blog/assets/js/143.c9c3e682.js"><link rel="prefetch" href="/blog/assets/js/144.643cd39c.js"><link rel="prefetch" href="/blog/assets/js/145.0d940abc.js"><link rel="prefetch" href="/blog/assets/js/146.1866b9b6.js"><link rel="prefetch" href="/blog/assets/js/147.a1a13583.js"><link rel="prefetch" href="/blog/assets/js/148.b0526b59.js"><link rel="prefetch" href="/blog/assets/js/149.4c01a0bd.js"><link rel="prefetch" href="/blog/assets/js/15.eccbff81.js"><link rel="prefetch" href="/blog/assets/js/150.c0a9e55f.js"><link rel="prefetch" href="/blog/assets/js/151.8acfde4e.js"><link rel="prefetch" href="/blog/assets/js/152.3de05754.js"><link rel="prefetch" href="/blog/assets/js/153.5430e800.js"><link rel="prefetch" href="/blog/assets/js/154.888405f4.js"><link rel="prefetch" href="/blog/assets/js/155.ec80d175.js"><link rel="prefetch" href="/blog/assets/js/156.97bba65e.js"><link rel="prefetch" href="/blog/assets/js/157.cbfa9c4b.js"><link rel="prefetch" href="/blog/assets/js/158.ef251003.js"><link rel="prefetch" href="/blog/assets/js/159.4caec581.js"><link rel="prefetch" href="/blog/assets/js/16.19b010da.js"><link rel="prefetch" href="/blog/assets/js/160.f9b116bc.js"><link rel="prefetch" href="/blog/assets/js/161.9e4bb7de.js"><link rel="prefetch" href="/blog/assets/js/162.6d952350.js"><link rel="prefetch" href="/blog/assets/js/163.d5a5f353.js"><link rel="prefetch" href="/blog/assets/js/164.476e8570.js"><link rel="prefetch" href="/blog/assets/js/165.b93aaed2.js"><link rel="prefetch" href="/blog/assets/js/166.7996df0a.js"><link rel="prefetch" href="/blog/assets/js/167.4cc7d75e.js"><link rel="prefetch" href="/blog/assets/js/168.19cc891d.js"><link rel="prefetch" href="/blog/assets/js/169.2c0bf571.js"><link rel="prefetch" href="/blog/assets/js/17.31c323bb.js"><link rel="prefetch" href="/blog/assets/js/170.98a2b2a1.js"><link rel="prefetch" href="/blog/assets/js/171.e2548c24.js"><link rel="prefetch" href="/blog/assets/js/172.30e6c8ba.js"><link rel="prefetch" href="/blog/assets/js/173.6c3a52fd.js"><link rel="prefetch" href="/blog/assets/js/174.217c6af3.js"><link rel="prefetch" href="/blog/assets/js/175.7b9d0bd3.js"><link rel="prefetch" href="/blog/assets/js/176.16e7ce65.js"><link rel="prefetch" href="/blog/assets/js/177.1830c864.js"><link rel="prefetch" href="/blog/assets/js/178.200bfd42.js"><link rel="prefetch" href="/blog/assets/js/179.2a3e5b5b.js"><link rel="prefetch" href="/blog/assets/js/18.6c4d9352.js"><link rel="prefetch" href="/blog/assets/js/180.fdeac10d.js"><link rel="prefetch" href="/blog/assets/js/181.40e69c13.js"><link rel="prefetch" href="/blog/assets/js/182.43dd023d.js"><link rel="prefetch" href="/blog/assets/js/183.050bbcdb.js"><link rel="prefetch" href="/blog/assets/js/184.7e38a358.js"><link rel="prefetch" href="/blog/assets/js/185.7988fdda.js"><link rel="prefetch" href="/blog/assets/js/186.1bd22bea.js"><link rel="prefetch" href="/blog/assets/js/187.e2bc97f8.js"><link rel="prefetch" href="/blog/assets/js/188.7f618293.js"><link rel="prefetch" href="/blog/assets/js/189.854e58c7.js"><link rel="prefetch" href="/blog/assets/js/190.db1f6fde.js"><link rel="prefetch" href="/blog/assets/js/191.e0bb94fb.js"><link rel="prefetch" href="/blog/assets/js/192.a2a24797.js"><link rel="prefetch" href="/blog/assets/js/20.2e04223c.js"><link rel="prefetch" href="/blog/assets/js/21.534f7b13.js"><link rel="prefetch" href="/blog/assets/js/22.813db543.js"><link rel="prefetch" href="/blog/assets/js/23.b9539532.js"><link rel="prefetch" href="/blog/assets/js/24.b10bb8eb.js"><link rel="prefetch" href="/blog/assets/js/25.7f08786c.js"><link rel="prefetch" href="/blog/assets/js/26.363359a1.js"><link rel="prefetch" href="/blog/assets/js/27.53e3c2b1.js"><link rel="prefetch" href="/blog/assets/js/28.6d6d2842.js"><link rel="prefetch" href="/blog/assets/js/29.8819f7d4.js"><link rel="prefetch" href="/blog/assets/js/3.f6f111f0.js"><link rel="prefetch" href="/blog/assets/js/30.0763e168.js"><link rel="prefetch" href="/blog/assets/js/31.e0dc2b1f.js"><link rel="prefetch" href="/blog/assets/js/32.db37fc35.js"><link rel="prefetch" href="/blog/assets/js/33.5a8e7c59.js"><link rel="prefetch" href="/blog/assets/js/34.2f53febf.js"><link rel="prefetch" href="/blog/assets/js/35.a6809987.js"><link rel="prefetch" href="/blog/assets/js/36.e261731a.js"><link rel="prefetch" href="/blog/assets/js/37.1980e040.js"><link rel="prefetch" href="/blog/assets/js/38.ceaf9534.js"><link rel="prefetch" href="/blog/assets/js/39.45c26cf3.js"><link rel="prefetch" href="/blog/assets/js/4.48084369.js"><link rel="prefetch" href="/blog/assets/js/40.e7326a09.js"><link rel="prefetch" href="/blog/assets/js/41.065fd2c9.js"><link rel="prefetch" href="/blog/assets/js/42.4da1ada5.js"><link rel="prefetch" href="/blog/assets/js/43.fb7452bf.js"><link rel="prefetch" href="/blog/assets/js/44.4159dde9.js"><link rel="prefetch" href="/blog/assets/js/45.b03aa9b4.js"><link rel="prefetch" href="/blog/assets/js/46.fadf150b.js"><link rel="prefetch" href="/blog/assets/js/47.22ed9488.js"><link rel="prefetch" href="/blog/assets/js/48.1ddb0b33.js"><link rel="prefetch" href="/blog/assets/js/49.ffa2fa97.js"><link rel="prefetch" href="/blog/assets/js/5.adf70ce4.js"><link rel="prefetch" href="/blog/assets/js/50.3f8712f6.js"><link rel="prefetch" href="/blog/assets/js/51.4907feb0.js"><link rel="prefetch" href="/blog/assets/js/52.347ae740.js"><link rel="prefetch" href="/blog/assets/js/53.87259183.js"><link rel="prefetch" href="/blog/assets/js/54.d80ba5ea.js"><link rel="prefetch" href="/blog/assets/js/55.e0493bcf.js"><link rel="prefetch" href="/blog/assets/js/56.f855f8d4.js"><link rel="prefetch" href="/blog/assets/js/57.f05cd47c.js"><link rel="prefetch" href="/blog/assets/js/58.ad21849e.js"><link rel="prefetch" href="/blog/assets/js/59.f87bf533.js"><link rel="prefetch" href="/blog/assets/js/6.0f15f97c.js"><link rel="prefetch" href="/blog/assets/js/60.36be1503.js"><link rel="prefetch" href="/blog/assets/js/61.23342dc7.js"><link rel="prefetch" href="/blog/assets/js/62.ba377ed7.js"><link rel="prefetch" href="/blog/assets/js/63.568d5deb.js"><link rel="prefetch" href="/blog/assets/js/64.4ca08419.js"><link rel="prefetch" href="/blog/assets/js/65.0beb6e05.js"><link rel="prefetch" href="/blog/assets/js/66.b373af8f.js"><link rel="prefetch" href="/blog/assets/js/67.d57377a6.js"><link rel="prefetch" href="/blog/assets/js/68.6ab7bb33.js"><link rel="prefetch" href="/blog/assets/js/69.4b561427.js"><link rel="prefetch" href="/blog/assets/js/7.5ad22b04.js"><link rel="prefetch" href="/blog/assets/js/70.f5256c13.js"><link rel="prefetch" href="/blog/assets/js/71.e3c434b5.js"><link rel="prefetch" href="/blog/assets/js/72.03181e3a.js"><link rel="prefetch" href="/blog/assets/js/73.3c487e8a.js"><link rel="prefetch" href="/blog/assets/js/74.9c389547.js"><link rel="prefetch" href="/blog/assets/js/75.13f2f38c.js"><link rel="prefetch" href="/blog/assets/js/76.5e7bd26b.js"><link rel="prefetch" href="/blog/assets/js/77.c6d41697.js"><link rel="prefetch" href="/blog/assets/js/78.b53bd3f6.js"><link rel="prefetch" href="/blog/assets/js/79.60c7a787.js"><link rel="prefetch" href="/blog/assets/js/8.e3715d0f.js"><link rel="prefetch" href="/blog/assets/js/80.d23ec1a6.js"><link rel="prefetch" href="/blog/assets/js/81.aa220153.js"><link rel="prefetch" href="/blog/assets/js/82.f36c3df2.js"><link rel="prefetch" href="/blog/assets/js/83.5d1e91e5.js"><link rel="prefetch" href="/blog/assets/js/84.0b726221.js"><link rel="prefetch" href="/blog/assets/js/85.847b2707.js"><link rel="prefetch" href="/blog/assets/js/86.1684287a.js"><link rel="prefetch" href="/blog/assets/js/87.1a92d542.js"><link rel="prefetch" href="/blog/assets/js/88.a9418349.js"><link rel="prefetch" href="/blog/assets/js/89.988bb040.js"><link rel="prefetch" href="/blog/assets/js/9.f18d4697.js"><link rel="prefetch" href="/blog/assets/js/90.b609d99f.js"><link rel="prefetch" href="/blog/assets/js/91.4849b8ee.js"><link rel="prefetch" href="/blog/assets/js/92.17969654.js"><link rel="prefetch" href="/blog/assets/js/93.9cd305f8.js"><link rel="prefetch" href="/blog/assets/js/94.f0128a1a.js"><link rel="prefetch" href="/blog/assets/js/95.cb26249c.js"><link rel="prefetch" href="/blog/assets/js/96.2af60b5a.js"><link rel="prefetch" href="/blog/assets/js/97.dfeea9c9.js"><link rel="prefetch" href="/blog/assets/js/98.16fb6346.js"><link rel="prefetch" href="/blog/assets/js/99.555bea56.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.4ceb4da7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/img/logo.png" alt="Lang's blog" class="logo"> <span class="site-name can-hide">Lang's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发规范 Menu" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发规范 Menu" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/develop-norm/engineer.html" class="nav-link">
+  开发规范
+</a></li><li class="dropdown-item"><!----> <a href="/blog/html/notes.html" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/blog/css/notes.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/javascript/notes.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/create.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/react/notes.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/build-tool/webpack/core.html" class="nav-link">
+  构建工具
+</a></li><li class="dropdown-item"><!----> <a href="/blog/nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/blog/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/optimization/data-desensitization.html" class="nav-link">
+  优化
+</a></li><li class="dropdown-item"><!----> <a href="/blog/web-security/xss.html" class="nav-link">
+  前端安全
+</a></li><li class="dropdown-item"><!----> <a href="/blog/network/01.html" class="nav-link">
+  网络
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/backend/" class="nav-link">
+  后端
+</a></div><div class="nav-item"><a href="/blog/algorithm/01-algorithm-datastructure.html" class="nav-link">
+  算法
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/course-notes/1-JavaScript进阶/1-1函数/01-内存管理.html" class="nav-link">
+  JavaScript进阶
+</a></li><li class="dropdown-item"><!----> <a href="/blog/course-notes/2-Vue框架源码and项目实战/2-1课程导学/01-Vue专题导学.html" class="nav-link">
+  Vue框架源码&amp;项目实战
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Q&amp;A" class="dropdown-title"><span class="title">Q&amp;A</span> <span class="arrow down"></span></button> <button type="button" aria-label="Q&amp;A" class="mobile-dropdown-title"><span class="title">Q&amp;A</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/interview-question/html-css.html" class="nav-link">
+  HTMl-CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/interview-question/javascript.html" class="nav-link">
+  JavaScript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="学习 Menu" class="dropdown-title"><span class="title">记录</span> <span class="arrow down"></span></button> <button type="button" aria-label="学习 Menu" class="mobile-dropdown-title"><span class="title">记录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/booklist/" class="nav-link">
+  我的书单
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/study.html" class="nav-link">
+  学习
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/quotations.html" class="nav-link">
+  语录
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/build-blog.html" class="nav-link">
+  十分钟搭建自己的个人博客
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/wechat-h5.html" class="nav-link">
+  微信公众号H5配置流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-customer-service.html" class="nav-link">
+  微信小程序客服绑定流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-online.html" class="nav-link">
+  微信小程序上线准备
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/quick-entry.html" class="nav-link">
+  前端相关框架
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="收藏" class="dropdown-title"><span class="title">收藏</span> <span class="arrow down"></span></button> <button type="button" aria-label="收藏" class="mobile-dropdown-title"><span class="title">收藏</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          框架及UI库
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/frame.html#vue及ui组件库" class="nav-link">
+  Vue及UI组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html#react-ui-组件库" class="nav-link">
+  React UI 组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html" class="nav-link">
+  更多...
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他网站
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/sites.html#文档" class="nav-link">
+  文档
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#社区" class="nav-link">
+  社区
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#工具" class="nav-link">
+  图片/工具
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html" class="nav-link">
+  更多...
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/blog/about/" class="nav-link">
+  关于
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发规范 Menu" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发规范 Menu" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/develop-norm/engineer.html" class="nav-link">
+  开发规范
+</a></li><li class="dropdown-item"><!----> <a href="/blog/html/notes.html" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/blog/css/notes.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/javascript/notes.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/create.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/react/notes.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/build-tool/webpack/core.html" class="nav-link">
+  构建工具
+</a></li><li class="dropdown-item"><!----> <a href="/blog/nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/blog/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/optimization/data-desensitization.html" class="nav-link">
+  优化
+</a></li><li class="dropdown-item"><!----> <a href="/blog/web-security/xss.html" class="nav-link">
+  前端安全
+</a></li><li class="dropdown-item"><!----> <a href="/blog/network/01.html" class="nav-link">
+  网络
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/backend/" class="nav-link">
+  后端
+</a></div><div class="nav-item"><a href="/blog/algorithm/01-algorithm-datastructure.html" class="nav-link">
+  算法
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/course-notes/1-JavaScript进阶/1-1函数/01-内存管理.html" class="nav-link">
+  JavaScript进阶
+</a></li><li class="dropdown-item"><!----> <a href="/blog/course-notes/2-Vue框架源码and项目实战/2-1课程导学/01-Vue专题导学.html" class="nav-link">
+  Vue框架源码&amp;项目实战
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Q&amp;A" class="dropdown-title"><span class="title">Q&amp;A</span> <span class="arrow down"></span></button> <button type="button" aria-label="Q&amp;A" class="mobile-dropdown-title"><span class="title">Q&amp;A</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/interview-question/html-css.html" class="nav-link">
+  HTMl-CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/interview-question/javascript.html" class="nav-link">
+  JavaScript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="学习 Menu" class="dropdown-title"><span class="title">记录</span> <span class="arrow down"></span></button> <button type="button" aria-label="学习 Menu" class="mobile-dropdown-title"><span class="title">记录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/booklist/" class="nav-link">
+  我的书单
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/study.html" class="nav-link">
+  学习
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/quotations.html" class="nav-link">
+  语录
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/build-blog.html" class="nav-link">
+  十分钟搭建自己的个人博客
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/wechat-h5.html" class="nav-link">
+  微信公众号H5配置流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-customer-service.html" class="nav-link">
+  微信小程序客服绑定流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-online.html" class="nav-link">
+  微信小程序上线准备
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/quick-entry.html" class="nav-link">
+  前端相关框架
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="收藏" class="dropdown-title"><span class="title">收藏</span> <span class="arrow down"></span></button> <button type="button" aria-label="收藏" class="mobile-dropdown-title"><span class="title">收藏</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          框架及UI库
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/frame.html#vue及ui组件库" class="nav-link">
+  Vue及UI组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html#react-ui-组件库" class="nav-link">
+  React UI 组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html" class="nav-link">
+  更多...
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他网站
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/sites.html#文档" class="nav-link">
+  文档
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#社区" class="nav-link">
+  社区
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#工具" class="nav-link">
+  图片/工具
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html" class="nav-link">
+  更多...
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/blog/about/" class="nav-link">
+  关于
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/blog/algorithm/01-algorithm-datastructure.html" class="sidebar-link">算法和数据结构</a></li><li><a href="/blog/algorithm/02-timeandspace-complexity.html" aria-current="page" class="active sidebar-link">时间复杂度和空间复杂度</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/algorithm/02-timeandspace-complexity.html#什么是时间复杂度" class="sidebar-link">什么是时间复杂度</a></li><li class="sidebar-sub-header"><a href="/blog/algorithm/02-timeandspace-complexity.html#表示方法" class="sidebar-link">表示方法</a></li><li class="sidebar-sub-header"><a href="/blog/algorithm/02-timeandspace-complexity.html#如何推导出时间复杂度" class="sidebar-link">如何推导出时间复杂度</a></li><li class="sidebar-sub-header"><a href="/blog/algorithm/02-timeandspace-complexity.html#什么是空间复杂度" class="sidebar-link">什么是空间复杂度</a></li><li class="sidebar-sub-header"><a href="/blog/algorithm/02-timeandspace-complexity.html#表示方法-2" class="sidebar-link">表示方法</a></li></ul></li><li><a href="/blog/algorithm/03-array-linkedlist.html" class="sidebar-link">数组和链表</a></li><li><a href="/blog/algorithm/04-stack-queue.html" class="sidebar-link">栈和队列</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="什么是时间复杂度"><a href="#什么是时间复杂度" class="header-anchor">#</a> 什么是时间复杂度</h2> <p>时间复杂度（Time Complexity）是程序在运行时所需要的时间的度量。它是算法复杂度的重要组成部分，用于评估算法在处理数据时所需的时间。</p> <h2 id="表示方法"><a href="#表示方法" class="header-anchor">#</a> 表示方法</h2> <p>一般用&quot;<strong>大O符号表示法</strong>&quot;来表示时间复杂度:</p> <blockquote><p>时间复杂度大小的计算公式是：T(n) = O(f(n))。</p></blockquote> <blockquote><p>其中，T(n)表示代码执行的时间，n表示数据规模的大小，f(n)表示每行代码执行次数总和，O表示代码执行时间T(n)与f(n)表达式成正比。根据这个公式，我们可以评估算法在处理不同规模的数据时所需的时间。</p></blockquote> <h4 id="场景1"><a href="#场景1" class="header-anchor">#</a> 场景1</h4> <blockquote><p>一个n寸的面包，每3天吃一寸，需要几天？</p></blockquote> <p>答案是3 乘以 n 等于 3n 天， 用一个函数来表示这个相对时间，可以记作 <strong>T(n) = 3n</strong></p> <h4 id="场景2"><a href="#场景2" class="header-anchor">#</a> 场景2</h4> <blockquote><p>一个n寸的面包，每5天吃掉剩余长度的一半，第一次n/2寸，第二次n/4，第三次n/8...... 那么吃得只剩1寸， 需要几天？</p></blockquote> <p>答案是 5 X logn = 5logn天，记作 <strong>T(n) = 5logn</strong></p> <h4 id="场景3"><a href="#场景3" class="header-anchor">#</a> 场景3</h4> <blockquote><p>给你一条长n寸的面包和一个鸡腿，你每2天吃掉一个鸡腿。那么吃掉整个鸡腿需要多少天呢？</p></blockquote> <p>答案是2天，因为只吃鸡腿，和n寸的面包没关，所以只需要2天，记作 <strong>T(n) = 2</strong></p> <h4 id="场景4"><a href="#场景4" class="header-anchor">#</a> 场景4</h4> <blockquote><p>给你一条长n寸的面包，你吃掉第一个一寸需要1天时间，吃掉第二个一寸需要两天时间，吃掉第三个一寸需要3天时间.....每多吃一寸，所花的时间也多一天。那么你吃掉整个面包需要多少天呢？</p></blockquote> <p>根据等差数列求和公式，此时吃掉整个面包需要 (1+n)*n/2 = 0.5n^2 + 0.5n天，记作 <strong>T（n） = 0.5n^2 + 0.5n</strong></p> <h2 id="如何推导出时间复杂度"><a href="#如何推导出时间复杂度" class="header-anchor">#</a> 如何推导出时间复杂度</h2> <p>有以下三个原则：</p> <ol><li><p>如果运行时间是常数量级，用常数1表示；</p></li> <li><p>只保留时间函数中的最高阶项；</p></li> <li><p>如果最高阶项存在，则省去最高阶项前面的系数</p></li></ol> <p>那么场景1 <strong>T(n) = 3n</strong>，最高阶项为3n，省去系数3，转化的时间复杂度是O（n）。</p> <p>那么场景2 <strong>T(n) = 5logn</strong>，最高阶项为5logn，省去系数5，转化的时间复杂度是 O（logn）。</p> <p>那么场景3 <strong>T(n) = 2</strong>，2只是一个常量，转化的时间复杂度是 O（1）。</p> <p>那么场景4 <strong>T(n) = 0.5n^2 + 0.5n</strong>，最高阶项为0.5n^2，省去系数0.5，转化的时间复杂度是O（n^2）</p> <p>这四种时间复杂度究竟谁用时更长，谁节省时间呢？稍微思考一下就可以得出结论：</p> <p><strong>O（1）&lt; O（logn）&lt; O（n）&lt; O（n^2）</strong></p> <h3 id="常见的时间复杂度"><a href="#常见的时间复杂度" class="header-anchor">#</a> 常见的时间复杂度</h3> <table><thead><tr><th>f(n)</th> <th>阶</th> <th>时间复杂度</th></tr></thead> <tbody><tr><td>1</td> <td>O(1)</td> <td>常数时间复杂度</td></tr> <tr><td>2n + 1</td> <td>O(n)</td> <td>线性时间复杂度</td></tr> <tr><td>2n^2 + 2n + 1</td> <td>O(n^2)</td> <td>平方级时间复杂度</td></tr> <tr><td>2log2n + 2</td> <td>O(logn)</td> <td>对数时间复杂度</td></tr> <tr><td>2nlog2n + 2n + 2</td> <td>O(nlogn)</td> <td>N次对数时间复杂度</td></tr> <tr><td>2n^3 + 2n + 2</td> <td>O(n^3)</td> <td>立方阶时间复杂度</td></tr> <tr><td>2^n</td> <td>O(2^n)</td> <td>指数级时间复杂度</td></tr></tbody></table> <p><strong>O(1) &lt; O(logn) &lt; O(n) &lt; O(nlogn) &lt; O(n^2) &lt; O(n^3) &lt; O(2^n)</strong></p> <h2 id="什么是空间复杂度"><a href="#什么是空间复杂度" class="header-anchor">#</a> 什么是空间复杂度</h2> <p>如果说时间复杂度是衡量算法执行的时间成本，那么空间复杂度（Space Complexity）就是<strong>对一个算法在运行过程中临时占用存储空间大小的量度</strong>。</p> <p>在运行一段程序的时候，我们不止要执行各种运算指令，同时也会根据需求，存储一些临时的中间数据，以便后续指令可以更方便地继续执行。<br> <img src="/blog/img/algorithm/6.jpg" alt="" style="width:30%;"></p> <p>这些中间数据所占用的空间大小就用<strong>空间复杂度来</strong>来度量。</p> <h2 id="表示方法-2"><a href="#表示方法-2" class="header-anchor">#</a> 表示方法</h2> <p>一般用&quot;<strong>大O符号表示法</strong>&quot;来表示空间复杂度:</p> <blockquote><p>计算公式是：S(n) = O(f(n))。</p></blockquote> <blockquote><p>其中，S(n)表示算法在运行过程中临时占用存储空间的大小，n表示数据规模的大小，f(n)表示关于输入规模n的函数，O表示大O符号，表示算法的空间复杂度与f(n)成正比</p></blockquote> <h3 id="常见空间复杂度"><a href="#常见空间复杂度" class="header-anchor">#</a> 常见空间复杂度</h3> <h4 id="_1-常量空间"><a href="#_1-常量空间" class="header-anchor">#</a> 1. 常量空间</h4> <p>当算法的存储空间大小分配固定，和输入规模没有直接关系的情况下，空间复杂度记作O（1）。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> j <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token operator">++</span>i<span class="token punctuation">;</span>
+j<span class="token operator">++</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> m <span class="token operator">=</span> i <span class="token operator">+</span> j<span class="token punctuation">;</span>
+<span class="token comment">// 代码中的 i、j、m 所分配的空间都不随着处理数据量变化，因此它的空间复杂度 S(n) = O(1)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h4 id="_2-线性空间"><a href="#_2-线性空间" class="header-anchor">#</a> 2. 线性空间</h4> <p>当算法分配的空间是一个线性的集合（比如数组），并且集合大小和输入规模n成正比，空间复杂度记作O（n）。</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+   arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> i
+<span class="token punctuation">}</span>
+<span class="token comment">// 第一行new了一个数组出来，这个数据占用的大小为n，虽然有循环，但没有再分配新的空间，因此，这段代码的空间复杂度主要看第一行即可，即 S(n) = O(n)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h4 id="_3-二维空间"><a href="#_3-二维空间" class="header-anchor">#</a> 3. 二维空间</h4> <p>当算法分配的空间是一个二维数组集合，并且集合的长度与宽度都和输入规模n成正比，空间复杂度记作O（n^2）。</p> <h4 id="_4-递归空间"><a href="#_4-递归空间" class="header-anchor">#</a> 4. 递归空间</h4> <p>递归是一种比较特殊的情况，计算机在执行程序的时候，会专门分配一块内存，用来存储“方法调用栈”。</p> <p>每当我们执行到更深一层的函数，方法调用栈都会进行入栈操作，当方法返回的时候，方法调用栈执行出栈操作。</p> <p>递归操作占用的空间到底有多大呢？它所需要的内存空间和递归的深度成正比。如果递归的深度是n，那么空间复杂度就是O（n）。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/algorithm/01-algorithm-datastructure.html" class="prev">
+        算法和数据结构
+      </a></span> <span class="next"><a href="/blog/algorithm/03-array-linkedlist.html">
+        数组和链表
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/blog/assets/js/app.1d7aa480.js" defer></script><script src="/blog/assets/js/2.a77c63c4.js" defer></script><script src="/blog/assets/js/19.d24b8c84.js" defer></script>
+  </body>
+</html>

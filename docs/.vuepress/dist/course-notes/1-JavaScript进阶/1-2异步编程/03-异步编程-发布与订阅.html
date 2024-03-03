@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>03-异步编程-发布与订阅 | Lang&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/blog/img/favicon.png">
+    <meta name="description" content="this is my blog">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.4ceb4da7.css" as="style"><link rel="preload" href="/blog/assets/js/app.1d7aa480.js" as="script"><link rel="preload" href="/blog/assets/js/2.a77c63c4.js" as="script"><link rel="preload" href="/blog/assets/js/53.87259183.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.4d5e23ca.js"><link rel="prefetch" href="/blog/assets/js/100.afe2a5a3.js"><link rel="prefetch" href="/blog/assets/js/101.a99e0a44.js"><link rel="prefetch" href="/blog/assets/js/102.069ccca8.js"><link rel="prefetch" href="/blog/assets/js/103.b8b8b534.js"><link rel="prefetch" href="/blog/assets/js/104.d7e8cc06.js"><link rel="prefetch" href="/blog/assets/js/105.c874d988.js"><link rel="prefetch" href="/blog/assets/js/106.6e4f9678.js"><link rel="prefetch" href="/blog/assets/js/107.0c8c0012.js"><link rel="prefetch" href="/blog/assets/js/108.426acb09.js"><link rel="prefetch" href="/blog/assets/js/109.6b6f777c.js"><link rel="prefetch" href="/blog/assets/js/11.e0d69fa8.js"><link rel="prefetch" href="/blog/assets/js/110.d7c54bfb.js"><link rel="prefetch" href="/blog/assets/js/111.cfb418d4.js"><link rel="prefetch" href="/blog/assets/js/112.ffca9ac0.js"><link rel="prefetch" href="/blog/assets/js/113.553af2aa.js"><link rel="prefetch" href="/blog/assets/js/114.1de796aa.js"><link rel="prefetch" href="/blog/assets/js/115.390fcf78.js"><link rel="prefetch" href="/blog/assets/js/116.333291a5.js"><link rel="prefetch" href="/blog/assets/js/117.d25aa6b5.js"><link rel="prefetch" href="/blog/assets/js/118.790b0e18.js"><link rel="prefetch" href="/blog/assets/js/119.04f6c551.js"><link rel="prefetch" href="/blog/assets/js/12.59479433.js"><link rel="prefetch" href="/blog/assets/js/120.10e01e3f.js"><link rel="prefetch" href="/blog/assets/js/121.36272ad8.js"><link rel="prefetch" href="/blog/assets/js/122.a2d598d9.js"><link rel="prefetch" href="/blog/assets/js/123.ffc46f47.js"><link rel="prefetch" href="/blog/assets/js/124.b1c0b8d4.js"><link rel="prefetch" href="/blog/assets/js/125.ad997419.js"><link rel="prefetch" href="/blog/assets/js/126.ac50cc39.js"><link rel="prefetch" href="/blog/assets/js/127.8700a103.js"><link rel="prefetch" href="/blog/assets/js/128.552560ee.js"><link rel="prefetch" href="/blog/assets/js/129.89cc2b85.js"><link rel="prefetch" href="/blog/assets/js/13.c635c6ec.js"><link rel="prefetch" href="/blog/assets/js/130.31de3388.js"><link rel="prefetch" href="/blog/assets/js/131.1dd35f34.js"><link rel="prefetch" href="/blog/assets/js/132.5d42d890.js"><link rel="prefetch" href="/blog/assets/js/133.5fac33a0.js"><link rel="prefetch" href="/blog/assets/js/134.9dc74ecc.js"><link rel="prefetch" href="/blog/assets/js/135.51d5e1c6.js"><link rel="prefetch" href="/blog/assets/js/136.17ea9982.js"><link rel="prefetch" href="/blog/assets/js/137.9943b7e9.js"><link rel="prefetch" href="/blog/assets/js/138.e32b2355.js"><link rel="prefetch" href="/blog/assets/js/139.cc753ff6.js"><link rel="prefetch" href="/blog/assets/js/14.63a45543.js"><link rel="prefetch" href="/blog/assets/js/140.d52876bd.js"><link rel="prefetch" href="/blog/assets/js/141.39f25c32.js"><link rel="prefetch" href="/blog/assets/js/142.be7a6718.js"><link rel="prefetch" href="/blog/assets/js/143.c9c3e682.js"><link rel="prefetch" href="/blog/assets/js/144.643cd39c.js"><link rel="prefetch" href="/blog/assets/js/145.0d940abc.js"><link rel="prefetch" href="/blog/assets/js/146.1866b9b6.js"><link rel="prefetch" href="/blog/assets/js/147.a1a13583.js"><link rel="prefetch" href="/blog/assets/js/148.b0526b59.js"><link rel="prefetch" href="/blog/assets/js/149.4c01a0bd.js"><link rel="prefetch" href="/blog/assets/js/15.eccbff81.js"><link rel="prefetch" href="/blog/assets/js/150.c0a9e55f.js"><link rel="prefetch" href="/blog/assets/js/151.8acfde4e.js"><link rel="prefetch" href="/blog/assets/js/152.3de05754.js"><link rel="prefetch" href="/blog/assets/js/153.5430e800.js"><link rel="prefetch" href="/blog/assets/js/154.888405f4.js"><link rel="prefetch" href="/blog/assets/js/155.ec80d175.js"><link rel="prefetch" href="/blog/assets/js/156.97bba65e.js"><link rel="prefetch" href="/blog/assets/js/157.cbfa9c4b.js"><link rel="prefetch" href="/blog/assets/js/158.ef251003.js"><link rel="prefetch" href="/blog/assets/js/159.4caec581.js"><link rel="prefetch" href="/blog/assets/js/16.19b010da.js"><link rel="prefetch" href="/blog/assets/js/160.f9b116bc.js"><link rel="prefetch" href="/blog/assets/js/161.9e4bb7de.js"><link rel="prefetch" href="/blog/assets/js/162.6d952350.js"><link rel="prefetch" href="/blog/assets/js/163.d5a5f353.js"><link rel="prefetch" href="/blog/assets/js/164.476e8570.js"><link rel="prefetch" href="/blog/assets/js/165.b93aaed2.js"><link rel="prefetch" href="/blog/assets/js/166.7996df0a.js"><link rel="prefetch" href="/blog/assets/js/167.4cc7d75e.js"><link rel="prefetch" href="/blog/assets/js/168.19cc891d.js"><link rel="prefetch" href="/blog/assets/js/169.2c0bf571.js"><link rel="prefetch" href="/blog/assets/js/17.31c323bb.js"><link rel="prefetch" href="/blog/assets/js/170.98a2b2a1.js"><link rel="prefetch" href="/blog/assets/js/171.e2548c24.js"><link rel="prefetch" href="/blog/assets/js/172.30e6c8ba.js"><link rel="prefetch" href="/blog/assets/js/173.6c3a52fd.js"><link rel="prefetch" href="/blog/assets/js/174.217c6af3.js"><link rel="prefetch" href="/blog/assets/js/175.7b9d0bd3.js"><link rel="prefetch" href="/blog/assets/js/176.16e7ce65.js"><link rel="prefetch" href="/blog/assets/js/177.1830c864.js"><link rel="prefetch" href="/blog/assets/js/178.200bfd42.js"><link rel="prefetch" href="/blog/assets/js/179.2a3e5b5b.js"><link rel="prefetch" href="/blog/assets/js/18.6c4d9352.js"><link rel="prefetch" href="/blog/assets/js/180.fdeac10d.js"><link rel="prefetch" href="/blog/assets/js/181.40e69c13.js"><link rel="prefetch" href="/blog/assets/js/182.43dd023d.js"><link rel="prefetch" href="/blog/assets/js/183.050bbcdb.js"><link rel="prefetch" href="/blog/assets/js/184.7e38a358.js"><link rel="prefetch" href="/blog/assets/js/185.7988fdda.js"><link rel="prefetch" href="/blog/assets/js/186.1bd22bea.js"><link rel="prefetch" href="/blog/assets/js/187.e2bc97f8.js"><link rel="prefetch" href="/blog/assets/js/188.7f618293.js"><link rel="prefetch" href="/blog/assets/js/189.854e58c7.js"><link rel="prefetch" href="/blog/assets/js/19.d24b8c84.js"><link rel="prefetch" href="/blog/assets/js/190.db1f6fde.js"><link rel="prefetch" href="/blog/assets/js/191.e0bb94fb.js"><link rel="prefetch" href="/blog/assets/js/192.a2a24797.js"><link rel="prefetch" href="/blog/assets/js/20.2e04223c.js"><link rel="prefetch" href="/blog/assets/js/21.534f7b13.js"><link rel="prefetch" href="/blog/assets/js/22.813db543.js"><link rel="prefetch" href="/blog/assets/js/23.b9539532.js"><link rel="prefetch" href="/blog/assets/js/24.b10bb8eb.js"><link rel="prefetch" href="/blog/assets/js/25.7f08786c.js"><link rel="prefetch" href="/blog/assets/js/26.363359a1.js"><link rel="prefetch" href="/blog/assets/js/27.53e3c2b1.js"><link rel="prefetch" href="/blog/assets/js/28.6d6d2842.js"><link rel="prefetch" href="/blog/assets/js/29.8819f7d4.js"><link rel="prefetch" href="/blog/assets/js/3.f6f111f0.js"><link rel="prefetch" href="/blog/assets/js/30.0763e168.js"><link rel="prefetch" href="/blog/assets/js/31.e0dc2b1f.js"><link rel="prefetch" href="/blog/assets/js/32.db37fc35.js"><link rel="prefetch" href="/blog/assets/js/33.5a8e7c59.js"><link rel="prefetch" href="/blog/assets/js/34.2f53febf.js"><link rel="prefetch" href="/blog/assets/js/35.a6809987.js"><link rel="prefetch" href="/blog/assets/js/36.e261731a.js"><link rel="prefetch" href="/blog/assets/js/37.1980e040.js"><link rel="prefetch" href="/blog/assets/js/38.ceaf9534.js"><link rel="prefetch" href="/blog/assets/js/39.45c26cf3.js"><link rel="prefetch" href="/blog/assets/js/4.48084369.js"><link rel="prefetch" href="/blog/assets/js/40.e7326a09.js"><link rel="prefetch" href="/blog/assets/js/41.065fd2c9.js"><link rel="prefetch" href="/blog/assets/js/42.4da1ada5.js"><link rel="prefetch" href="/blog/assets/js/43.fb7452bf.js"><link rel="prefetch" href="/blog/assets/js/44.4159dde9.js"><link rel="prefetch" href="/blog/assets/js/45.b03aa9b4.js"><link rel="prefetch" href="/blog/assets/js/46.fadf150b.js"><link rel="prefetch" href="/blog/assets/js/47.22ed9488.js"><link rel="prefetch" href="/blog/assets/js/48.1ddb0b33.js"><link rel="prefetch" href="/blog/assets/js/49.ffa2fa97.js"><link rel="prefetch" href="/blog/assets/js/5.adf70ce4.js"><link rel="prefetch" href="/blog/assets/js/50.3f8712f6.js"><link rel="prefetch" href="/blog/assets/js/51.4907feb0.js"><link rel="prefetch" href="/blog/assets/js/52.347ae740.js"><link rel="prefetch" href="/blog/assets/js/54.d80ba5ea.js"><link rel="prefetch" href="/blog/assets/js/55.e0493bcf.js"><link rel="prefetch" href="/blog/assets/js/56.f855f8d4.js"><link rel="prefetch" href="/blog/assets/js/57.f05cd47c.js"><link rel="prefetch" href="/blog/assets/js/58.ad21849e.js"><link rel="prefetch" href="/blog/assets/js/59.f87bf533.js"><link rel="prefetch" href="/blog/assets/js/6.0f15f97c.js"><link rel="prefetch" href="/blog/assets/js/60.36be1503.js"><link rel="prefetch" href="/blog/assets/js/61.23342dc7.js"><link rel="prefetch" href="/blog/assets/js/62.ba377ed7.js"><link rel="prefetch" href="/blog/assets/js/63.568d5deb.js"><link rel="prefetch" href="/blog/assets/js/64.4ca08419.js"><link rel="prefetch" href="/blog/assets/js/65.0beb6e05.js"><link rel="prefetch" href="/blog/assets/js/66.b373af8f.js"><link rel="prefetch" href="/blog/assets/js/67.d57377a6.js"><link rel="prefetch" href="/blog/assets/js/68.6ab7bb33.js"><link rel="prefetch" href="/blog/assets/js/69.4b561427.js"><link rel="prefetch" href="/blog/assets/js/7.5ad22b04.js"><link rel="prefetch" href="/blog/assets/js/70.f5256c13.js"><link rel="prefetch" href="/blog/assets/js/71.e3c434b5.js"><link rel="prefetch" href="/blog/assets/js/72.03181e3a.js"><link rel="prefetch" href="/blog/assets/js/73.3c487e8a.js"><link rel="prefetch" href="/blog/assets/js/74.9c389547.js"><link rel="prefetch" href="/blog/assets/js/75.13f2f38c.js"><link rel="prefetch" href="/blog/assets/js/76.5e7bd26b.js"><link rel="prefetch" href="/blog/assets/js/77.c6d41697.js"><link rel="prefetch" href="/blog/assets/js/78.b53bd3f6.js"><link rel="prefetch" href="/blog/assets/js/79.60c7a787.js"><link rel="prefetch" href="/blog/assets/js/8.e3715d0f.js"><link rel="prefetch" href="/blog/assets/js/80.d23ec1a6.js"><link rel="prefetch" href="/blog/assets/js/81.aa220153.js"><link rel="prefetch" href="/blog/assets/js/82.f36c3df2.js"><link rel="prefetch" href="/blog/assets/js/83.5d1e91e5.js"><link rel="prefetch" href="/blog/assets/js/84.0b726221.js"><link rel="prefetch" href="/blog/assets/js/85.847b2707.js"><link rel="prefetch" href="/blog/assets/js/86.1684287a.js"><link rel="prefetch" href="/blog/assets/js/87.1a92d542.js"><link rel="prefetch" href="/blog/assets/js/88.a9418349.js"><link rel="prefetch" href="/blog/assets/js/89.988bb040.js"><link rel="prefetch" href="/blog/assets/js/9.f18d4697.js"><link rel="prefetch" href="/blog/assets/js/90.b609d99f.js"><link rel="prefetch" href="/blog/assets/js/91.4849b8ee.js"><link rel="prefetch" href="/blog/assets/js/92.17969654.js"><link rel="prefetch" href="/blog/assets/js/93.9cd305f8.js"><link rel="prefetch" href="/blog/assets/js/94.f0128a1a.js"><link rel="prefetch" href="/blog/assets/js/95.cb26249c.js"><link rel="prefetch" href="/blog/assets/js/96.2af60b5a.js"><link rel="prefetch" href="/blog/assets/js/97.dfeea9c9.js"><link rel="prefetch" href="/blog/assets/js/98.16fb6346.js"><link rel="prefetch" href="/blog/assets/js/99.555bea56.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.4ceb4da7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/img/logo.png" alt="Lang's blog" class="logo"> <span class="site-name can-hide">Lang's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发规范 Menu" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发规范 Menu" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/develop-norm/engineer.html" class="nav-link">
+  开发规范
+</a></li><li class="dropdown-item"><!----> <a href="/blog/html/notes.html" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/blog/css/notes.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/javascript/notes.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/create.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/react/notes.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/build-tool/webpack/core.html" class="nav-link">
+  构建工具
+</a></li><li class="dropdown-item"><!----> <a href="/blog/nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/blog/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/optimization/data-desensitization.html" class="nav-link">
+  优化
+</a></li><li class="dropdown-item"><!----> <a href="/blog/web-security/xss.html" class="nav-link">
+  前端安全
+</a></li><li class="dropdown-item"><!----> <a href="/blog/network/01.html" class="nav-link">
+  网络
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/backend/" class="nav-link">
+  后端
+</a></div><div class="nav-item"><a href="/blog/algorithm/01-algorithm-datastructure.html" class="nav-link">
+  算法
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/course-notes/1-JavaScript进阶/1-1函数/01-内存管理.html" class="nav-link">
+  JavaScript进阶
+</a></li><li class="dropdown-item"><!----> <a href="/blog/course-notes/2-Vue框架源码and项目实战/2-1课程导学/01-Vue专题导学.html" class="nav-link">
+  Vue框架源码&amp;项目实战
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Q&amp;A" class="dropdown-title"><span class="title">Q&amp;A</span> <span class="arrow down"></span></button> <button type="button" aria-label="Q&amp;A" class="mobile-dropdown-title"><span class="title">Q&amp;A</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/interview-question/html-css.html" class="nav-link">
+  HTMl-CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/interview-question/javascript.html" class="nav-link">
+  JavaScript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="学习 Menu" class="dropdown-title"><span class="title">记录</span> <span class="arrow down"></span></button> <button type="button" aria-label="学习 Menu" class="mobile-dropdown-title"><span class="title">记录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/booklist/" class="nav-link">
+  我的书单
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/study.html" class="nav-link">
+  学习
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/quotations.html" class="nav-link">
+  语录
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/build-blog.html" class="nav-link">
+  十分钟搭建自己的个人博客
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/wechat-h5.html" class="nav-link">
+  微信公众号H5配置流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-customer-service.html" class="nav-link">
+  微信小程序客服绑定流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-online.html" class="nav-link">
+  微信小程序上线准备
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/quick-entry.html" class="nav-link">
+  前端相关框架
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="收藏" class="dropdown-title"><span class="title">收藏</span> <span class="arrow down"></span></button> <button type="button" aria-label="收藏" class="mobile-dropdown-title"><span class="title">收藏</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          框架及UI库
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/frame.html#vue及ui组件库" class="nav-link">
+  Vue及UI组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html#react-ui-组件库" class="nav-link">
+  React UI 组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html" class="nav-link">
+  更多...
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他网站
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/sites.html#文档" class="nav-link">
+  文档
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#社区" class="nav-link">
+  社区
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#工具" class="nav-link">
+  图片/工具
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html" class="nav-link">
+  更多...
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/blog/about/" class="nav-link">
+  关于
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发规范 Menu" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发规范 Menu" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/develop-norm/engineer.html" class="nav-link">
+  开发规范
+</a></li><li class="dropdown-item"><!----> <a href="/blog/html/notes.html" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/blog/css/notes.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/javascript/notes.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/create.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/react/notes.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/build-tool/webpack/core.html" class="nav-link">
+  构建工具
+</a></li><li class="dropdown-item"><!----> <a href="/blog/nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/blog/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/optimization/data-desensitization.html" class="nav-link">
+  优化
+</a></li><li class="dropdown-item"><!----> <a href="/blog/web-security/xss.html" class="nav-link">
+  前端安全
+</a></li><li class="dropdown-item"><!----> <a href="/blog/network/01.html" class="nav-link">
+  网络
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/backend/" class="nav-link">
+  后端
+</a></div><div class="nav-item"><a href="/blog/algorithm/01-algorithm-datastructure.html" class="nav-link">
+  算法
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/course-notes/1-JavaScript进阶/1-1函数/01-内存管理.html" class="nav-link">
+  JavaScript进阶
+</a></li><li class="dropdown-item"><!----> <a href="/blog/course-notes/2-Vue框架源码and项目实战/2-1课程导学/01-Vue专题导学.html" class="nav-link">
+  Vue框架源码&amp;项目实战
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Q&amp;A" class="dropdown-title"><span class="title">Q&amp;A</span> <span class="arrow down"></span></button> <button type="button" aria-label="Q&amp;A" class="mobile-dropdown-title"><span class="title">Q&amp;A</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/interview-question/html-css.html" class="nav-link">
+  HTMl-CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/interview-question/javascript.html" class="nav-link">
+  JavaScript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="学习 Menu" class="dropdown-title"><span class="title">记录</span> <span class="arrow down"></span></button> <button type="button" aria-label="学习 Menu" class="mobile-dropdown-title"><span class="title">记录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/booklist/" class="nav-link">
+  我的书单
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/study.html" class="nav-link">
+  学习
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/quotations.html" class="nav-link">
+  语录
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/build-blog.html" class="nav-link">
+  十分钟搭建自己的个人博客
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/wechat-h5.html" class="nav-link">
+  微信公众号H5配置流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-customer-service.html" class="nav-link">
+  微信小程序客服绑定流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-online.html" class="nav-link">
+  微信小程序上线准备
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/quick-entry.html" class="nav-link">
+  前端相关框架
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="收藏" class="dropdown-title"><span class="title">收藏</span> <span class="arrow down"></span></button> <button type="button" aria-label="收藏" class="mobile-dropdown-title"><span class="title">收藏</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          框架及UI库
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/frame.html#vue及ui组件库" class="nav-link">
+  Vue及UI组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html#react-ui-组件库" class="nav-link">
+  React UI 组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html" class="nav-link">
+  更多...
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他网站
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/sites.html#文档" class="nav-link">
+  文档
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#社区" class="nav-link">
+  社区
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#工具" class="nav-link">
+  图片/工具
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html" class="nav-link">
+  更多...
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/blog/about/" class="nav-link">
+  关于
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>1-JavaScript进阶</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>1-1函数</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>1-2异步编程</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/course-notes/1-JavaScript进阶/1-2异步编程/01-理解异步.html" class="sidebar-link">01-理解异步</a></li><li><a href="/blog/course-notes/1-JavaScript进阶/1-2异步编程/02-Event Loop事件循环.html" class="sidebar-link">02-Event Loop事件循环</a></li><li><a href="/blog/course-notes/1-JavaScript进阶/1-2异步编程/03-异步编程-发布与订阅.html" class="active sidebar-link">03-异步编程-发布与订阅</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/course-notes/1-JavaScript进阶/1-2异步编程/03-异步编程-发布与订阅.html#异步编程解决方案" class="sidebar-link">异步编程解决方案</a></li><li class="sidebar-sub-header"><a href="/blog/course-notes/1-JavaScript进阶/1-2异步编程/03-异步编程-发布与订阅.html#发布-订阅模式" class="sidebar-link">发布-订阅模式</a></li><li class="sidebar-sub-header"><a href="/blog/course-notes/1-JavaScript进阶/1-2异步编程/03-异步编程-发布与订阅.html#优点-缺点" class="sidebar-link">优点/缺点</a></li><li class="sidebar-sub-header"><a href="/blog/course-notes/1-JavaScript进阶/1-2异步编程/03-异步编程-发布与订阅.html#发布订阅模式和观察者模式的区别" class="sidebar-link">发布订阅模式和观察者模式的区别</a></li></ul></li><li><a href="/blog/course-notes/1-JavaScript进阶/1-2异步编程/04-深入理解Promise.html" class="sidebar-link">04-深入理解Promise</a></li><li><a href="/blog/course-notes/1-JavaScript进阶/1-2异步编程/05-Generator函数及其异步应用.html" class="sidebar-link">05-Generator函数及其异步应用</a></li><li><a href="/blog/course-notes/1-JavaScript进阶/1-2异步编程/06-基于Thunk函数的Generator自动执行器.html" class="sidebar-link">06-基于Thunk函数的Generator自动执行器</a></li><li><a href="/blog/course-notes/1-JavaScript进阶/1-2异步编程/07-co模块源码分析.html" class="sidebar-link">07-co模块源码分析</a></li><li><a href="/blog/course-notes/1-JavaScript进阶/1-2异步编程/08-深入理解Async和Await.html" class="sidebar-link">08-深入理解Async和Await</a></li><li><a href="/blog/course-notes/1-JavaScript进阶/1-2异步编程/09-手写Promise上.html" class="sidebar-link">09-手写Promise上</a></li><li><a href="/blog/course-notes/1-JavaScript进阶/1-2异步编程/10-手写Promise下.html" class="sidebar-link">10-手写Promise下</a></li><li><a href="/blog/course-notes/1-JavaScript进阶/1-2异步编程/11-WebWorker多线程机制.html" class="sidebar-link">11-WebWorker多线程机制</a></li><li><a href="/blog/course-notes/1-JavaScript进阶/1-2异步编程/12-复杂异步场景下的解决方案Rxjs.html" class="sidebar-link">12-复杂异步场景下的解决方案Rxjs</a></li></ul></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>1-3设计模式</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>2-Vue框架源码and项目实战</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_03-异步编程-发布与订阅"><a href="#_03-异步编程-发布与订阅" class="header-anchor">#</a> 03-异步编程-发布与订阅</h1> <h2 id="异步编程解决方案"><a href="#异步编程解决方案" class="header-anchor">#</a> 异步编程解决方案</h2> <ul><li>发布/订阅</li> <li>deferred对象</li> <li>Promise</li> <li>Generator</li> <li>async/await</li></ul> <h2 id="发布-订阅模式"><a href="#发布-订阅模式" class="header-anchor">#</a> 发布-订阅模式</h2> <ul><li><p>发布-订阅模式其实是一种对象间一对多的依赖关系，当一个对象的状态发送改变时，所有依赖于它的对象都将得到状态改变的通知。</p></li> <li><p>订阅者（Subscriber）把自己想订阅的事件注册（Subscribe）到调度中心（Event Channel），当发布者（Publisher）发布该事件（Publish Event）到调度中心，也就是该事件触发时，由调度中心统一调度（Fire Event）订阅者注册到调度中心的处理代码。</p></li></ul> <details class="custom-block details"><summary>发布订阅模式实现</summary> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">let</span> eventEmitter <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 缓存列表</span>
+    <span class="token literal-property property">list</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 订阅</span>
+    <span class="token function">on</span> <span class="token punctuation">(</span><span class="token parameter">event<span class="token punctuation">,</span> fn</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> _this <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+        <span class="token comment">// 如果对象中没有对应的 event 值，也就是说明没有订阅过，就给 event 创建个缓存列表</span>
+        <span class="token comment">// 如有对象中有相应的 event 值，把 fn 添加到对应 event 的缓存列表里</span>
+        <span class="token punctuation">(</span>_this<span class="token punctuation">.</span>list<span class="token punctuation">[</span>event<span class="token punctuation">]</span> <span class="token operator">||</span> <span class="token punctuation">(</span>_this<span class="token punctuation">.</span>list<span class="token punctuation">[</span>event<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>fn<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> _this<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 监听一次</span>
+    <span class="token function">once</span> <span class="token punctuation">(</span><span class="token parameter">event<span class="token punctuation">,</span> fn</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 先绑定，调用后删除</span>
+        <span class="token keyword">let</span> _this <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+        <span class="token keyword">function</span> <span class="token function">on</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            _this<span class="token punctuation">.</span><span class="token function">off</span><span class="token punctuation">(</span>event<span class="token punctuation">,</span> on<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>_this<span class="token punctuation">,</span> arguments<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        on<span class="token punctuation">.</span>fn <span class="token operator">=</span> fn<span class="token punctuation">;</span>
+        _this<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span>event<span class="token punctuation">,</span> on<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> _this<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 取消订阅</span>
+    <span class="token function">off</span> <span class="token punctuation">(</span><span class="token parameter">event<span class="token punctuation">,</span> fn</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> _this <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> fns <span class="token operator">=</span> _this<span class="token punctuation">.</span>list<span class="token punctuation">[</span>event<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token comment">// 如果缓存列表中没有相应的 fn，返回false</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>fns<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>fn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">// 如果没有传 fn 的话，就会将 event 值对应缓存列表中的 fn 都清空</span>
+            fns <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>fns<span class="token punctuation">.</span>length <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token comment">// 若有 fn，遍历缓存列表，看看传入的 fn 与哪个函数相同，如果相同就直接从缓存列表中删掉即可</span>
+            <span class="token keyword">let</span> cb<span class="token punctuation">;</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> cbLen <span class="token operator">=</span> fns<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> cbLen<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                cb <span class="token operator">=</span> fns<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>cb <span class="token operator">===</span> fn <span class="token operator">||</span> cb<span class="token punctuation">.</span>fn <span class="token operator">===</span> fn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    fns<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token keyword">break</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> _this<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 发布</span>
+    <span class="token function">emit</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> _this <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+        <span class="token comment">// 第一个参数是对应的 event 值，直接用数组的 shift 方法取出</span>
+        <span class="token keyword">let</span> event <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">shift</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>arguments<span class="token punctuation">)</span><span class="token punctuation">,</span>
+            fns <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span>_this<span class="token punctuation">.</span>list<span class="token punctuation">[</span>event<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token comment">// 如果缓存列表里没有 fn 就返回 false</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>fns <span class="token operator">||</span> fns<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">// 遍历 event 值对应的缓存列表，依次执行 fn</span>
+        fns<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">fn</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+            <span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>_this<span class="token punctuation">,</span> arguments<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> _this<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">user1</span> <span class="token punctuation">(</span><span class="token parameter">content</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'用户1订阅了:'</span><span class="token punctuation">,</span> content<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">user2</span> <span class="token punctuation">(</span><span class="token parameter">content</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'用户2订阅了:'</span><span class="token punctuation">,</span> content<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">user3</span> <span class="token punctuation">(</span><span class="token parameter">content</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'用户3订阅了:'</span><span class="token punctuation">,</span> content<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">user4</span> <span class="token punctuation">(</span><span class="token parameter">content</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'用户4订阅了:'</span><span class="token punctuation">,</span> content<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 订阅</span>
+eventEmitter<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'article1'</span><span class="token punctuation">,</span> user1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+eventEmitter<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'article1'</span><span class="token punctuation">,</span> user2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+eventEmitter<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'article1'</span><span class="token punctuation">,</span> user3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 取消user2方法的订阅</span>
+eventEmitter<span class="token punctuation">.</span><span class="token function">off</span><span class="token punctuation">(</span><span class="token string">'article1'</span><span class="token punctuation">,</span> user2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+eventEmitter<span class="token punctuation">.</span><span class="token function">once</span><span class="token punctuation">(</span><span class="token string">'article2'</span><span class="token punctuation">,</span> user4<span class="token punctuation">)</span>
+
+<span class="token comment">// 发布</span>
+eventEmitter<span class="token punctuation">.</span><span class="token function">emit</span><span class="token punctuation">(</span><span class="token string">'article1'</span><span class="token punctuation">,</span> <span class="token string">'Javascript 发布-订阅模式'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+eventEmitter<span class="token punctuation">.</span><span class="token function">emit</span><span class="token punctuation">(</span><span class="token string">'article1'</span><span class="token punctuation">,</span> <span class="token string">'Javascript 发布-订阅模式'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+eventEmitter<span class="token punctuation">.</span><span class="token function">emit</span><span class="token punctuation">(</span><span class="token string">'article2'</span><span class="token punctuation">,</span> <span class="token string">'Javascript 观察者模式'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+eventEmitter<span class="token punctuation">.</span><span class="token function">emit</span><span class="token punctuation">(</span><span class="token string">'article2'</span><span class="token punctuation">,</span> <span class="token string">'Javascript 观察者模式'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// eventEmitter.on('article1', user3).emit('article1', 'test111');</span>
+
+<span class="token comment">/*
+    用户1订阅了: Javascript 发布-订阅模式
+    用户3订阅了: Javascript 发布-订阅模式
+    用户1订阅了: Javascript 发布-订阅模式
+    用户3订阅了: Javascript 发布-订阅模式
+    用户4订阅了: Javascript 观察者模式
+*/</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br></div></div></details> <h2 id="优点-缺点"><a href="#优点-缺点" class="header-anchor">#</a> 优点/缺点</h2> <h3 id="_1-优点"><a href="#_1-优点" class="header-anchor">#</a> 1. 优点</h3> <ul><li>对象之间解耦</li> <li>异步编程中，可以更松耦合的代码编写</li></ul> <h3 id="_2-缺点"><a href="#_2-缺点" class="header-anchor">#</a> 2. 缺点</h3> <ul><li>创建订阅者本身要消耗一定的时间和内存</li> <li>虽然可以弱化对象之间的联系，多个发布者和订阅者嵌套一起的时候，程序难以跟踪维护</li></ul> <h2 id="发布订阅模式和观察者模式的区别"><a href="#发布订阅模式和观察者模式的区别" class="header-anchor">#</a> 发布订阅模式和观察者模式的区别</h2> <ul><li>观察者模式：观察者（Observer）直接订阅（Subscribe）主题（Subject），而当主题被激活的时候，会触发（Fire Event）观察者里的事件。</li> <li>发布订阅模式：订阅者（Subscriber）把自己想订阅的事件注册（Subscribe）到调度中心（Event Channel），当发布者（Publisher）发布该事件（Publish Event）到调度中心，也就是该事件触发时，由调度中心统一调度（Fire Event）订阅者注册到调度中心的处理代码。</li></ul> <p>参考：<a href="https://juejin.cn/post/6844903850105634824" target="_blank" rel="noopener noreferrer">JavaScript 发布-订阅模式<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/course-notes/1-JavaScript进阶/1-2异步编程/02-Event Loop事件循环.html" class="prev">
+        02-Event Loop事件循环
+      </a></span> <span class="next"><a href="/blog/course-notes/1-JavaScript进阶/1-2异步编程/04-深入理解Promise.html">
+        04-深入理解Promise
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/blog/assets/js/app.1d7aa480.js" defer></script><script src="/blog/assets/js/2.a77c63c4.js" defer></script><script src="/blog/assets/js/53.87259183.js" defer></script>
+  </body>
+</html>
