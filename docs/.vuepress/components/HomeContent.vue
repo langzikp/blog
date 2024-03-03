@@ -97,9 +97,9 @@
           <a class="color4" href="https://www.iconfont.cn/" target="blank"
             >阿里矢量图标库</a
           >
-          <a class="color5" href="https://hu-snail.github.io/vue3-resource/platform/introduction.html" target="blank"
+          <!-- <a class="color5" href="https://hu-snail.github.io/vue3-resource/platform/introduction.html" target="blank"
             >vue3资源</a
-          >
+          > -->
         </div>
         <div class="more">
           <a :href="$withBase('/documents/quick-entry')"> 更多>> </a>

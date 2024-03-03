@@ -46,7 +46,7 @@ promise有三种状态：pending(等待态)，fulfiled(成功态)，rejected(失
 Promise.resolve(1).then(2).then(Promise.resolve(3)).then(console.log);
 
 // 如果then函数中不是一个函数，会被替换成 `(x)=>x` 的形式
-// 什么的代码就相当于
+// 上面的代码就相当于
 Promise.resolve(1).then(function (x) { 
     return x; 
 }).then(function (x) { 

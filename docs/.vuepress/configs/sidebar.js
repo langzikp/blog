@@ -119,6 +119,7 @@ module.exports = {
         ['optimize', 'vue常见优化手段'],
         ['add-icon', 'vue+element使用第三方icon'],
         ['notes', '学习笔记'],
+        ['questions-answers', '面试问答'],
     ],
     '/react/': [
         ['notes', '学习笔记'],
@@ -156,7 +157,16 @@ module.exports = {
     '/network/': [
         ['01', '网络分层模型和应用协议'],
         ['02', '浏览器的通信能力'],
+        ['cookiedoc', 'Cookie'],
+        ['encryption', '加密算法'],
+        ['jwt', 'JWT'],
         ['03', '跨域问题及解决方案'],
+        ['httpcache', 'Http 缓存协议'],
+        ['httpversion', 'Http 多版本差异'],
+        ['tcp', 'TCP协议'],
+        ['https', 'SSL、TLS、HTTPS的关系'],
+        ['WebSocket', 'WebSocket'],
+        ['question', '面试问答'],
 
     ],
     '/questions-answers/': [
@@ -182,7 +192,7 @@ module.exports = {
 
     // 构建工具
     '/build-tool/': [
-        // ['webpack', 'webpack'],
+        ['webpack', 'webpack'],
         {
             title: 'webpack',   // 必要的
             collapsable: true, // 可选的, 默认值是 true,collapsable: false 来让一个组永远都是展开状态。
@@ -197,6 +207,7 @@ module.exports = {
             ]
         },
         ['vite', 'vite'],
+        ['question', '面试问答'],
     ],
     // 课程笔记
     '/course-notes/': courseNotes,

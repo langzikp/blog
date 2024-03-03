@@ -24,7 +24,7 @@ $ npm config get registry
 https://registry.npmjs.org/
 
 # 设置npm镜像源为淘宝镜像
-$ npm config set registry https://registry.npm.taobao.org/
+$ npm config set registry https://registry.npmmirror.com/
 ```
 
 ### 安装yarn
@@ -41,7 +41,7 @@ $ yarn config get registry
 https://registry.npmjs.org/
 
 # 设置yarn镜像源为淘宝镜像
-$ yarn config set registry https://registry.npm.taobao.org/
+$ yarn config set registry https://registry.npmmirror.com/
 ```
 
 ### 安装开发工具 Visual Studio Code
