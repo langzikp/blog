@@ -100,6 +100,12 @@
           <!-- <a class="color5" href="https://hu-snail.github.io/vue3-resource/platform/introduction.html" target="blank"
             >vue3资源</a
           > -->
+           <a class="color5" href="https://hu-snail.github.io/vue3-resource/platform/introduction.html" target="blank"
+            >D3.js</a
+          >
+           <a class="color5" href="https://threejs.org/docs/index.html#manual/zh/introduction/Creating-a-scene" target="blank"
+            >three.js</a
+          >
         </div>
         <div class="more">
           <a :href="$withBase('/documents/quick-entry')"> 更多>> </a>

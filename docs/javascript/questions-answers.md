@@ -516,13 +516,13 @@ export class ButtonWrapper {
 >
 > ***promise.all* 的特点**
 >
-> 接收一个*Promise*实例的数组或具有*Iterator*接口的对象
+> 接收一个`Promise`实例的数组或具有**Iterator**接口的对象
 >
-> 如果元素不是*Promise*对象，则使用*Promise.resolve*转成*Promise*对象
+> 如果元素不是`Promise`对象，则使用`Promise.resolve`转成`Promise`对象
 >
-> 如果全部成功，状态变为*resolved*，返回值将组成一个数组传给回调
+> 如果全部成功，状态变为`resolved`，返回值将组成一个数组传给回调
 >
-> 只有有一个失败，状态就变为 *rejected*，返回值将直接传递给回调  *all( )*的返回值，也是新的 *promise* 对象
+> 只有有一个失败，状态就变为 `rejected`，返回值将直接传递给回调  **all( )**的返回值，也是新的 `promise` 对象
 
 
 
@@ -530,7 +530,7 @@ export class ButtonWrapper {
 
 > 参考答案：
 >
-> 总结起来，*this* 的指向规律有如下几条：
+> 总结起来，**this** 的指向规律有如下几条：
 >
 > - 在函数体中，非显式或隐式地简单调用函数时，在严格模式下，函数内的 *this* 会被绑定到 *undefined* 上，在非严格模式下则会被绑定到全局对象 *window/global* 上。
 > - 一般使用 *new* 方法调用构造函数时，构造函数内的 *this* 会被绑定到新创建的对象上。

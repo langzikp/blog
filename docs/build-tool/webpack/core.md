@@ -1,6 +1,7 @@
 
 [webpack 官网](https://www.webpackjs.com/concepts/)  
-[技能树](http://mdrs.yuanjin.tech/img/20210508151156.png)
+[技能树](http://mdrs.yuanjin.tech/img/20210508151156.png)  
+[Webpack 知识图谱-博客](https://tsejx.github.io/webpack-guidebook/)
 
 **webpack是用来搭建前端工程的**
 它运行在node环境中，它所做的事情，简单来说，就是**打包**

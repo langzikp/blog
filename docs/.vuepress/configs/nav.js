@@ -12,8 +12,9 @@ module.exports = [
     ariaLabel: '开发规范 Menu',
     items: [
       { text: '开发规范', link: '/develop-norm/engineer' },
+      { text: '浏览器', link: '/browser/notes' },
       { text: 'HTML', link: '/html/notes' },
-      { text: 'CSS', link: '/css/notes' },
+      { text: 'CSS', link: '/css/weight' },
       { text: 'Javascript', link: '/javascript/notes' },
       { text: 'Vue', link: '/vue/create' },
       { text: 'React', link: '/react/notes' },

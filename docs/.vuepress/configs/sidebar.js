@@ -17,13 +17,17 @@ module.exports = {
         ['react', 'React 编码规范'],
         ['git', 'Git 提交规范'],
     ],
+    '/browser/': [
+        ['notes', '浏览器是如何渲染页面的'],
+        ['question', '面试问答'],
+
+    ],
     '/html/': [
         ['notes', '学习笔记'],
         ['question', '面试问答'],
 
     ],
     '/css/': [
-        ['notes', '浏览器是如何渲染页面的'],
         ['weight', 'CSS 特性及权重'],
         ['css-computed', 'CSS 属性计算过程'],
         ['css-box-model', 'CSS 之盒模型'],
@@ -245,5 +249,6 @@ module.exports = {
     ],
 
     // 关于
-    '/about/': ['']
+    '/about/': [''],
+    '/about/resume/': ['']
 }
