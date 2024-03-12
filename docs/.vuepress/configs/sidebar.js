@@ -19,12 +19,12 @@ module.exports = {
     ],
     '/browser/': [
         ['notes', '浏览器是如何渲染页面的'],
-        ['question', '面试问答'],
+        ['question', 'Q&A'],
 
     ],
     '/html/': [
         ['notes', '学习笔记'],
-        ['question', '面试问答'],
+        ['question', 'Q&A'],
 
     ],
     '/css/': [
@@ -53,7 +53,7 @@ module.exports = {
         ['css-border', 'CSS 边框效果'],
         ['css-pixel', '设备像素/设备独立像素/css像素/dpr/ppi的区别'],
         ['other', '其他知识点'],
-        ['question', '面试问答'],
+        ['question', 'Q&A'],
 
        
     ],
@@ -115,7 +115,7 @@ module.exports = {
         ['utils', '工具函数'],
         ['array', '数组循环总结'],
         ['regexp', '正则表达式'],
-        ['questions-answers', '面试问答']
+        ['questions-answers', 'Q&A']
     ],
     '/vue/': [
         ['create', 'vue2项目搭建'],
@@ -123,7 +123,7 @@ module.exports = {
         ['notes', '深入理解vue'],
         ['optimize', 'vue常见优化手段'],
         ['add-icon', 'vue+element使用第三方icon'],
-        ['questions-answers', '面试问答'],
+        ['questions-answers', 'Q&A'],
     ],
     '/react/': [
         ['notes', '学习笔记'],
@@ -170,7 +170,7 @@ module.exports = {
         ['tcp', 'TCP协议'],
         ['https', 'SSL、TLS、HTTPS的关系'],
         ['WebSocket', 'WebSocket'],
-        ['question', '面试问答'],
+        ['question', 'Q&A'],
 
     ],
     '/questions-answers/': [
@@ -211,7 +211,7 @@ module.exports = {
             ]
         },
         ['vite', 'vite'],
-        ['question', '面试问答'],
+        ['question', 'Q&A'],
     ],
     // 课程笔记
     '/course-notes/': courseNotes,

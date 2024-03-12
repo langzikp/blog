@@ -5,7 +5,7 @@ sidebar: false
 navbar: false
 ---
 
-<style>
+<style scoped>
 
        *{
             padding: 0;
@@ -14,7 +14,7 @@ navbar: false
             color: #333;
         }
         .theme-default-content:not(.custom){
-            padding: 0 !important;
+            padding: 0 120px !important;
             max-width: none !important;
             margin: none !important;
             position: relative;
