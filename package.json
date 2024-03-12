@@ -17,5 +17,6 @@
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "deploy": "bash scripts/deploy-gitee.sh"
-  }
+  },
+  "dependencies": {}
 }

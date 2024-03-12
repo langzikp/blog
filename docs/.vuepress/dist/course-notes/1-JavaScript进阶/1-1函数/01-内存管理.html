@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>01-内存管理 | Lang&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/blog/img/favicon.png">
+    <meta name="description" content="this is my blog">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.28a83d0f.css" as="style"><link rel="preload" href="/blog/assets/js/app.0d0c2ebd.js" as="script"><link rel="preload" href="/blog/assets/js/2.93652e77.js" as="script"><link rel="preload" href="/blog/assets/js/43.cf947994.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.7f3d36f5.js"><link rel="prefetch" href="/blog/assets/js/100.860b1878.js"><link rel="prefetch" href="/blog/assets/js/101.0395eaa6.js"><link rel="prefetch" href="/blog/assets/js/102.d331d4c6.js"><link rel="prefetch" href="/blog/assets/js/103.3e774c54.js"><link rel="prefetch" href="/blog/assets/js/104.457bc78e.js"><link rel="prefetch" href="/blog/assets/js/105.d39e8fab.js"><link rel="prefetch" href="/blog/assets/js/106.f28e2070.js"><link rel="prefetch" href="/blog/assets/js/107.4cf41bf0.js"><link rel="prefetch" href="/blog/assets/js/108.3eac1d2e.js"><link rel="prefetch" href="/blog/assets/js/109.ee5fe0c4.js"><link rel="prefetch" href="/blog/assets/js/11.e3fdf62f.js"><link rel="prefetch" href="/blog/assets/js/110.fdf1ba84.js"><link rel="prefetch" href="/blog/assets/js/111.f5afe295.js"><link rel="prefetch" href="/blog/assets/js/112.d0337d8f.js"><link rel="prefetch" href="/blog/assets/js/113.019b2b7e.js"><link rel="prefetch" href="/blog/assets/js/114.b39ec44d.js"><link rel="prefetch" href="/blog/assets/js/115.b00dd49f.js"><link rel="prefetch" href="/blog/assets/js/116.7efaf4b5.js"><link rel="prefetch" href="/blog/assets/js/117.5efc8f23.js"><link rel="prefetch" href="/blog/assets/js/118.2fe12284.js"><link rel="prefetch" href="/blog/assets/js/119.c32dd51c.js"><link rel="prefetch" href="/blog/assets/js/12.8734f8aa.js"><link rel="prefetch" href="/blog/assets/js/120.aa22f188.js"><link rel="prefetch" href="/blog/assets/js/121.e61cac2a.js"><link rel="prefetch" href="/blog/assets/js/122.de899088.js"><link rel="prefetch" href="/blog/assets/js/123.6322c896.js"><link rel="prefetch" href="/blog/assets/js/124.70510788.js"><link rel="prefetch" href="/blog/assets/js/125.e1d96383.js"><link rel="prefetch" href="/blog/assets/js/126.11068c20.js"><link rel="prefetch" href="/blog/assets/js/127.d8246c0a.js"><link rel="prefetch" href="/blog/assets/js/128.817fdcb9.js"><link rel="prefetch" href="/blog/assets/js/129.fd17b323.js"><link rel="prefetch" href="/blog/assets/js/13.baacb279.js"><link rel="prefetch" href="/blog/assets/js/130.31615e65.js"><link rel="prefetch" href="/blog/assets/js/131.b24f6be6.js"><link rel="prefetch" href="/blog/assets/js/132.b138c94c.js"><link rel="prefetch" href="/blog/assets/js/133.dc2e917c.js"><link rel="prefetch" href="/blog/assets/js/134.f9e82cf8.js"><link rel="prefetch" href="/blog/assets/js/135.0c456a7f.js"><link rel="prefetch" href="/blog/assets/js/136.9e283717.js"><link rel="prefetch" href="/blog/assets/js/137.5d6bed7c.js"><link rel="prefetch" href="/blog/assets/js/138.e9a809ce.js"><link rel="prefetch" href="/blog/assets/js/139.37320a88.js"><link rel="prefetch" href="/blog/assets/js/14.c320f6a4.js"><link rel="prefetch" href="/blog/assets/js/140.6dd3df30.js"><link rel="prefetch" href="/blog/assets/js/141.9174645c.js"><link rel="prefetch" href="/blog/assets/js/142.47e69553.js"><link rel="prefetch" href="/blog/assets/js/143.7f01e672.js"><link rel="prefetch" href="/blog/assets/js/144.a58d14eb.js"><link rel="prefetch" href="/blog/assets/js/145.12e6e05c.js"><link rel="prefetch" href="/blog/assets/js/146.100b7748.js"><link rel="prefetch" href="/blog/assets/js/147.bf8c32d7.js"><link rel="prefetch" href="/blog/assets/js/148.2706cdb0.js"><link rel="prefetch" href="/blog/assets/js/149.9c2e64dd.js"><link rel="prefetch" href="/blog/assets/js/15.cc2d6029.js"><link rel="prefetch" href="/blog/assets/js/150.9ac3ba72.js"><link rel="prefetch" href="/blog/assets/js/151.91ec2fc5.js"><link rel="prefetch" href="/blog/assets/js/152.eb2852e2.js"><link rel="prefetch" href="/blog/assets/js/153.1e285a55.js"><link rel="prefetch" href="/blog/assets/js/154.55119a4e.js"><link rel="prefetch" href="/blog/assets/js/155.3eb8ab34.js"><link rel="prefetch" href="/blog/assets/js/156.e725027b.js"><link rel="prefetch" href="/blog/assets/js/157.0d689d98.js"><link rel="prefetch" href="/blog/assets/js/158.448054b0.js"><link rel="prefetch" href="/blog/assets/js/159.986601ad.js"><link rel="prefetch" href="/blog/assets/js/16.97edfdf5.js"><link rel="prefetch" href="/blog/assets/js/160.ddc9a483.js"><link rel="prefetch" href="/blog/assets/js/161.b376631b.js"><link rel="prefetch" href="/blog/assets/js/162.ebc596e8.js"><link rel="prefetch" href="/blog/assets/js/163.fe70fc46.js"><link rel="prefetch" href="/blog/assets/js/164.3715b9da.js"><link rel="prefetch" href="/blog/assets/js/165.25ac0e69.js"><link rel="prefetch" href="/blog/assets/js/166.8fc72508.js"><link rel="prefetch" href="/blog/assets/js/167.7037f84f.js"><link rel="prefetch" href="/blog/assets/js/168.7aaa9d44.js"><link rel="prefetch" href="/blog/assets/js/169.9f082352.js"><link rel="prefetch" href="/blog/assets/js/17.fa659648.js"><link rel="prefetch" href="/blog/assets/js/170.594e169d.js"><link rel="prefetch" href="/blog/assets/js/171.6e2cb591.js"><link rel="prefetch" href="/blog/assets/js/172.5bff0e6c.js"><link rel="prefetch" href="/blog/assets/js/173.24b9ae8a.js"><link rel="prefetch" href="/blog/assets/js/174.fb8668c2.js"><link rel="prefetch" href="/blog/assets/js/175.3693f346.js"><link rel="prefetch" href="/blog/assets/js/176.7bf0252a.js"><link rel="prefetch" href="/blog/assets/js/177.f61486e9.js"><link rel="prefetch" href="/blog/assets/js/178.8d829c83.js"><link rel="prefetch" href="/blog/assets/js/179.f9754cc5.js"><link rel="prefetch" href="/blog/assets/js/18.ffe8bef4.js"><link rel="prefetch" href="/blog/assets/js/180.d890b1ac.js"><link rel="prefetch" href="/blog/assets/js/181.487c0ade.js"><link rel="prefetch" href="/blog/assets/js/182.5fa5e665.js"><link rel="prefetch" href="/blog/assets/js/183.3be5eda7.js"><link rel="prefetch" href="/blog/assets/js/184.8ce268d2.js"><link rel="prefetch" href="/blog/assets/js/185.8b314405.js"><link rel="prefetch" href="/blog/assets/js/186.1096425d.js"><link rel="prefetch" href="/blog/assets/js/187.355ed72a.js"><link rel="prefetch" href="/blog/assets/js/188.efd8ef0c.js"><link rel="prefetch" href="/blog/assets/js/189.cae70237.js"><link rel="prefetch" href="/blog/assets/js/19.07a478c7.js"><link rel="prefetch" href="/blog/assets/js/190.6c8a58ab.js"><link rel="prefetch" href="/blog/assets/js/191.a362cf82.js"><link rel="prefetch" href="/blog/assets/js/192.439e7f1b.js"><link rel="prefetch" href="/blog/assets/js/193.05ee7f2e.js"><link rel="prefetch" href="/blog/assets/js/20.6f40f893.js"><link rel="prefetch" href="/blog/assets/js/21.6774aaf5.js"><link rel="prefetch" href="/blog/assets/js/22.f986824b.js"><link rel="prefetch" href="/blog/assets/js/23.b9539532.js"><link rel="prefetch" href="/blog/assets/js/24.ba563d25.js"><link rel="prefetch" href="/blog/assets/js/25.fb034721.js"><link rel="prefetch" href="/blog/assets/js/26.6fff9b0c.js"><link rel="prefetch" href="/blog/assets/js/27.4a4d0856.js"><link rel="prefetch" href="/blog/assets/js/28.eedbf1aa.js"><link rel="prefetch" href="/blog/assets/js/29.146288f6.js"><link rel="prefetch" href="/blog/assets/js/3.180f1000.js"><link rel="prefetch" href="/blog/assets/js/30.f47b796c.js"><link rel="prefetch" href="/blog/assets/js/31.0d7d9ec1.js"><link rel="prefetch" href="/blog/assets/js/32.72906af7.js"><link rel="prefetch" href="/blog/assets/js/33.839b38fd.js"><link rel="prefetch" href="/blog/assets/js/34.e0ef9354.js"><link rel="prefetch" href="/blog/assets/js/35.9db4bafc.js"><link rel="prefetch" href="/blog/assets/js/36.34608b48.js"><link rel="prefetch" href="/blog/assets/js/37.c42d66b3.js"><link rel="prefetch" href="/blog/assets/js/38.2627eef1.js"><link rel="prefetch" href="/blog/assets/js/39.db1f5aaf.js"><link rel="prefetch" href="/blog/assets/js/4.f03f8c9d.js"><link rel="prefetch" href="/blog/assets/js/40.69b18389.js"><link rel="prefetch" href="/blog/assets/js/41.21241c7a.js"><link rel="prefetch" href="/blog/assets/js/42.0054b368.js"><link rel="prefetch" href="/blog/assets/js/44.fe6b090f.js"><link rel="prefetch" href="/blog/assets/js/45.ad2e34dd.js"><link rel="prefetch" href="/blog/assets/js/46.6d43aa71.js"><link rel="prefetch" href="/blog/assets/js/47.3c6d5b49.js"><link rel="prefetch" href="/blog/assets/js/48.54e13f6e.js"><link rel="prefetch" href="/blog/assets/js/49.9ffa4f91.js"><link rel="prefetch" href="/blog/assets/js/5.cb3ffbda.js"><link rel="prefetch" href="/blog/assets/js/50.1e8230ed.js"><link rel="prefetch" href="/blog/assets/js/51.89becc30.js"><link rel="prefetch" href="/blog/assets/js/52.b1bc8abc.js"><link rel="prefetch" href="/blog/assets/js/53.103e50c8.js"><link rel="prefetch" href="/blog/assets/js/54.8c604ac2.js"><link rel="prefetch" href="/blog/assets/js/55.fe0bdf7e.js"><link rel="prefetch" href="/blog/assets/js/56.c0341832.js"><link rel="prefetch" href="/blog/assets/js/57.29084cd2.js"><link rel="prefetch" href="/blog/assets/js/58.983dc3bf.js"><link rel="prefetch" href="/blog/assets/js/59.4d091136.js"><link rel="prefetch" href="/blog/assets/js/6.44e6b4c5.js"><link rel="prefetch" href="/blog/assets/js/60.6562f3dd.js"><link rel="prefetch" href="/blog/assets/js/61.22a1c9e6.js"><link rel="prefetch" href="/blog/assets/js/62.d9a6e61c.js"><link rel="prefetch" href="/blog/assets/js/63.d161742d.js"><link rel="prefetch" href="/blog/assets/js/64.9efc8ec4.js"><link rel="prefetch" href="/blog/assets/js/65.241d3609.js"><link rel="prefetch" href="/blog/assets/js/66.78516e39.js"><link rel="prefetch" href="/blog/assets/js/67.6824c276.js"><link rel="prefetch" href="/blog/assets/js/68.df5b4a8c.js"><link rel="prefetch" href="/blog/assets/js/69.4c0089e8.js"><link rel="prefetch" href="/blog/assets/js/7.245ce8a1.js"><link rel="prefetch" href="/blog/assets/js/70.e8c5fde9.js"><link rel="prefetch" href="/blog/assets/js/71.3f7e838a.js"><link rel="prefetch" href="/blog/assets/js/72.f1b45868.js"><link rel="prefetch" href="/blog/assets/js/73.2faa647e.js"><link rel="prefetch" href="/blog/assets/js/74.e61990cf.js"><link rel="prefetch" href="/blog/assets/js/75.29ed530d.js"><link rel="prefetch" href="/blog/assets/js/76.a2db254f.js"><link rel="prefetch" href="/blog/assets/js/77.69c11181.js"><link rel="prefetch" href="/blog/assets/js/78.a2664707.js"><link rel="prefetch" href="/blog/assets/js/79.aa316d4a.js"><link rel="prefetch" href="/blog/assets/js/8.ce8991da.js"><link rel="prefetch" href="/blog/assets/js/80.e6099d9b.js"><link rel="prefetch" href="/blog/assets/js/81.fb0f75f2.js"><link rel="prefetch" href="/blog/assets/js/82.d106529b.js"><link rel="prefetch" href="/blog/assets/js/83.ee97a51b.js"><link rel="prefetch" href="/blog/assets/js/84.55805e33.js"><link rel="prefetch" href="/blog/assets/js/85.2e6b7b8e.js"><link rel="prefetch" href="/blog/assets/js/86.4543bc47.js"><link rel="prefetch" href="/blog/assets/js/87.b6382a4e.js"><link rel="prefetch" href="/blog/assets/js/88.731da9f8.js"><link rel="prefetch" href="/blog/assets/js/89.1660693a.js"><link rel="prefetch" href="/blog/assets/js/9.be398fd1.js"><link rel="prefetch" href="/blog/assets/js/90.531d2c13.js"><link rel="prefetch" href="/blog/assets/js/91.93b613e6.js"><link rel="prefetch" href="/blog/assets/js/92.56bc99a6.js"><link rel="prefetch" href="/blog/assets/js/93.97875b9c.js"><link rel="prefetch" href="/blog/assets/js/94.8d6c06c4.js"><link rel="prefetch" href="/blog/assets/js/95.6459b87c.js"><link rel="prefetch" href="/blog/assets/js/96.144f8013.js"><link rel="prefetch" href="/blog/assets/js/97.8c5f84d5.js"><link rel="prefetch" href="/blog/assets/js/98.411663d4.js"><link rel="prefetch" href="/blog/assets/js/99.b1c502e2.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.28a83d0f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/img/logo.png" alt="Lang's blog" class="logo"> <span class="site-name can-hide">Lang's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发规范 Menu" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发规范 Menu" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/develop-norm/engineer.html" class="nav-link">
+  开发规范
+</a></li><li class="dropdown-item"><!----> <a href="/blog/browser/notes.html" class="nav-link">
+  浏览器
+</a></li><li class="dropdown-item"><!----> <a href="/blog/html/notes.html" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/blog/css/weight.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/javascript/notes.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/create.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/react/notes.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/build-tool/webpack/core.html" class="nav-link">
+  构建工具
+</a></li><li class="dropdown-item"><!----> <a href="/blog/nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/blog/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/optimization/data-desensitization.html" class="nav-link">
+  优化
+</a></li><li class="dropdown-item"><!----> <a href="/blog/web-security/xss.html" class="nav-link">
+  前端安全
+</a></li><li class="dropdown-item"><!----> <a href="/blog/network/01.html" class="nav-link">
+  网络
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/backend/" class="nav-link">
+  后端
+</a></div><div class="nav-item"><a href="/blog/algorithm/01-algorithm-datastructure.html" class="nav-link">
+  算法
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/course-notes/1-JavaScript进阶/1-1函数/01-内存管理.html" class="nav-link">
+  JavaScript进阶
+</a></li><li class="dropdown-item"><!----> <a href="/blog/course-notes/2-Vue框架源码and项目实战/2-1课程导学/01-Vue专题导学.html" class="nav-link">
+  Vue框架源码&amp;项目实战
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Q&amp;A" class="dropdown-title"><span class="title">Q&amp;A</span> <span class="arrow down"></span></button> <button type="button" aria-label="Q&amp;A" class="mobile-dropdown-title"><span class="title">Q&amp;A</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/interview-question/html-css.html" class="nav-link">
+  HTMl-CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/interview-question/javascript.html" class="nav-link">
+  JavaScript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="学习 Menu" class="dropdown-title"><span class="title">记录</span> <span class="arrow down"></span></button> <button type="button" aria-label="学习 Menu" class="mobile-dropdown-title"><span class="title">记录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/booklist/" class="nav-link">
+  我的书单
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/study.html" class="nav-link">
+  学习
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/quotations.html" class="nav-link">
+  语录
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/build-blog.html" class="nav-link">
+  十分钟搭建自己的个人博客
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/wechat-h5.html" class="nav-link">
+  微信公众号H5配置流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-customer-service.html" class="nav-link">
+  微信小程序客服绑定流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-online.html" class="nav-link">
+  微信小程序上线准备
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/quick-entry.html" class="nav-link">
+  前端相关框架
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="收藏" class="dropdown-title"><span class="title">收藏</span> <span class="arrow down"></span></button> <button type="button" aria-label="收藏" class="mobile-dropdown-title"><span class="title">收藏</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          框架及UI库
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/frame.html#vue及ui组件库" class="nav-link">
+  Vue及UI组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html#react-ui-组件库" class="nav-link">
+  React UI 组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html" class="nav-link">
+  更多...
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他网站
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/sites.html#文档" class="nav-link">
+  文档
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#社区" class="nav-link">
+  社区
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#工具" class="nav-link">
+  图片/工具
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html" class="nav-link">
+  更多...
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/blog/about/" class="nav-link">
+  关于
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发规范 Menu" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发规范 Menu" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/develop-norm/engineer.html" class="nav-link">
+  开发规范
+</a></li><li class="dropdown-item"><!----> <a href="/blog/browser/notes.html" class="nav-link">
+  浏览器
+</a></li><li class="dropdown-item"><!----> <a href="/blog/html/notes.html" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/blog/css/weight.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/javascript/notes.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/create.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/react/notes.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/build-tool/webpack/core.html" class="nav-link">
+  构建工具
+</a></li><li class="dropdown-item"><!----> <a href="/blog/nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/blog/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/optimization/data-desensitization.html" class="nav-link">
+  优化
+</a></li><li class="dropdown-item"><!----> <a href="/blog/web-security/xss.html" class="nav-link">
+  前端安全
+</a></li><li class="dropdown-item"><!----> <a href="/blog/network/01.html" class="nav-link">
+  网络
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/backend/" class="nav-link">
+  后端
+</a></div><div class="nav-item"><a href="/blog/algorithm/01-algorithm-datastructure.html" class="nav-link">
+  算法
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/course-notes/1-JavaScript进阶/1-1函数/01-内存管理.html" class="nav-link">
+  JavaScript进阶
+</a></li><li class="dropdown-item"><!----> <a href="/blog/course-notes/2-Vue框架源码and项目实战/2-1课程导学/01-Vue专题导学.html" class="nav-link">
+  Vue框架源码&amp;项目实战
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Q&amp;A" class="dropdown-title"><span class="title">Q&amp;A</span> <span class="arrow down"></span></button> <button type="button" aria-label="Q&amp;A" class="mobile-dropdown-title"><span class="title">Q&amp;A</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/interview-question/html-css.html" class="nav-link">
+  HTMl-CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/interview-question/javascript.html" class="nav-link">
+  JavaScript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="学习 Menu" class="dropdown-title"><span class="title">记录</span> <span class="arrow down"></span></button> <button type="button" aria-label="学习 Menu" class="mobile-dropdown-title"><span class="title">记录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/booklist/" class="nav-link">
+  我的书单
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/study.html" class="nav-link">
+  学习
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/quotations.html" class="nav-link">
+  语录
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/build-blog.html" class="nav-link">
+  十分钟搭建自己的个人博客
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/wechat-h5.html" class="nav-link">
+  微信公众号H5配置流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-customer-service.html" class="nav-link">
+  微信小程序客服绑定流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-online.html" class="nav-link">
+  微信小程序上线准备
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/quick-entry.html" class="nav-link">
+  前端相关框架
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="收藏" class="dropdown-title"><span class="title">收藏</span> <span class="arrow down"></span></button> <button type="button" aria-label="收藏" class="mobile-dropdown-title"><span class="title">收藏</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          框架及UI库
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/frame.html#vue及ui组件库" class="nav-link">
+  Vue及UI组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html#react-ui-组件库" class="nav-link">
+  React UI 组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html" class="nav-link">
+  更多...
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他网站
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/sites.html#文档" class="nav-link">
+  文档
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#社区" class="nav-link">
+  社区
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#工具" class="nav-link">
+  图片/工具
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html" class="nav-link">
+  更多...
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/blog/about/" class="nav-link">
+  关于
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>1-JavaScript进阶</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>1-1函数</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/course-notes/1-JavaScript进阶/1-1函数/01-内存管理.html" class="active sidebar-link">01-内存管理</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/course-notes/1-JavaScript进阶/1-1函数/01-内存管理.html#内存的数据存储-堆和栈" class="sidebar-link">内存的数据存储：堆和栈</a></li><li class="sidebar-sub-header"><a href="/blog/course-notes/1-JavaScript进阶/1-1函数/01-内存管理.html#v8有多大" class="sidebar-link">V8有多大</a></li><li class="sidebar-sub-header"><a href="/blog/course-notes/1-JavaScript进阶/1-1函数/01-内存管理.html#新生代和老生代" class="sidebar-link">新生代和老生代</a></li><li class="sidebar-sub-header"><a href="/blog/course-notes/1-JavaScript进阶/1-1函数/01-内存管理.html#什么时候触发回收" class="sidebar-link">什么时候触发回收</a></li><li class="sidebar-sub-header"><a href="/blog/course-notes/1-JavaScript进阶/1-1函数/01-内存管理.html#变量什么时候被回收" class="sidebar-link">变量什么时候被回收</a></li><li class="sidebar-sub-header"><a href="/blog/course-notes/1-JavaScript进阶/1-1函数/01-内存管理.html#如何检查内存" class="sidebar-link">如何检查内存</a></li><li class="sidebar-sub-header"><a href="/blog/course-notes/1-JavaScript进阶/1-1函数/01-内存管理.html#内存优化" class="sidebar-link">内存优化</a></li><li class="sidebar-sub-header"><a href="/blog/course-notes/1-JavaScript进阶/1-1函数/01-内存管理.html#node端的一些特殊点" class="sidebar-link">Node端的一些特殊点</a></li></ul></li><li><a href="/blog/course-notes/1-JavaScript进阶/1-1函数/02-代码性能指标.html" class="sidebar-link">02-代码性能指标</a></li><li><a href="/blog/course-notes/1-JavaScript进阶/1-1函数/03-函数式编程.html" class="sidebar-link">03-函数式编程</a></li><li><a href="/blog/course-notes/1-JavaScript进阶/1-1函数/04-如何做好函数式编程.html" class="sidebar-link">04-如何做好函数式编程</a></li><li><a href="/blog/course-notes/1-JavaScript进阶/1-1函数/05-compose函数和pipe函数.html" class="sidebar-link">05-compose函数和pipe函数</a></li><li><a href="/blog/course-notes/1-JavaScript进阶/1-1函数/06-高阶函数.html" class="sidebar-link">06-高阶函数</a></li><li><a href="/blog/course-notes/1-JavaScript进阶/1-1函数/07-函数柯里化.html" class="sidebar-link">07-函数柯里化</a></li><li><a href="/blog/course-notes/1-JavaScript进阶/1-1函数/08-防抖和节流.html" class="sidebar-link">08-防抖和节流</a></li><li><a href="/blog/course-notes/1-JavaScript进阶/1-1函数/09-underscore源码分析.html" class="sidebar-link">09-underscore源码分析</a></li><li><a href="/blog/course-notes/1-JavaScript进阶/1-1函数/10-深拷贝和浅拷贝.html" class="sidebar-link">10-深拷贝和浅拷贝</a></li></ul></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>1-2异步编程</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>1-3设计模式</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>2-Vue框架源码and项目实战</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_01-内存管理"><a href="#_01-内存管理" class="header-anchor">#</a> 01-内存管理</h1> <h2 id="内存的数据存储-堆和栈"><a href="#内存的数据存储-堆和栈" class="header-anchor">#</a> 内存的数据存储：堆和栈</h2> <ul><li>栈内存（Stack）：存储普通类型的变量，如：Sting，Number，Boolean，null，undefined，Symbol</li> <li>堆内存（Heap）：存储方法，数组，函数，对象，等引用类型，如：Array,Function,Object</li></ul> <p>栈是一种特殊的列表，栈内的元素只能通过列表的一端访问，这一端称为栈顶。 栈被称为是一种后入先出（LIFO，last-in-first-out）的数据结构。</p> <p>堆是一种经过排序的树形数据结构，每个结点都有一个值。 通常我们所说的堆的数据结构，是指二叉堆。</p> <p>引用数据类型存储在堆内存中，因为引用数据类型占据空间大、大小不固定。 如果存储在栈中，将会影响程序运行的性能； 引用数据类型在栈中存储了指针，该指针指向堆中该实体的起始地址。 当解释器寻找引用值时，会首先检索其在栈中的地址，取得地址后从堆中获得实体</p> <h3 id="栈内存和堆内存的优缺点"><a href="#栈内存和堆内存的优缺点" class="header-anchor">#</a> 栈内存和堆内存的优缺点</h3> <p>1.在JS中，基本数据类型变量大小固定，并且操作简单容易，所以把它们放入栈中存储。 引用类型变量大小不固定，所以把它们分配给堆中，让他们申请空间的时候自己确定大小，这样把它们分开存储能够使得程序运行起来占用的内存最小。</p> <p>2.栈内存由于它的特点，所以它的系统效率较高。 堆内存需要分配空间和地址，还要把地址存到栈中，所以效率低于栈。</p> <h3 id="栈内存和堆内存的垃圾回收"><a href="#栈内存和堆内存的垃圾回收" class="header-anchor">#</a> 栈内存和堆内存的垃圾回收</h3> <p>栈内存中变量一般在它的当前执行环境结束就会被销毁被垃圾回收制回收， 而堆内存中的变量则不会，因为不确定其他的地方是不是还有一些对它的引用。 堆内存中的变量只有在所有对它的引用都结束的时候才会被回收。</p> <h2 id="v8有多大"><a href="#v8有多大" class="header-anchor">#</a> V8有多大</h2> <ol><li>64位下1.4G</li> <li>32位下0.7G</li> <li>根据浏览器不同会有些许扩容。Node情况下会有一些C++内存扩容</li></ol> <h2 id="新生代和老生代"><a href="#新生代和老生代" class="header-anchor">#</a> 新生代和老生代</h2> <p>v8的内存空间分为新生代和老生代：<br>
+新生代：新产生的对象<br>
+老生代：经历过新生代垃圾回收后还“存活”下来的对象</p> <ul><li>64位下新生代的空间为32MB，老生代为1400MB</li> <li>32位下新生代的空间为16MB，老生代为700MB</li></ul> <h4 id="新生代转化为老生代的条件"><a href="#新生代转化为老生代的条件" class="header-anchor">#</a> 新生代转化为老生代的条件</h4> <ol><li>新生代发现本次复制后，会占用25%的to空间</li> <li>这个对象已经经历过一次回收</li></ol> <h2 id="什么时候触发回收"><a href="#什么时候触发回收" class="header-anchor">#</a> 什么时候触发回收</h2> <ol><li>执行完一次代码</li> <li>内存不够的时候</li></ol> <h2 id="变量什么时候被回收"><a href="#变量什么时候被回收" class="header-anchor">#</a> 变量什么时候被回收</h2> <ul><li>全局变量不会被回收</li> <li>局部变量会被回收，也就是函数一旦运行完以后，函数内部的东西就会被销毁</li> <li>只要被另外一个作用域所引用就不会被回收</li></ul> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>   <span class="token comment">// 全局变量不会被回收</span>
+<span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>   <span class="token comment">// 这里重复声明变量i,因此var声明被忽略，只是把i赋值为2</span>
+<span class="token keyword">var</span> <span class="token function-variable function">add</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token comment">// 全局变量不会被回收</span>
+  <span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>  <span class="token comment">// 局部变量</span>
+  <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      i<span class="token operator">++</span><span class="token punctuation">;</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 被另一个作用域引用导致不会被回收</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 1</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h2 id="如何检查内存"><a href="#如何检查内存" class="header-anchor">#</a> 如何检查内存</h2> <h3 id="浏览器端-以字节为单位"><a href="#浏览器端-以字节为单位" class="header-anchor">#</a> 浏览器端（以字节为单位）</h3> <div class="language-js line-numbers-mode"><pre class="language-js"><code>window<span class="token punctuation">.</span>performance<span class="token punctuation">.</span>memory
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>window<span class="token punctuation">.</span>performance<span class="token punctuation">.</span>memory<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 打印:</span>
+<span class="token comment">// {</span>
+<span class="token comment">//   jsHeapSizeLimit: 4294705152</span>
+<span class="token comment">//   totalJSHeapSize: 9957865</span>
+<span class="token comment">//   usedJSHeapSize: 7467161</span>
+<span class="token comment">// }</span>
+<span class="token comment">// 查看当前使用内存</span>
+<span class="token keyword">function</span> <span class="token function">testMemory</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> usedJSHeapSize <span class="token operator">=</span> window<span class="token punctuation">.</span>performance<span class="token punctuation">.</span>memory<span class="token punctuation">.</span>usedJSHeapSize<span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>usedJSHeapSize <span class="token operator">/</span> <span class="token number">1024</span> <span class="token operator">/</span> <span class="token number">1024</span> <span class="token operator">+</span> <span class="token string">'mb'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>window<span class="token punctuation">.</span>performance<span class="token punctuation">.</span>memory<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><ul><li><p>jsHeapSizeLimit该属性代表的含义是：上下文内可用堆的最大体积</p></li> <li><p>totalJSHeapSize表示 已分配的堆体积</p></li> <li><p>usedJSHeapSize表示当前 JS 堆活跃段（segment）的体积</p></li></ul> <h3 id="node端-以字节为单位"><a href="#node端-以字节为单位" class="header-anchor">#</a> Node端（以字节为单位）</h3> <p><a href="http://nodejs.cn/api/process/process_memoryusage.html" target="_blank" rel="noopener noreferrer">node.js中文网<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <div class="language-js line-numbers-mode"><pre class="language-js"><code>process<span class="token punctuation">.</span><span class="token function">memoryUsage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">memoryUsage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 打印:</span>
+<span class="token comment">// {</span>
+<span class="token comment">//  rss: 4935680,</span>
+<span class="token comment">//  heapTotal: 1826816,</span>
+<span class="token comment">//  heapUsed: 650472,</span>
+<span class="token comment">//  external: 49879,</span>
+<span class="token comment">//  arrayBuffers: 9386</span>
+<span class="token comment">// }</span>
+
+<span class="token comment">// 查看当前使用内存</span>
+<span class="token keyword">function</span> <span class="token function">testMemory</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> memory <span class="token operator">=</span> process<span class="token punctuation">.</span><span class="token function">memoryUsage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>heapUsed<span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>memory <span class="token operator">/</span> <span class="token number">1024</span> <span class="token operator">/</span><span class="token number">1024</span> <span class="token operator">+</span> <span class="token string">'mb'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><ul><li><strong>rss</strong>，常驻集大小，是进程在主内存设备（即总分配内存的子集）中占用的空间量，包括所有 C++ 和 JavaScript 对象和代码。</li> <li><strong>heapTotal</strong> 和 <strong>heapUsed</strong> 指的是 V8 的内存使用量。</li> <li><strong>external</strong> 指的是绑定到 V8 管理的 JavaScript 对象的 C++ 对象的内存使用量。</li> <li><strong>arrayBuffers</strong> 是指为 ArrayBuffer 和 SharedArrayBuffer 分配的内存，包括所有 Node.js Buffer。 这也包含在 external 值中。 当 Node.js 被用作嵌入式库时，此值可能为 0，因为在这种情况下可能不会跟踪 ArrayBuffer 的分配。</li></ul> <h2 id="内存优化"><a href="#内存优化" class="header-anchor">#</a> 内存优化</h2> <ul><li>尽量不要定义全局，定义了及时手动释放</li> <li>注意闭包</li></ul> <h2 id="node端的一些特殊点"><a href="#node端的一些特殊点" class="header-anchor">#</a> Node端的一些特殊点</h2> <ol><li>Node可以手动触发垃圾回收： global.gc</li> <li>Node端可以设置内存：
+<ul><li>node --max-old-space-size=1700 test.js  (单位为MB)</li> <li>node --max-new-space-size=1024 test.js (单位为KB)</li></ul></li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/blog/course-notes/1-JavaScript进阶/1-1函数/02-代码性能指标.html">
+        02-代码性能指标
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/blog/assets/js/app.0d0c2ebd.js" defer></script><script src="/blog/assets/js/2.93652e77.js" defer></script><script src="/blog/assets/js/43.cf947994.js" defer></script>
+  </body>
+</html>

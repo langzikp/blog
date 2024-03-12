@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Git提交规范 | Lang&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/blog/img/favicon.png">
+    <meta name="description" content="this is my blog">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.28a83d0f.css" as="style"><link rel="preload" href="/blog/assets/js/app.0d0c2ebd.js" as="script"><link rel="preload" href="/blog/assets/js/2.93652e77.js" as="script"><link rel="preload" href="/blog/assets/js/116.7efaf4b5.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.7f3d36f5.js"><link rel="prefetch" href="/blog/assets/js/100.860b1878.js"><link rel="prefetch" href="/blog/assets/js/101.0395eaa6.js"><link rel="prefetch" href="/blog/assets/js/102.d331d4c6.js"><link rel="prefetch" href="/blog/assets/js/103.3e774c54.js"><link rel="prefetch" href="/blog/assets/js/104.457bc78e.js"><link rel="prefetch" href="/blog/assets/js/105.d39e8fab.js"><link rel="prefetch" href="/blog/assets/js/106.f28e2070.js"><link rel="prefetch" href="/blog/assets/js/107.4cf41bf0.js"><link rel="prefetch" href="/blog/assets/js/108.3eac1d2e.js"><link rel="prefetch" href="/blog/assets/js/109.ee5fe0c4.js"><link rel="prefetch" href="/blog/assets/js/11.e3fdf62f.js"><link rel="prefetch" href="/blog/assets/js/110.fdf1ba84.js"><link rel="prefetch" href="/blog/assets/js/111.f5afe295.js"><link rel="prefetch" href="/blog/assets/js/112.d0337d8f.js"><link rel="prefetch" href="/blog/assets/js/113.019b2b7e.js"><link rel="prefetch" href="/blog/assets/js/114.b39ec44d.js"><link rel="prefetch" href="/blog/assets/js/115.b00dd49f.js"><link rel="prefetch" href="/blog/assets/js/117.5efc8f23.js"><link rel="prefetch" href="/blog/assets/js/118.2fe12284.js"><link rel="prefetch" href="/blog/assets/js/119.c32dd51c.js"><link rel="prefetch" href="/blog/assets/js/12.8734f8aa.js"><link rel="prefetch" href="/blog/assets/js/120.aa22f188.js"><link rel="prefetch" href="/blog/assets/js/121.e61cac2a.js"><link rel="prefetch" href="/blog/assets/js/122.de899088.js"><link rel="prefetch" href="/blog/assets/js/123.6322c896.js"><link rel="prefetch" href="/blog/assets/js/124.70510788.js"><link rel="prefetch" href="/blog/assets/js/125.e1d96383.js"><link rel="prefetch" href="/blog/assets/js/126.11068c20.js"><link rel="prefetch" href="/blog/assets/js/127.d8246c0a.js"><link rel="prefetch" href="/blog/assets/js/128.817fdcb9.js"><link rel="prefetch" href="/blog/assets/js/129.fd17b323.js"><link rel="prefetch" href="/blog/assets/js/13.baacb279.js"><link rel="prefetch" href="/blog/assets/js/130.31615e65.js"><link rel="prefetch" href="/blog/assets/js/131.b24f6be6.js"><link rel="prefetch" href="/blog/assets/js/132.b138c94c.js"><link rel="prefetch" href="/blog/assets/js/133.dc2e917c.js"><link rel="prefetch" href="/blog/assets/js/134.f9e82cf8.js"><link rel="prefetch" href="/blog/assets/js/135.0c456a7f.js"><link rel="prefetch" href="/blog/assets/js/136.9e283717.js"><link rel="prefetch" href="/blog/assets/js/137.5d6bed7c.js"><link rel="prefetch" href="/blog/assets/js/138.e9a809ce.js"><link rel="prefetch" href="/blog/assets/js/139.37320a88.js"><link rel="prefetch" href="/blog/assets/js/14.c320f6a4.js"><link rel="prefetch" href="/blog/assets/js/140.6dd3df30.js"><link rel="prefetch" href="/blog/assets/js/141.9174645c.js"><link rel="prefetch" href="/blog/assets/js/142.47e69553.js"><link rel="prefetch" href="/blog/assets/js/143.7f01e672.js"><link rel="prefetch" href="/blog/assets/js/144.a58d14eb.js"><link rel="prefetch" href="/blog/assets/js/145.12e6e05c.js"><link rel="prefetch" href="/blog/assets/js/146.100b7748.js"><link rel="prefetch" href="/blog/assets/js/147.bf8c32d7.js"><link rel="prefetch" href="/blog/assets/js/148.2706cdb0.js"><link rel="prefetch" href="/blog/assets/js/149.9c2e64dd.js"><link rel="prefetch" href="/blog/assets/js/15.cc2d6029.js"><link rel="prefetch" href="/blog/assets/js/150.9ac3ba72.js"><link rel="prefetch" href="/blog/assets/js/151.91ec2fc5.js"><link rel="prefetch" href="/blog/assets/js/152.eb2852e2.js"><link rel="prefetch" href="/blog/assets/js/153.1e285a55.js"><link rel="prefetch" href="/blog/assets/js/154.55119a4e.js"><link rel="prefetch" href="/blog/assets/js/155.3eb8ab34.js"><link rel="prefetch" href="/blog/assets/js/156.e725027b.js"><link rel="prefetch" href="/blog/assets/js/157.0d689d98.js"><link rel="prefetch" href="/blog/assets/js/158.448054b0.js"><link rel="prefetch" href="/blog/assets/js/159.986601ad.js"><link rel="prefetch" href="/blog/assets/js/16.97edfdf5.js"><link rel="prefetch" href="/blog/assets/js/160.ddc9a483.js"><link rel="prefetch" href="/blog/assets/js/161.b376631b.js"><link rel="prefetch" href="/blog/assets/js/162.ebc596e8.js"><link rel="prefetch" href="/blog/assets/js/163.fe70fc46.js"><link rel="prefetch" href="/blog/assets/js/164.3715b9da.js"><link rel="prefetch" href="/blog/assets/js/165.25ac0e69.js"><link rel="prefetch" href="/blog/assets/js/166.8fc72508.js"><link rel="prefetch" href="/blog/assets/js/167.7037f84f.js"><link rel="prefetch" href="/blog/assets/js/168.7aaa9d44.js"><link rel="prefetch" href="/blog/assets/js/169.9f082352.js"><link rel="prefetch" href="/blog/assets/js/17.fa659648.js"><link rel="prefetch" href="/blog/assets/js/170.594e169d.js"><link rel="prefetch" href="/blog/assets/js/171.6e2cb591.js"><link rel="prefetch" href="/blog/assets/js/172.5bff0e6c.js"><link rel="prefetch" href="/blog/assets/js/173.24b9ae8a.js"><link rel="prefetch" href="/blog/assets/js/174.fb8668c2.js"><link rel="prefetch" href="/blog/assets/js/175.3693f346.js"><link rel="prefetch" href="/blog/assets/js/176.7bf0252a.js"><link rel="prefetch" href="/blog/assets/js/177.f61486e9.js"><link rel="prefetch" href="/blog/assets/js/178.8d829c83.js"><link rel="prefetch" href="/blog/assets/js/179.f9754cc5.js"><link rel="prefetch" href="/blog/assets/js/18.ffe8bef4.js"><link rel="prefetch" href="/blog/assets/js/180.d890b1ac.js"><link rel="prefetch" href="/blog/assets/js/181.487c0ade.js"><link rel="prefetch" href="/blog/assets/js/182.5fa5e665.js"><link rel="prefetch" href="/blog/assets/js/183.3be5eda7.js"><link rel="prefetch" href="/blog/assets/js/184.8ce268d2.js"><link rel="prefetch" href="/blog/assets/js/185.8b314405.js"><link rel="prefetch" href="/blog/assets/js/186.1096425d.js"><link rel="prefetch" href="/blog/assets/js/187.355ed72a.js"><link rel="prefetch" href="/blog/assets/js/188.efd8ef0c.js"><link rel="prefetch" href="/blog/assets/js/189.cae70237.js"><link rel="prefetch" href="/blog/assets/js/19.07a478c7.js"><link rel="prefetch" href="/blog/assets/js/190.6c8a58ab.js"><link rel="prefetch" href="/blog/assets/js/191.a362cf82.js"><link rel="prefetch" href="/blog/assets/js/192.439e7f1b.js"><link rel="prefetch" href="/blog/assets/js/193.05ee7f2e.js"><link rel="prefetch" href="/blog/assets/js/20.6f40f893.js"><link rel="prefetch" href="/blog/assets/js/21.6774aaf5.js"><link rel="prefetch" href="/blog/assets/js/22.f986824b.js"><link rel="prefetch" href="/blog/assets/js/23.b9539532.js"><link rel="prefetch" href="/blog/assets/js/24.ba563d25.js"><link rel="prefetch" href="/blog/assets/js/25.fb034721.js"><link rel="prefetch" href="/blog/assets/js/26.6fff9b0c.js"><link rel="prefetch" href="/blog/assets/js/27.4a4d0856.js"><link rel="prefetch" href="/blog/assets/js/28.eedbf1aa.js"><link rel="prefetch" href="/blog/assets/js/29.146288f6.js"><link rel="prefetch" href="/blog/assets/js/3.180f1000.js"><link rel="prefetch" href="/blog/assets/js/30.f47b796c.js"><link rel="prefetch" href="/blog/assets/js/31.0d7d9ec1.js"><link rel="prefetch" href="/blog/assets/js/32.72906af7.js"><link rel="prefetch" href="/blog/assets/js/33.839b38fd.js"><link rel="prefetch" href="/blog/assets/js/34.e0ef9354.js"><link rel="prefetch" href="/blog/assets/js/35.9db4bafc.js"><link rel="prefetch" href="/blog/assets/js/36.34608b48.js"><link rel="prefetch" href="/blog/assets/js/37.c42d66b3.js"><link rel="prefetch" href="/blog/assets/js/38.2627eef1.js"><link rel="prefetch" href="/blog/assets/js/39.db1f5aaf.js"><link rel="prefetch" href="/blog/assets/js/4.f03f8c9d.js"><link rel="prefetch" href="/blog/assets/js/40.69b18389.js"><link rel="prefetch" href="/blog/assets/js/41.21241c7a.js"><link rel="prefetch" href="/blog/assets/js/42.0054b368.js"><link rel="prefetch" href="/blog/assets/js/43.cf947994.js"><link rel="prefetch" href="/blog/assets/js/44.fe6b090f.js"><link rel="prefetch" href="/blog/assets/js/45.ad2e34dd.js"><link rel="prefetch" href="/blog/assets/js/46.6d43aa71.js"><link rel="prefetch" href="/blog/assets/js/47.3c6d5b49.js"><link rel="prefetch" href="/blog/assets/js/48.54e13f6e.js"><link rel="prefetch" href="/blog/assets/js/49.9ffa4f91.js"><link rel="prefetch" href="/blog/assets/js/5.cb3ffbda.js"><link rel="prefetch" href="/blog/assets/js/50.1e8230ed.js"><link rel="prefetch" href="/blog/assets/js/51.89becc30.js"><link rel="prefetch" href="/blog/assets/js/52.b1bc8abc.js"><link rel="prefetch" href="/blog/assets/js/53.103e50c8.js"><link rel="prefetch" href="/blog/assets/js/54.8c604ac2.js"><link rel="prefetch" href="/blog/assets/js/55.fe0bdf7e.js"><link rel="prefetch" href="/blog/assets/js/56.c0341832.js"><link rel="prefetch" href="/blog/assets/js/57.29084cd2.js"><link rel="prefetch" href="/blog/assets/js/58.983dc3bf.js"><link rel="prefetch" href="/blog/assets/js/59.4d091136.js"><link rel="prefetch" href="/blog/assets/js/6.44e6b4c5.js"><link rel="prefetch" href="/blog/assets/js/60.6562f3dd.js"><link rel="prefetch" href="/blog/assets/js/61.22a1c9e6.js"><link rel="prefetch" href="/blog/assets/js/62.d9a6e61c.js"><link rel="prefetch" href="/blog/assets/js/63.d161742d.js"><link rel="prefetch" href="/blog/assets/js/64.9efc8ec4.js"><link rel="prefetch" href="/blog/assets/js/65.241d3609.js"><link rel="prefetch" href="/blog/assets/js/66.78516e39.js"><link rel="prefetch" href="/blog/assets/js/67.6824c276.js"><link rel="prefetch" href="/blog/assets/js/68.df5b4a8c.js"><link rel="prefetch" href="/blog/assets/js/69.4c0089e8.js"><link rel="prefetch" href="/blog/assets/js/7.245ce8a1.js"><link rel="prefetch" href="/blog/assets/js/70.e8c5fde9.js"><link rel="prefetch" href="/blog/assets/js/71.3f7e838a.js"><link rel="prefetch" href="/blog/assets/js/72.f1b45868.js"><link rel="prefetch" href="/blog/assets/js/73.2faa647e.js"><link rel="prefetch" href="/blog/assets/js/74.e61990cf.js"><link rel="prefetch" href="/blog/assets/js/75.29ed530d.js"><link rel="prefetch" href="/blog/assets/js/76.a2db254f.js"><link rel="prefetch" href="/blog/assets/js/77.69c11181.js"><link rel="prefetch" href="/blog/assets/js/78.a2664707.js"><link rel="prefetch" href="/blog/assets/js/79.aa316d4a.js"><link rel="prefetch" href="/blog/assets/js/8.ce8991da.js"><link rel="prefetch" href="/blog/assets/js/80.e6099d9b.js"><link rel="prefetch" href="/blog/assets/js/81.fb0f75f2.js"><link rel="prefetch" href="/blog/assets/js/82.d106529b.js"><link rel="prefetch" href="/blog/assets/js/83.ee97a51b.js"><link rel="prefetch" href="/blog/assets/js/84.55805e33.js"><link rel="prefetch" href="/blog/assets/js/85.2e6b7b8e.js"><link rel="prefetch" href="/blog/assets/js/86.4543bc47.js"><link rel="prefetch" href="/blog/assets/js/87.b6382a4e.js"><link rel="prefetch" href="/blog/assets/js/88.731da9f8.js"><link rel="prefetch" href="/blog/assets/js/89.1660693a.js"><link rel="prefetch" href="/blog/assets/js/9.be398fd1.js"><link rel="prefetch" href="/blog/assets/js/90.531d2c13.js"><link rel="prefetch" href="/blog/assets/js/91.93b613e6.js"><link rel="prefetch" href="/blog/assets/js/92.56bc99a6.js"><link rel="prefetch" href="/blog/assets/js/93.97875b9c.js"><link rel="prefetch" href="/blog/assets/js/94.8d6c06c4.js"><link rel="prefetch" href="/blog/assets/js/95.6459b87c.js"><link rel="prefetch" href="/blog/assets/js/96.144f8013.js"><link rel="prefetch" href="/blog/assets/js/97.8c5f84d5.js"><link rel="prefetch" href="/blog/assets/js/98.411663d4.js"><link rel="prefetch" href="/blog/assets/js/99.b1c502e2.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.28a83d0f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/img/logo.png" alt="Lang's blog" class="logo"> <span class="site-name can-hide">Lang's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发规范 Menu" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发规范 Menu" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/develop-norm/engineer.html" class="nav-link">
+  开发规范
+</a></li><li class="dropdown-item"><!----> <a href="/blog/browser/notes.html" class="nav-link">
+  浏览器
+</a></li><li class="dropdown-item"><!----> <a href="/blog/html/notes.html" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/blog/css/weight.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/javascript/notes.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/create.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/react/notes.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/build-tool/webpack/core.html" class="nav-link">
+  构建工具
+</a></li><li class="dropdown-item"><!----> <a href="/blog/nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/blog/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/optimization/data-desensitization.html" class="nav-link">
+  优化
+</a></li><li class="dropdown-item"><!----> <a href="/blog/web-security/xss.html" class="nav-link">
+  前端安全
+</a></li><li class="dropdown-item"><!----> <a href="/blog/network/01.html" class="nav-link">
+  网络
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/backend/" class="nav-link">
+  后端
+</a></div><div class="nav-item"><a href="/blog/algorithm/01-algorithm-datastructure.html" class="nav-link">
+  算法
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/course-notes/1-JavaScript进阶/1-1函数/01-内存管理.html" class="nav-link">
+  JavaScript进阶
+</a></li><li class="dropdown-item"><!----> <a href="/blog/course-notes/2-Vue框架源码and项目实战/2-1课程导学/01-Vue专题导学.html" class="nav-link">
+  Vue框架源码&amp;项目实战
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Q&amp;A" class="dropdown-title"><span class="title">Q&amp;A</span> <span class="arrow down"></span></button> <button type="button" aria-label="Q&amp;A" class="mobile-dropdown-title"><span class="title">Q&amp;A</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/interview-question/html-css.html" class="nav-link">
+  HTMl-CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/interview-question/javascript.html" class="nav-link">
+  JavaScript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="学习 Menu" class="dropdown-title"><span class="title">记录</span> <span class="arrow down"></span></button> <button type="button" aria-label="学习 Menu" class="mobile-dropdown-title"><span class="title">记录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/booklist/" class="nav-link">
+  我的书单
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/study.html" class="nav-link">
+  学习
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/quotations.html" class="nav-link">
+  语录
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/build-blog.html" class="nav-link">
+  十分钟搭建自己的个人博客
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/wechat-h5.html" class="nav-link">
+  微信公众号H5配置流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-customer-service.html" class="nav-link">
+  微信小程序客服绑定流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-online.html" class="nav-link">
+  微信小程序上线准备
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/quick-entry.html" class="nav-link">
+  前端相关框架
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="收藏" class="dropdown-title"><span class="title">收藏</span> <span class="arrow down"></span></button> <button type="button" aria-label="收藏" class="mobile-dropdown-title"><span class="title">收藏</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          框架及UI库
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/frame.html#vue及ui组件库" class="nav-link">
+  Vue及UI组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html#react-ui-组件库" class="nav-link">
+  React UI 组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html" class="nav-link">
+  更多...
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他网站
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/sites.html#文档" class="nav-link">
+  文档
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#社区" class="nav-link">
+  社区
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#工具" class="nav-link">
+  图片/工具
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html" class="nav-link">
+  更多...
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/blog/about/" class="nav-link">
+  关于
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发规范 Menu" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发规范 Menu" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/develop-norm/engineer.html" class="nav-link">
+  开发规范
+</a></li><li class="dropdown-item"><!----> <a href="/blog/browser/notes.html" class="nav-link">
+  浏览器
+</a></li><li class="dropdown-item"><!----> <a href="/blog/html/notes.html" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/blog/css/weight.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/javascript/notes.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/create.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/react/notes.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/build-tool/webpack/core.html" class="nav-link">
+  构建工具
+</a></li><li class="dropdown-item"><!----> <a href="/blog/nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/blog/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/optimization/data-desensitization.html" class="nav-link">
+  优化
+</a></li><li class="dropdown-item"><!----> <a href="/blog/web-security/xss.html" class="nav-link">
+  前端安全
+</a></li><li class="dropdown-item"><!----> <a href="/blog/network/01.html" class="nav-link">
+  网络
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/backend/" class="nav-link">
+  后端
+</a></div><div class="nav-item"><a href="/blog/algorithm/01-algorithm-datastructure.html" class="nav-link">
+  算法
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/course-notes/1-JavaScript进阶/1-1函数/01-内存管理.html" class="nav-link">
+  JavaScript进阶
+</a></li><li class="dropdown-item"><!----> <a href="/blog/course-notes/2-Vue框架源码and项目实战/2-1课程导学/01-Vue专题导学.html" class="nav-link">
+  Vue框架源码&amp;项目实战
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Q&amp;A" class="dropdown-title"><span class="title">Q&amp;A</span> <span class="arrow down"></span></button> <button type="button" aria-label="Q&amp;A" class="mobile-dropdown-title"><span class="title">Q&amp;A</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/interview-question/html-css.html" class="nav-link">
+  HTMl-CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/interview-question/javascript.html" class="nav-link">
+  JavaScript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="学习 Menu" class="dropdown-title"><span class="title">记录</span> <span class="arrow down"></span></button> <button type="button" aria-label="学习 Menu" class="mobile-dropdown-title"><span class="title">记录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/booklist/" class="nav-link">
+  我的书单
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/study.html" class="nav-link">
+  学习
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/quotations.html" class="nav-link">
+  语录
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/build-blog.html" class="nav-link">
+  十分钟搭建自己的个人博客
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/wechat-h5.html" class="nav-link">
+  微信公众号H5配置流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-customer-service.html" class="nav-link">
+  微信小程序客服绑定流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-online.html" class="nav-link">
+  微信小程序上线准备
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/quick-entry.html" class="nav-link">
+  前端相关框架
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="收藏" class="dropdown-title"><span class="title">收藏</span> <span class="arrow down"></span></button> <button type="button" aria-label="收藏" class="mobile-dropdown-title"><span class="title">收藏</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          框架及UI库
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/frame.html#vue及ui组件库" class="nav-link">
+  Vue及UI组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html#react-ui-组件库" class="nav-link">
+  React UI 组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html" class="nav-link">
+  更多...
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他网站
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/sites.html#文档" class="nav-link">
+  文档
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#社区" class="nav-link">
+  社区
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#工具" class="nav-link">
+  图片/工具
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html" class="nav-link">
+  更多...
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/blog/about/" class="nav-link">
+  关于
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/blog/develop-norm/engineer.html" class="sidebar-link">工程师规范</a></li><li><a href="/blog/develop-norm/html.html" class="sidebar-link">HTML 编码规范</a></li><li><a href="/blog/develop-norm/css.html" class="sidebar-link">CSS 编码规范</a></li><li><a href="/blog/develop-norm/javascript.html" class="sidebar-link">Javascript 编码规范</a></li><li><a href="/blog/develop-norm/vue.html" class="sidebar-link">Vue 编码规范</a></li><li><a href="/blog/develop-norm/react.html" class="sidebar-link">React 编码规范</a></li><li><a href="/blog/develop-norm/git.html" aria-current="page" class="active sidebar-link">Git 提交规范</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/develop-norm/git.html#格式讲解" class="sidebar-link">格式讲解</a></li><li class="sidebar-sub-header"><a href="/blog/develop-norm/git.html#body" class="sidebar-link">Body</a></li><li class="sidebar-sub-header"><a href="/blog/develop-norm/git.html#footer" class="sidebar-link">Footer</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="git提交规范"><a href="#git提交规范" class="header-anchor">#</a> Git提交规范</h1> <blockquote><p>参考Angular的提交规范</p></blockquote> <p>Angular提交规范:</p> <div class="language-txt line-numbers-mode"><pre class="language-txt"><code>&lt;type&gt;(&lt;scope&gt;): &lt;subject&gt; #header
+// 空一行
+&lt;body&gt;
+// 空一行
+&lt;footer&gt; 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="格式讲解"><a href="#格式讲解" class="header-anchor">#</a> 格式讲解</h2> <h3 id="header"><a href="#header" class="header-anchor">#</a> Header</h3> <p>Header部分只有一行，包括三个字段：type（必需）、scope（可选）和subject（必需）。
+例如:</p> <div class="language-txt line-numbers-mode"><pre class="language-txt"><code>feat:新增财务报表
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="type"><a href="#type" class="header-anchor">#</a> type</h3> <p>用于说明本次commit的类别，只允许使用下面7个标识</p> <ul><li><code>feat</code>：新功能（feature）</li> <li><code>fix</code>：修补bug</li> <li><code>docs</code>：文档（documentation）</li> <li><code>style</code>： 格式（不影响代码运行的变动）</li> <li><code>refactor</code>：重构（即不是新增功能，也不是修改bug的代码变动）</li> <li><code>test</code>：增加测试</li> <li><code>chore</code>：构建过程或辅助工具的变动</li></ul> <h3 id="scope"><a href="#scope" class="header-anchor">#</a> scope</h3> <p><code>scope</code>用于说明 commit 影响的范围，比如数据层、控制层、视图层等等，视项目不同而不同。</p> <h3 id="subject"><a href="#subject" class="header-anchor">#</a> subject</h3> <p><code>subject</code>是 commit 目的的简短描述，不超过50个字符。</p> <h2 id="body"><a href="#body" class="header-anchor">#</a> Body</h2> <p>Body 部分是对本次 commit 的详细描述，可以分成多行。</p> <div class="language-txt line-numbers-mode"><pre class="language-txt"><code>More detailed explanatory text, if necessary.  Wrap it to 
+about 72 characters or so. 
+
+Further paragraphs come after blank lines.
+
+- Bullet points are okay, too
+- Use a hanging indent
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h2 id="footer"><a href="#footer" class="header-anchor">#</a> Footer</h2> <p>Footer 部分只用于两种情况。</p> <h3 id="不兼容变动"><a href="#不兼容变动" class="header-anchor">#</a> 不兼容变动</h3> <p>如果当前代码与上一个版本不兼容，则 Footer 部分以BREAKING CHANGE开头，后面是对变动的描述、以及变动理由和迁移方法。</p> <div class="language-txt line-numbers-mode"><pre class="language-txt"><code>BREAKING CHANGE: isolate scope bindings definition has changed.
+
+To migrate the code follow the example below:
+
+Before:
+
+scope: {
+  myAttr: 'attribute',
+}
+
+After:
+
+scope: {
+  myAttr: '@',
+}
+
+The removed `inject` wasn't generaly useful for directives so there should be no code using it.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><h3 id="关闭-issue"><a href="#关闭-issue" class="header-anchor">#</a> 关闭 Issue</h3> <p>如果当前 commit 针对某个issue，那么可以在 Footer 部分关闭这个 issue 。</p> <div class="language-txt line-numbers-mode"><pre class="language-txt"><code>Closes #234
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>也可以一次关闭多个 issue 。</p> <div class="language-txt line-numbers-mode"><pre class="language-txt"><code>Closes #123, #245, #992
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/develop-norm/react.html" class="prev">
+        React 编码规范
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/blog/assets/js/app.0d0c2ebd.js" defer></script><script src="/blog/assets/js/2.93652e77.js" defer></script><script src="/blog/assets/js/116.7efaf4b5.js" defer></script>
+  </body>
+</html>

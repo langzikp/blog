@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>你不知道的 CSS 之包含块 | Lang&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/blog/img/favicon.png">
+    <meta name="description" content="this is my blog">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.28a83d0f.css" as="style"><link rel="preload" href="/blog/assets/js/app.0d0c2ebd.js" as="script"><link rel="preload" href="/blog/assets/js/2.93652e77.js" as="script"><link rel="preload" href="/blog/assets/js/100.860b1878.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.7f3d36f5.js"><link rel="prefetch" href="/blog/assets/js/101.0395eaa6.js"><link rel="prefetch" href="/blog/assets/js/102.d331d4c6.js"><link rel="prefetch" href="/blog/assets/js/103.3e774c54.js"><link rel="prefetch" href="/blog/assets/js/104.457bc78e.js"><link rel="prefetch" href="/blog/assets/js/105.d39e8fab.js"><link rel="prefetch" href="/blog/assets/js/106.f28e2070.js"><link rel="prefetch" href="/blog/assets/js/107.4cf41bf0.js"><link rel="prefetch" href="/blog/assets/js/108.3eac1d2e.js"><link rel="prefetch" href="/blog/assets/js/109.ee5fe0c4.js"><link rel="prefetch" href="/blog/assets/js/11.e3fdf62f.js"><link rel="prefetch" href="/blog/assets/js/110.fdf1ba84.js"><link rel="prefetch" href="/blog/assets/js/111.f5afe295.js"><link rel="prefetch" href="/blog/assets/js/112.d0337d8f.js"><link rel="prefetch" href="/blog/assets/js/113.019b2b7e.js"><link rel="prefetch" href="/blog/assets/js/114.b39ec44d.js"><link rel="prefetch" href="/blog/assets/js/115.b00dd49f.js"><link rel="prefetch" href="/blog/assets/js/116.7efaf4b5.js"><link rel="prefetch" href="/blog/assets/js/117.5efc8f23.js"><link rel="prefetch" href="/blog/assets/js/118.2fe12284.js"><link rel="prefetch" href="/blog/assets/js/119.c32dd51c.js"><link rel="prefetch" href="/blog/assets/js/12.8734f8aa.js"><link rel="prefetch" href="/blog/assets/js/120.aa22f188.js"><link rel="prefetch" href="/blog/assets/js/121.e61cac2a.js"><link rel="prefetch" href="/blog/assets/js/122.de899088.js"><link rel="prefetch" href="/blog/assets/js/123.6322c896.js"><link rel="prefetch" href="/blog/assets/js/124.70510788.js"><link rel="prefetch" href="/blog/assets/js/125.e1d96383.js"><link rel="prefetch" href="/blog/assets/js/126.11068c20.js"><link rel="prefetch" href="/blog/assets/js/127.d8246c0a.js"><link rel="prefetch" href="/blog/assets/js/128.817fdcb9.js"><link rel="prefetch" href="/blog/assets/js/129.fd17b323.js"><link rel="prefetch" href="/blog/assets/js/13.baacb279.js"><link rel="prefetch" href="/blog/assets/js/130.31615e65.js"><link rel="prefetch" href="/blog/assets/js/131.b24f6be6.js"><link rel="prefetch" href="/blog/assets/js/132.b138c94c.js"><link rel="prefetch" href="/blog/assets/js/133.dc2e917c.js"><link rel="prefetch" href="/blog/assets/js/134.f9e82cf8.js"><link rel="prefetch" href="/blog/assets/js/135.0c456a7f.js"><link rel="prefetch" href="/blog/assets/js/136.9e283717.js"><link rel="prefetch" href="/blog/assets/js/137.5d6bed7c.js"><link rel="prefetch" href="/blog/assets/js/138.e9a809ce.js"><link rel="prefetch" href="/blog/assets/js/139.37320a88.js"><link rel="prefetch" href="/blog/assets/js/14.c320f6a4.js"><link rel="prefetch" href="/blog/assets/js/140.6dd3df30.js"><link rel="prefetch" href="/blog/assets/js/141.9174645c.js"><link rel="prefetch" href="/blog/assets/js/142.47e69553.js"><link rel="prefetch" href="/blog/assets/js/143.7f01e672.js"><link rel="prefetch" href="/blog/assets/js/144.a58d14eb.js"><link rel="prefetch" href="/blog/assets/js/145.12e6e05c.js"><link rel="prefetch" href="/blog/assets/js/146.100b7748.js"><link rel="prefetch" href="/blog/assets/js/147.bf8c32d7.js"><link rel="prefetch" href="/blog/assets/js/148.2706cdb0.js"><link rel="prefetch" href="/blog/assets/js/149.9c2e64dd.js"><link rel="prefetch" href="/blog/assets/js/15.cc2d6029.js"><link rel="prefetch" href="/blog/assets/js/150.9ac3ba72.js"><link rel="prefetch" href="/blog/assets/js/151.91ec2fc5.js"><link rel="prefetch" href="/blog/assets/js/152.eb2852e2.js"><link rel="prefetch" href="/blog/assets/js/153.1e285a55.js"><link rel="prefetch" href="/blog/assets/js/154.55119a4e.js"><link rel="prefetch" href="/blog/assets/js/155.3eb8ab34.js"><link rel="prefetch" href="/blog/assets/js/156.e725027b.js"><link rel="prefetch" href="/blog/assets/js/157.0d689d98.js"><link rel="prefetch" href="/blog/assets/js/158.448054b0.js"><link rel="prefetch" href="/blog/assets/js/159.986601ad.js"><link rel="prefetch" href="/blog/assets/js/16.97edfdf5.js"><link rel="prefetch" href="/blog/assets/js/160.ddc9a483.js"><link rel="prefetch" href="/blog/assets/js/161.b376631b.js"><link rel="prefetch" href="/blog/assets/js/162.ebc596e8.js"><link rel="prefetch" href="/blog/assets/js/163.fe70fc46.js"><link rel="prefetch" href="/blog/assets/js/164.3715b9da.js"><link rel="prefetch" href="/blog/assets/js/165.25ac0e69.js"><link rel="prefetch" href="/blog/assets/js/166.8fc72508.js"><link rel="prefetch" href="/blog/assets/js/167.7037f84f.js"><link rel="prefetch" href="/blog/assets/js/168.7aaa9d44.js"><link rel="prefetch" href="/blog/assets/js/169.9f082352.js"><link rel="prefetch" href="/blog/assets/js/17.fa659648.js"><link rel="prefetch" href="/blog/assets/js/170.594e169d.js"><link rel="prefetch" href="/blog/assets/js/171.6e2cb591.js"><link rel="prefetch" href="/blog/assets/js/172.5bff0e6c.js"><link rel="prefetch" href="/blog/assets/js/173.24b9ae8a.js"><link rel="prefetch" href="/blog/assets/js/174.fb8668c2.js"><link rel="prefetch" href="/blog/assets/js/175.3693f346.js"><link rel="prefetch" href="/blog/assets/js/176.7bf0252a.js"><link rel="prefetch" href="/blog/assets/js/177.f61486e9.js"><link rel="prefetch" href="/blog/assets/js/178.8d829c83.js"><link rel="prefetch" href="/blog/assets/js/179.f9754cc5.js"><link rel="prefetch" href="/blog/assets/js/18.ffe8bef4.js"><link rel="prefetch" href="/blog/assets/js/180.d890b1ac.js"><link rel="prefetch" href="/blog/assets/js/181.487c0ade.js"><link rel="prefetch" href="/blog/assets/js/182.5fa5e665.js"><link rel="prefetch" href="/blog/assets/js/183.3be5eda7.js"><link rel="prefetch" href="/blog/assets/js/184.8ce268d2.js"><link rel="prefetch" href="/blog/assets/js/185.8b314405.js"><link rel="prefetch" href="/blog/assets/js/186.1096425d.js"><link rel="prefetch" href="/blog/assets/js/187.355ed72a.js"><link rel="prefetch" href="/blog/assets/js/188.efd8ef0c.js"><link rel="prefetch" href="/blog/assets/js/189.cae70237.js"><link rel="prefetch" href="/blog/assets/js/19.07a478c7.js"><link rel="prefetch" href="/blog/assets/js/190.6c8a58ab.js"><link rel="prefetch" href="/blog/assets/js/191.a362cf82.js"><link rel="prefetch" href="/blog/assets/js/192.439e7f1b.js"><link rel="prefetch" href="/blog/assets/js/193.05ee7f2e.js"><link rel="prefetch" href="/blog/assets/js/20.6f40f893.js"><link rel="prefetch" href="/blog/assets/js/21.6774aaf5.js"><link rel="prefetch" href="/blog/assets/js/22.f986824b.js"><link rel="prefetch" href="/blog/assets/js/23.b9539532.js"><link rel="prefetch" href="/blog/assets/js/24.ba563d25.js"><link rel="prefetch" href="/blog/assets/js/25.fb034721.js"><link rel="prefetch" href="/blog/assets/js/26.6fff9b0c.js"><link rel="prefetch" href="/blog/assets/js/27.4a4d0856.js"><link rel="prefetch" href="/blog/assets/js/28.eedbf1aa.js"><link rel="prefetch" href="/blog/assets/js/29.146288f6.js"><link rel="prefetch" href="/blog/assets/js/3.180f1000.js"><link rel="prefetch" href="/blog/assets/js/30.f47b796c.js"><link rel="prefetch" href="/blog/assets/js/31.0d7d9ec1.js"><link rel="prefetch" href="/blog/assets/js/32.72906af7.js"><link rel="prefetch" href="/blog/assets/js/33.839b38fd.js"><link rel="prefetch" href="/blog/assets/js/34.e0ef9354.js"><link rel="prefetch" href="/blog/assets/js/35.9db4bafc.js"><link rel="prefetch" href="/blog/assets/js/36.34608b48.js"><link rel="prefetch" href="/blog/assets/js/37.c42d66b3.js"><link rel="prefetch" href="/blog/assets/js/38.2627eef1.js"><link rel="prefetch" href="/blog/assets/js/39.db1f5aaf.js"><link rel="prefetch" href="/blog/assets/js/4.f03f8c9d.js"><link rel="prefetch" href="/blog/assets/js/40.69b18389.js"><link rel="prefetch" href="/blog/assets/js/41.21241c7a.js"><link rel="prefetch" href="/blog/assets/js/42.0054b368.js"><link rel="prefetch" href="/blog/assets/js/43.cf947994.js"><link rel="prefetch" href="/blog/assets/js/44.fe6b090f.js"><link rel="prefetch" href="/blog/assets/js/45.ad2e34dd.js"><link rel="prefetch" href="/blog/assets/js/46.6d43aa71.js"><link rel="prefetch" href="/blog/assets/js/47.3c6d5b49.js"><link rel="prefetch" href="/blog/assets/js/48.54e13f6e.js"><link rel="prefetch" href="/blog/assets/js/49.9ffa4f91.js"><link rel="prefetch" href="/blog/assets/js/5.cb3ffbda.js"><link rel="prefetch" href="/blog/assets/js/50.1e8230ed.js"><link rel="prefetch" href="/blog/assets/js/51.89becc30.js"><link rel="prefetch" href="/blog/assets/js/52.b1bc8abc.js"><link rel="prefetch" href="/blog/assets/js/53.103e50c8.js"><link rel="prefetch" href="/blog/assets/js/54.8c604ac2.js"><link rel="prefetch" href="/blog/assets/js/55.fe0bdf7e.js"><link rel="prefetch" href="/blog/assets/js/56.c0341832.js"><link rel="prefetch" href="/blog/assets/js/57.29084cd2.js"><link rel="prefetch" href="/blog/assets/js/58.983dc3bf.js"><link rel="prefetch" href="/blog/assets/js/59.4d091136.js"><link rel="prefetch" href="/blog/assets/js/6.44e6b4c5.js"><link rel="prefetch" href="/blog/assets/js/60.6562f3dd.js"><link rel="prefetch" href="/blog/assets/js/61.22a1c9e6.js"><link rel="prefetch" href="/blog/assets/js/62.d9a6e61c.js"><link rel="prefetch" href="/blog/assets/js/63.d161742d.js"><link rel="prefetch" href="/blog/assets/js/64.9efc8ec4.js"><link rel="prefetch" href="/blog/assets/js/65.241d3609.js"><link rel="prefetch" href="/blog/assets/js/66.78516e39.js"><link rel="prefetch" href="/blog/assets/js/67.6824c276.js"><link rel="prefetch" href="/blog/assets/js/68.df5b4a8c.js"><link rel="prefetch" href="/blog/assets/js/69.4c0089e8.js"><link rel="prefetch" href="/blog/assets/js/7.245ce8a1.js"><link rel="prefetch" href="/blog/assets/js/70.e8c5fde9.js"><link rel="prefetch" href="/blog/assets/js/71.3f7e838a.js"><link rel="prefetch" href="/blog/assets/js/72.f1b45868.js"><link rel="prefetch" href="/blog/assets/js/73.2faa647e.js"><link rel="prefetch" href="/blog/assets/js/74.e61990cf.js"><link rel="prefetch" href="/blog/assets/js/75.29ed530d.js"><link rel="prefetch" href="/blog/assets/js/76.a2db254f.js"><link rel="prefetch" href="/blog/assets/js/77.69c11181.js"><link rel="prefetch" href="/blog/assets/js/78.a2664707.js"><link rel="prefetch" href="/blog/assets/js/79.aa316d4a.js"><link rel="prefetch" href="/blog/assets/js/8.ce8991da.js"><link rel="prefetch" href="/blog/assets/js/80.e6099d9b.js"><link rel="prefetch" href="/blog/assets/js/81.fb0f75f2.js"><link rel="prefetch" href="/blog/assets/js/82.d106529b.js"><link rel="prefetch" href="/blog/assets/js/83.ee97a51b.js"><link rel="prefetch" href="/blog/assets/js/84.55805e33.js"><link rel="prefetch" href="/blog/assets/js/85.2e6b7b8e.js"><link rel="prefetch" href="/blog/assets/js/86.4543bc47.js"><link rel="prefetch" href="/blog/assets/js/87.b6382a4e.js"><link rel="prefetch" href="/blog/assets/js/88.731da9f8.js"><link rel="prefetch" href="/blog/assets/js/89.1660693a.js"><link rel="prefetch" href="/blog/assets/js/9.be398fd1.js"><link rel="prefetch" href="/blog/assets/js/90.531d2c13.js"><link rel="prefetch" href="/blog/assets/js/91.93b613e6.js"><link rel="prefetch" href="/blog/assets/js/92.56bc99a6.js"><link rel="prefetch" href="/blog/assets/js/93.97875b9c.js"><link rel="prefetch" href="/blog/assets/js/94.8d6c06c4.js"><link rel="prefetch" href="/blog/assets/js/95.6459b87c.js"><link rel="prefetch" href="/blog/assets/js/96.144f8013.js"><link rel="prefetch" href="/blog/assets/js/97.8c5f84d5.js"><link rel="prefetch" href="/blog/assets/js/98.411663d4.js"><link rel="prefetch" href="/blog/assets/js/99.b1c502e2.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.28a83d0f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/img/logo.png" alt="Lang's blog" class="logo"> <span class="site-name can-hide">Lang's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发规范 Menu" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发规范 Menu" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/develop-norm/engineer.html" class="nav-link">
+  开发规范
+</a></li><li class="dropdown-item"><!----> <a href="/blog/browser/notes.html" class="nav-link">
+  浏览器
+</a></li><li class="dropdown-item"><!----> <a href="/blog/html/notes.html" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/blog/css/weight.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/javascript/notes.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/create.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/react/notes.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/build-tool/webpack/core.html" class="nav-link">
+  构建工具
+</a></li><li class="dropdown-item"><!----> <a href="/blog/nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/blog/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/optimization/data-desensitization.html" class="nav-link">
+  优化
+</a></li><li class="dropdown-item"><!----> <a href="/blog/web-security/xss.html" class="nav-link">
+  前端安全
+</a></li><li class="dropdown-item"><!----> <a href="/blog/network/01.html" class="nav-link">
+  网络
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/backend/" class="nav-link">
+  后端
+</a></div><div class="nav-item"><a href="/blog/algorithm/01-algorithm-datastructure.html" class="nav-link">
+  算法
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/course-notes/1-JavaScript进阶/1-1函数/01-内存管理.html" class="nav-link">
+  JavaScript进阶
+</a></li><li class="dropdown-item"><!----> <a href="/blog/course-notes/2-Vue框架源码and项目实战/2-1课程导学/01-Vue专题导学.html" class="nav-link">
+  Vue框架源码&amp;项目实战
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Q&amp;A" class="dropdown-title"><span class="title">Q&amp;A</span> <span class="arrow down"></span></button> <button type="button" aria-label="Q&amp;A" class="mobile-dropdown-title"><span class="title">Q&amp;A</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/interview-question/html-css.html" class="nav-link">
+  HTMl-CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/interview-question/javascript.html" class="nav-link">
+  JavaScript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="学习 Menu" class="dropdown-title"><span class="title">记录</span> <span class="arrow down"></span></button> <button type="button" aria-label="学习 Menu" class="mobile-dropdown-title"><span class="title">记录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/booklist/" class="nav-link">
+  我的书单
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/study.html" class="nav-link">
+  学习
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/quotations.html" class="nav-link">
+  语录
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/build-blog.html" class="nav-link">
+  十分钟搭建自己的个人博客
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/wechat-h5.html" class="nav-link">
+  微信公众号H5配置流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-customer-service.html" class="nav-link">
+  微信小程序客服绑定流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-online.html" class="nav-link">
+  微信小程序上线准备
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/quick-entry.html" class="nav-link">
+  前端相关框架
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="收藏" class="dropdown-title"><span class="title">收藏</span> <span class="arrow down"></span></button> <button type="button" aria-label="收藏" class="mobile-dropdown-title"><span class="title">收藏</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          框架及UI库
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/frame.html#vue及ui组件库" class="nav-link">
+  Vue及UI组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html#react-ui-组件库" class="nav-link">
+  React UI 组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html" class="nav-link">
+  更多...
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他网站
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/sites.html#文档" class="nav-link">
+  文档
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#社区" class="nav-link">
+  社区
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#工具" class="nav-link">
+  图片/工具
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html" class="nav-link">
+  更多...
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/blog/about/" class="nav-link">
+  关于
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发规范 Menu" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="开发规范 Menu" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/develop-norm/engineer.html" class="nav-link">
+  开发规范
+</a></li><li class="dropdown-item"><!----> <a href="/blog/browser/notes.html" class="nav-link">
+  浏览器
+</a></li><li class="dropdown-item"><!----> <a href="/blog/html/notes.html" class="nav-link">
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/blog/css/weight.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/javascript/notes.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/create.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/react/notes.html" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/blog/build-tool/webpack/core.html" class="nav-link">
+  构建工具
+</a></li><li class="dropdown-item"><!----> <a href="/blog/nodejs/" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/blog/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/optimization/data-desensitization.html" class="nav-link">
+  优化
+</a></li><li class="dropdown-item"><!----> <a href="/blog/web-security/xss.html" class="nav-link">
+  前端安全
+</a></li><li class="dropdown-item"><!----> <a href="/blog/network/01.html" class="nav-link">
+  网络
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/backend/" class="nav-link">
+  后端
+</a></div><div class="nav-item"><a href="/blog/algorithm/01-algorithm-datastructure.html" class="nav-link">
+  算法
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="笔记" class="dropdown-title"><span class="title">笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="笔记" class="mobile-dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/course-notes/1-JavaScript进阶/1-1函数/01-内存管理.html" class="nav-link">
+  JavaScript进阶
+</a></li><li class="dropdown-item"><!----> <a href="/blog/course-notes/2-Vue框架源码and项目实战/2-1课程导学/01-Vue专题导学.html" class="nav-link">
+  Vue框架源码&amp;项目实战
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Q&amp;A" class="dropdown-title"><span class="title">Q&amp;A</span> <span class="arrow down"></span></button> <button type="button" aria-label="Q&amp;A" class="mobile-dropdown-title"><span class="title">Q&amp;A</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/interview-question/html-css.html" class="nav-link">
+  HTMl-CSS
+</a></li><li class="dropdown-item"><!----> <a href="/blog/interview-question/javascript.html" class="nav-link">
+  JavaScript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="学习 Menu" class="dropdown-title"><span class="title">记录</span> <span class="arrow down"></span></button> <button type="button" aria-label="学习 Menu" class="mobile-dropdown-title"><span class="title">记录</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/booklist/" class="nav-link">
+  我的书单
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/study.html" class="nav-link">
+  学习
+</a></li><li class="dropdown-item"><!----> <a href="/blog/booklist/quotations.html" class="nav-link">
+  语录
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/build-blog.html" class="nav-link">
+  十分钟搭建自己的个人博客
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/wechat-h5.html" class="nav-link">
+  微信公众号H5配置流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-customer-service.html" class="nav-link">
+  微信小程序客服绑定流程
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/mini-program-online.html" class="nav-link">
+  微信小程序上线准备
+</a></li><li class="dropdown-item"><!----> <a href="/blog/documents/quick-entry.html" class="nav-link">
+  前端相关框架
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="收藏" class="dropdown-title"><span class="title">收藏</span> <span class="arrow down"></span></button> <button type="button" aria-label="收藏" class="mobile-dropdown-title"><span class="title">收藏</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          框架及UI库
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/frame.html#vue及ui组件库" class="nav-link">
+  Vue及UI组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html#react-ui-组件库" class="nav-link">
+  React UI 组件库
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/frame.html" class="nav-link">
+  更多...
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其他网站
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/blog/collect/sites.html#文档" class="nav-link">
+  文档
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#社区" class="nav-link">
+  社区
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html#工具" class="nav-link">
+  图片/工具
+</a></li><li class="dropdown-subitem"><a href="/blog/collect/sites.html" class="nav-link">
+  更多...
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="/blog/about/" class="nav-link">
+  关于
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/blog/css/weight.html" class="sidebar-link">CSS 特性及权重</a></li><li><a href="/blog/css/css-computed.html" class="sidebar-link">CSS 属性计算过程</a></li><li><a href="/blog/css/css-box-model.html" class="sidebar-link">CSS 之盒模型</a></li><li><a href="/blog/css/css-include-block.html" aria-current="page" class="active sidebar-link">CSS 之包含块</a></li><li><a href="/blog/css/css-visual-formatting-model.html" class="sidebar-link">CSS 之视觉格式化模型</a></li><li><a href="/blog/css/css-bfc.html" class="sidebar-link">CSS 之块级格式化上下文</a></li><li><a href="/blog/css/css-stack-context.html" class="sidebar-link">CSS 之层叠上下文</a></li><li><a href="/blog/css/css-compatibility.html" class="sidebar-link">CSS 之兼容性</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS3常用属性</span> <span class="arrow right"></span></p> <!----></section></li><li><a href="/blog/css/tool.html" class="sidebar-link">CSS 高频实用片段</a></li><li><a href="/blog/css/css-border.html" class="sidebar-link">CSS 边框效果</a></li><li><a href="/blog/css/css-pixel.html" class="sidebar-link">设备像素/设备独立像素/css像素/dpr/ppi的区别</a></li><li><a href="/blog/css/other.html" class="sidebar-link">其他知识点</a></li><li><a href="/blog/css/question.html" class="sidebar-link">Q&amp;A</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="你不知道的-css-之包含块"><a href="#你不知道的-css-之包含块" class="header-anchor">#</a> 你不知道的 CSS 之包含块</h1> <p>一说到 CSS 盒模型，这是很多小伙伴耳熟能详的知识，甚至有的小伙伴还能说出 border-box 和 content-box 这两种盒模型的区别。
+但是一说到 CSS 包含块，有的小伙伴就懵圈了，什么是包含块？好像从来没有听说过这玩意儿。</p> <img src="https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-08-14-142005.png" alt="image-20220814222004395" style="zoom:20%;"> <p>好吧，如果你对包含块的知识一无所知，那么系好安全带，咱们准备出发了。</p> <img src="https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-08-13-060434.png" alt="image-20220813140434032" style="zoom:50%;"> <p>包含块英语全称为<strong>containing block</strong>，实际上平时你在书写 CSS 时，大多数情况下你是感受不到它的存在，因此你不知道这个知识点也是一件很正常的事情。但是这玩意儿是确确实实存在的，在 CSS 规范中也是明确书写了的：</p> <p><a href="https://drafts.csswg.org/css2/#containing-block-details" target="_blank" rel="noopener noreferrer">包含块containing block<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <img src="https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-08-14-142459.png" alt="image-20220814222458695" style="zoom:50%;"> <p>并且，如果你不了解它的运作机制，有时就会出现一些你认为的莫名其妙的现象。</p> <p>那么，这个包含块究竟说了什么内容呢？</p> <p>说起来也简单，<strong>就是元素的尺寸和位置，会受它的包含块所影响。对于一些属性，例如 width, height, padding, margin，绝对定位元素的偏移值（比如 position 被设置为 absolute 或 fixed），当我们对其赋予百分比值时，这些值的计算值，就是通过元素的包含块计算得来。</strong></p> <p>来吧，少年，让我们从最简单的 case 开始看。</p> <img src="https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-08-14-143153.png" alt="image-20220814223152726" style="zoom:50%;"> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>container<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token selector">.container</span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 500px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> skyblue<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item</span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 50%<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>请仔细阅读上面的代码，然后你认为 div.item 这个盒子的宽高是多少？</p> <img src="/blog/img/css/15.png" alt="图片" width="600px"> <p>相信你能够很自信的回答这个简单的问题，div.item 盒子的 width 为 250px，height 为 150px。</p> <p>这个答案确实是没有问题的，但是如果我追问你是怎么得到这个答案的，我猜不了解包含块的你大概率会说，因为它的父元素 div.container 的 width 为 500px，50% 就是 250px，height 为 300px，因此 50% 就是 150px。</p> <p>这个答案实际上是不准确的。正确的答案应该是，<strong>div.item 的宽高是根据它的包含块来计算的</strong>，而这里包含块的大小，正是这个元素最近的祖先块元素的内容区。</p> <p>因此正如我前面所说，<strong>很多时候你都感受不到包含块的存在。</strong></p> <p>包含块分为两种，一种是根元素（HTML 元素）所在的包含块，被称之为初始包含块（<strong>initial containing block</strong>）。对于浏览器而言，初始包含块的的大小等于视口 viewport 的大小，基点在画布的原点（视口左上角）。它是作为元素绝对定位和固定定位的参照物。</p> <p>另外一种是对于非根元素，对于非根元素的包含块判定就有几种不同的情况了。大致可以分为如下几种：</p> <ul><li>如果元素的 positiion 是 relative 或 static ，那么包含块由离它最近的<strong>块容器（block container）的内容区域</strong>（content area）的边缘建立。</li> <li>如果 position 属性是 fixed，那么包含块由视口建立。</li> <li>如果元素使用了 absolute 定位，则包含块由它的最近的 position 的值不是 static （也就是值为fixed、absolute、relative 或 sticky）的<strong>祖先元素</strong>的<strong>内边距区</strong>的边缘组成。</li></ul> <p>前面两条实际上都还比较好理解，第三条往往是初学者容易比较忽视的，我们来看一个示例：</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>container<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item2<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token selector">.container</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 500px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> skyblue<span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 5px solid<span class="token punctuation">;</span>
+  <span class="token property">margin-left</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item2</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+  <span class="token property">left</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+  <span class="token property">top</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p>首先阅读上面的代码，然后你能在脑海里面想出其大致的样子么？或者用笔和纸画一下也行。</p> <p>公布正确答案：
+<img src="/blog/img/css/16.png" alt="图片" width="600px"></p> <p>怎么样？有没有和你所想象的对上？</p> <p>其实原因也非常简单，根据上面的第三条规则，对于 div.item2 来讲，它的包含块应该是 div.container，而非 div.item。</p> <p>如果你能把上面非根元素的包含块判定规则掌握，那么关于包含块的知识你就已经掌握 80% 了。</p> <p>实际上对于非根元素来讲，包含块还有一种可能，那就是如果 position 属性是 absolute 或 fixed，包含块也可能是由满足以下条件的最近父级元素的内边距区的边缘组成的：</p> <ul><li>transform 或 perspective 的值不是 none</li> <li>will-change 的值是 transform 或 perspective</li> <li>filter 的值不是 none 或 will-change 的值是 filter(只在 Firefox 下生效).</li> <li>contain 的值是 paint (例如: contain: paint;)</li></ul> <p>我们还是来看一个示例：</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>container<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item2<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token selector">.container</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 500px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> skyblue<span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 5px solid<span class="token punctuation">;</span>
+  <span class="token property">margin-left</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0deg<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">/* 新增代码 */</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.item2</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+  <span class="token property">left</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+  <span class="token property">top</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><p>我们对于上面的代码只新增了一条声明，那就是 transform: rotate(0deg)，此时的渲染效果却发生了改变，如下图所示：</p> <img src="/blog/img/css/17.png" alt="图片" width="600px">
+可以看到，此时对于 div.item2 来讲，包含块就变成了 div.item。
+<p>好了，到这里，关于包含块的知识就基本讲完了。</p> <img src="https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-08-14-154655.png" alt="image-20220814234654914" style="zoom:33%;"> <p>我们再把 CSS 规范中所举的例子来看一下。</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Illustration of containing blocks<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>body<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>div1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>p1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>This is text in the first paragraph...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>p2<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        This is text
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>em</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>em1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+          in the
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>strong1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>second<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">&gt;</span></span>
+          paragraph.
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>em</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p>上面是一段简单的 HTML 代码，在没有添加任何 CSS 代码的情况下，你能说出各自的包含块么？</p> <p>对应的结果如下：</p> <table><thead><tr><th>元素</th> <th>包含块</th></tr></thead> <tbody><tr><td>html</td> <td>initial C.B. (UA-dependent)</td></tr> <tr><td>body</td> <td>html</td></tr> <tr><td>div1</td> <td>body</td></tr> <tr><td>p1</td> <td>div1</td></tr> <tr><td>p2</td> <td>div1</td></tr> <tr><td>em1</td> <td>p2</td></tr> <tr><td>strong1</td> <td>p2</td></tr></tbody></table> <p>首先 HTML 作为根元素，对应的包含块就是前面我们所说的初始包含块，而对于 body 而言，这是一个 static 定位的元素，因此该元素的包含块参照第一条为 html，以此类推 div1、p1、p2 以及 em1 的包含块也都是它们的父元素。</p> <p>不过 strong1 比较例外，它的包含块确实 p2，而非 em1。为什么会这样？建议你再把非根元素的第一条规则读一下：</p> <ul><li>如果元素的 positiion 是 relative 或 static ，那么包含块由离它最近的**块容器（block container）**的内容区域（content area）的边缘建立。</li></ul> <p>没错，因为 em1 不是块容器，而包含块是<strong>离它最近的块容器</strong>的内容区域，所以是 p2。</p> <p>接下来添加如下的 CSS：</p> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token selector">#div1</span> <span class="token punctuation">{</span> 
+  <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span> 
+  <span class="token property">left</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span> <span class="token property">top</span><span class="token punctuation">:</span> 50px 
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>上面的代码我们对 div1 进行了定位，那么此时的包含块会发生变化么？你可以先在自己思考一下。</p> <p>答案如下：</p> <table><thead><tr><th>元素</th> <th>包含块</th></tr></thead> <tbody><tr><td>html</td> <td>initial C.B. (UA-dependent)</td></tr> <tr><td>body</td> <td>html</td></tr> <tr><td>div1</td> <td>initial C.B. (UA-dependent)</td></tr> <tr><td>p1</td> <td>div1</td></tr> <tr><td>p2</td> <td>div1</td></tr> <tr><td>em1</td> <td>p2</td></tr> <tr><td>strong1</td> <td>p2</td></tr></tbody></table> <p>可以看到，这里 div1 的包含块就发生了变化，变为了初始包含块。这里你可以参考前文中的这两句话：</p> <ul><li>初始包含块（<strong>initial containing block</strong>）。对于浏览器而言，初始包含块的的大小等于视口 viewport 的大小，基点在画布的原点（视口左上角）。它是作为元素绝对定位和固定定位的参照物。</li> <li>如果元素使用了 absolute 定位，则包含块由它的最近的 position 的值不是 static （也就是值为fixed、absolute、relative 或 sticky）的祖先元素的内边距区的边缘组成。</li></ul> <p>是不是一下子就理解了。没错，因为我们对 div1 进行了定位，因此它会应用非根元素包含块计算规则的第三条规则，寻找离它最近的  position 的值不是 static 的祖先元素，不过显然 body 的定位方式为 static，因此 div1 的包含块最终就变成了初始包含块。</p> <p>接下来我们继续修改我们的 CSS：</p> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token selector">#div1</span> <span class="token punctuation">{</span> 
+  <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span> 
+  <span class="token property">left</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span> 
+  <span class="token property">top</span><span class="token punctuation">:</span> 50px 
+<span class="token punctuation">}</span>
+<span class="token selector">#em1</span>  <span class="token punctuation">{</span> 
+  <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span> 
+  <span class="token property">left</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span> 
+  <span class="token property">top</span><span class="token punctuation">:</span> 100px 
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>这里我们对 em1 同样进行了 absolute 绝对定位，你想一想会有什么样的变化？</p> <p>没错，聪明的你大概应该知道，em1 的包含块不再是 p2，而变成了 div1，而 strong1 的包含块也不再是 p2 了，而是变成了 em1。</p> <p>如下表所示：</p> <table><thead><tr><th>元素</th> <th>包含块</th></tr></thead> <tbody><tr><td>html</td> <td>initial C.B. (UA-dependent)</td></tr> <tr><td>body</td> <td>html</td></tr> <tr><td>div1</td> <td>initial C.B. (UA-dependent)</td></tr> <tr><td>p1</td> <td>div1</td></tr> <tr><td>p2</td> <td>div1</td></tr> <tr><td>em1</td> <td>div1（因为定位了，参阅非根元素包含块确定规则的第三条）</td></tr> <tr><td>strong1</td> <td>em1（因为 em1 变为了块容器，参阅非根元素包含块确定规则的第一条）</td></tr></tbody></table> <p>好了，这就是 CSS 规范中所举的例子。如果你全都能看明白，以后你还能跟别人说你是看过这一块知识对应的 CSS 规范的人。</p> <img src="https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-08-15-013519.png" alt="image-20220815093518833" style="zoom:33%;"> <p>另外，关于包含块的知识，在 MDN 上除了解说了什么是包含块以外，也举出了很多简单易懂的示例。</p> <p>具体你可以移步到：<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Containing_block" target="_blank" rel="noopener noreferrer">MDN包含块<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/css/css-box-model.html" class="prev">
+        CSS 之盒模型
+      </a></span> <span class="next"><a href="/blog/css/css-visual-formatting-model.html">
+        CSS 之视觉格式化模型
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/blog/assets/js/app.0d0c2ebd.js" defer></script><script src="/blog/assets/js/2.93652e77.js" defer></script><script src="/blog/assets/js/100.860b1878.js" defer></script>
+  </body>
+</html>
