@@ -76,7 +76,7 @@ module.exports = {
     // ],
     '/javascript/':  [
         {
-            title: 'JS基础',   // 必要的
+            title: 'JS核心',   // 必要的
             collapsable: true, // 可选的, 默认值是 true,collapsable: false 来让一个组永远都是展开状态。
             sidebarDepth: 2,    // 可选的, 默认值是 1
             children: [

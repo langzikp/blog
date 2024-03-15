@@ -1,74 +1,86 @@
 ## 1. 多久以前
-js计算几天前，几小时前，几分钟前
+
+js 计算几天前，几小时前，几分钟前
+
 ```js
 /**
  * @param {date} time 订单时间（日期格式或者时间戳）
  * @param {number} num 返回几个时间单位，如：1周(num=1)，1周2天(num=2),1周2天1小时(num=3)
  */
-function timeFormat (time, num = 1){
-    let timeArr = [365*24*60*60*1000, 30*24*60*60*1000, 7*24*60*60*1000, 24*60*60*1000, 60*60*1000,60*1000, 1000];
-    let unit = ["年", "个月", "周", "天", "小时", "分钟", "秒钟"];
-    let timeDiff = Date.now() - new Date(time).getTime();
-    if (timeDiff <= 0) return '刚刚'
-    let tip = [];
-    for(let i= 0; i< timeArr.length; i++){
-        if(timeDiff < timeArr[i]) continue;
+function timeFormat(time, num = 1) {
+  let timeArr = [
+    365 * 24 * 60 * 60 * 1000,
+    30 * 24 * 60 * 60 * 1000,
+    7 * 24 * 60 * 60 * 1000,
+    24 * 60 * 60 * 1000,
+    60 * 60 * 1000,
+    60 * 1000,
+    1000,
+  ];
+  let unit = ["年", "个月", "周", "天", "小时", "分钟", "秒钟"];
+  let timeDiff = Date.now() - new Date(time).getTime();
+  if (timeDiff <= 0) return "刚刚";
+  let tip = [];
+  for (let i = 0; i < timeArr.length; i++) {
+    if (timeDiff < timeArr[i]) continue;
 
-        let temp = Math.floor(timeDiff / timeArr[i]);
-        timeDiff = timeDiff % timeArr[i];
+    let temp = Math.floor(timeDiff / timeArr[i]);
+    timeDiff = timeDiff % timeArr[i];
 
-        if(temp > 0){
-            tip.push(temp + unit[i]);
-        }
-
-        if(tip.length >= num) break;
+    if (temp > 0) {
+      tip.push(temp + unit[i]);
     }
-    return tip.join("")+"前"
+
+    if (tip.length >= num) break;
+  }
+  return tip.join("") + "前";
 }
-console.log(timeFormat ('2023-5-10 17:42:09', 1)); 
+console.log(timeFormat("2023-5-10 17:42:09", 1));
 // 1小时前
 ```
 
 ## 2. 判断两个对象的值是否一致
+
 ```js
 /**
  * @description 判断两个对象的值是否一致
  * @param {Object} b
  * @param {Object} a
  */
-function isObjectValueEqual(a, b){
-   if (a === b) return true;
-	let aProps = Object.getOwnPropertyNames(a);
-	let bProps = Object.getOwnPropertyNames(b);
-	if (aProps.length !== bProps.length) return false;
-	for (let prop in a) {
-		if (b.hasOwnProperty(prop)) {
-			if (typeof a[prop] === 'object') {
-				if (!isObjectValueEqual(a[prop], b[prop])) return false;
-			} else if (a[prop] !== b[prop]) {
-				return false;
-			}
-		} else {
-			return false;
-		}
-	}
-	return true;
+function isObjectValueEqual(a, b) {
+  if (a === b) return true;
+  let aProps = Object.getOwnPropertyNames(a);
+  let bProps = Object.getOwnPropertyNames(b);
+  if (aProps.length !== bProps.length) return false;
+  for (let prop in a) {
+    if (b.hasOwnProperty(prop)) {
+      if (typeof a[prop] === "object") {
+        if (!isObjectValueEqual(a[prop], b[prop])) return false;
+      } else if (a[prop] !== b[prop]) {
+        return false;
+      }
+    } else {
+      return false;
+    }
+  }
+  return true;
 }
 
-let a = {a: 1, b: 2}
-let b = {b: 2, a: 1}
-console.log(isObjectValueEqual(a, b));  // true
+let a = { a: 1, b: 2 };
+let b = { b: 2, a: 1 };
+console.log(isObjectValueEqual(a, b)); // true
 ```
 
-## 3. JavaScript小数精度计算
-```js
+## 3. JavaScript 小数精度计算
+
+````js
 /**
  * 数字运算（主要用于小数点精度问题）
  * [see](https://juejin.im/post/6844904066418491406#heading-12)
  * @param {number} a 前面的值
  * @param {"+"|"-"|"*"|"/"} type 计算方式
  * @param {number} b 后面的值
- * @example 
+ * @example
  * ```js
  * // 可链式调用
  * const res = computeNumber(1.3, "-", 1.2).next("+", 1.5).next("*", 2.3).next("/", 0.2).result;
@@ -89,8 +101,12 @@ function computeNumber(a, type, b) {
    * @description 防止出现 `33.33333*100000 = 3333332.9999999995` && `33.33*10 = 333.29999999999995` 这类情况做的处理
    * @param {number} n
    */
-  const amend = (n, precision = 15) => parseFloat(Number(n).toPrecision(precision));
-  const power = Math.pow(10, Math.max(getDecimalLength(a), getDecimalLength(b)));
+  const amend = (n, precision = 15) =>
+    parseFloat(Number(n).toPrecision(precision));
+  const power = Math.pow(
+    10,
+    Math.max(getDecimalLength(a), getDecimalLength(b))
+  );
   let result = 0;
 
   a = amend(a * power);
@@ -123,13 +139,13 @@ function computeNumber(a, type, b) {
      */
     next(nextType, nextValue) {
       return computeNumber(result, nextType, nextValue);
-    }
-  }
+    },
+  };
 }
-
-```
+````
 
 ## 4.复制功能
+
 ```js
 /**
  * 复制文本
@@ -153,7 +169,8 @@ function copyText(text, success = null, fail = null) {
     clipboard = document.createElement("textarea");
     clipboard.id = id;
     clipboard.readOnly = true;
-    clipboard.style.cssText = "font-size: 15px; position: fixed; top: -1000%; left: -1000%;";
+    clipboard.style.cssText =
+      "font-size: 15px; position: fixed; top: -1000%; left: -1000%;";
     document.body.appendChild(clipboard);
   }
   clipboard.value = text;
@@ -167,48 +184,60 @@ function copyText(text, success = null, fail = null) {
     typeof fail === "function" && fail("复制失败");
   }
 }
-
 ```
 
-## 格式化时间
+## 5.格式化时间
+
 ```js
 /**
-	 * 格式化日期
-	 * 
-	 * @param JSONDate 该参数为json格式的日期（包含time为毫秒数），或者，该参数的值直接为毫秒数
-	 * @param formatter 返回日期格式，需使用以下字母：Y（年）、m（月）、d（日）、H（时）、i（分）、s（秒），大小写敏感
-	 * @example 使用如下：$.parseJsonDateToFormatDate(1311583624000,"Y-m-d H:i:s");
-	 * @description 传入时间和格式，并按传入的格式返回一个日期字符串
-	 */
-	$.parseJsonDateToFormatDate = function(JSONDate, formatter) {
-		if ("undefined" == typeof(JSONDate) || null == JSONDate || "" == JSONDate){
-		    return "<div align='center'>/</div>";
-		} 
-		var time = JSONDate["time"] || JSONDate;
-		formatter = ("undefined" == typeof(formatter) || "" == formatter) 
-				? "Y-m-d H:i:s"
-				: formatter;
-		var date, datastr, y, m, d, h, i, s;
-		datastr = formatter;
-		date = new Date(time);
-		y = date.getFullYear();
-		m = ("0" + (date.getMonth() + 1)).slice(-2);
-		d = ("0" + date.getDate()).slice(-2);
-		h = ("0" + date.getHours()).slice(-2);
-		i = ("0" + date.getMinutes()).slice(-2);
-		s = ("0" + date.getSeconds()).slice(-2);
-		datastr = datastr.replace(/Y/, y);
-		datastr = datastr.replace(/m/, m);
-		datastr = datastr.replace(/d/, d);
-		datastr = datastr.replace(/H/, h);
-		datastr = datastr.replace(/i/, i);
-		datastr = datastr.replace(/s/, s);
-		return datastr;
-	};
+ * 格式化日期
+ *
+ * @param {(Object|string|number)} time
+ * @param {string} format 
+ * @returns {string | null}
+ */
+function parseTime(time, format = '{y}-{m}-{d} {h}:{i}:{s}') {
+  if (!time) return "";
+  if (arguments.length === 0) {
+    return null;
+  }
+  let date;
+  if (typeof time === "object") {
+    date = time;
+  } else {
+    if (typeof time === "string") {
+      if (/^[0-9]+$/.test(time)) {
+        time = parseInt(time);
+      } else {
+        time = time.replace(new RegExp(/-/gm), "/");
+      }
+    }
+
+    if (typeof time === "number" && time.toString().length === 10) {
+      time = time * 1000;
+    }
+    date = new Date(time);
+  }
+  const formatObj = {
+    y: date.getFullYear(),
+    m: date.getMonth() + 1,
+    d: date.getDate(),
+    h: date.getHours(),
+    i: date.getMinutes(),
+    s: date.getSeconds(),
+    a: date.getDay(),
+  };
+  const time_str = format.replace(/{([ymdhisa])+}/g, (result, key) => {
+    const value = formatObj[key];
+    if (key === "a") {
+      return ["日", "一", "二", "三", "四", "五", "六"][value];
+    }
+    return value.toString().padStart(2, "0");
+  });
+  return time_str;
+}
 ```
 
+**_参考_**
 
-
-***参考***  
-
-[前端常用功能js-掘金](https://juejin.cn/post/6844904066418491406#heading-3)
+[前端常用功能 js-掘金](https://juejin.cn/post/6844904066418491406#heading-3)
