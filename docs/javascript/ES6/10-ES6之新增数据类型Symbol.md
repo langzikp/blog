@@ -84,7 +84,7 @@ s.description // "Hello"
 
 ### 三. Symbol 用作属性名
 `Symbol`作为对象的属性名，需在方括号`[]`中使用。
-```
+```js
 let sym= Symbol();
 
 // 第一种写法

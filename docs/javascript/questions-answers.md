@@ -2010,7 +2010,10 @@ try {
 
 >参考答案：
 >
->*promise.all* 方法参数是一个 *promise* 的数组,只有当所有的 *promise* 都完成并返回成功，才会调用 *resolve*，当有一个失败，都会进*catch*，被捕获错误，*promise.all* 调用成功返回的结果是每个 *promise* 单独调用成功之后返回的结果组成的数组,如果调用失败的话，返回的则是第一个 *reject* 的结果
+>*promise.all* 方法参数是一个 *promise* 的数组,只有当所有的 *promise* 都完成并返回成功，才会调用 *resolve*，  
+> 
+，都会进*catch*，被捕获错误，   
+> *promise.all* 调用成功返回的结果是每个 *promise* 单独调用成功之后返回的结果组成的数组，如果调用失败的话，返回的则是第一个 *reject* 的结果
 >
 >*promise.race* 也会调用所有的 *promise*，返回的结果则是所有 *promise* 中最先返回的结果，不关心是成功还是失败。
 
@@ -2090,7 +2093,7 @@ try {
 
 >参考答案：
 >
->请参阅前面第 *22* 题答案。
+>请参阅前面第 *21* 题答案。
 
 
 
@@ -2180,7 +2183,7 @@ try {
 
 >参考答案：
 >
->请参阅前面第 *8、25、83* 题答案。
+>请参阅前面第 *8、83* 题答案。
 
 
 
@@ -2801,7 +2804,7 @@ try {
 >
 > **Set**
 >
-> - 成员唯一、无序且不重复
+> - 成员唯一、有序且不重复（有序指循环顺序与插入顺序一致）
 >
 > - 键值与键名是一致的（或者说只有键值，没有键名）
 >
@@ -2869,8 +2872,8 @@ try {
 > 
 > 明白了这个原理后，我们就可以尝试来实现一个 *new* 方法，参考示例如下：
 > 
-> ```js
-> // 构造器函数
+```js
+ // 构造器函数
 let Parent = function (name, age) {
     this.name = name;
     this.age = age;
@@ -2895,7 +2898,7 @@ console.log(child instanceof Parent)//true
 console.log(child.hasOwnProperty('name'))//true
 console.log(child.hasOwnProperty('age'))//true
 console.log(child.hasOwnProperty('sayName'))//false
-> ```
+```
 
 
 
@@ -5348,15 +5351,14 @@ console.log('script end');
 
 ## 202. *symbol* 用途
 
-> 参考答案：
->
-> 可以用来表示一个独一无二的变量防止命名冲突。但是面试官问还有吗?我没想出其他的用处就直接答我不知道了，还可以利用 symbol 不会被常规的方法(除了 Object.getOwnPropertySymbols 外)遍历到，所以可以用来模拟私有变量。
->
-> 主要用来提供遍历接口，布置了 symbol.iterator 的对象才可以使用 for···of 循环，可以统一处理数据结构。调用之后回返回一个遍历器对象，包含有一个 next 方法，使用 next 方法后有两个返回值 value 和 done 分别表示函数当前执行位置的值和是否遍历完毕。
->
-> Symbol.for() 可以在全局访问 symbol
-
-
+> 参考答案：  
+>  1. 作为对象的属性名（key）：由于Symbol类型的key是不能通过Object.keys()或者for…in来枚举的，它不会被包含在对象自身的属性名集合中。因此，我们可以把一些不需要对外操作和访问的属性使用Symbol来定义。此外，当使用JSON.stringify()将对象转换成JSON字符串的时候，Symbol属性也会被排除在输出内容之外，这使得我们可以更好地设计数据对象，让“对内操作”和“对外选择性输出”变得更加优雅。  
+> 2. 防止变量名冲突：使用Symbol可以防止命名冲突，因为它可以生成一个全局唯一的值。  
+> 3. 模拟私有变量：Symbol不会被常规的方法（除了Object.getOwnPropertySymbols外）遍历到，因此可以利用这一特性来模拟私有变量。  
+> 4. 定义不重复的常量：由于Symbol的值是唯一的，因此可以用来定义不重复的常量。
+> 5. `Symbol.for()`用于创建或检索已存在的具有给定键的符号， 创建的符号是全局可共享的
+> 6. 提供了 11 个内置的 Symbol 值，指向语言内部使用的方法
+[内置的 Symbol 值](https://es6.ruanyifeng.com/#docs/symbol#%E5%86%85%E7%BD%AE%E7%9A%84-Symbol-%E5%80%BC)
 
 ## 203. 什么是函数式编程，应用场景是什么
 
@@ -8067,4 +8069,4 @@ a();
 ```
 运行一下，在IE下，会弹出5，而不是undefined，也就是说全局的undefined有可能被其他函数覆盖的危险。
 
-通过在匿名函数中多定义一个undefined的形参，由于只传入实参window，从而可以保证undefined形参未被赋值，从而最终是我们想要的undefined的值。302.
+通过在匿名函数中多定义一个undefined的形参，由于只传入实参window，从而可以保证undefined形参未被赋值，从而最终是我们想要的undefined的值。

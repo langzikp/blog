@@ -13,7 +13,10 @@
 这个区域由某个HTML元素创建，以下元素会在其内部创建BFC区域：
 - 根元素  （意味着，`<html>`元素创建的BFC区域，覆盖了网页中所有的元素)
 - 浮动和绝对定位元素
-- `overflow`不等于`visible`的块盒
+- `overflow`值不为 `visible` 或 `clip` 的块级元素
+- `display` 值为 `flow-root` 的元素  
+
+更多查看[MDN 区块格式化上下文](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)
 
 ### BFC的规则
 创建BFC的元素，隔绝了它内部和外部的联系，内部的渲染不会影响到外部
