@@ -143,6 +143,10 @@ module.exports = {
     ],
 
     '/optimization/':  [
+        ['scheme-abt', 'ABT在前端基建中的实践方案'],
+        ['scheme-big-file-upload', '大文件上传方案'],
+        ['scheme-reqest', '请求库封装方案'],
+        ['first-screen', '首屏优化'],
         ['data-desensitization', '优化之数据脱敏'],
         {
             title: '性能优化',   // 必要的

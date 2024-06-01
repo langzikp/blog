@@ -42,7 +42,7 @@
           >
           <a
             class="color3"
-            href="https://element-plus.gitee.io/zh-CN/component/button.html"
+            href="https://element-plus.org/zh-CN/component/overview.html"
             target="blank"
             >Element Plus</a
           >

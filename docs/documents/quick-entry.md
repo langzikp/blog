@@ -32,7 +32,7 @@
            </div>
            <div>
                 <a class="item" href="https://vuepress.vuejs.org/zh/" target="blank">vuepress</a>
-                <a class="item" href="https://vitejs.cn/vitepress/" target="blank">vitepress</a>
+                <a class="item" href="https://vitepress.dev/zh/" target="blank">vitepress</a>
            </div>
         </div>
         <div class="card">

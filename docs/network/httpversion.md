@@ -40,7 +40,7 @@ end
 
 ### 队头阻塞
 
-![img](http://mdrs.yuanjin.tech/img/20211027133404.png)
+![img-22](http://mdrs.yuanjin.tech/img/20211027133404.png)
 
 ## HTTP1.1
 

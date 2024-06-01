@@ -30,13 +30,19 @@ nvm 全称为 node version manger，顾名思义就是管理 node 版本的一�
 打开 setting.txt 文件，在末尾写入：
 
 ```shell
-node_mirror: https://npm.taobao.org/mirrors/node/
-npm_mirror: https://npm.taobao.org/mirrors/npm/
+node_mirror: https://npmmirror.com/mirrors/node/
+npm_mirror: https://npmmirror.com/mirrors/npm/
 ```
 
 **4. nvm常用命令**
 
 ```shell
+# 查看版本，确认是否安装成功
+nvm version
+
+# 查看所有可用的 node 版本
+ nvm list available
+
 # 查看当前安装和使用的 node 版本
 nvm list
 

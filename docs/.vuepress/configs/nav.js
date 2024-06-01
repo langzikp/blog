@@ -21,7 +21,7 @@ module.exports = [
       { text: '构建工具', link: '/build-tool/webpack/core' },
       { text: 'Nodejs', link: '/nodejs/' },
       { text: 'Git', link: '/git/' },
-      { text: '优化', link: '/optimization/data-desensitization' },
+      { text: '技术方案及优化', link: '/optimization/data-desensitization' },
       { text: '前端安全', link: '/web-security/xss' },
       { text: '网络', link: '/network/01' },
     ]
@@ -62,6 +62,7 @@ module.exports = [
       { text: '学习', link: '/booklist/study' },
       { text: '语录', link: '/booklist/quotations' },
       { text: '十分钟搭建自己的个人博客', link: '/documents/build-blog' },
+      { text: '使用vitepress搭建自己的个人博客', link: '/documents/build-vitepress-blog' },
       { text: '微信公众号H5配置流程', link: '/documents/wechat-h5' },
       { text: '微信小程序客服绑定流程', link: '/documents/mini-program-customer-service' },
       { text: '微信小程序上线准备', link: '/documents/mini-program-online' },
